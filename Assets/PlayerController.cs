@@ -31,6 +31,12 @@ public class PlayerController : MonoBehaviour
 public float inkCooldown = 1.0f;   // seconds you must wait after stopping ink
 private float inkCooldownTimer = 0f;
 
+[Header("Soft Ceiling (Screen Based)")]
+public Camera cam;
+public float topMargin = 0.6f;   // how far below top edge player must stay
+public float ceilingPush = 12f;  // push down strength when above ceiling
+
+
 
 
     void Awake()
@@ -40,6 +46,9 @@ private float inkCooldownTimer = 0f;
         rb.linearDamping = waterDrag;
 
         currentInk = maxInk;
+
+        if (cam == null) cam = Camera.main;
+
     }
 
     void Update()
@@ -106,14 +115,33 @@ currentInk = Mathf.Clamp(currentInk, 0f, maxInk);
     }
 
     void FixedUpdate()
-    {
-        // Smooth underwater movement
-        velocity = Vector2.Lerp(
-            velocity,
-            input * moveSpeed,
-            acceleration * Time.fixedDeltaTime
-        );
+{
+    // Smooth underwater movement
+    velocity = Vector2.Lerp(
+        velocity,
+        input * moveSpeed,
+        acceleration * Time.fixedDeltaTime
+    );
 
-        rb.linearVelocity = velocity;
+    // ===== SOFT CEILING (screen-based) =====
+    if (cam != null)
+    {
+        float topY = cam.ViewportToWorldPoint(new Vector3(0.5f, 1f, 0f)).y;
+        float maxY = topY - topMargin;
+
+        if (transform.position.y > maxY)
+        {
+            float overflow = transform.position.y - maxY;
+
+            // push down smoothly
+            velocity.y -= ceilingPush * (1f + overflow) * Time.fixedDeltaTime;
+
+            // optional: if player is holding UP, cancel upward movement near ceiling
+            if (velocity.y > 0f) velocity.y = 0f;
+        }
     }
+
+    rb.linearVelocity = velocity;
+}
+
 }

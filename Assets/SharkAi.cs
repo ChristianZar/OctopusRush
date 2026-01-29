@@ -161,8 +161,11 @@ public void ApplyInkSlow()
 {
     slowTimer = slowDuration;
     patrolSpeed = originalPatrolSpeed * slowMultiplier;
-    chaseSpeed = originalChaseSpeed * slowMultiplier;
+    chaseSpeed  = originalChaseSpeed  * slowMultiplier;
+
+    Debug.Log("SHARK SLOWED! chaseSpeed=" + chaseSpeed);
 }
+
 
 
 }
