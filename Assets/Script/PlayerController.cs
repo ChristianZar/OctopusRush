@@ -186,6 +186,15 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = velocity;
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+{
+    if (collision.gameObject.CompareTag("Obstacle"))
+    {
+        // Handle collision
+        Debug.Log("Collided with obstacle!");
+    }
+}
+
     /// <summary>
     /// Updates the octopus sprite animation
     /// Animates tentacles smoothly through the frames!
