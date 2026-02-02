@@ -1,21 +1,14 @@
 using UnityEngine;
 
 /// <summary>
-/// Moves an obstacle from right to left and destroys it when off screen
-/// Attached automatically by ObstacleSpawner or manually to obstacle prefabs
+/// Obstacle that stays stationary in world space
+/// Perfect for auto-scrolling games!
+/// Player/camera moves past them
 /// </summary>
 public class ObstacleMover : MonoBehaviour
 {
-    [Header("Movement")]
-    [Tooltip("Speed the obstacle moves to the left")]
-    public float moveSpeed = 3f;
-    
-    [Header("Destruction")]
-    [Tooltip("X position where obstacle is destroyed")]
-    public float destroyX = -12f;
-    
     [Header("Rotation (Optional)")]
-    [Tooltip("Enable rotation while moving")]
+    [Tooltip("Enable rotation while stationary")]
     public bool rotate = false;
     
     [Tooltip("Rotation speed (degrees per second)")]
@@ -42,16 +35,16 @@ public class ObstacleMover : MonoBehaviour
     
     void Update()
     {
-        // Move left
-        transform.position += Vector3.left * moveSpeed * Time.deltaTime;
+        // Obstacles stay in place - player moves past them!
+        // NO MOVEMENT CODE HERE!
         
-        // Optional rotation
+        // Optional rotation (looks cool for rocks/urchins)
         if (rotate)
         {
             transform.Rotate(0f, 0f, rotationSpeed * Time.deltaTime);
         }
         
-        // Optional bobbing
+        // Optional bobbing (looks cool for jellyfish/seaweed)
         if (bob)
         {
             bobTimer += Time.deltaTime * bobSpeed;
@@ -59,24 +52,9 @@ public class ObstacleMover : MonoBehaviour
             Vector3 pos = transform.position;
             pos.y = startPosition.y + yOffset;
             transform.position = pos;
-            
-            // Update start position to maintain bob
-            startPosition.x = pos.x;
-        }
-        
-        // Destroy when off screen
-        if (transform.position.x < destroyX)
-        {
-            Destroy(gameObject);
         }
     }
     
-    /// <summary>
-    /// Called when obstacle is destroyed
-    /// </summary>
-    void OnDestroy()
-    {
-        // Optional: Play destruction particle effect
-        // Optional: Play sound effect
-    }
+    // ObstacleSpawner handles destruction based on camera position
+    // No need to check destroyX here!
 }
