@@ -84,12 +84,20 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
+<<<<<<< Updated upstream:Assets/Prefabs/TreasureChest.prefab
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+=======
+  m_Sprite: {fileID: 4831649890860970648, guid: 2f5b1dd031eed47639705ee3a8bdc27b, type: 3}
+>>>>>>> Stashed changes:Assets/Prefabs/Seaweed.prefab
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
+<<<<<<< Updated upstream:Assets/Prefabs/TreasureChest.prefab
   m_Size: {x: 1, y: 1}
+=======
+  m_Size: {x: 2.14, y: 3.71}
+>>>>>>> Stashed changes:Assets/Prefabs/Seaweed.prefab
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -132,8 +140,13 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream:Assets/Prefabs/TreasureChest.prefab
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
+=======
+    oldSize: {x: 2.14, y: 3.71}
+    newSize: {x: 2.14, y: 3.71}
+>>>>>>> Stashed changes:Assets/Prefabs/Seaweed.prefab
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -151,6 +164,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 736609030a67e444bb965fd11faafb0a, type: 3}
   m_Name: 
+<<<<<<< Updated upstream:Assets/Prefabs/TreasureChest.prefab
   m_EditorClassIdentifier: Assembly-CSharp::TreasureChest
   openKey: 101
   keysRequired: 5
@@ -188,3 +202,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4305591306933046496}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  m_EditorClassIdentifier: Assembly-CSharp::ObstacleMover
+  rotate: 0
+  rotationSpeed: 30
+  bob: 1
+  bobSpeed: 2
+  bobAmount: 0.3
+>>>>>>> Stashed changes:Assets/Prefabs/Seaweed.prefab

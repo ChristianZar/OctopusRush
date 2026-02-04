@@ -1046,12 +1046,32 @@ MonoBehaviour:
   cam: {fileID: 0}
   topMargin: 0.6
   ceilingPush: 12
+<<<<<<< Updated upstream
   animationFrames: []
+=======
+  enableFlipping: 1
+  flipWhenMovingLeft: 1
+  flipThreshold: 0.1
+  idleFrames:
+  - {fileID: -5406763814006953364, guid: 0b781c452d988430babb61e7b31b062d, type: 3}
+  - {fileID: 3457336883507781506, guid: 0b781c452d988430babb61e7b31b062d, type: 3}
+  - {fileID: -5530838983651205356, guid: 0b781c452d988430babb61e7b31b062d, type: 3}
+  - {fileID: 5823199159104095235, guid: 0b781c452d988430babb61e7b31b062d, type: 3}
+  - {fileID: -2126573918194320792, guid: 0b781c452d988430babb61e7b31b062d, type: 3}
+  - {fileID: 5823199159104095235, guid: 0b781c452d988430babb61e7b31b062d, type: 3}
+  - {fileID: 6757071551915624590, guid: 0b781c452d988430babb61e7b31b062d, type: 3}
+  - {fileID: 8621126326058972510, guid: 0b781c452d988430babb61e7b31b062d, type: 3}
+>>>>>>> Stashed changes
   idleAnimationSpeed: 0.15
-  moveAnimationSpeed: 0.08
-  animateFasterWhenMoving: 1
+  swimFrames:
+  - {fileID: -4700763938974556897, guid: 0b781c452d988430babb61e7b31b062d, type: 3}
+  - {fileID: -1896525185715814834, guid: 0b781c452d988430babb61e7b31b062d, type: 3}
+  - {fileID: -659020653407643061, guid: 0b781c452d988430babb61e7b31b062d, type: 3}
+  - {fileID: -5572781115469238229, guid: 0b781c452d988430babb61e7b31b062d, type: 3}
+  swimAnimationSpeed: 0.08
+  swimSpeedThreshold: 0.1
   animateFasterWhenInking: 1
-  inkAnimationSpeedMultiplier: 2
+  inkAnimationMultiplier: 1.5
 --- !u!58 &367825980
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1164,15 +1184,15 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 4287472915163087358, guid: 31ced80da8de84b7d929c97d4df3261c, type: 3}
+  m_Sprite: {fileID: 3480231676062874751, guid: 813ae779439b649fd8ec8ee2b52692c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3.6, y: 3.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &367825983
 Transform:
@@ -1246,8 +1266,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.03, y: 1.28}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 3.6, y: 3.6}
+    newSize: {x: 3.6, y: 3.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -2215,6 +2235,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f920393f982974346977b90f93dc3236, type: 3}
   m_Name: 
+<<<<<<< Updated upstream
   m_EditorClassIdentifier: Assembly-CSharp::SharkSpawner
   sharkPrefab: {fileID: 98821587}
   target: {fileID: 0}
@@ -2224,6 +2245,39 @@ MonoBehaviour:
   minDistance: 6
   spawnInterval: 2
 --- !u!4 &1492976842
+=======
+  m_EditorClassIdentifier: Assembly-CSharp::ObstacleSpawner
+  floorDecorations:
+  - {fileID: 3952149586380777886, guid: 679419d73ffb1479c9c44f62b90aab98, type: 3}
+  - {fileID: 6789215297499874154, guid: 5fa8f89d531cb4b79b036d906f8c41f4, type: 3}
+  - {fileID: 3456199338709875524, guid: 103b1413617104c79b91e45055043f7f, type: 3}
+  floorY: -4.5
+  floorYVariation: 0.2
+  floatingObstacles:
+  - {fileID: 1949650283078842132, guid: 3d913f75fc3164143945c4dc3cb5e456, type: 3}
+  - {fileID: 3456199338709875524, guid: 103b1413617104c79b91e45055043f7f, type: 3}
+  spawnDistanceAhead: 15
+  spawnSpacing: 10
+  spacingVariation: 2
+  decorationChance: 0.5
+  minY: -4
+  maxY: 4
+  destroyDistanceBehind: 15
+  useSafeZone: 1
+  safeZoneRadius: 1.5
+  trackedCamera: {fileID: 0}
+  playerTransform: {fileID: 0}
+  trackPlayer: 1
+  useSpawnPatterns: 1
+  patternChance: 0.3
+  verticalGapSize: 3.5
+  horizontalSpacing: 3
+  increaseDifficulty: 1
+  difficultyIncreaseDistance: 50
+  spacingDecreaseAmount: 0.5
+  minSpawnSpacing: 2
+--- !u!4 &1490243171
+>>>>>>> Stashed changes
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

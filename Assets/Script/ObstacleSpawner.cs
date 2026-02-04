@@ -2,20 +2,37 @@ using UnityEngine;
 using System.Collections.Generic;
 
 /// <summary>
+<<<<<<< Updated upstream
 /// UPDATED ObstacleSpawner for scrolling/moving camera gameplay
 /// Spawns obstacles ahead of the player as they move forward
 /// Perfect for games where player keeps moving!
+=======
+/// Spawns both floor decorations (coral, rock, seaweed) and floating obstacles (sea urchin, jellyfish)
+/// Decorations are placed on the ground for visual appeal
+/// Obstacles float in the water as hazards
+>>>>>>> Stashed changes
 /// </summary>
 public class ObstacleSpawner : MonoBehaviour
 {
-    [Header("Obstacle Prefabs")]
-    [Tooltip("Array of different obstacle prefabs to spawn")]
-    public GameObject[] obstaclePrefabs;
+    [Header("Floor Decorations (Non-Obstacles)")]
+    [Tooltip("Decorative sprites that spawn on the floor")]
+    public GameObject[] floorDecorations; // coral, rock, seaweed
+    
+    [Tooltip("Floor Y position where decorations spawn")]
+    public float floorY = -4.5f;
+    
+    [Tooltip("Random Y variation for floor decorations")]
+    public float floorYVariation = 0.2f;
+    
+    [Header("Floating Obstacles (Hazards)")]
+    [Tooltip("Obstacle prefabs that float in water (sea urchin, jellyfish)")]
+    public GameObject[] floatingObstacles; // sea urchin, jellyfish
     
     [Header("Spawn Settings")]
     [Tooltip("Distance ahead of player/camera to spawn")]
     public float spawnDistanceAhead = 15f;
     
+<<<<<<< Updated upstream
     [Tooltip("Distance between obstacle spawns")]
     public float spawnSpacing = 5f;
     
@@ -28,10 +45,38 @@ public class ObstacleSpawner : MonoBehaviour
     
     [Tooltip("Maximum Y position for spawning")]
     public float maxY = 4f;
+=======
+    [Tooltip("Distance between spawns (INCREASED for easier gameplay)")]
+    public float spawnSpacing = 8f;
     
-    [Tooltip("Distance behind player/camera to destroy obstacles")]
+    [Tooltip("Random variation in spawn spacing (+/- units)")]
+    public float spacingVariation = 3f;
+    
+    [Tooltip("Chance to spawn decoration instead of obstacle")]
+    [Range(0f, 1f)]
+    public float decorationChance = 0.5f; // 50% decoration, 50% obstacle
+    
+    [Header("Floating Obstacle Area")]
+    [Tooltip("Minimum Y position for floating obstacles")]
+    public float minY = -3.5f;
+>>>>>>> Stashed changes
+    
+    [Tooltip("Maximum Y position for floating obstacles")]
+    public float maxY = 3.5f;
+    
+    [Tooltip("Distance behind player/camera to destroy")]
     public float destroyDistanceBehind = 15f;
     
+<<<<<<< Updated upstream
+=======
+    [Header("Safe Zone (For Floating Obstacles)")]
+    [Tooltip("Create safe corridor in center (no floating obstacles here)")]
+    public bool useSafeZone = true;
+    
+    [Tooltip("Center safe zone radius (obstacles won't spawn too close to Y=0)")]
+    public float safeZoneRadius = 1.5f;
+    
+>>>>>>> Stashed changes
     [Header("Camera/Player Reference")]
     [Tooltip("The camera to track (will use Main Camera if not set)")]
     public Camera trackedCamera;
@@ -42,19 +87,31 @@ public class ObstacleSpawner : MonoBehaviour
     [Tooltip("Track player instead of camera")]
     public bool trackPlayer = true;
     
-    [Header("Spawn Patterns")]
+    [Header("Spawn Patterns (Floating Obstacles Only)")]
     [Tooltip("Enable spawn patterns (groups of obstacles)")]
     public bool useSpawnPatterns = true;
     
     [Tooltip("Chance of spawning a pattern instead of single obstacle (0-1)")]
     [Range(0f, 1f)]
+<<<<<<< Updated upstream
     public float patternChance = 0.3f;
+=======
+    public float patternChance = 0.15f;
+    
+    [Header("Gap Sizes (For Patterns)")]
+    [Tooltip("Gap size for vertical line patterns")]
+    public float verticalGapSize = 3.5f;
+    
+    [Tooltip("Spacing between obstacles in horizontal patterns")]
+    public float horizontalSpacing = 3f;
+>>>>>>> Stashed changes
     
     [Header("Difficulty Settings")]
     [Tooltip("Increase difficulty over distance")]
     public bool increaseDifficulty = true;
     
     [Tooltip("Distance traveled before difficulty increases")]
+<<<<<<< Updated upstream
     public float difficultyIncreaseDistance = 50f;
     
     [Tooltip("How much to decrease spawn spacing each difficulty increase")]
@@ -62,6 +119,15 @@ public class ObstacleSpawner : MonoBehaviour
     
     [Tooltip("Minimum spawn spacing (won't go below this)")]
     public float minSpawnSpacing = 2f;
+=======
+    public float difficultyIncreaseDistance = 60f;
+    
+    [Tooltip("How much to decrease spawn spacing each difficulty increase")]
+    public float spacingDecreaseAmount = 0.3f;
+    
+    [Tooltip("Minimum spawn spacing (won't go below this)")]
+    public float minSpawnSpacing = 4f;
+>>>>>>> Stashed changes
     
     // Private variables
     private float lastSpawnX = 0f;
@@ -70,7 +136,7 @@ public class ObstacleSpawner : MonoBehaviour
     private float distanceTraveled = 0f;
     private float lastDifficultyIncreaseDistance = 0f;
     private Vector3 lastTrackedPosition;
-    private List<GameObject> activeObstacles = new List<GameObject>();
+    private List<GameObject> activeObjects = new List<GameObject>();
     private bool isSpawning = false;
     
     void Start()
@@ -92,9 +158,12 @@ public class ObstacleSpawner : MonoBehaviour
         }
         
         // Validate
-        if (obstaclePrefabs == null || obstaclePrefabs.Length == 0)
+        bool hasDecorations = floorDecorations != null && floorDecorations.Length > 0;
+        bool hasObstacles = floatingObstacles != null && floatingObstacles.Length > 0;
+        
+        if (!hasDecorations && !hasObstacles)
         {
-            Debug.LogError("ObstacleSpawner: No obstacle prefabs assigned!");
+            Debug.LogError("ObstacleSpawner: No decorations or obstacles assigned!");
             enabled = false;
             return;
         }
@@ -119,6 +188,10 @@ public class ObstacleSpawner : MonoBehaviour
         isSpawning = true;
         
         Debug.Log($"ObstacleSpawner initialized. Tracking: {(trackPlayer ? "Player" : "Camera")}");
+<<<<<<< Updated upstream
+=======
+        Debug.Log($"Floor Decorations: {floorDecorations?.Length ?? 0}, Floating Obstacles: {floatingObstacles?.Length ?? 0}");
+>>>>>>> Stashed changes
     }
     
     void Update()
@@ -141,7 +214,7 @@ public class ObstacleSpawner : MonoBehaviour
         
         while (nextSpawnX < spawnThreshold)
         {
-            SpawnObstacle();
+            SpawnObject();
             CalculateNextSpawnX();
         }
         
@@ -151,8 +224,8 @@ public class ObstacleSpawner : MonoBehaviour
             UpdateDifficulty();
         }
         
-        // Clean up obstacles that are far behind
-        CleanupObstacles(currentPos.x);
+        // Clean up objects that are far behind
+        CleanupObjects(currentPos.x);
     }
     
     /// <summary>
@@ -173,39 +246,108 @@ public class ObstacleSpawner : MonoBehaviour
     }
     
     /// <summary>
+<<<<<<< Updated upstream
     /// Spawns an obstacle at nextSpawnX
     /// </summary>
     void SpawnObstacle()
+=======
+    /// Spawns either a floor decoration or floating obstacle
+    /// </summary>
+    void SpawnObject()
+    {
+        bool hasDecorations = floorDecorations != null && floorDecorations.Length > 0;
+        bool hasObstacles = floatingObstacles != null && floatingObstacles.Length > 0;
+        
+        // Decide: decoration or obstacle?
+        bool spawnDecoration = hasDecorations && (!hasObstacles || Random.value < decorationChance);
+        
+        if (spawnDecoration)
+        {
+            SpawnFloorDecoration(nextSpawnX);
+        }
+        else if (hasObstacles)
+        {
+            SpawnFloatingObstacle(nextSpawnX);
+        }
+    }
+    
+    /// <summary>
+    /// Spawns a floor decoration (coral, rock, seaweed)
+    /// </summary>
+    void SpawnFloorDecoration(float xPos)
+    {
+        // Choose random decoration
+        GameObject decorationPrefab = floorDecorations[Random.Range(0, floorDecorations.Length)];
+        
+        // Position on floor with slight variation
+        float yPos = floorY + Random.Range(-floorYVariation, floorYVariation);
+        Vector3 spawnPos = new Vector3(xPos, yPos, 0f);
+        
+        // Create decoration
+        GameObject decoration = Instantiate(decorationPrefab, spawnPos, Quaternion.identity);
+        decoration.transform.parent = transform;
+        
+        // Add to active list
+        activeObjects.Add(decoration);
+        
+        Debug.Log($"Spawned floor decoration '{decorationPrefab.name}' at X={xPos:F1}, Y={yPos:F1}");
+    }
+    
+    /// <summary>
+    /// Spawns a floating obstacle (sea urchin, jellyfish)
+    /// </summary>
+    void SpawnFloatingObstacle(float xPos)
+>>>>>>> Stashed changes
     {
         // Decide if spawning pattern or single obstacle
         bool spawnPattern = useSpawnPatterns && Random.value < patternChance;
         
         if (spawnPattern)
         {
+<<<<<<< Updated upstream
             SpawnPattern(nextSpawnX);
         }
         else
         {
             SpawnSingleObstacle(nextSpawnX);
+=======
+            SpawnPattern(xPos);
+        }
+        else
+        {
+            SpawnSingleObstacle(xPos);
+>>>>>>> Stashed changes
         }
     }
     
     /// <summary>
+<<<<<<< Updated upstream
     /// Spawns a single random obstacle at specific X position
+=======
+    /// Spawns a single floating obstacle at specific X position
+>>>>>>> Stashed changes
     /// </summary>
     void SpawnSingleObstacle(float xPos)
     {
         // Choose random obstacle prefab
+<<<<<<< Updated upstream
         GameObject obstaclePrefab = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)];
         
         // Random Y position
         float yPos = Random.Range(minY, maxY);
+=======
+        GameObject obstaclePrefab = floatingObstacles[Random.Range(0, floatingObstacles.Length)];
+        
+        // Safe Y position (avoids center corridor)
+        float yPos = GetSafeYPosition();
+>>>>>>> Stashed changes
         
         // Spawn position
         Vector3 spawnPos = new Vector3(xPos, yPos, 0f);
         
         // Create obstacle
         GameObject obstacle = Instantiate(obstaclePrefab, spawnPos, Quaternion.identity);
+<<<<<<< Updated upstream
         
         // Parent to this spawner (optional, for organization)
         obstacle.transform.parent = transform;
@@ -223,6 +365,60 @@ public class ObstacleSpawner : MonoBehaviour
     {
         // Choose random pattern type
         int patternType = Random.Range(0, 4);
+=======
+        obstacle.transform.parent = transform;
+        
+        // Make sure it has the Obstacle tag for collisions
+        if (!obstacle.CompareTag("Obstacle"))
+        {
+            obstacle.tag = "Obstacle";
+        }
+        
+        // Add to active list
+        activeObjects.Add(obstacle);
+        
+        Debug.Log($"Spawned floating obstacle '{obstaclePrefab.name}' at X={xPos:F1}, Y={yPos:F1}");
+    }
+    
+    /// <summary>
+    /// Get safe Y position (avoids center safe zone)
+    /// </summary>
+    float GetSafeYPosition()
+    {
+        float yPos = Random.Range(minY, maxY);
+        
+        // If safe zone enabled, avoid spawning near center
+        if (useSafeZone)
+        {
+            // If spawn would be in safe zone, push it out
+            if (Mathf.Abs(yPos) < safeZoneRadius)
+            {
+                // Push to top or bottom of safe zone
+                if (yPos >= 0)
+                {
+                    yPos = safeZoneRadius + Random.Range(0.5f, 1.5f);
+                }
+                else
+                {
+                    yPos = -safeZoneRadius - Random.Range(0.5f, 1.5f);
+                }
+                
+                // Clamp to bounds
+                yPos = Mathf.Clamp(yPos, minY, maxY);
+            }
+        }
+        
+        return yPos;
+    }
+    
+    /// <summary>
+    /// Spawns a pattern of floating obstacles at specific X position
+    /// </summary>
+    void SpawnPattern(float xPos)
+    {
+        // Choose random pattern type (only 2 simple patterns)
+        int patternType = Random.Range(0, 2);
+>>>>>>> Stashed changes
         
         switch (patternType)
         {
@@ -232,28 +428,43 @@ public class ObstacleSpawner : MonoBehaviour
             case 1:
                 SpawnHorizontalSpread(xPos);
                 break;
+<<<<<<< Updated upstream
             case 2:
                 SpawnDiagonalLine(xPos);
                 break;
             case 3:
                 SpawnCluster(xPos);
                 break;
+=======
+>>>>>>> Stashed changes
         }
     }
     
     /// <summary>
+<<<<<<< Updated upstream
     /// Spawns obstacles in a vertical line with a gap
+=======
+    /// Spawns floating obstacles in a vertical line with a LARGE gap
+>>>>>>> Stashed changes
     /// </summary>
     void SpawnVerticalLine(float xPos)
     {
-        GameObject obstaclePrefab = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)];
+        GameObject obstaclePrefab = floatingObstacles[Random.Range(0, floatingObstacles.Length)];
         
+<<<<<<< Updated upstream
         // Create gap in middle
         float gapSize = 2.5f;
         float gapCenter = Random.Range(minY + 1.5f, maxY - 1.5f);
         
         // Spawn obstacles above and below gap
         for (float y = minY; y <= maxY; y += 1.5f)
+=======
+        // Create LARGE gap in middle
+        float gapCenter = Random.Range(-1f, 1f);
+        
+        // Spawn obstacles above and below gap
+        for (float y = minY; y <= maxY; y += 2f)
+>>>>>>> Stashed changes
         {
             // Skip gap area
             if (Mathf.Abs(y - gapCenter) < gapSize / 2f)
@@ -263,9 +474,15 @@ public class ObstacleSpawner : MonoBehaviour
             GameObject obstacle = Instantiate(obstaclePrefab, spawnPos, Quaternion.identity);
             obstacle.transform.parent = transform;
             
-            activeObstacles.Add(obstacle);
+            if (!obstacle.CompareTag("Obstacle"))
+            {
+                obstacle.tag = "Obstacle";
+            }
+            
+            activeObjects.Add(obstacle);
         }
         
+<<<<<<< Updated upstream
         Debug.Log($"Spawned vertical line at X={xPos:F1}");
     }
     
@@ -281,14 +498,40 @@ public class ObstacleSpawner : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             float xOffset = i * 2f;
+=======
+        Debug.Log($"Spawned vertical line pattern at X={xPos:F1} with {verticalGapSize} gap");
+    }
+    
+    /// <summary>
+    /// Spawns floating obstacles spread horizontally with MORE space
+    /// </summary>
+    void SpawnHorizontalSpread(float xPos)
+    {
+        GameObject obstaclePrefab = floatingObstacles[Random.Range(0, floatingObstacles.Length)];
+        float yPos = GetSafeYPosition();
+        
+        // Spawn only 2 obstacles with MORE spacing
+        for (int i = 0; i < 2; i++)
+        {
+            float xOffset = i * horizontalSpacing;
+>>>>>>> Stashed changes
             Vector3 spawnPos = new Vector3(xPos + xOffset, yPos, 0f);
             GameObject obstacle = Instantiate(obstaclePrefab, spawnPos, Quaternion.identity);
             obstacle.transform.parent = transform;
             
-            activeObstacles.Add(obstacle);
+            if (!obstacle.CompareTag("Obstacle"))
+            {
+                obstacle.tag = "Obstacle";
+            }
+            
+            activeObjects.Add(obstacle);
         }
         
+<<<<<<< Updated upstream
         Debug.Log($"Spawned horizontal spread at X={xPos:F1}");
+=======
+        Debug.Log($"Spawned horizontal spread pattern at X={xPos:F1}");
+>>>>>>> Stashed changes
     }
     
     /// <summary>
@@ -367,30 +610,30 @@ public class ObstacleSpawner : MonoBehaviour
     }
     
     /// <summary>
-    /// Removes obstacles that are far behind the player
+    /// Removes objects that are far behind the player
     /// </summary>
-    void CleanupObstacles(float currentX)
+    void CleanupObjects(float currentX)
     {
         float destroyThreshold = currentX - destroyDistanceBehind;
         
-        for (int i = activeObstacles.Count - 1; i >= 0; i--)
+        for (int i = activeObjects.Count - 1; i >= 0; i--)
         {
-            GameObject obstacle = activeObstacles[i];
+            GameObject obj = activeObjects[i];
             
-            if (obstacle == null)
+            if (obj == null)
             {
-                activeObstacles.RemoveAt(i);
+                activeObjects.RemoveAt(i);
             }
-            else if (obstacle.transform.position.x < destroyThreshold)
+            else if (obj.transform.position.x < destroyThreshold)
             {
-                Destroy(obstacle);
-                activeObstacles.RemoveAt(i);
+                Destroy(obj);
+                activeObjects.RemoveAt(i);
             }
         }
     }
     
     /// <summary>
-    /// Stop spawning obstacles
+    /// Stop spawning
     /// </summary>
     public void StopSpawning()
     {
@@ -398,7 +641,7 @@ public class ObstacleSpawner : MonoBehaviour
     }
     
     /// <summary>
-    /// Start spawning obstacles
+    /// Start spawning
     /// </summary>
     public void StartSpawning()
     {
@@ -406,18 +649,18 @@ public class ObstacleSpawner : MonoBehaviour
     }
     
     /// <summary>
-    /// Clear all active obstacles
+    /// Clear all active objects
     /// </summary>
-    public void ClearAllObstacles()
+    public void ClearAllObjects()
     {
-        foreach (GameObject obstacle in activeObstacles)
+        foreach (GameObject obj in activeObjects)
         {
-            if (obstacle != null)
+            if (obj != null)
             {
-                Destroy(obstacle);
+                Destroy(obj);
             }
         }
-        activeObstacles.Clear();
+        activeObjects.Clear();
     }
     
     /// <summary>
@@ -438,18 +681,38 @@ public class ObstacleSpawner : MonoBehaviour
         
         Vector3 trackedPos = GetTrackedPosition();
         
-        // Draw spawn ahead line
+        // Draw spawn ahead line (green)
         Gizmos.color = Color.green;
         float spawnX = trackedPos.x + spawnDistanceAhead;
         Gizmos.DrawLine(new Vector3(spawnX, minY, 0), new Vector3(spawnX, maxY, 0));
         
-        // Draw destroy behind line
+        // Draw destroy behind line (red)
         Gizmos.color = Color.red;
         float destroyX = trackedPos.x - destroyDistanceBehind;
         Gizmos.DrawLine(new Vector3(destroyX, minY, 0), new Vector3(destroyX, maxY, 0));
         
+<<<<<<< Updated upstream
         // Draw next spawn position
+=======
+        // Draw safe zone (center corridor) - light green
+        if (useSafeZone)
+        {
+            Gizmos.color = new Color(0, 1, 0, 0.3f);
+            Vector3 safeCenter = new Vector3(trackedPos.x, 0, 0);
+            Vector3 safeSize = new Vector3(50, safeZoneRadius * 2, 0.1f);
+            Gizmos.DrawCube(safeCenter, safeSize);
+        }
+        
+        // Draw floor line (yellow)
+>>>>>>> Stashed changes
         Gizmos.color = Color.yellow;
+        Gizmos.DrawLine(
+            new Vector3(trackedPos.x - 20, floorY, 0),
+            new Vector3(trackedPos.x + 20, floorY, 0)
+        );
+        
+        // Draw next spawn position (cyan)
+        Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(new Vector3(nextSpawnX, (minY + maxY) / 2f, 0), 0.5f);
     }
 }

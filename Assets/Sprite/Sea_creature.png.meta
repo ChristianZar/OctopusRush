@@ -1,0 +1,520 @@
+fileFormatVersion: 2
+guid: 2f5b1dd031eed47639705ee3a8bdc27b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4831649890860970648
+    second: Sea_creature_0
+  - first:
+      213: -8060862718717243319
+    second: Sea_creature_1
+  - first:
+      213: -1283843670118663611
+    second: Sea_creature_2
+  - first:
+      213: 2089458727843561674
+    second: Sea_creature_3
+  - first:
+      213: -5690670278243603039
+    second: Sea_creature_4
+  - first:
+      213: 7786219519901724007
+    second: Sea_creature_5
+  - first:
+      213: -8279054988616661609
+    second: Sea_creature_6
+  - first:
+      213: 7229020792323570354
+    second: Sea_creature_7
+  - first:
+      213: -107607320498698109
+    second: Sea_creature_8
+  - first:
+      213: -6758596250210825183
+    second: Sea_creature_9
+  - first:
+      213: -8298975882687966819
+    second: Sea_creature_10
+  - first:
+      213: -1635718977122917690
+    second: Sea_creature_11
+  - first:
+      213: 5319630538445989422
+    second: Sea_creature_12
+  - first:
+      213: -8765105988499401204
+    second: Sea_creature_13
+  - first:
+      213: 7156693087442978371
+    second: Sea_creature_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 175
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sea_creature_0
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 547
+        width: 214
+        height: 371
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 892b2dff9f77d0340800000000000000
+      internalID: 4831649890860970648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sea_creature_1
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 549
+        width: 259
+        height: 393
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9405babc010122090800000000000000
+      internalID: -8060862718717243319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sea_creature_2
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 807
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54a717febfede2ee0800000000000000
+      internalID: -1283843670118663611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sea_creature_3
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 829
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac084fd74af3ffc10800000000000000
+      internalID: 2089458727843561674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sea_creature_4
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 564
+        width: 272
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1adaa6b488da601b0800000000000000
+      internalID: -5690670278243603039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sea_creature_5
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 545
+        width: 282
+        height: 264
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76d64f276653e0c60800000000000000
+      internalID: 7786219519901724007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sea_creature_6
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 810
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79504972a53ea1d80800000000000000
+      internalID: -8279054988616661609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sea_creature_7
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 767
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bafb501c14a25460800000000000000
+      internalID: 7229020792323570354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sea_creature_8
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 783
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 388817e46b3b18ef0800000000000000
+      internalID: -107607320498698109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sea_creature_9
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 734
+        width: 25
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12c85edd484a432a0800000000000000
+      internalID: -6758596250210825183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sea_creature_10
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 734
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9199d0976d14dc80800000000000000
+      internalID: -8298975882687966819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sea_creature_11
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 677
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c22938b142cc49e0800000000000000
+      internalID: -1635718977122917690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sea_creature_12
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 178
+        width: 490
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e26a4644acf13d940800000000000000
+      internalID: 5319630538445989422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sea_creature_13
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 146
+        width: 454
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0618d00b861c5680800000000000000
+      internalID: -8765105988499401204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sea_creature_14
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 171
+        width: 328
+        height: 229
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 346488bf17ea15360800000000000000
+      internalID: 7156693087442978371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 540d2b34688754c0ea376a0d194d901b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Sea_creature_0: 4831649890860970648
+      Sea_creature_1: -8060862718717243319
+      Sea_creature_10: -8298975882687966819
+      Sea_creature_11: -1635718977122917690
+      Sea_creature_12: 5319630538445989422
+      Sea_creature_13: -8765105988499401204
+      Sea_creature_14: 7156693087442978371
+      Sea_creature_2: -1283843670118663611
+      Sea_creature_3: 2089458727843561674
+      Sea_creature_4: -5690670278243603039
+      Sea_creature_5: 7786219519901724007
+      Sea_creature_6: -8279054988616661609
+      Sea_creature_7: 7229020792323570354
+      Sea_creature_8: -107607320498698109
+      Sea_creature_9: -6758596250210825183
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
