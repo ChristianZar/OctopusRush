@@ -1,0 +1,1638 @@
+fileFormatVersion: 2
+guid: 73fc45db45eddc94db510e4b2812b5c3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4988462400131082715
+    second: KeySprite_0
+  - first:
+      213: 5959992666865731764
+    second: KeySprite_1
+  - first:
+      213: -1302483952159053211
+    second: KeySprite_2
+  - first:
+      213: -5190824408239526757
+    second: KeySprite_3
+  - first:
+      213: 7594656647122324466
+    second: KeySprite_4
+  - first:
+      213: 584417211861250135
+    second: KeySprite_5
+  - first:
+      213: -6366458716796552179
+    second: KeySprite_6
+  - first:
+      213: 5685775396852457014
+    second: KeySprite_7
+  - first:
+      213: -6919022750115168524
+    second: KeySprite_8
+  - first:
+      213: 4990411602271492928
+    second: KeySprite_9
+  - first:
+      213: 2435454225143224292
+    second: KeySprite_10
+  - first:
+      213: -7693211595685668064
+    second: KeySprite_11
+  - first:
+      213: 4345845152009399797
+    second: KeySprite_12
+  - first:
+      213: 7902312074503634839
+    second: KeySprite_13
+  - first:
+      213: -8275777715020583741
+    second: KeySprite_14
+  - first:
+      213: 1171087759788884234
+    second: KeySprite_15
+  - first:
+      213: 4721203487945028344
+    second: KeySprite_16
+  - first:
+      213: 3527701316363823213
+    second: KeySprite_17
+  - first:
+      213: 3065395623991913123
+    second: KeySprite_18
+  - first:
+      213: 438061805707239548
+    second: KeySprite_19
+  - first:
+      213: -811529265077952974
+    second: KeySprite_20
+  - first:
+      213: -7752835335466573941
+    second: KeySprite_21
+  - first:
+      213: 3720730117699061430
+    second: KeySprite_22
+  - first:
+      213: 961595842802726953
+    second: KeySprite_23
+  - first:
+      213: 1460761027404231413
+    second: KeySprite_24
+  - first:
+      213: 7089172416147872173
+    second: KeySprite_25
+  - first:
+      213: 1294431974264505818
+    second: KeySprite_26
+  - first:
+      213: -3819299998638749926
+    second: KeySprite_27
+  - first:
+      213: -6487790272393753924
+    second: KeySprite_28
+  - first:
+      213: -8408490231742872021
+    second: KeySprite_29
+  - first:
+      213: -7585503986458205757
+    second: KeySprite_30
+  - first:
+      213: 1804089161674252734
+    second: KeySprite_31
+  - first:
+      213: 2457897592049780214
+    second: KeySprite_32
+  - first:
+      213: -3950903436470202289
+    second: KeySprite_33
+  - first:
+      213: 1125974416848825609
+    second: KeySprite_34
+  - first:
+      213: 8751043739917260122
+    second: KeySprite_35
+  - first:
+      213: -8039808985551977335
+    second: KeySprite_36
+  - first:
+      213: -4509074083704697267
+    second: KeySprite_37
+  - first:
+      213: -1992995854437168653
+    second: KeySprite_38
+  - first:
+      213: 2026583879913300655
+    second: KeySprite_39
+  - first:
+      213: -8285830674927853947
+    second: KeySprite_40
+  - first:
+      213: -1221789092272395266
+    second: KeySprite_41
+  - first:
+      213: 4373072324066197711
+    second: KeySprite_42
+  - first:
+      213: 4473425060398295688
+    second: KeySprite_43
+  - first:
+      213: 3242632794270928016
+    second: KeySprite_44
+  - first:
+      213: 8434566357297730418
+    second: KeySprite_45
+  - first:
+      213: -8484890637363200577
+    second: KeySprite_46
+  - first:
+      213: -6347820364335875732
+    second: KeySprite_47
+  - first:
+      213: -277762478373195670
+    second: KeySprite_48
+  - first:
+      213: 4590957427879846990
+    second: KeySprite_49
+  - first:
+      213: 5928124357476112210
+    second: KeySprite_50
+  - first:
+      213: 2111230177557759040
+    second: KeySprite_51
+  - first:
+      213: -4060751529542458488
+    second: KeySprite_52
+  - first:
+      213: -9009069316987145703
+    second: KeySprite_53
+  - first:
+      213: 5388274408601411567
+    second: KeySprite_54
+  - first:
+      213: 5730327935152297832
+    second: KeySprite_55
+  - first:
+      213: -3480959896475258329
+    second: KeySprite_56
+  - first:
+      213: 1883281095857144598
+    second: KeySprite_57
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: KeySprite_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 390
+        height: 1023
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5265bc880eb65cab0800000000000000
+      internalID: -4988462400131082715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_1
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 729
+        width: 310
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b8077cc0c526b250800000000000000
+      internalID: 5959992666865731764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_2
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 0
+        width: 687
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56aa9e11fb5acede0800000000000000
+      internalID: -1302483952159053211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_3
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 773
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9ca47fe3bc76f7b0800000000000000
+      internalID: -5190824408239526757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_4
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 775
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fb09ca7bf3a56960800000000000000
+      internalID: 7594656647122324466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_5
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 770
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7503d999b544c1800800000000000000
+      internalID: 584417211861250135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_6
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 764
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0cf62c278bc5a7a0800000000000000
+      internalID: -6366458716796552179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_7
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 768
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63edb02599ee7ee40800000000000000
+      internalID: 5685775396852457014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_8
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 757
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fef982a771baff90800000000000000
+      internalID: -6919022750115168524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_9
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 762
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04b516479e0814540800000000000000
+      internalID: 4990411602271492928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_10
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 741
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e7d264d6b87cc120800000000000000
+      internalID: 2435454225143224292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_11
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 736
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02b5d3960d83c3590800000000000000
+      internalID: -7693211595685668064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_12
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 742
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fdaf56f32b8f4c30800000000000000
+      internalID: 4345845152009399797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_13
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 737
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79fb119a6f6aaad60800000000000000
+      internalID: 7902312074503634839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_14
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 727
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ccaa10e308862d80800000000000000
+      internalID: -8275777715020583741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_15
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 735
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a014603ec1a804010800000000000000
+      internalID: 1171087759788884234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_16
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 346
+        width: 261
+        height: 391
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f27c4bee85158140800000000000000
+      internalID: 4721203487945028344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_17
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 1
+        width: 366
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d682b8b18a9e4f030800000000000000
+      internalID: 3527701316363823213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_18
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 690
+        width: 49
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aa231034197a8a20800000000000000
+      internalID: 3065395623991913123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_19
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 705
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c70a8de24ee441600800000000000000
+      internalID: 438061805707239548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_20
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 699
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23ed13ede6edcb4f0800000000000000
+      internalID: -811529265077952974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_21
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 661
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8f1b63b655686490800000000000000
+      internalID: -7752835335466573941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_22
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 695
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b6cc8a2450b2a330800000000000000
+      internalID: 3720730117699061430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_23
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 655
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 928bfb30356485d00800000000000000
+      internalID: 961595842802726953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_24
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 658
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f2f92c3a6aa54410800000000000000
+      internalID: 1460761027404231413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_25
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 631
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da9ddff90ccc16260800000000000000
+      internalID: 7089172416147872173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_26
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 603
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad581fbb50fb6f110800000000000000
+      internalID: 1294431974264505818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_27
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 615
+        width: 24
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a17cc7203ee1ffac0800000000000000
+      internalID: -3819299998638749926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_28
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 607
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cba4cbcfe1db6f5a0800000000000000
+      internalID: -6487790272393753924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_29
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 607
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b26cf9f2faa0f4b80800000000000000
+      internalID: -8408490231742872021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_30
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 607
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c169d46050eab690800000000000000
+      internalID: -7585503986458205757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_31
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 576
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb1e9b8b889690910800000000000000
+      internalID: 1804089161674252734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_32
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 581
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f54a6466d43c1220800000000000000
+      internalID: 2457897592049780214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_33
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 553
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f40d25fd1429b29c0800000000000000
+      internalID: -3950903436470202289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_34
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 560
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90da37634c340af00800000000000000
+      internalID: 1125974416848825609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_35
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 523
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a559cab9ae3f17970800000000000000
+      internalID: 8751043739917260122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_36
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 473
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9844e2a035cdc6090800000000000000
+      internalID: -8039808985551977335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_37
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4e8cdec20d8c61c0800000000000000
+      internalID: -4509074083704697267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_38
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 475
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f9427964d47754e0800000000000000
+      internalID: -1992995854437168653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_39
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 455
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa2e3cd2d4fdf1c10800000000000000
+      internalID: 2026583879913300655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_40
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 340
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58ed3efb6e0d20d80800000000000000
+      internalID: -8285830674927853947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_41
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 344
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efb28ac3b455b0fe0800000000000000
+      internalID: -1221789092272395266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_42
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 345
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc0ce05fb1640bc30800000000000000
+      internalID: 4373072324066197711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_43
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 336
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88aee56246cc41e30800000000000000
+      internalID: 4473425060398295688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_44
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 329
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09c0d8f9855200d20800000000000000
+      internalID: 3242632794270928016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_45
+      rect:
+        serializedVersion: 2
+        x: 1231
+        y: 338
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2731139e9699d0570800000000000000
+      internalID: 8434566357297730418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_46
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 336
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbdbde19bec9f3a80800000000000000
+      internalID: -8484890637363200577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_47
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 324
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c69f4c5c20308e7a0800000000000000
+      internalID: -6347820364335875732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_48
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 330
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6032a06f70352cf0800000000000000
+      internalID: -277762478373195670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_49
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 331
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4428bbe47b56bf30800000000000000
+      internalID: 4590957427879846990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_50
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 328
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25754bfc1bde44250800000000000000
+      internalID: 5928124357476112210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_51
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 327
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0444a6429a89c4d10800000000000000
+      internalID: 2111230177557759040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_52
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 329
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8836f78afff45a7c0800000000000000
+      internalID: -4060751529542458488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_53
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 321
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9123c14303b59f280800000000000000
+      internalID: -9009069316987145703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_54
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 319
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fefd30db60ff6ca40800000000000000
+      internalID: 5388274408601411567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_55
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 283
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 867104d75e6368f40800000000000000
+      internalID: 5730327935152297832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_56
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 74
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7223635ca6521bfc0800000000000000
+      internalID: -3480959896475258329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_57
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 18
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61306cabd22c22a10800000000000000
+      internalID: 1883281095857144598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      KeySprite_0: -4988462400131082715
+      KeySprite_1: 5959992666865731764
+      KeySprite_10: 2435454225143224292
+      KeySprite_11: -7693211595685668064
+      KeySprite_12: 4345845152009399797
+      KeySprite_13: 7902312074503634839
+      KeySprite_14: -8275777715020583741
+      KeySprite_15: 1171087759788884234
+      KeySprite_16: 4721203487945028344
+      KeySprite_17: 3527701316363823213
+      KeySprite_18: 3065395623991913123
+      KeySprite_19: 438061805707239548
+      KeySprite_2: -1302483952159053211
+      KeySprite_20: -811529265077952974
+      KeySprite_21: -7752835335466573941
+      KeySprite_22: 3720730117699061430
+      KeySprite_23: 961595842802726953
+      KeySprite_24: 1460761027404231413
+      KeySprite_25: 7089172416147872173
+      KeySprite_26: 1294431974264505818
+      KeySprite_27: -3819299998638749926
+      KeySprite_28: -6487790272393753924
+      KeySprite_29: -8408490231742872021
+      KeySprite_3: -5190824408239526757
+      KeySprite_30: -7585503986458205757
+      KeySprite_31: 1804089161674252734
+      KeySprite_32: 2457897592049780214
+      KeySprite_33: -3950903436470202289
+      KeySprite_34: 1125974416848825609
+      KeySprite_35: 8751043739917260122
+      KeySprite_36: -8039808985551977335
+      KeySprite_37: -4509074083704697267
+      KeySprite_38: -1992995854437168653
+      KeySprite_39: 2026583879913300655
+      KeySprite_4: 7594656647122324466
+      KeySprite_40: -8285830674927853947
+      KeySprite_41: -1221789092272395266
+      KeySprite_42: 4373072324066197711
+      KeySprite_43: 4473425060398295688
+      KeySprite_44: 3242632794270928016
+      KeySprite_45: 8434566357297730418
+      KeySprite_46: -8484890637363200577
+      KeySprite_47: -6347820364335875732
+      KeySprite_48: -277762478373195670
+      KeySprite_49: 4590957427879846990
+      KeySprite_5: 584417211861250135
+      KeySprite_50: 5928124357476112210
+      KeySprite_51: 2111230177557759040
+      KeySprite_52: -4060751529542458488
+      KeySprite_53: -9009069316987145703
+      KeySprite_54: 5388274408601411567
+      KeySprite_55: 5730327935152297832
+      KeySprite_56: -3480959896475258329
+      KeySprite_57: 1883281095857144598
+      KeySprite_6: -6366458716796552179
+      KeySprite_7: 5685775396852457014
+      KeySprite_8: -6919022750115168524
+      KeySprite_9: 4990411602271492928
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

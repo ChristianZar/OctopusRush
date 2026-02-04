@@ -1,0 +1,398 @@
+fileFormatVersion: 2
+guid: 0d6b03ae5b239d340bd02dbbfdddbcc1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4988462400131082715
+    second: KeySprite_0
+  - first:
+      213: 5959992666865731764
+    second: KeySprite_1
+  - first:
+      213: -1302483952159053211
+    second: KeySprite_2
+  - first:
+      213: -5190824408239526757
+    second: KeySprite_3
+  - first:
+      213: 7594656647122324466
+    second: KeySprite_4
+  - first:
+      213: 584417211861250135
+    second: KeySprite_5
+  - first:
+      213: -6366458716796552179
+    second: KeySprite_6
+  - first:
+      213: 5685775396852457014
+    second: KeySprite_7
+  - first:
+      213: -6919022750115168524
+    second: KeySprite_8
+  - first:
+      213: 4990411602271492928
+    second: KeySprite_9
+  - first:
+      213: 2435454225143224292
+    second: KeySprite_10
+  - first:
+      213: -7693211595685668064
+    second: KeySprite_11
+  - first:
+      213: 4345845152009399797
+    second: KeySprite_12
+  - first:
+      213: 7902312074503634839
+    second: KeySprite_13
+  - first:
+      213: -8275777715020583741
+    second: KeySprite_14
+  - first:
+      213: 1171087759788884234
+    second: KeySprite_15
+  - first:
+      213: 4721203487945028344
+    second: KeySprite_16
+  - first:
+      213: 3527701316363823213
+    second: KeySprite_17
+  - first:
+      213: 3065395623991913123
+    second: KeySprite_18
+  - first:
+      213: 438061805707239548
+    second: KeySprite_19
+  - first:
+      213: -811529265077952974
+    second: KeySprite_20
+  - first:
+      213: -7752835335466573941
+    second: KeySprite_21
+  - first:
+      213: 3720730117699061430
+    second: KeySprite_22
+  - first:
+      213: 961595842802726953
+    second: KeySprite_23
+  - first:
+      213: 1460761027404231413
+    second: KeySprite_24
+  - first:
+      213: 7089172416147872173
+    second: KeySprite_25
+  - first:
+      213: 1294431974264505818
+    second: KeySprite_26
+  - first:
+      213: -3819299998638749926
+    second: KeySprite_27
+  - first:
+      213: -6487790272393753924
+    second: KeySprite_28
+  - first:
+      213: -8408490231742872021
+    second: KeySprite_29
+  - first:
+      213: -7585503986458205757
+    second: KeySprite_30
+  - first:
+      213: 1804089161674252734
+    second: KeySprite_31
+  - first:
+      213: 2457897592049780214
+    second: KeySprite_32
+  - first:
+      213: -3950903436470202289
+    second: KeySprite_33
+  - first:
+      213: 1125974416848825609
+    second: KeySprite_34
+  - first:
+      213: 8751043739917260122
+    second: KeySprite_35
+  - first:
+      213: -8039808985551977335
+    second: KeySprite_36
+  - first:
+      213: -4509074083704697267
+    second: KeySprite_37
+  - first:
+      213: -1992995854437168653
+    second: KeySprite_38
+  - first:
+      213: 2026583879913300655
+    second: KeySprite_39
+  - first:
+      213: -8285830674927853947
+    second: KeySprite_40
+  - first:
+      213: -1221789092272395266
+    second: KeySprite_41
+  - first:
+      213: 4373072324066197711
+    second: KeySprite_42
+  - first:
+      213: 4473425060398295688
+    second: KeySprite_43
+  - first:
+      213: 3242632794270928016
+    second: KeySprite_44
+  - first:
+      213: 8434566357297730418
+    second: KeySprite_45
+  - first:
+      213: -8484890637363200577
+    second: KeySprite_46
+  - first:
+      213: -6347820364335875732
+    second: KeySprite_47
+  - first:
+      213: -277762478373195670
+    second: KeySprite_48
+  - first:
+      213: 4590957427879846990
+    second: KeySprite_49
+  - first:
+      213: 5928124357476112210
+    second: KeySprite_50
+  - first:
+      213: 2111230177557759040
+    second: KeySprite_51
+  - first:
+      213: -4060751529542458488
+    second: KeySprite_52
+  - first:
+      213: -9009069316987145703
+    second: KeySprite_53
+  - first:
+      213: 5388274408601411567
+    second: KeySprite_54
+  - first:
+      213: 5730327935152297832
+    second: KeySprite_55
+  - first:
+      213: -3480959896475258329
+    second: KeySprite_56
+  - first:
+      213: 1883281095857144598
+    second: KeySprite_57
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: KeySprite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 384
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5265bc880eb65cab0800000000000000
+      internalID: -4988462400131082715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_1
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 384
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b8077cc0c526b250800000000000000
+      internalID: 5959992666865731764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 384
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56aa9e11fb5acede0800000000000000
+      internalID: -1302483952159053211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySprite_3
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 384
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9ca47fe3bc76f7b0800000000000000
+      internalID: -5190824408239526757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 3ecbc852063ed8b4485cfc50a2b0d6f6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":384.0,"y":1024.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      KeySprite_0: -4988462400131082715
+      KeySprite_1: 5959992666865731764
+      KeySprite_2: -1302483952159053211
+      KeySprite_3: -5190824408239526757
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

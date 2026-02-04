@@ -48,25 +48,33 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.3.5f1\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AKpowerUp.cs" />
     <Compile Include="Assets\ScoreManager.cs" />
     <Compile Include="Assets\SharkHealth.cs" />
     <Compile Include="Assets\CamaraAutoScroll.cs" />
     <Compile Include="Assets\KeySpawner.cs" />
     <Compile Include="Assets\FloorLooper.cs" />
+    <Compile Include="Assets\Bullet.cs" />
     <Compile Include="Assets\SharkBite.cs" />
     <Compile Include="Assets\SharkAi.cs" />
+    <Compile Include="Assets\TreasureChest.cs" />
     <Compile Include="Assets\LeftBehind.cs" />
     <Compile Include="Assets\Ink.cs" />
     <Compile Include="Assets\SoftCeiling.cs" />
     <Compile Include="Assets\PlayerHealth.cs" />
     <Compile Include="Assets\SharkBiteDamage.cs" />
     <Compile Include="Assets\keyPickup.cs" />
+    <Compile Include="Assets\Prefabs\KeyRotate.cs" />
     <Compile Include="Assets\AutoForward.cs" />
     <Compile Include="Assets\KeyBarUI.cs" />
+    <Compile Include="Assets\SharkSpawner.cs" />
+    <Compile Include="Assets\PlayerShooting.cs" />
     <Compile Include="Assets\InkCloud.cs" />
     <Compile Include="Assets\PlayerController.cs" />
     <Compile Include="Assets\EndlessFloor.cs" />
     <Compile Include="Assets\HealthBar.cs" />
+    <Compile Include="Assets\SharkSway.cs" />
+    <Compile Include="Assets\TreasureChestSpawner.cs" />
     <Compile Include="Assets\TantacleDamage.cs" />
     <Compile Include="Assets\CamaraFollow2D.cs" />
   </ItemGroup>

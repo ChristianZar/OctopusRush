@@ -25,6 +25,22 @@ public class KeyBarUI : MonoBehaviour
         return keysCollected >= keysToFull;
     }
 
+    public bool SpendKeys(int amount)
+{
+    if (keysCollected < amount) return false;
+
+    keysCollected -= amount;
+    keysCollected = Mathf.Clamp(keysCollected, 0, keysToFull);
+    UpdateBar();
+    return true;
+}
+
+public void ResetKeys()
+{
+    keysCollected = 0;
+    UpdateBar();
+}
+
     void UpdateBar()
     {
         if (fillImage == null) return;
