@@ -1046,10 +1046,7 @@ MonoBehaviour:
   cam: {fileID: 0}
   topMargin: 0.6
   ceilingPush: 12
-  animationFrames:
-  - {fileID: 4287472915163087358, guid: 31ced80da8de84b7d929c97d4df3261c, type: 3}
-  - {fileID: -5053907666646600607, guid: 0246036d07fef45a48878821cc313030, type: 3}
-  - {fileID: -1304900050578057775, guid: 28d920227e3bb47c2b82ad6bd36522d4, type: 3}
+  animationFrames: []
   idleAnimationSpeed: 0.15
   moveAnimationSpeed: 0.08
   animateFasterWhenMoving: 1
@@ -2190,11 +2187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::KeyBarUI
   fillImage: {fileID: 944365001}
   keysToFull: 50
-<<<<<<< HEAD
 --- !u!1 &1492976840
-=======
---- !u!1 &1490243169
->>>>>>> ad0f0d26a7942c9ce0f53d4c97f967006530b41a
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2202,33 +2195,21 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
   - component: {fileID: 1492976842}
   - component: {fileID: 1492976841}
   m_Layer: 0
   m_Name: SharkSpawner
-=======
-  - component: {fileID: 1490243171}
-  - component: {fileID: 1490243170}
-  m_Layer: 0
-  m_Name: ObstacleSpawner
->>>>>>> ad0f0d26a7942c9ce0f53d4c97f967006530b41a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
 --- !u!114 &1492976841
-=======
---- !u!114 &1490243170
->>>>>>> ad0f0d26a7942c9ce0f53d4c97f967006530b41a
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 1492976840}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2243,52 +2224,15 @@ MonoBehaviour:
   minDistance: 6
   spawnInterval: 2
 --- !u!4 &1492976842
-=======
-  m_GameObject: {fileID: 1490243169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf340a2ad23614fa4b48f00690280a16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObstacleSpawner
-  obstaclePrefabs:
-  - {fileID: 3952149586380777886, guid: 679419d73ffb1479c9c44f62b90aab98, type: 3}
-  - {fileID: 754573393405031210, guid: 834cb4ebd83e54fb18689f6b9112637e, type: 3}
-  - {fileID: 3456199338709875524, guid: 103b1413617104c79b91e45055043f7f, type: 3}
-  - {fileID: 6789215297499874154, guid: 5fa8f89d531cb4b79b036d906f8c41f4, type: 3}
-  - {fileID: 1949650283078842132, guid: 3d913f75fc3164143945c4dc3cb5e456, type: 3}
-  spawnDistanceAhead: 15
-  spawnSpacing: 5
-  spacingVariation: 2
-  minY: -4
-  maxY: 4
-  destroyDistanceBehind: 15
-  trackedCamera: {fileID: 0}
-  playerTransform: {fileID: 0}
-  trackPlayer: 1
-  useSpawnPatterns: 1
-  patternChance: 0.3
-  increaseDifficulty: 1
-  difficultyIncreaseDistance: 50
-  spacingDecreaseAmount: 0.5
-  minSpawnSpacing: 2
---- !u!4 &1490243171
->>>>>>> ad0f0d26a7942c9ce0f53d4c97f967006530b41a
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 1492976840}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.93359, y: 2.44842, z: 0}
-=======
-  m_GameObject: {fileID: 1490243169}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
->>>>>>> ad0f0d26a7942c9ce0f53d4c97f967006530b41a
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2564,9 +2508,5 @@ SceneRoots:
   - {fileID: 184167699}
   - {fileID: 1590093148}
   - {fileID: 634699434}
-<<<<<<< HEAD
   - {fileID: 1492976842}
   - {fileID: 645949077}
-=======
-  - {fileID: 1490243171}
->>>>>>> ad0f0d26a7942c9ce0f53d4c97f967006530b41a
