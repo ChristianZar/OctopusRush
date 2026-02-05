@@ -1,0 +1,21 @@
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Unity / C#
+*.csproj
+*.sln
+*.user
+*.unityproj
+*.booproj
