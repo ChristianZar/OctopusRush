@@ -84,12 +84,20 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Bullet.prefab
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+=======
+  m_Sprite: {fileID: 5319630538445989422, guid: 2f5b1dd031eed47639705ee3a8bdc27b, type: 3}
+>>>>>>> Stashed changes:Assets/Prefabs/Rock.prefab
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Bullet.prefab
   m_Size: {x: 1, y: 1}
+=======
+  m_Size: {x: 4.9, y: 2.55}
+>>>>>>> Stashed changes:Assets/Prefabs/Rock.prefab
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -155,9 +163,25 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Bullet.prefab
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
 --- !u!114 &1468598474918987689
+=======
+  m_Offset: {x: -0.0059650242, y: -0.014912322}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.9, y: 2.55}
+    newSize: {x: 4.9, y: 2.55}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.7703505, y: 0.7001754}
+  m_EdgeRadius: 0
+--- !u!114 &750703909990836382
+>>>>>>> Stashed changes:Assets/Prefabs/Rock.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,5 +192,14 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2749380feab8508438bdddc1aa4b594a, type: 3}
   m_Name: 
+<<<<<<< Updated upstream:Assets/Prefabs/Bullet.prefab
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   lifeTime: 2
+=======
+  m_EditorClassIdentifier: Assembly-CSharp::ObstacleMover
+  rotate: 1
+  rotationSpeed: 30
+  bob: 0
+  bobSpeed: 2
+  bobAmount: 0.3
+>>>>>>> Stashed changes:Assets/Prefabs/Rock.prefab
