@@ -38,17 +38,17 @@ public class PlayerController : MonoBehaviour
 
     // ========== ANIMATION SETTINGS ==========
     [Header("Animation Settings")]
-    [Tooltip("Octopus animation frames (use octopus_clean_frame1/2/3)")]
-    public Sprite[] animationFrames;
+    [Tooltip("Idle animation frames (when not moving)")]
+    public Sprite[] idleAnimationFrames;
     
-    [Tooltip("Animation speed when idle (higher = faster)")]
+    [Tooltip("Swimming animation frames (when moving)")]
+    public Sprite[] swimmingAnimationFrames;
+    
+    [Tooltip("Animation speed when idle (seconds per frame)")]
     public float idleAnimationSpeed = 0.15f;
     
-    [Tooltip("Animation speed when moving (higher = faster)")]
-    public float moveAnimationSpeed = 0.08f;
-    
-    [Tooltip("Animate faster when moving")]
-    public bool animateFasterWhenMoving = true;
+    [Tooltip("Animation speed when swimming (seconds per frame)")]
+    public float swimmingAnimationSpeed = 0.08f;
     
     [Tooltip("Animate even faster when using ink")]
     public bool animateFasterWhenInking = true;
@@ -56,10 +56,18 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Ink animation speed multiplier")]
     public float inkAnimationSpeedMultiplier = 2f;
     
+    [Header("Sprite Flipping")]
+    [Tooltip("Should sprite flip when moving left/right")]
+    public bool enableFlipping = true;
+    
+    [Tooltip("Input threshold to trigger flipping (0.1 recommended)")]
+    public float flipThreshold = 0.1f;
+    
     // Animation private variables
     private SpriteRenderer spriteRenderer;
     private float animationTimer = 0f;
     private int currentFrameIndex = 0;
+    private bool facingRight = true;
 
     void Awake()
     {
@@ -79,15 +87,15 @@ public class PlayerController : MonoBehaviour
             Debug.LogError("PlayerController needs a SpriteRenderer component for animation!");
         }
         
-        // Set initial sprite if we have animation frames
-        if (animationFrames != null && animationFrames.Length > 0 && spriteRenderer != null)
+        // Set initial sprite from idle animation
+        if (idleAnimationFrames != null && idleAnimationFrames.Length > 0 && spriteRenderer != null)
         {
-            spriteRenderer.sprite = animationFrames[0];
-            Debug.Log($"Animation initialized with {animationFrames.Length} frames");
+            spriteRenderer.sprite = idleAnimationFrames[0];
+            Debug.Log($"Animation initialized - Idle: {idleAnimationFrames.Length} frames, Swimming: {swimmingAnimationFrames?.Length ?? 0} frames");
         }
         else
         {
-            Debug.LogWarning("No animation frames assigned to PlayerController!");
+            Debug.LogWarning("No idle animation frames assigned to PlayerController!");
         }
     }
 
@@ -100,6 +108,9 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
         input = new Vector2(x, y).normalized;
+
+        // ===== HANDLE SPRITE FLIPPING =====
+        HandleFlipping();
 
         // INK COOLDOWN TIMER
         if (inkCooldownTimer > 0f)
@@ -187,31 +198,82 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
+    /// Handles sprite flipping based on horizontal input
+    /// Flips sprite to face left when moving left, right when moving right
+    /// </summary>
+    void HandleFlipping()
+    {
+        if (!enableFlipping) return;
+        if (spriteRenderer == null) return;
+
+        // Check horizontal input
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
+
+        // Only flip if there's significant horizontal input
+        if (Mathf.Abs(horizontalInput) > flipThreshold)
+        {
+            if (horizontalInput > 0 && !facingRight)
+            {
+                // Moving right, currently facing left -> flip to right
+                Flip();
+            }
+            else if (horizontalInput < 0 && facingRight)
+            {
+                // Moving left, currently facing right -> flip to left
+                Flip();
+            }
+        }
+    }
+
+    /// <summary>
+    /// Flips the sprite horizontally
+    /// </summary>
+    void Flip()
+    {
+        facingRight = !facingRight;
+        
+        // Flip by inverting the X scale
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
+    }
+
+    /// <summary>
     /// Updates the octopus sprite animation
-    /// Animates tentacles smoothly through the frames!
+    /// Switches between idle and swimming animations based on movement
+    /// Animates faster when using ink!
     /// </summary>
     void UpdateAnimation()
     {
-        // Skip if no animation frames or no sprite renderer
-        if (animationFrames == null || animationFrames.Length == 0) return;
         if (spriteRenderer == null) return;
 
         // Determine if player is moving
         bool isMoving = input.magnitude > 0.1f;
 
-        // Calculate current animation speed based on state
-        float currentAnimSpeed = idleAnimationSpeed;
+        // Select appropriate animation set
+        Sprite[] currentAnimationSet;
+        float currentAnimSpeed;
 
-        // Moving? Use faster animation
-        if (isMoving && animateFasterWhenMoving)
+        if (isMoving)
         {
-            currentAnimSpeed = moveAnimationSpeed;
+            // Use swimming animation
+            currentAnimationSet = swimmingAnimationFrames;
+            currentAnimSpeed = swimmingAnimationSpeed;
         }
+        else
+        {
+            // Use idle animation
+            currentAnimationSet = idleAnimationFrames;
+            currentAnimSpeed = idleAnimationSpeed;
+        }
+
+        // Skip if no frames available
+        if (currentAnimationSet == null || currentAnimationSet.Length == 0) return;
 
         // Using ink? Animate even faster!
         if (usingInk && animateFasterWhenInking)
         {
-            currentAnimSpeed = moveAnimationSpeed / inkAnimationSpeedMultiplier;
+            currentAnimSpeed = currentAnimSpeed / inkAnimationSpeedMultiplier;
         }
 
         // Update animation timer
@@ -226,13 +288,13 @@ public class PlayerController : MonoBehaviour
             currentFrameIndex++;
 
             // Loop back to start
-            if (currentFrameIndex >= animationFrames.Length)
+            if (currentFrameIndex >= currentAnimationSet.Length)
             {
                 currentFrameIndex = 0;
             }
 
             // Update the sprite
-            spriteRenderer.sprite = animationFrames[currentFrameIndex];
+            spriteRenderer.sprite = currentAnimationSet[currentFrameIndex];
         }
     }
 
@@ -274,5 +336,13 @@ public class PlayerController : MonoBehaviour
     public float GetInkCooldownTimer()
     {
         return inkCooldownTimer;
+    }
+
+    /// <summary>
+    /// Public method to check which direction the player is facing
+    /// </summary>
+    public bool IsFacingRight()
+    {
+        return facingRight;
     }
 }

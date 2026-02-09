@@ -1,0 +1,483 @@
+fileFormatVersion: 2
+guid: f20bf9b0b7bd6420d959afb609d3dc58
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3041970383809997380
+    second: Octopus_0
+  - first:
+      213: -3771765876042405461
+    second: Octopus_1
+  - first:
+      213: -4843423368283092884
+    second: Octopus_2
+  - first:
+      213: -45465870562817968
+    second: Octopus_3
+  - first:
+      213: -6260392431215227753
+    second: Octopus_4
+  - first:
+      213: 7367131644601371944
+    second: Octopus_5
+  - first:
+      213: 7626989339613092885
+    second: Octopus_6
+  - first:
+      213: -1843698165986144608
+    second: Octopus_7
+  - first:
+      213: -8942090923015426470
+    second: Octopus_8
+  - first:
+      213: -5506947785179541251
+    second: Octopus_9
+  - first:
+      213: 5263185281901012879
+    second: Octopus_10
+  - first:
+      213: 4729056675509296531
+    second: Octopus_11
+  - first:
+      213: -4347337062270470910
+    second: Octopus_12
+  - first:
+      213: 2635412061518924531
+    second: Octopus_13
+  - first:
+      213: 44265087737845617
+    second: Octopus_14
+  - first:
+      213: -6703606268347085594
+    second: Octopus_15
+  - first:
+      213: 3093352084723344154
+    second: Octopus_16
+  - first:
+      213: 8179215580392141816
+    second: Octopus_17
+  - first:
+      213: -4592117705822535489
+    second: Octopus_18
+  - first:
+      213: 1247754474821694406
+    second: Octopus_19
+  - first:
+      213: -8085463201183302131
+    second: Octopus_20
+  - first:
+      213: -438970639684287474
+    second: Octopus_21
+  - first:
+      213: 6575117879664571829
+    second: Octopus_22
+  - first:
+      213: 5412000062223299616
+    second: Octopus_23
+  - first:
+      213: -1040900843708051025
+    second: Octopus_24
+  - first:
+      213: 4420388171047644081
+    second: Octopus_25
+  - first:
+      213: -7160258438948565640
+    second: Octopus_26
+  - first:
+      213: 4139360026566310000
+    second: Octopus_27
+  - first:
+      213: 4174833038649174529
+    second: Octopus_28
+  - first:
+      213: 5626135909767684769
+    second: Octopus_29
+  - first:
+      213: 6713146437333729633
+    second: Octopus_30
+  - first:
+      213: 3805869132336339828
+    second: Octopus_31
+  - first:
+      213: 2332570274476247938
+    second: Octopus_32
+  - first:
+      213: 8101075503976891445
+    second: Octopus_33
+  - first:
+      213: -359372350673255115
+    second: Octopus_34
+  - first:
+      213: 8675127511054925643
+    second: Octopus_35
+  - first:
+      213: 1755862376676245167
+    second: Octopus_36
+  - first:
+      213: 2356365544474049884
+    second: Octopus_37
+  - first:
+      213: -7669253384456808577
+    second: Octopus_38
+  - first:
+      213: -2906789568648101242
+    second: Octopus_39
+  - first:
+      213: 4399424224311424867
+    second: Octopus_40
+  - first:
+      213: -2149201961027772408
+    second: Octopus_41
+  - first:
+      213: 4034276221682406803
+    second: Octopus_42
+  - first:
+      213: -4505747492376866813
+    second: Octopus_43
+  - first:
+      213: -1908226779468479228
+    second: Octopus_44
+  - first:
+      213: -5757589601565622423
+    second: Octopus_45
+  - first:
+      213: 170227933616563263
+    second: Octopus_46
+  - first:
+      213: -353581793118784026
+    second: Octopus_47
+  - first:
+      213: -3004916519684722493
+    second: Octopus_48
+  - first:
+      213: 590253736663347856
+    second: Octopus_49
+  - first:
+      213: -6740338917329322438
+    second: Octopus_50
+  - first:
+      213: 5654677344023544843
+    second: Octopus_51
+  - first:
+      213: 4715021066740222850
+    second: Octopus_52
+  - first:
+      213: -2491710461165063028
+    second: Octopus_53
+  - first:
+      213: 477969551950030122
+    second: Octopus_54
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Octopus_0
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 667
+        width: 251
+        height: 218
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b04941e88e89e4f8397f2d468a971436
+      internalID: 3041970383809997380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Octopus_1
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 659
+        width: 286
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48494c525dbfa429d887960a4f38f2c2
+      internalID: -3771765876042405461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Octopus_2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 678
+        width: 234
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d932fb8044a574df480c1a4d778791aa
+      internalID: -4843423368283092884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Octopus_3
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 692
+        width: 292
+        height: 208
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 435c347273d164b39a52b1c71ff7f263
+      internalID: -45465870562817968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Octopus_4
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 163
+        width: 308
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cdb703dce4774196925b76ba21fce5e
+      internalID: -6260392431215227753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Octopus_5
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 160
+        width: 297
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abcb7122aa5c046ac9a2395ff107f66c
+      internalID: 7367131644601371944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Octopus_6
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 179
+        width: 320
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5414f718329214d0399baa794451b7b3
+      internalID: 7626989339613092885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Octopus_7
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 172
+        width: 373
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e5933a06d9d64bc8be2dfa512487b1d
+      internalID: -1843698165986144608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 186d30d8c136849d4b11183931ef52aa
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceOnImport
+        value: False
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":2.0},"gridSpriteSize":{"x":384.0,"y":512.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Octopus_0: 3041970383809997380
+      Octopus_1: -3771765876042405461
+      Octopus_2: -4843423368283092884
+      Octopus_3: -45465870562817968
+      Octopus_4: -6260392431215227753
+      Octopus_5: 7367131644601371944
+      Octopus_6: 7626989339613092885
+      Octopus_7: -1843698165986144608
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

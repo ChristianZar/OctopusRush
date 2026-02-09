@@ -1046,12 +1046,22 @@ MonoBehaviour:
   cam: {fileID: 0}
   topMargin: 0.6
   ceilingPush: 12
-  animationFrames: []
+  idleAnimationFrames:
+  - {fileID: 3041970383809997380, guid: f20bf9b0b7bd6420d959afb609d3dc58, type: 3}
+  - {fileID: -3771765876042405461, guid: f20bf9b0b7bd6420d959afb609d3dc58, type: 3}
+  - {fileID: -4843423368283092884, guid: f20bf9b0b7bd6420d959afb609d3dc58, type: 3}
+  - {fileID: -45465870562817968, guid: f20bf9b0b7bd6420d959afb609d3dc58, type: 3}
+  swimmingAnimationFrames:
+  - {fileID: -6260392431215227753, guid: f20bf9b0b7bd6420d959afb609d3dc58, type: 3}
+  - {fileID: 7367131644601371944, guid: f20bf9b0b7bd6420d959afb609d3dc58, type: 3}
+  - {fileID: 7626989339613092885, guid: f20bf9b0b7bd6420d959afb609d3dc58, type: 3}
+  - {fileID: -1843698165986144608, guid: f20bf9b0b7bd6420d959afb609d3dc58, type: 3}
   idleAnimationSpeed: 0.15
-  moveAnimationSpeed: 0.08
-  animateFasterWhenMoving: 1
+  swimmingAnimationSpeed: 0.08
   animateFasterWhenInking: 1
   inkAnimationSpeedMultiplier: 2
+  enableFlipping: 1
+  flipThreshold: 0.1
 --- !u!58 &367825980
 CircleCollider2D:
   m_ObjectHideFlags: 0
