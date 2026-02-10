@@ -1,0 +1,2678 @@
+fileFormatVersion: 2
+guid: 01c99f7e181a23e48821861779a4b396
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8343103212482650166
+    second: AK47Bubble_0
+  - first:
+      213: 7957734718955821736
+    second: AK47Bubble_1
+  - first:
+      213: -7855790754437819702
+    second: AK47Bubble_2
+  - first:
+      213: -330834713682008529
+    second: AK47Bubble_3
+  - first:
+      213: 6469170377936983368
+    second: AK47Bubble_4
+  - first:
+      213: -5655284789610352757
+    second: AK47Bubble_5
+  - first:
+      213: -5441008273513694546
+    second: AK47Bubble_6
+  - first:
+      213: 8649448455108947011
+    second: AK47Bubble_7
+  - first:
+      213: -8415846160889782798
+    second: AK47Bubble_8
+  - first:
+      213: 6653998770619993325
+    second: AK47Bubble_9
+  - first:
+      213: -8027744977995138891
+    second: AK47Bubble_10
+  - first:
+      213: -830696542856682373
+    second: AK47Bubble_11
+  - first:
+      213: -7608813912260743372
+    second: AK47Bubble_12
+  - first:
+      213: 6668727112964634070
+    second: AK47Bubble_13
+  - first:
+      213: 8370824340832462580
+    second: AK47Bubble_14
+  - first:
+      213: 1733866915042523575
+    second: AK47Bubble_15
+  - first:
+      213: -765756975469403823
+    second: AK47Bubble_16
+  - first:
+      213: 9010879778345648926
+    second: AK47Bubble_17
+  - first:
+      213: -5758334760228031757
+    second: AK47Bubble_18
+  - first:
+      213: -3797450131093203055
+    second: AK47Bubble_19
+  - first:
+      213: 3101361857079260642
+    second: AK47Bubble_20
+  - first:
+      213: -8867381404529850335
+    second: AK47Bubble_21
+  - first:
+      213: 4042666322380331033
+    second: AK47Bubble_22
+  - first:
+      213: 5915295993797470281
+    second: AK47Bubble_23
+  - first:
+      213: 6861310168297299013
+    second: AK47Bubble_24
+  - first:
+      213: 3230437973138383584
+    second: AK47Bubble_25
+  - first:
+      213: -1493458206033787954
+    second: AK47Bubble_26
+  - first:
+      213: -7223097674954432281
+    second: AK47Bubble_27
+  - first:
+      213: -9121470478166618183
+    second: AK47Bubble_28
+  - first:
+      213: 1621530224719134836
+    second: AK47Bubble_29
+  - first:
+      213: -6542203828551331812
+    second: AK47Bubble_30
+  - first:
+      213: 7529728338644354429
+    second: AK47Bubble_31
+  - first:
+      213: 6346888614301215235
+    second: AK47Bubble_32
+  - first:
+      213: 3756738036914156402
+    second: AK47Bubble_33
+  - first:
+      213: 5567636050501747632
+    second: AK47Bubble_34
+  - first:
+      213: -6431073118193085870
+    second: AK47Bubble_35
+  - first:
+      213: -5756999954703754582
+    second: AK47Bubble_36
+  - first:
+      213: 1904806329768943777
+    second: AK47Bubble_37
+  - first:
+      213: 4135585738468379182
+    second: AK47Bubble_38
+  - first:
+      213: 5092921617067708148
+    second: AK47Bubble_39
+  - first:
+      213: 7654938370154616050
+    second: AK47Bubble_40
+  - first:
+      213: 142200638862219308
+    second: AK47Bubble_41
+  - first:
+      213: -6542948907877670193
+    second: AK47Bubble_42
+  - first:
+      213: 960474635037314322
+    second: AK47Bubble_43
+  - first:
+      213: -2500451274562546870
+    second: AK47Bubble_44
+  - first:
+      213: 8267425970807659853
+    second: AK47Bubble_45
+  - first:
+      213: 2593491021402840788
+    second: AK47Bubble_46
+  - first:
+      213: 3393907286285477757
+    second: AK47Bubble_47
+  - first:
+      213: 5794805916814312317
+    second: AK47Bubble_48
+  - first:
+      213: -7078591098488879114
+    second: AK47Bubble_49
+  - first:
+      213: -4245118856677254147
+    second: AK47Bubble_50
+  - first:
+      213: 7157042916208170791
+    second: AK47Bubble_51
+  - first:
+      213: -8215682336353615803
+    second: AK47Bubble_52
+  - first:
+      213: 6006557651797729749
+    second: AK47Bubble_53
+  - first:
+      213: 5062211805961485358
+    second: AK47Bubble_54
+  - first:
+      213: 8739379159551150438
+    second: AK47Bubble_55
+  - first:
+      213: -6756024262861446951
+    second: AK47Bubble_56
+  - first:
+      213: 9156644812262824818
+    second: AK47Bubble_57
+  - first:
+      213: -1126453071634952230
+    second: AK47Bubble_58
+  - first:
+      213: 8175109835657889324
+    second: AK47Bubble_59
+  - first:
+      213: -814035512688801772
+    second: AK47Bubble_60
+  - first:
+      213: -2396556007882720141
+    second: AK47Bubble_61
+  - first:
+      213: -6322897315674336740
+    second: AK47Bubble_62
+  - first:
+      213: -8443298796161637725
+    second: AK47Bubble_63
+  - first:
+      213: -774275817603738066
+    second: AK47Bubble_64
+  - first:
+      213: -6231348797210820202
+    second: AK47Bubble_65
+  - first:
+      213: -1042227352917641914
+    second: AK47Bubble_66
+  - first:
+      213: 4833823730899188694
+    second: AK47Bubble_67
+  - first:
+      213: 4632197621048258400
+    second: AK47Bubble_68
+  - first:
+      213: -1445462357164860980
+    second: AK47Bubble_69
+  - first:
+      213: 3175315008488941818
+    second: AK47Bubble_70
+  - first:
+      213: 4607915222953710724
+    second: AK47Bubble_71
+  - first:
+      213: -4816877618608699447
+    second: AK47Bubble_72
+  - first:
+      213: 7920190570545310708
+    second: AK47Bubble_73
+  - first:
+      213: 2609331295165241870
+    second: AK47Bubble_74
+  - first:
+      213: -5143951532218330510
+    second: AK47Bubble_75
+  - first:
+      213: 9054370331502529830
+    second: AK47Bubble_76
+  - first:
+      213: 7824978891856950775
+    second: AK47Bubble_77
+  - first:
+      213: 3652879365144107601
+    second: AK47Bubble_78
+  - first:
+      213: -4980810051627335826
+    second: AK47Bubble_79
+  - first:
+      213: -7050098976662322726
+    second: AK47Bubble_80
+  - first:
+      213: -7976723161382047861
+    second: AK47Bubble_81
+  - first:
+      213: -1900378496259599013
+    second: AK47Bubble_82
+  - first:
+      213: 6044910161718780308
+    second: AK47Bubble_83
+  - first:
+      213: -1773328211228683427
+    second: AK47Bubble_84
+  - first:
+      213: -1779568266204983869
+    second: AK47Bubble_85
+  - first:
+      213: -2648059464383727898
+    second: AK47Bubble_86
+  - first:
+      213: -8315781296823807028
+    second: AK47Bubble_87
+  - first:
+      213: -1747151357527116614
+    second: AK47Bubble_88
+  - first:
+      213: -8563011047759310440
+    second: AK47Bubble_89
+  - first:
+      213: 3690220579462756177
+    second: AK47Bubble_90
+  - first:
+      213: -5180886887209115894
+    second: AK47Bubble_91
+  - first:
+      213: 4350304561929698806
+    second: AK47Bubble_92
+  - first:
+      213: -8796462243211828813
+    second: AK47Bubble_93
+  - first:
+      213: -1226634247018425955
+    second: AK47Bubble_94
+  - first:
+      213: -7345596328887445744
+    second: AK47Bubble_95
+  - first:
+      213: 3168394613126318696
+    second: AK47Bubble_96
+  - first:
+      213: -1261450500811694327
+    second: AK47Bubble_97
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 600
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AK47Bubble_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 1513
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 630e2780b28a8c370800000000000000
+      internalID: 8343103212482650166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_1
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 943
+        width: 43
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aa9724a09d8f6e60800000000000000
+      internalID: 7957734718955821736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_2
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 815
+        width: 111
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac29feb3eef9af290800000000000000
+      internalID: -7855790754437819702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_3
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 908
+        width: 31
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f26ad9ba493a86bf0800000000000000
+      internalID: -330834713682008529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_4
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 897
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 845d9600f2c17c950800000000000000
+      internalID: 6469170377936983368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_5
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 855
+        width: 87
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8fea9362746481b0800000000000000
+      internalID: -5655284789610352757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_6
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 895
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaa314d8dc7ad74b0800000000000000
+      internalID: -5441008273513694546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 898
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34ce1dd0b83090870800000000000000
+      internalID: 8649448455108947011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_8
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 880
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fd54d77188e43b80800000000000000
+      internalID: -8415846160889782798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_9
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 880
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: decc0b2a0a0c75c50800000000000000
+      internalID: 6653998770619993325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_10
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 887
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b87c2fa978b79090800000000000000
+      internalID: -8027744977995138891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_11
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 679
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b74e1ee35e5c874f0800000000000000
+      internalID: -830696542856682373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_12
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 643
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43fe5ad5f00186690800000000000000
+      internalID: -7608813912260743372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_13
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 607
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d5f5401af31c8c50800000000000000
+      internalID: 6668727112964634070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_14
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 570
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f6238033642b2470800000000000000
+      internalID: 8370824340832462580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_15
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 568
+        width: 9
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b979e6d5ceef0810800000000000000
+      internalID: 1733866915042523575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_16
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 526
+        width: 43
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1516ed4861c7f55f0800000000000000
+      internalID: -765756975469403823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_17
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 544
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e130b0eaa631d0d70800000000000000
+      internalID: 9010879778345648926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_18
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 551
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f2f2d66b094610b0800000000000000
+      internalID: -5758334760228031757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_19
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 513
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 197ddebb93fbc4bc0800000000000000
+      internalID: -3797450131093203055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_20
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 487
+        width: 12
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e5b7236d204a0b20800000000000000
+      internalID: 3101361857079260642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_21
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 486
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 128081f089bb0f480800000000000000
+      internalID: -8867381404529850335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_22
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 485
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9181aeae99f6a1830800000000000000
+      internalID: 4042666322380331033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_23
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 471
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 948e693ad5a571250800000000000000
+      internalID: 5915295993797470281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_24
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 431
+        width: 15
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54cd22bce35483f50800000000000000
+      internalID: 6861310168297299013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_25
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 485
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e2a8d19832d4dc20800000000000000
+      internalID: 3230437973138383584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_26
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 463
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec3c67e9cab264be0800000000000000
+      internalID: -1493458206033787954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_27
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 450
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e0246a2fe662cb90800000000000000
+      internalID: -7223097674954432281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_28
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 424
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bf8aaf7de60a6180800000000000000
+      internalID: -9121470478166618183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_29
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 437
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47081fce525d08610800000000000000
+      internalID: 1621530224719134836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_30
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 422
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c105ffea74c6535a0800000000000000
+      internalID: -6542203828551331812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_31
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 422
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d75c610a708fe7860800000000000000
+      internalID: 7529728338644354429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_32
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 397
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30a2564419da41850800000000000000
+      internalID: 6346888614301215235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_33
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 391
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 273777c275d922430800000000000000
+      internalID: 3756738036914156402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_34
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 376
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b3c0d44d77344d40800000000000000
+      internalID: 5567636050501747632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_35
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 366
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2529981821d30c6a0800000000000000
+      internalID: -6431073118193085870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_36
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 359
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaa51f70b070b10b0800000000000000
+      internalID: -5756999954703754582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_37
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 288
+        width: 63
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a02bcbc34b3f6a10800000000000000
+      internalID: 1904806329768943777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_38
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 344
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2a449f515d846930800000000000000
+      internalID: 4135585738468379182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_39
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 199
+        width: 124
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fe8a3e2a31bda640800000000000000
+      internalID: 5092921617067708148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_40
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 305
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f4d29ad3edcb3a60800000000000000
+      internalID: 7654938370154616050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_41
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 271
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2857364ab239f100800000000000000
+      internalID: 142200638862219308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_42
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 278
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc2eb6262a6c235a0800000000000000
+      internalID: -6542948907877670193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_43
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 271
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21d0c2d779a445d00800000000000000
+      internalID: 960474635037314322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_44
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 171
+        width: 102
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a43d68150dc9c4dd0800000000000000
+      internalID: -2500451274562546870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_45
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 264
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4d54d42e1ccbb270800000000000000
+      internalID: 8267425970807659853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_46
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 249
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4de91e2d75eedf320800000000000000
+      internalID: 2593491021402840788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_47
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 247
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d77e7a7f1b4991f20800000000000000
+      internalID: 3393907286285477757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_48
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 233
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d738c0677494b6050800000000000000
+      internalID: 5794805916814312317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_49
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 228
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f7045066eac3cd90800000000000000
+      internalID: -7078591098488879114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_50
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 235
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfb907634ee4615c0800000000000000
+      internalID: -4245118856677254147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_51
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 168
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72750d6dc9ce25360800000000000000
+      internalID: 7157042916208170791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_52
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 177
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 540013291780cfd80800000000000000
+      internalID: -8215682336353615803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_53
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 171
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d1ee463c549b5350800000000000000
+      internalID: 6006557651797729749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_54
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 169
+        width: 121
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2c7f1811d6904640800000000000000
+      internalID: 5062211805961485358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_55
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 169
+        width: 40
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6698f7ada03884970800000000000000
+      internalID: 8739379159551150438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_56
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 174
+        width: 55
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d029365ab7cd32a0800000000000000
+      internalID: -6756024262861446951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_57
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 178
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27b595951ffe21f70800000000000000
+      internalID: 9156644812262824818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_58
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 176
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adf0d0946e80e50f0800000000000000
+      internalID: -1126453071634952230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_59
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 168
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c26c03af413d37170800000000000000
+      internalID: 8175109835657889324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_60
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 167
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41881af9307f3b4f0800000000000000
+      internalID: -814035512688801772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_61
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 157
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37c72d12209bdbed0800000000000000
+      internalID: -2396556007882720141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_62
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 159
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c12d5fb346e8048a0800000000000000
+      internalID: -6322897315674336740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_63
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 159
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a26d4aba7063da80800000000000000
+      internalID: -8443298796161637725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_64
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 167
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e26dd850f383145f0800000000000000
+      internalID: -774275817603738066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_65
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 154
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69101b6b84dc589a0800000000000000
+      internalID: -6231348797210820202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_66
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 155
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 645f5269eb34981f0800000000000000
+      internalID: -1042227352917641914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_67
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 160
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6db79139211351340800000000000000
+      internalID: 4833823730899188694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_68
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 154
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06fadf3a13fd84040800000000000000
+      internalID: 4632197621048258400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_69
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 151
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc95df005afa0fbe0800000000000000
+      internalID: -1445462357164860980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_70
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 140
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af823fa3d2cf01c20800000000000000
+      internalID: 3175315008488941818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_71
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 138
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48455434b7a92ff30800000000000000
+      internalID: 4607915222953710724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_72
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 136
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c78c48a353072db0800000000000000
+      internalID: -4816877618608699447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_73
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 144
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fb60c66c5b2aed60800000000000000
+      internalID: 7920190570545310708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_74
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 136
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0a52a5fcf4363420800000000000000
+      internalID: 2609331295165241870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_75
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 145
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 272dc44d5530d98b0800000000000000
+      internalID: -5143951532218330510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_76
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 120
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62d4b0a28d597ad70800000000000000
+      internalID: 9054370331502529830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_77
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 127
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f53018f7d8e79c60800000000000000
+      internalID: 7824978891856950775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_78
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 128
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15ad4c6cd62a1b230800000000000000
+      internalID: 3652879365144107601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_79
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 120
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6fbe03c5ab90eab0800000000000000
+      internalID: -4980810051627335826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_80
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 128
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad182b07554092e90800000000000000
+      internalID: -7050098976662322726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_81
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 119
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8f21361c8cfc4190800000000000000
+      internalID: -7976723161382047861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_82
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 119
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b55d7a783df70a5e0800000000000000
+      internalID: -1900378496259599013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_83
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 107
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 491a568c3c5d3e350800000000000000
+      internalID: 6044910161718780308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_84
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 111
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d53198b236fd367e0800000000000000
+      internalID: -1773328211228683427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_85
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 89
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cd4b472714bd47e0800000000000000
+      internalID: -1779568266204983869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_86
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 73
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e6fb4972f3304bd0800000000000000
+      internalID: -2648059464383727898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_87
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 55
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc3dafc28f8689c80800000000000000
+      internalID: -8315781296823807028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_88
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 58
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab431cdd81fd0c7e0800000000000000
+      internalID: -1747151357527116614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_89
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 52
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8919f8222d21a2980800000000000000
+      internalID: -8563011047759310440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_90
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 41
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 157b6bdb01c463330800000000000000
+      internalID: 3690220579462756177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_91
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 43
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0fdb6a53dac918b0800000000000000
+      internalID: -5180886887209115894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_92
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 42
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fdb49e33f26f5c30800000000000000
+      internalID: 4350304561929698806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_93
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 49
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b129390230bce580800000000000000
+      internalID: -8796462243211828813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_94
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 45
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d91532db6ae1afee0800000000000000
+      internalID: -1226634247018425955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_95
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 31
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0171049be033f0a90800000000000000
+      internalID: -7345596328887445744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_96
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 34
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86ac7af1d1668fb20800000000000000
+      internalID: 3168394613126318696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK47Bubble_97
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 37
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90f5165f37d6e7ee0800000000000000
+      internalID: -1261450500811694327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      AK47Bubble_0: 8343103212482650166
+      AK47Bubble_1: 7957734718955821736
+      AK47Bubble_10: -8027744977995138891
+      AK47Bubble_11: -830696542856682373
+      AK47Bubble_12: -7608813912260743372
+      AK47Bubble_13: 6668727112964634070
+      AK47Bubble_14: 8370824340832462580
+      AK47Bubble_15: 1733866915042523575
+      AK47Bubble_16: -765756975469403823
+      AK47Bubble_17: 9010879778345648926
+      AK47Bubble_18: -5758334760228031757
+      AK47Bubble_19: -3797450131093203055
+      AK47Bubble_2: -7855790754437819702
+      AK47Bubble_20: 3101361857079260642
+      AK47Bubble_21: -8867381404529850335
+      AK47Bubble_22: 4042666322380331033
+      AK47Bubble_23: 5915295993797470281
+      AK47Bubble_24: 6861310168297299013
+      AK47Bubble_25: 3230437973138383584
+      AK47Bubble_26: -1493458206033787954
+      AK47Bubble_27: -7223097674954432281
+      AK47Bubble_28: -9121470478166618183
+      AK47Bubble_29: 1621530224719134836
+      AK47Bubble_3: -330834713682008529
+      AK47Bubble_30: -6542203828551331812
+      AK47Bubble_31: 7529728338644354429
+      AK47Bubble_32: 6346888614301215235
+      AK47Bubble_33: 3756738036914156402
+      AK47Bubble_34: 5567636050501747632
+      AK47Bubble_35: -6431073118193085870
+      AK47Bubble_36: -5756999954703754582
+      AK47Bubble_37: 1904806329768943777
+      AK47Bubble_38: 4135585738468379182
+      AK47Bubble_39: 5092921617067708148
+      AK47Bubble_4: 6469170377936983368
+      AK47Bubble_40: 7654938370154616050
+      AK47Bubble_41: 142200638862219308
+      AK47Bubble_42: -6542948907877670193
+      AK47Bubble_43: 960474635037314322
+      AK47Bubble_44: -2500451274562546870
+      AK47Bubble_45: 8267425970807659853
+      AK47Bubble_46: 2593491021402840788
+      AK47Bubble_47: 3393907286285477757
+      AK47Bubble_48: 5794805916814312317
+      AK47Bubble_49: -7078591098488879114
+      AK47Bubble_5: -5655284789610352757
+      AK47Bubble_50: -4245118856677254147
+      AK47Bubble_51: 7157042916208170791
+      AK47Bubble_52: -8215682336353615803
+      AK47Bubble_53: 6006557651797729749
+      AK47Bubble_54: 5062211805961485358
+      AK47Bubble_55: 8739379159551150438
+      AK47Bubble_56: -6756024262861446951
+      AK47Bubble_57: 9156644812262824818
+      AK47Bubble_58: -1126453071634952230
+      AK47Bubble_59: 8175109835657889324
+      AK47Bubble_6: -5441008273513694546
+      AK47Bubble_60: -814035512688801772
+      AK47Bubble_61: -2396556007882720141
+      AK47Bubble_62: -6322897315674336740
+      AK47Bubble_63: -8443298796161637725
+      AK47Bubble_64: -774275817603738066
+      AK47Bubble_65: -6231348797210820202
+      AK47Bubble_66: -1042227352917641914
+      AK47Bubble_67: 4833823730899188694
+      AK47Bubble_68: 4632197621048258400
+      AK47Bubble_69: -1445462357164860980
+      AK47Bubble_7: 8649448455108947011
+      AK47Bubble_70: 3175315008488941818
+      AK47Bubble_71: 4607915222953710724
+      AK47Bubble_72: -4816877618608699447
+      AK47Bubble_73: 7920190570545310708
+      AK47Bubble_74: 2609331295165241870
+      AK47Bubble_75: -5143951532218330510
+      AK47Bubble_76: 9054370331502529830
+      AK47Bubble_77: 7824978891856950775
+      AK47Bubble_78: 3652879365144107601
+      AK47Bubble_79: -4980810051627335826
+      AK47Bubble_8: -8415846160889782798
+      AK47Bubble_80: -7050098976662322726
+      AK47Bubble_81: -7976723161382047861
+      AK47Bubble_82: -1900378496259599013
+      AK47Bubble_83: 6044910161718780308
+      AK47Bubble_84: -1773328211228683427
+      AK47Bubble_85: -1779568266204983869
+      AK47Bubble_86: -2648059464383727898
+      AK47Bubble_87: -8315781296823807028
+      AK47Bubble_88: -1747151357527116614
+      AK47Bubble_89: -8563011047759310440
+      AK47Bubble_9: 6653998770619993325
+      AK47Bubble_90: 3690220579462756177
+      AK47Bubble_91: -5180886887209115894
+      AK47Bubble_92: 4350304561929698806
+      AK47Bubble_93: -8796462243211828813
+      AK47Bubble_94: -1226634247018425955
+      AK47Bubble_95: -7345596328887445744
+      AK47Bubble_96: 3168394613126318696
+      AK47Bubble_97: -1261450500811694327
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -11,11 +11,10 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Optional: destroy bullet when it hits enemies
-        // if (other.CompareTag("Enemy")) { ... }
-        // Destroy(gameObject);
+        // ✅ don't destroy when touching the player
+        if (other.CompareTag("Player")) return;
 
-        // For now, just destroy on anything solid:
+        // destroy on anything solid
         if (!other.isTrigger)
             Destroy(gameObject);
     }

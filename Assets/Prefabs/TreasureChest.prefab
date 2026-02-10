@@ -132,7 +132,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.68, y: 10.24}
+    oldSize: {x: 3.84, y: 5.12}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -153,10 +153,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TreasureChest
   openKey: 101
-  keysRequired: 5
   spawnPoint: {fileID: 5184272226711703634}
-  rewardPrefab: {fileID: 2788338236585047786, guid: 59391340513b5e0478c88fe75b2f4ab6, type: 3}
+  rewardPrefab: {fileID: 5448370876804474881, guid: 708c693b9b0693e4cbaceb24c73de880, type: 3}
   openedSprite: {fileID: 7429822970295999662, guid: ab1778f5224b1fa4a81c593fb74cf31b, type: 3}
+  spawner: {fileID: 0}
 --- !u!1 &2146785894915060797
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,47 +2,61 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
-    [Header("Weapon")]
-    public bool hasAK = false;
-
-    [Header("Bullet")]
-    public GameObject bulletPrefab;     // drag Bullet prefab here
-    public Transform firePoint;         // drag FirePoint here
+    public GameObject bulletPrefab;
+    public Transform firePoint;
     public float bulletSpeed = 12f;
+    public float fireCooldown = 0.12f;
 
-    [Header("Fire Rate")]
-    public float fireCooldown = 0.12f;  // how fast AK shoots
-    private float nextFireTime = 0f;
+    private float nextFireTime;
+    private PlayerWeapon weapon;
+
+    void Start()
+    {
+        weapon = GetComponent<PlayerWeapon>();
+        Debug.Log("PlayerShooting START. weapon found = " + (weapon != null));
+        Debug.Log("bulletPrefab assigned = " + (bulletPrefab != null) + ", firePoint assigned = " + (firePoint != null));
+    }
 
     void Update()
     {
-        if (!hasAK) return;
+        // Prove input is being detected
+        if (Input.GetKeyDown(KeyCode.F))
+            Debug.Log("F pressed (Update running)");
 
-        if (Input.GetMouseButton(0) && Time.time >= nextFireTime)
+        // Require AK equipped
+        if (weapon == null) return;
+        if (weapon.currentWeapon != WeaponType.AK47) return;
+
+        if (Input.GetKey(KeyCode.F) && Time.time >= nextFireTime)
         {
+            Debug.Log("Calling Shoot()");
             Shoot();
             nextFireTime = Time.time + fireCooldown;
         }
     }
 
-    public void GiveAK()
+    void Shoot()
     {
-        hasAK = true;
-        // Debug.Log("AK unlocked!");
-    }
+        if (bulletPrefab == null || firePoint == null)
+        {
+            Debug.LogWarning("Shoot blocked: bulletPrefab or firePoint is NULL");
+            return;
+        }
 
-    private void Shoot()
-    {
-        if (bulletPrefab == null || firePoint == null) return;
+        // Spawn a tiny bit in front so it doesn't start inside the player collider
+        Vector3 spawnPos = firePoint.position + firePoint.right * 0.25f;
 
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        GameObject b = Instantiate(bulletPrefab, spawnPos, firePoint.rotation);
+        Debug.Log("Spawned bullet: " + b.name + " at " + spawnPos);
 
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        Rigidbody2D rb = b.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            rb.linearVelocity = Vector2.right * bulletSpeed; 
-            // if your game scrolls right, bullets go right.
-            // If you want bullets to go toward mouse, tell me and I'll update it.
+            rb.linearVelocity = (Vector2)firePoint.right * bulletSpeed; // use velocity (reliable)
+        }
+        else
+        {
+            Debug.LogWarning("Bullet has NO Rigidbody2D");
         }
     }
 }
