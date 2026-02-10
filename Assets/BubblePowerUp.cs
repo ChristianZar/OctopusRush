@@ -10,19 +10,35 @@ public class BubblePowerup : MonoBehaviour
     [Header("Powerup")]
     public WeaponType weaponToGrant = WeaponType.AK47;
 
+    [Header("Pickup Delay")]
+    public float pickupDelay = 2f;   // ✅ wait before collectible
+
     [Header("FX (optional)")]
     public GameObject popFxPrefab;
 
     private float t;
+    private float spawnTime;
+    private Collider2D myCollider;
 
     void Start()
     {
         Destroy(gameObject, lifetime);
         drift = drift.normalized;
+
+        spawnTime = Time.time;
+
+        // ✅ disable pickup collider at first
+        myCollider = GetComponent<Collider2D>();
+        if (myCollider != null)
+            myCollider.enabled = false;
     }
 
     void Update()
     {
+        // ✅ enable pickup after delay
+        if (myCollider != null && !myCollider.enabled && Time.time >= spawnTime + pickupDelay)
+            myCollider.enabled = true;
+
         // Smooth little float wobble
         t += Time.deltaTime;
         float wobble = Mathf.Sin(t * 3f) * 0.15f;
@@ -33,6 +49,9 @@ public class BubblePowerup : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        // extra safety (in case collider gets enabled weirdly)
+        if (Time.time < spawnTime + pickupDelay) return;
+
         if (!other.CompareTag("Player")) return;
 
         // Give the weapon to the player
@@ -49,4 +68,3 @@ public class BubblePowerup : MonoBehaviour
         Destroy(gameObject);
     }
 }
-

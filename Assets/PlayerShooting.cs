@@ -9,16 +9,24 @@ public class PlayerShooting : MonoBehaviour
 
     private float nextFireTime;
     private PlayerWeapon weapon;
+      private PlayerHealth health;
 
     void Start()
     {
         weapon = GetComponent<PlayerWeapon>();
+        health = GetComponent<PlayerHealth>(); 
         Debug.Log("PlayerShooting START. weapon found = " + (weapon != null));
         Debug.Log("bulletPrefab assigned = " + (bulletPrefab != null) + ", firePoint assigned = " + (firePoint != null));
     }
 
     void Update()
     {
+         // ✅ STOP shooting if dead
+        if (health != null && health.IsDead()) return;
+
+        if (weapon == null) return;
+        if (weapon.currentWeapon != WeaponType.AK47) return;
+
         // Prove input is being detected
         if (Input.GetKeyDown(KeyCode.F))
             Debug.Log("F pressed (Update running)");

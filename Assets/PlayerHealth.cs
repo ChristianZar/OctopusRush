@@ -66,6 +66,10 @@ if (sm != null) sm.SaveLastRun();
     var controller = GetComponent<PlayerController>();
     if (controller != null) controller.enabled = false;
 
+    var shooting = GetComponent<PlayerShooting>();
+    if (shooting != null) shooting.enabled = false;
+
+
     // Enable gravity so the body falls
     var rb = GetComponent<Rigidbody2D>();
     if (rb != null)
@@ -82,6 +86,9 @@ if (sm != null) sm.SaveLastRun();
 
     var camScroll = Camera.main.GetComponent<CameraAutoScroll>();
 if (camScroll != null) camScroll.enabled = false;
+
+
+
 
 }
 
