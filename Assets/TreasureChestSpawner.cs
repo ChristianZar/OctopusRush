@@ -11,7 +11,9 @@ public class TreasureChestSpawner : MonoBehaviour
 
     private Transform player;
     private KeyBarUI keyBar;
-    private bool spawnedThisFull = false;
+
+    private GameObject currentChest;          // track the chest
+    private bool chestOpenedThisCycle = false; // stop spawning after opened until keys fill again
 
     void Start()
     {
@@ -27,24 +29,45 @@ public class TreasureChestSpawner : MonoBehaviour
         if (player == null || keyBar == null || treasureChestPrefab == null)
             return;
 
-        // Spawn ONE chest when bar becomes full
-        if (keyBar.IsFull() && !spawnedThisFull)
-        {
-            float y = Random.Range(minY, maxY);
-            Vector3 spawnPos = new Vector3(
-                player.position.x + spawnAhead,
-                y,
-                0
-            );
-
-            Instantiate(treasureChestPrefab, spawnPos, Quaternion.identity);
-            spawnedThisFull = true;
-        }
-
-        // Allow another chest after keys are spent
+        // If bar is NOT full, reset cycle so chest can spawn next time it becomes full
         if (!keyBar.IsFull())
         {
-            spawnedThisFull = false;
+            chestOpenedThisCycle = false;
+            return;
         }
+
+        // Bar IS full:
+        // If chest isn't opened yet this cycle, ensure one chest exists (respawn if missing)
+        if (!chestOpenedThisCycle && currentChest == null)
+        {
+            SpawnChest();
+        }
+    }
+
+    void SpawnChest()
+    {
+        float y = Random.Range(minY, maxY);
+        Vector3 spawnPos = new Vector3(player.position.x + spawnAhead, y, 0);
+
+        currentChest = Instantiate(treasureChestPrefab, spawnPos, Quaternion.identity);
+
+        // Connect chest back to this spawner so it can notify on open
+        TreasureChest chest = currentChest.GetComponent<TreasureChest>();
+        if (chest != null)
+        {
+            chest.spawner = this;
+        }
+    }
+
+    // ✅ THIS is what your TreasureChest.cs is trying to call
+    public void NotifyChestOpened()
+    {
+        chestOpenedThisCycle = true;
+
+        // Chest opened => bar resets, and no more chest spawns until bar fills again
+        if (keyBar != null)
+            keyBar.ResetKeys();
+
+        currentChest = null;
     }
 }
