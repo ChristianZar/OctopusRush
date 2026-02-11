@@ -20,11 +20,15 @@ public class FloorLooper : MonoBehaviour
         Debug.Log($"{gameObject.name} width = {width}");
     }
 
-    void Update()
+  void Update()
+{
+    if (Camera.main.transform.position.x > transform.position.x + width)
     {
-        if (Camera.main.transform.position.x > transform.position.x + width)
-        {
-            transform.position += Vector3.right * width * 2f;
-        }
+        transform.position += Vector3.right * width * 2f;
+
+        // 🔥 SPAWN NEW CRABS WHEN FLOOR RESETS
+        GetComponent<FloorCrabSpawner>()?.SpawnCrabs();
     }
+}
+
 }
