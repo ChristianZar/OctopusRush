@@ -1016,6 +1016,7 @@ GameObject:
   - component: {fileID: 367825990}
   - component: {fileID: 367825991}
   - component: {fileID: 367825992}
+  - component: {fileID: 367825993}
   m_Layer: 0
   m_Name: Player_Octopus
   m_TagString: Player
@@ -1446,6 +1447,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &367825993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367825978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b303fc5994f6f84fbd9571f7e6188ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InkEntrance
+  inkCloudPrefab: {fileID: 7980751360856455966, guid: ca5c953e9dba66d44940e75ab465f75e, type: 3}
+  delay: 1
+  popScale: 1.25
+  popDuration: 0.2
+  disableDuringIntro: []
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
