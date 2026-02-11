@@ -1178,7 +1178,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 4287472915163087358, guid: 31ced80da8de84b7d929c97d4df3261c, type: 3}
+  m_Sprite: {fileID: 3041970383809997380, guid: f20bf9b0b7bd6420d959afb609d3dc58, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1261,7 +1261,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.03, y: 1.28}
+    oldSize: {x: 2.51, y: 2.18}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1951,6 +1951,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 704592564}
   m_CullTransparentMesh: 1
+--- !u!1 &711785938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 711785939}
+  m_Layer: 0
+  m_Name: CrabSpawnRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &711785939
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711785938}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.292, y: 0.52, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1609397182}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &773947747
 GameObject:
   m_ObjectHideFlags: 0
@@ -2347,6 +2378,37 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1110847136
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1110847137}
+  m_Layer: 0
+  m_Name: CrabLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1110847137
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110847136}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.7, y: -2.94, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1216467420
 GameObject:
   m_ObjectHideFlags: 0
@@ -2618,6 +2680,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1494958069
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1494958070}
+  m_Layer: 0
+  m_Name: CrabSpawnLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1494958070
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494958069}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.381, y: 0.52, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1609397182}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1585708988
 GameObject:
   m_ObjectHideFlags: 0
@@ -2776,6 +2869,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3485b80d0558044ba2f2852e3b08fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FloorLooper
+--- !u!4 &1609397182 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1446353686012544309, guid: ed43c10df4d03914b8fa41c9efc4fd94, type: 3}
+  m_PrefabInstance: {fileID: 6714682990886238974}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1609397183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609397171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2c417d6ade6e9248bf1778806849d09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FloorCrabSpawner
+  crabPrefab: {fileID: 6262809339085150249, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+  spawnLeft: {fileID: 1494958070}
+  spawnRight: {fileID: 711785939}
+  minCrabs: 0
+  maxCrabs: 2
 --- !u!1 &1850416995
 GameObject:
   m_ObjectHideFlags: 0
@@ -2912,6 +3027,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3485b80d0558044ba2f2852e3b08fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FloorLooper
+--- !u!1 &2047468074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2047468075}
+  m_Layer: 0
+  m_Name: CrabRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2047468075
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047468074}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.47, y: -2.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6714682990886238974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2970,7 +3116,13 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 7601b37eb37a69d47a6270d7cad79153, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1446353686012544309, guid: ed43c10df4d03914b8fa41c9efc4fd94, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1494958070}
+    - targetCorrespondingSourceObject: {fileID: 1446353686012544309, guid: ed43c10df4d03914b8fa41c9efc4fd94, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 711785939}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2614173068676701802, guid: ed43c10df4d03914b8fa41c9efc4fd94, type: 3}
       insertIndex: -1
@@ -2978,7 +3130,75 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2614173068676701802, guid: ed43c10df4d03914b8fa41c9efc4fd94, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1609397179}
+    - targetCorrespondingSourceObject: {fileID: 2614173068676701802, guid: ed43c10df4d03914b8fa41c9efc4fd94, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1609397183}
   m_SourcePrefab: {fileID: 100100000, guid: ed43c10df4d03914b8fa41c9efc4fd94, type: 3}
+--- !u!1001 &6982122604070158497
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5465420290918450654, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5465420290918450654, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5465420290918450654, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5465420290918450654, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5465420290918450654, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5465420290918450654, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5465420290918450654, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5465420290918450654, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5465420290918450654, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5465420290918450654, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6262809339085150249, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: m_Name
+      value: Crab
+      objectReference: {fileID: 0}
+    - target: {fileID: 7545818350289337735, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: leftPoint
+      value: 
+      objectReference: {fileID: 1110847137}
+    - target: {fileID: 7545818350289337735, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: rightPoint
+      value: 
+      objectReference: {fileID: 2047468075}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2996,3 +3216,6 @@ SceneRoots:
   - {fileID: 1492976842}
   - {fileID: 645949077}
   - {fileID: 773947749}
+  - {fileID: 6982122604070158497}
+  - {fileID: 1110847137}
+  - {fileID: 2047468075}
