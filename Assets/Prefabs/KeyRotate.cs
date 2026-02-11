@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class KeyRotate : MonoBehaviour
 {
-    public float rotateSpeed = 360f; // degrees per second
+    public float rotateSpeed = 90f; // slower for nicer look
 
     void Update()
     {
-        transform.Rotate(0f, 0f, rotateSpeed * Time.deltaTime);
+        transform.Rotate(0f, rotateSpeed * Time.deltaTime, 0f);
     }
 }

@@ -7,6 +7,9 @@ public class PlayerShooting : MonoBehaviour
     public float bulletSpeed = 12f;
     public float fireCooldown = 0.12f;
 
+       [Header("Audio")]                 
+    public AudioSource gunSound;      
+
     private float nextFireTime;
     private PlayerWeapon weapon;
       private PlayerHealth health;
@@ -56,6 +59,14 @@ public class PlayerShooting : MonoBehaviour
 
         GameObject b = Instantiate(bulletPrefab, spawnPos, firePoint.rotation);
         Debug.Log("Spawned bullet: " + b.name + " at " + spawnPos);
+
+          // ✅ PLAY SOUND HERE (after spawning is fine)
+       // ✅ Sound
+if (gunSound != null && gunSound.clip != null)
+{
+    gunSound.pitch = Random.Range(0.9f, 1.1f);
+    gunSound.PlayOneShot(gunSound.clip);
+}
 
         Rigidbody2D rb = b.GetComponent<Rigidbody2D>();
         if (rb != null)

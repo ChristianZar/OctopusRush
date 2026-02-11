@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 input;
     private Vector2 velocity;
+   
+
 
     public GameObject inkPrefab;
     public Transform inkSpawnPoint;
