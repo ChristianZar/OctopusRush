@@ -9,10 +9,15 @@ public class EndlessFloor : MonoBehaviour
 
     void Start()
     {
-        if (cam == null) cam = Camera.main.transform;
+        if (cam == null && Camera.main != null)
+            cam = Camera.main.transform;
 
-        // Automatically get the width of this floor tile
-        tileWidth = GetComponent<SpriteRenderer>().bounds.size.x;
+        // Get width from the floor sprite
+        var sr = GetComponent<SpriteRenderer>();
+        if (sr != null)
+            tileWidth = sr.bounds.size.x;
+        else
+            tileWidth = GetComponent<BoxCollider2D>().bounds.size.x;
     }
 
     void Update()
@@ -23,6 +28,14 @@ public class EndlessFloor : MonoBehaviour
         if (transform.position.x + tileWidth < cam.position.x - recycleOffset)
         {
             transform.position += Vector3.right * (tileWidth * 2f);
+
+            // spawn fresh crabs for the recycled tile
+            var spawner = GetComponent<FloorCrabSpawner>();
+            if (spawner != null)
+            {
+                spawner.ResetSpawner();
+                spawner.SpawnCrabs();
+            }
         }
     }
 }

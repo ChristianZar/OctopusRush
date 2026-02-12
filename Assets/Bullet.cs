@@ -3,6 +3,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float lifeTime = 2f;
+    public int damage = 20; // change this number
 
     void Start()
     {
@@ -14,7 +15,17 @@ public class Bullet : MonoBehaviour
         // ✅ don't destroy when touching the player
         if (other.CompareTag("Player")) return;
 
-        // destroy on anything solid
+        // ✅ if we hit a shark, damage it + destroy bullet
+       SharkHealth sharkHealth = other.GetComponentInParent<SharkHealth>();
+if (sharkHealth != null)
+{
+    sharkHealth.TakeDamage(damage, transform.position);
+    Destroy(gameObject);
+    return;
+}
+
+
+        // ✅ destroy on anything solid (same behavior as your working script)
         if (!other.isTrigger)
             Destroy(gameObject);
     }

@@ -6,29 +6,23 @@ public class FloorLooper : MonoBehaviour
 
     void Start()
     {
-        // Prefer SpriteRenderer width if present
         var sr = GetComponent<SpriteRenderer>();
-        if (sr != null)
-        {
-            width = sr.bounds.size.x;
-        }
-        else
-        {
-            width = GetComponent<BoxCollider2D>().bounds.size.x;
-        }
-
-        Debug.Log($"{gameObject.name} width = {width}");
+        if (sr != null) width = sr.bounds.size.x;
+        else width = GetComponent<BoxCollider2D>().bounds.size.x;
     }
 
-  void Update()
-{
-    if (Camera.main.transform.position.x > transform.position.x + width)
+    void Update()
     {
-        transform.position += Vector3.right * width * 2f;
+        if (Camera.main != null && Camera.main.transform.position.x > transform.position.x + width)
+        {
+            transform.position += Vector3.right * width * 2f;
 
-        // 🔥 SPAWN NEW CRABS WHEN FLOOR RESETS
-        GetComponent<FloorCrabSpawner>()?.SpawnCrabs();
+            var spawner = GetComponent<FloorCrabSpawner>();
+            if (spawner != null)
+            {
+                spawner.ResetSpawner();
+                spawner.SpawnCrabs();
+            }
+        }
     }
-}
-
 }
