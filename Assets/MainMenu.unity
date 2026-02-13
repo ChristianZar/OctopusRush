@@ -714,12 +714,42 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "CONTROLS\n\n    ARROW KEYS or WASD\n    Move your octopus through the
-    ocean\n\n    SPACEBAR\n    Release ink cloud to escape danger!\n\n    \n    OBJECTIVE\n\n   
-    Survive as long as possible\n    Avoid the scary anglerfish\n    Collect treasure
-    coins\n    Explore the underwater depths\n\n\n    TIPS\n\n    Your ink recharges
-    over time\n    Swift movements help dodge enemies\n    Watch out for dangerous
-    creatures!"
+  m_text: 'CONTROLS
+
+
+    ARROW KEYS or WASD
+
+    Move your octopus
+
+
+    SPACEBAR
+
+    Release
+    ink cloud!
+
+
+
+    OBJECTIVE
+
+
+    Survive as long as possible
+
+    Avoid the
+    dangerous creatures
+
+    Collect treasure coins
+
+
+
+    TIPS
+
+
+    - Ink recharges
+    over time
+
+    - Swift movements dodge enemies
+
+    - Stay calm underwater!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -746,8 +776,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1895,7 +1925,6 @@ GameObject:
   - component: {fileID: 1130359123}
   - component: {fileID: 1130359126}
   - component: {fileID: 1130359127}
-  - component: {fileID: 1130359128}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -2046,22 +2075,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FloatUI
   speed: 2
   height: 10
---- !u!114 &1130359128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1130359121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b011092d1743c424da67237a12084f31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GlowOnHover
-  image: {fileID: 0}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  glowColor: {r: 0.6, g: 1, b: 1, a: 1}
-  speed: 5
 --- !u!1 &1138987995
 GameObject:
   m_ObjectHideFlags: 0
@@ -2089,7 +2102,7 @@ Transform:
   m_GameObject: {fileID: 1138987995}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 91, z: -1}
+  m_LocalPosition: {x: 0, y: 542, z: -1}
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2121,7 +2134,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e9cd89f0ff6894aeb9aba8dfcbca8db9, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2365,7 +2378,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -2429,7 +2442,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.8
+      scalar: 1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -7986,10 +7999,10 @@ RectTransform:
   - {fileID: 1138987996}
   m_Father: {fileID: 378720699}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 90}
-  m_SizeDelta: {x: 1000, y: 800}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 540}
+  m_SizeDelta: {x: 900, y: 400}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2125682115
 MonoBehaviour:
