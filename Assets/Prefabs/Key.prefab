@@ -154,6 +154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pickUpKey
   keyValue: 1
+  pickupSfx: {fileID: 8300000, guid: 94b312d6de2d61f45ab7b50e9a6cd41e, type: 3}
+  volume: 0.8
 --- !u!95 &884760199160482420
 Animator:
   serializedVersion: 7
