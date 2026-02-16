@@ -520,6 +520,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_B
       objectReference: {fileID: 0}
+    - target: {fileID: 2614173068676701802, guid: ed43c10df4d03914b8fa41c9efc4fd94, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3875008730821602932, guid: ed43c10df4d03914b8fa41c9efc4fd94, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -975,9 +979,15 @@ MonoBehaviour:
   inkDrainPerSecond: 40
   inkRechargePerSecond: 20
   inkSpawnRate: 0.2
-  inkPrefab: {fileID: 0}
-  inkSpawnPoint: {fileID: 0}
+  inkForwardOffset: 1.5
+  inkUpOffset: 0
   inkCooldown: 1
+  speedBoostWhileInking: 1
+  inkSpeedMultiplier: 1.6
+  boostRampUpTime: 0.25
+  boostRampDownTime: 0.35
+  boostCooldown: 1.25
+  minInkToStartBoost: 10
   cam: {fileID: 0}
   topMargin: 0.6
   ceilingPush: 12
@@ -2267,7 +2277,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 711785939}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CrabSpawnRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2913,7 +2923,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1352594143}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CrabSpawnLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3081,10 +3091,15 @@ MonoBehaviour:
   sharkPrefab: {fileID: 7577851971774916772, guid: aab9103f79905d34ab5bcc8a1f7a7768, type: 3}
   target: {fileID: 0}
   spawnAhead: 10
+  minSpawnAhead: 10
   minY: -1.5
   maxY: 2
-  minDistance: 6
-  spawnInterval: 2
+  easyDistance: 60
+  rampEndDistance: 250
+  easyMinDistance: 35
+  hardMinDistance: 14
+  easySpawnInterval: 6
+  hardSpawnInterval: 2
 --- !u!4 &1492976842
 Transform:
   m_ObjectHideFlags: 0
@@ -3109,7 +3124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1494958070}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CrabSpawnLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3273,7 +3288,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1545913370}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CrabSpawnRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3395,6 +3410,12 @@ MonoBehaviour:
   maxCrabs: 10
   edgePadding: 0.8
   spawnYOffset: 0.25
+  player: {fileID: 0}
+  startDistance: 80
+  rampEndDistance: 260
+  earlyMax: 2
+  lateMax: 5
+  allowZeroEarly: 1
 --- !u!1 &1648641957
 GameObject:
   m_ObjectHideFlags: 0
@@ -3833,6 +3854,12 @@ MonoBehaviour:
   maxCrabs: 2
   edgePadding: 0.8
   spawnYOffset: 0.25
+  player: {fileID: 0}
+  startDistance: 80
+  rampEndDistance: 260
+  earlyMax: 2
+  lateMax: 5
+  allowZeroEarly: 1
 --- !u!1 &2047468074
 GameObject:
   m_ObjectHideFlags: 0
@@ -3969,6 +3996,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_A
       objectReference: {fileID: 0}
+    - target: {fileID: 2614173068676701802, guid: ed43c10df4d03914b8fa41c9efc4fd94, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3875008730821602932, guid: ed43c10df4d03914b8fa41c9efc4fd94, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -4002,6 +4033,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -46747207352617375, guid: 062d9917eebd8fa4395b0f9bccd539cc, type: 3}
+    - target: {fileID: 3830286219797271960, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5465420290918450654, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4046,6 +4081,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crab
       objectReference: {fileID: 0}
+    - target: {fileID: 6262809339085150249, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7545818350289337735, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
       propertyPath: leftPoint
       value: 
@@ -4054,6 +4093,30 @@ PrefabInstance:
       propertyPath: rightPoint
       value: 
       objectReference: {fileID: 2047468075}
+    - target: {fileID: 7545818350289337735, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: jumpTriggerRangeX
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7545818350289337735, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7545818350289337735, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: jumpUnlockDistance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7843922291941542772, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7843922291941542772, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7843922291941542772, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: m_GravityScale
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
