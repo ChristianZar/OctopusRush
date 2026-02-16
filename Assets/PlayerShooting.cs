@@ -46,36 +46,38 @@ public class PlayerShooting : MonoBehaviour
         }
     }
 
-    void Shoot()
-    {
-        if (bulletPrefab == null || firePoint == null)
-        {
-            Debug.LogWarning("Shoot blocked: bulletPrefab or firePoint is NULL");
-            return;
-        }
-
-        // Spawn a tiny bit in front so it doesn't start inside the player collider
-        Vector3 spawnPos = firePoint.position + firePoint.right * 0.25f;
-
-        GameObject b = Instantiate(bulletPrefab, spawnPos, firePoint.rotation);
-        Debug.Log("Spawned bullet: " + b.name + " at " + spawnPos);
-
-          // ✅ PLAY SOUND HERE (after spawning is fine)
-       // ✅ Sound
-if (gunSound != null && gunSound.clip != null)
+void Shoot()
 {
-    gunSound.pitch = Random.Range(0.9f, 1.1f);
-    gunSound.PlayOneShot(gunSound.clip);
-}
-
-        Rigidbody2D rb = b.GetComponent<Rigidbody2D>();
-        if (rb != null)
-        {
-            rb.linearVelocity = (Vector2)firePoint.right * bulletSpeed; // use velocity (reliable)
-        }
-        else
-        {
-            Debug.LogWarning("Bullet has NO Rigidbody2D");
-        }
+    if (bulletPrefab == null || firePoint == null)
+    {
+        Debug.LogWarning("Shoot blocked: bulletPrefab or firePoint is NULL");
+        return;
     }
+
+    // ✅ 1 = right, -1 = left (based on flip)
+    float dir = Mathf.Sign(transform.localScale.x);
+
+    // ✅ spawn in front based on facing
+    Vector3 spawnPos = firePoint.position + Vector3.right * dir * 0.25f;
+
+    GameObject b = Instantiate(bulletPrefab, spawnPos, Quaternion.identity);
+    Debug.Log("Spawned bullet: " + b.name + " at " + spawnPos);
+
+    // ✅ Sound
+    if (gunSound != null && gunSound.clip != null)
+    {
+        gunSound.pitch = Random.Range(0.9f, 1.1f);
+        gunSound.PlayOneShot(gunSound.clip);
+    }
+
+    Rigidbody2D rb = b.GetComponent<Rigidbody2D>();
+    if (rb != null)
+    {
+        rb.linearVelocity = Vector2.right * dir * bulletSpeed;
+    }
+    else
+    {
+        Debug.LogWarning("Bullet has NO Rigidbody2D");
+    }
+}
 }
