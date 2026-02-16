@@ -7,14 +7,27 @@ public class SharkSpawner : MonoBehaviour
     [Header("Target to spawn ahead of (Player or Camera)")]
     public Transform target;          // drag Player_Octopus or Main Camera here
 
-    public float spawnAhead = 20f;    // how far in front of target
+    [Header("Spawn Area")]
+    public float spawnAhead = 20f;    // base distance in front of target
+    public float minSpawnAhead = 10f; // NEVER spawn closer than this (anti-unfair)
     public float minY = -1.5f;
     public float maxY = 2f;
 
-    public float minDistance = 30f;    // spacing between sharks
-    public float spawnInterval = 15f;
+    [Header("Difficulty by Distance (units ~= meters)")]
+    public float easyDistance = 60f;        // first 60 units = easy
+    public float rampEndDistance = 250f;    // by 250 units = hardest
+
+    [Header("Spacing (minDistance)")]
+    public float easyMinDistance = 35f;
+    public float hardMinDistance = 14f;
+
+    [Header("Spawn Rate (seconds)")]
+    public float easySpawnInterval = 6f;
+    public float hardSpawnInterval = 2.0f;
 
     private float lastSpawnX;
+    private float startX;
+    private float timer;
 
     void Start()
     {
@@ -24,22 +37,45 @@ public class SharkSpawner : MonoBehaviour
             if (p != null) target = p.transform;
         }
 
-        // Start spawning a little ahead of the target
+        if (target != null) startX = target.position.x;
+
         float baseX = (target != null) ? target.position.x : transform.position.x;
         lastSpawnX = baseX + spawnAhead;
 
-        InvokeRepeating(nameof(SpawnShark), 1f, spawnInterval);
+        timer = 0f;
     }
 
-    void SpawnShark()
+    void Update()
     {
         if (sharkPrefab == null || target == null) return;
 
-        // where "in front" is right now
-        float desiredX = target.position.x + spawnAhead;
+        // ---- Difficulty scaling based on distance traveled ----
+        float dist = target.position.x - startX;
 
-        // enforce spacing (don't spawn too close)
-        if (desiredX < lastSpawnX + minDistance)
+        // t = 0 (easy) until easyDistance, then ramps to 1 by rampEndDistance
+        float t = Mathf.InverseLerp(easyDistance, rampEndDistance, dist);
+        t = Mathf.SmoothStep(0f, 1f, t);
+
+        float currentMinDistance = Mathf.Lerp(easyMinDistance, hardMinDistance, t);
+        float currentSpawnInterval = Mathf.Lerp(easySpawnInterval, hardSpawnInterval, t);
+
+        // ---- Timer-based spawning so interval can change ----
+        timer += Time.deltaTime;
+        if (timer < currentSpawnInterval) return;
+
+        // try spawn, then reset timer (even if we didn't spawn, to avoid spam checks)
+        timer = 0f;
+
+        SpawnShark(currentMinDistance);
+    }
+
+    void SpawnShark(float currentMinDistance)
+    {
+        // where "in front" is right now (and enforce a minimum ahead distance)
+        float desiredX = target.position.x + Mathf.Max(spawnAhead, minSpawnAhead);
+
+        // enforce spacing
+        if (desiredX < lastSpawnX + currentMinDistance)
             return;
 
         float spawnX = desiredX;
@@ -48,11 +84,9 @@ public class SharkSpawner : MonoBehaviour
         Vector3 pos = new Vector3(spawnX, spawnY, 0f);
         GameObject shark = Instantiate(sharkPrefab, pos, Quaternion.identity);
 
-if (shark.transform.position.x > target.position.x)
-{
-    shark.transform.localScale = new Vector3(-1, 1, 1);
-}
-
+        // Face toward player (if shark spawns in front, flip to face left)
+        if (shark.transform.position.x > target.position.x)
+            shark.transform.localScale = new Vector3(-1, 1, 1);
 
         lastSpawnX = spawnX;
     }
