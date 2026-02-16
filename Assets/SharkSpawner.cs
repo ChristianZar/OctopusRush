@@ -7,12 +7,12 @@ public class SharkSpawner : MonoBehaviour
     [Header("Target to spawn ahead of (Player or Camera)")]
     public Transform target;          // drag Player_Octopus or Main Camera here
 
-    public float spawnAhead = 10f;    // how far in front of target
+    public float spawnAhead = 20f;    // how far in front of target
     public float minY = -1.5f;
     public float maxY = 2f;
 
-    public float minDistance = 6f;    // spacing between sharks
-    public float spawnInterval = 2f;
+    public float minDistance = 30f;    // spacing between sharks
+    public float spawnInterval = 15f;
 
     private float lastSpawnX;
 
