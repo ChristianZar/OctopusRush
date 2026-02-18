@@ -3,8 +3,11 @@ using UnityEngine;
 
 public class CameraShake : MonoBehaviour
 {
-    private Vector3 shakeOffset;
+    private Vector3 originalPosition;
     private Coroutine routine;
+
+    [Header("Clamp Settings")]
+    [SerializeField] private bool clampY = true;
 
     public void Shake(float duration, float magnitude)
     {
@@ -18,23 +21,28 @@ public class CameraShake : MonoBehaviour
     {
         float elapsed = 0f;
 
+        // Store camera position when shake starts
+        originalPosition = transform.position;
+
         while (elapsed < duration)
         {
-            shakeOffset = new Vector3(
-                Random.Range(-1f, 1f) * magnitude,
-                Random.Range(-1f, 1f) * magnitude,
-                0f
-            );
+            float x = Random.Range(-1f, 1f) * magnitude;
+            float y = Random.Range(-1f, 1f) * magnitude;
 
-            elapsed += Time.deltaTime;
+            Vector3 offset = new Vector3(x, y, 0f);
+            Vector3 targetPos = originalPosition + offset;
+
+            // 🚫 Prevent going below original Y
+            if (clampY && targetPos.y < originalPosition.y)
+                targetPos.y = originalPosition.y;
+
+            transform.position = targetPos;
+
+            elapsed += Time.unscaledDeltaTime; // better for pauses
             yield return null;
         }
 
-        shakeOffset = Vector3.zero;
-    }
-
-    void LateUpdate()
-    {
-        transform.position += shakeOffset;
+        transform.position = originalPosition;
+        routine = null;
     }
 }
