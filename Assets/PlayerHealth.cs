@@ -17,11 +17,15 @@ public class PlayerHealth : MonoBehaviour
     private bool isDead = false;
     private SpriteRenderer sr;
     private GameManager gameManager; // NEW: Reference to GameManager
+    private DamageFX damageFX;
+
 
     void Awake()
-    {
-        sr = GetComponent<SpriteRenderer>();
-    }
+{
+    sr = GetComponent<SpriteRenderer>();
+    damageFX = GetComponent<DamageFX>();
+}
+
 
     void Start()
     {
@@ -41,6 +45,8 @@ public class PlayerHealth : MonoBehaviour
 
         currentHealth -= amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        damageFX?.SpawnBlood();
+
 
         float healthPercent = (float)currentHealth / maxHealth;
         OnHealthChanged?.Invoke(healthPercent);

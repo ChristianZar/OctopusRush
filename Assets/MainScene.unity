@@ -952,6 +952,7 @@ GameObject:
   - component: {fileID: 367825991}
   - component: {fileID: 367825992}
   - component: {fileID: 367825993}
+  - component: {fileID: 367825994}
   m_Layer: 0
   m_Name: Player_Octopus
   m_TagString: Player
@@ -1405,6 +1406,19 @@ MonoBehaviour:
   popScale: 1.25
   popDuration: 0.2
   disableDuringIntro: []
+--- !u!114 &367825994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367825978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e7e510342a8bae4e8fa60edde88cba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageFX
+  bloodPrefab: {fileID: 8529487960689385479, guid: 7e46774ea4781584a83712495faec2a9, type: 3}
 --- !u!1 &515011741
 GameObject:
   m_ObjectHideFlags: 0
@@ -1707,6 +1721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b457fb83f95774dbdb16cd55980692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraShake
+  clampY: 1
 --- !u!1 &567168785
 GameObject:
   m_ObjectHideFlags: 0
@@ -3325,6 +3340,7 @@ MonoBehaviour:
   rockPrefab: {fileID: 3827039390200165617, guid: a3ff63be61ff0cd40afdef597918fc6e, type: 3}
   shadowPrefab: {fileID: 3398254494143133737, guid: fae2fee9b46cf1e4a8c1a24727c05ebf, type: 3}
   cam: {fileID: 519420031}
+  scoreManager: {fileID: 0}
   warningShakeDuration: 0.45
   warningShakeMagnitude: 0.1
   delayBeforeDrop: 0.15
@@ -3335,6 +3351,12 @@ MonoBehaviour:
   triggerCooldown: 0.2
   rockSprites: []
   rockOrderInLayer: 20
+  autoStart: 1
+  startDelay: 2
+  intervalAt0m: 7
+  intervalAt1000m: 3.5
+  metersForMax: 1000
+  extraRocksMax: 3
 --- !u!4 &1499409852
 Transform:
   m_ObjectHideFlags: 0
@@ -4161,6 +4183,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 762275667755158193, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: m_Size.y
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 762275667755158193, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: m_Offset.y
+      value: -2.9652505
+      objectReference: {fileID: 0}
+    - target: {fileID: 845600920608811758, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: m_Size.x
+      value: 3.0911527
+      objectReference: {fileID: 0}
+    - target: {fileID: 845600920608811758, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: m_Size.y
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 845600920608811758, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.9455764
+      objectReference: {fileID: 0}
+    - target: {fileID: 845600920608811758, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 3830286219797271960, guid: dad7cf4482d4cc349b66da40bd37498a, type: 3}
       propertyPath: m_Sprite
       value: 
