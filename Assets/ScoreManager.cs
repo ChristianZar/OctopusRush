@@ -62,4 +62,10 @@ public class ScoreManager : MonoBehaviour
     }
 }
 
+public float GetMeters()
+{
+    return Mathf.Max(0f, scoreTarget.position.x - startX);
+}
+
+
 }
