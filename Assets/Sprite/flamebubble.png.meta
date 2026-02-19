@@ -1,0 +1,728 @@
+fileFormatVersion: 2
+guid: 967a93b7bf5071f4e9c96f5780addff5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9140241759435815151
+    second: flamebubble_0
+  - first:
+      213: -4277897295510318836
+    second: flamebubble_1
+  - first:
+      213: 1085846185565599283
+    second: flamebubble_2
+  - first:
+      213: 5099175041101170015
+    second: flamebubble_3
+  - first:
+      213: -6138558863452308100
+    second: flamebubble_4
+  - first:
+      213: -1873938749144025653
+    second: flamebubble_5
+  - first:
+      213: 5018914863106142023
+    second: flamebubble_6
+  - first:
+      213: 458036492085738578
+    second: flamebubble_7
+  - first:
+      213: 5840742851538630258
+    second: flamebubble_8
+  - first:
+      213: -6731694742492529792
+    second: flamebubble_9
+  - first:
+      213: -8471485597135770949
+    second: flamebubble_10
+  - first:
+      213: 6595640725148657513
+    second: flamebubble_11
+  - first:
+      213: 1552628860226961387
+    second: flamebubble_12
+  - first:
+      213: -4728696585586748636
+    second: flamebubble_13
+  - first:
+      213: 8709010320322729651
+    second: flamebubble_14
+  - first:
+      213: 8991581379585665572
+    second: flamebubble_15
+  - first:
+      213: -8831804578247990725
+    second: flamebubble_16
+  - first:
+      213: 4459639138857816633
+    second: flamebubble_17
+  - first:
+      213: 2476622663587487520
+    second: flamebubble_18
+  - first:
+      213: 4166637384204796749
+    second: flamebubble_19
+  - first:
+      213: -4040858612392888662
+    second: flamebubble_20
+  - first:
+      213: 320581663623197493
+    second: flamebubble_21
+  - first:
+      213: -5975968030263392811
+    second: flamebubble_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: flamebubble_0
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1
+        width: 1248
+        height: 1023
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11703affb86572180800000000000000
+      internalID: -9140241759435815151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamebubble_1
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 936
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c01d083331bd1a4c0800000000000000
+      internalID: -4277897295510318836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamebubble_2
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 924
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 336b95b4a53b11f00800000000000000
+      internalID: 1085846185565599283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamebubble_3
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 935
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f558f5ceea8e3c640800000000000000
+      internalID: 5099175041101170015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamebubble_4
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 929
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7d7917bc357fcaa0800000000000000
+      internalID: -6138558863452308100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamebubble_5
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 929
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc53e6ed2ae6ef5e0800000000000000
+      internalID: -1873938749144025653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamebubble_6
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 903
+        width: 43
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74fae550a74c6a540800000000000000
+      internalID: 5018914863106142023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamebubble_7
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 769
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25cbfe443c54b5600800000000000000
+      internalID: 458036492085738578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamebubble_8
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 753
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 276bc5a8dac7e0150800000000000000
+      internalID: 5840742851538630258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamebubble_9
+      rect:
+        serializedVersion: 2
+        x: 1313
+        y: 741
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08b3e593c473492a0800000000000000
+      internalID: -6731694742492529792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamebubble_10
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 729
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bba62e6bbbc3f6a80800000000000000
+      internalID: -8471485597135770949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamebubble_11
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 527
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 967e5985b4c688b50800000000000000
+      internalID: 6595640725148657513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamebubble_12
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 472
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beff8d1e8bb0c8510800000000000000
+      internalID: 1552628860226961387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamebubble_13
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 414
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 423df75528b406eb0800000000000000
+      internalID: -4728696585586748636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamebubble_14
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 263
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b61c087ebe9cd870800000000000000
+      internalID: 8709010320322729651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamebubble_15
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 151
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42a683310a388cc70800000000000000
+      internalID: 8991581379585665572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamebubble_16
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 152
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b322cdb67802f6580800000000000000
+      internalID: -8831804578247990725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamebubble_17
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 160
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9329c0a2b22d3ed30800000000000000
+      internalID: 4459639138857816633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamebubble_18
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 146
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02f50d9d03bbe5220800000000000000
+      internalID: 2476622663587487520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamebubble_19
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 152
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d43c36900aed2d930800000000000000
+      internalID: 4166637384204796749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamebubble_20
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 151
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa67ebc508cfbe7c0800000000000000
+      internalID: -4040858612392888662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamebubble_21
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 129
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 533b3c5135fe27400800000000000000
+      internalID: 320581663623197493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamebubble_22
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 143
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d54f0f0db8111da0800000000000000
+      internalID: -5975968030263392811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      flamebubble_0: -9140241759435815151
+      flamebubble_1: -4277897295510318836
+      flamebubble_10: -8471485597135770949
+      flamebubble_11: 6595640725148657513
+      flamebubble_12: 1552628860226961387
+      flamebubble_13: -4728696585586748636
+      flamebubble_14: 8709010320322729651
+      flamebubble_15: 8991581379585665572
+      flamebubble_16: -8831804578247990725
+      flamebubble_17: 4459639138857816633
+      flamebubble_18: 2476622663587487520
+      flamebubble_19: 4166637384204796749
+      flamebubble_2: 1085846185565599283
+      flamebubble_20: -4040858612392888662
+      flamebubble_21: 320581663623197493
+      flamebubble_22: -5975968030263392811
+      flamebubble_3: 5099175041101170015
+      flamebubble_4: -6138558863452308100
+      flamebubble_5: -1873938749144025653
+      flamebubble_6: 5018914863106142023
+      flamebubble_7: 458036492085738578
+      flamebubble_8: 5840742851538630258
+      flamebubble_9: -6731694742492529792
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
