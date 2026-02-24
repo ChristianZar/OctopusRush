@@ -6347,6 +6347,63 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageFX
   bloodPrefab: {fileID: 8529487960689385479, guid: 7e46774ea4781584a83712495faec2a9, type: 3}
+--- !u!1001 &449523940
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6803679385586997609, guid: aab9103f79905d34ab5bcc8a1f7a7768, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.92821
+      objectReference: {fileID: 0}
+    - target: {fileID: 6803679385586997609, guid: aab9103f79905d34ab5bcc8a1f7a7768, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.90946
+      objectReference: {fileID: 0}
+    - target: {fileID: 6803679385586997609, guid: aab9103f79905d34ab5bcc8a1f7a7768, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6803679385586997609, guid: aab9103f79905d34ab5bcc8a1f7a7768, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6803679385586997609, guid: aab9103f79905d34ab5bcc8a1f7a7768, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6803679385586997609, guid: aab9103f79905d34ab5bcc8a1f7a7768, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6803679385586997609, guid: aab9103f79905d34ab5bcc8a1f7a7768, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6803679385586997609, guid: aab9103f79905d34ab5bcc8a1f7a7768, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6803679385586997609, guid: aab9103f79905d34ab5bcc8a1f7a7768, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6803679385586997609, guid: aab9103f79905d34ab5bcc8a1f7a7768, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577851971774916772, guid: aab9103f79905d34ab5bcc8a1f7a7768, type: 3}
+      propertyPath: m_Name
+      value: Shark
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aab9103f79905d34ab5bcc8a1f7a7768, type: 3}
 --- !u!1 &515011741
 GameObject:
   m_ObjectHideFlags: 0
@@ -14203,3 +14260,4 @@ SceneRoots:
   - {fileID: 1499409852}
   - {fileID: 6218375173179796071}
   - {fileID: 1949683030}
+  - {fileID: 449523940}
