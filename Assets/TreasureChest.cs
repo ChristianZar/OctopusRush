@@ -75,4 +75,21 @@ public class TreasureChest : MonoBehaviour
         if (other.CompareTag("Player"))
             playerInRange = false;
     }
+
+    private void OnDestroy()
+{
+    // If the chest disappears without being opened, allow a new one to spawn
+    if (!opened && spawner != null)
+    {
+        spawner.NotifyChestDespawned(this);
+    }
+}
+
+private void OnDisable()
+{
+    if (!opened && spawner != null)
+    {
+        spawner.NotifyChestDespawned(this);
+    }
+}
 }

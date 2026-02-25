@@ -14,6 +14,8 @@ public class TreasureChestSpawner : MonoBehaviour
 
     private GameObject currentChest;          // track the chest
     private bool chestOpenedThisCycle = false; // stop spawning after opened until keys fill again
+    [Header("Despawn Settings")]
+public float despawnBehind = 15f;  // how far behind player before we remove chest
 
     void Start()
     {
@@ -24,25 +26,29 @@ public class TreasureChestSpawner : MonoBehaviour
         keyBar = FindFirstObjectByType<KeyBarUI>();
     }
 
-    void Update()
+void Update()
+{
+    if (player == null || keyBar == null || treasureChestPrefab == null)
+        return;
+
+    // ✅ Despawn if player passed it too far
+    if (currentChest != null && currentChest.transform.position.x < player.position.x - despawnBehind)
     {
-        if (player == null || keyBar == null || treasureChestPrefab == null)
-            return;
-
-        // If bar is NOT full, reset cycle so chest can spawn next time it becomes full
-        if (!keyBar.IsFull())
-        {
-            chestOpenedThisCycle = false;
-            return;
-        }
-
-        // Bar IS full:
-        // If chest isn't opened yet this cycle, ensure one chest exists (respawn if missing)
-        if (!chestOpenedThisCycle && currentChest == null)
-        {
-            SpawnChest();
-        }
+        Destroy(currentChest);
+        currentChest = null;
     }
+
+    if (!keyBar.IsFull())
+    {
+        chestOpenedThisCycle = false;
+        return;
+    }
+
+    if (!chestOpenedThisCycle && (currentChest == null || !currentChest))
+    {
+        SpawnChest();
+    }
+}
 
     void SpawnChest()
     {
@@ -70,4 +76,13 @@ public class TreasureChestSpawner : MonoBehaviour
 
         currentChest = null;
     }
+
+    public void NotifyChestDespawned(TreasureChest chest)
+{
+    // Only clear if this is the chest we were tracking
+    if (currentChest != null && chest != null && chest.gameObject == currentChest)
+    {
+        currentChest = null;
+    }
+}
 }
