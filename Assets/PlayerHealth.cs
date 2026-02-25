@@ -6,6 +6,8 @@ public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 5;
     public int currentHealth;
+    public int fishPerHeal = 3;
+    private int fishEatenCounter = 0;
 
     public System.Action<float> OnHealthChanged;
 
@@ -58,6 +60,24 @@ public class PlayerHealth : MonoBehaviour
             Die();
         }
     }
+
+    public void Heal(int amount)
+{
+    if (isDead) return;                    // don’t heal a dead player
+    if (amount <= 0) return;
+
+    int before = currentHealth;
+
+    currentHealth += amount;
+    currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
+    if (currentHealth != before)
+    {
+        float healthPercent = (float)currentHealth / maxHealth;
+        OnHealthChanged?.Invoke(healthPercent);
+        Debug.Log("Healed! Octopus HP: " + currentHealth);
+    }
+}
 
     void Die()
     {
@@ -172,4 +192,17 @@ public class PlayerHealth : MonoBehaviour
     {
         return (float)currentHealth / maxHealth;
     }
+
+    public void OnFishEaten()
+{
+    if (isDead) return;
+    if (currentHealth >= maxHealth) return;
+
+    fishEatenCounter++;
+    if (fishEatenCounter >= fishPerHeal)
+    {
+        fishEatenCounter = 0;
+        Heal(1);
+    }
+}
 }
