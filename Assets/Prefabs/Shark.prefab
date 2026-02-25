@@ -348,6 +348,7 @@ GameObject:
   - component: {fileID: 2425522213193244472}
   - component: {fileID: 4861865998795132166}
   - component: {fileID: 3712932108693024579}
+  - component: {fileID: 5959400445559783715}
   m_Layer: 3
   m_Name: Shark
   m_TagString: Shark
@@ -430,7 +431,7 @@ SpriteRenderer:
   m_Size: {x: 15.36, y: 10.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!50 &2900161326536520163
 Rigidbody2D:
@@ -583,6 +584,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5959400445559783715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7577851971774916772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5de7563571a472b4b96d21a2e18193ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SharkEatFish
+  fishTag: Fish
+  eatCooldown: 0.15
+  bloodPuffPrefab: {fileID: 8529487960689385479, guid: 7e46774ea4781584a83712495faec2a9, type: 3}
+  bloodOffset: {x: 0, y: 0, z: 0}
+  bloodLifeTime: 1.5
 --- !u!1 &9131399296558228864
 GameObject:
   m_ObjectHideFlags: 0
