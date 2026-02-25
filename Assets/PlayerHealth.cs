@@ -42,24 +42,32 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public void TakeDamage(int amount)
+{
+    if (isDead) return;
+
+    // ✅ SHIELD: ignore damage if bubble shield is active
+    var shield = GetComponent<ShieldSystem>();
+    if (shield != null && shield.IsShieldActive)
     {
-        if (isDead) return;
-
-        currentHealth -= amount;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        damageFX?.SpawnBlood();
-
-
-        float healthPercent = (float)currentHealth / maxHealth;
-        OnHealthChanged?.Invoke(healthPercent);
-
-        Debug.Log("Octopus HP: " + currentHealth);
-
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
+        // optional: play a "blocked" effect instead of blood
+        // damageFX?.SpawnShieldHit();
+        return;
     }
+
+    currentHealth -= amount;
+    currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+    damageFX?.SpawnBlood();
+
+    float healthPercent = (float)currentHealth / maxHealth;
+    OnHealthChanged?.Invoke(healthPercent);
+
+    Debug.Log("Octopus HP: " + currentHealth);
+
+    if (currentHealth <= 0)
+    {
+        Die();
+    }
+}
 
     public void Heal(int amount)
 {
