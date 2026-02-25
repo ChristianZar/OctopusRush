@@ -6091,6 +6091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   maxHealth: 20
   currentHealth: 0
+  fishPerHeal: 3
   aliveSprite: {fileID: 0}
   deadSprite: {fileID: 0}
   deathDelay: 1.5
@@ -13763,7 +13764,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 566a0eba19ba4c34eb4a5d8ca3edb66d, type: 3}
+  m_Sprite: {fileID: -6311352213680616822, guid: 687e40ed42c0b48168cc73bb736bd92b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
