@@ -478,19 +478,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1446353686012544309, guid: ed43c10df4d03914b8fa41c9efc4fd94, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 15.2
       objectReference: {fileID: 0}
     - target: {fileID: 1446353686012544309, guid: ed43c10df4d03914b8fa41c9efc4fd94, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1446353686012544309, guid: ed43c10df4d03914b8fa41c9efc4fd94, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.22307241
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1446353686012544309, guid: ed43c10df4d03914b8fa41c9efc4fd94, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.799143
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 1446353686012544309, guid: ed43c10df4d03914b8fa41c9efc4fd94, type: 3}
       propertyPath: m_LocalPosition.z
@@ -531,14 +531,6 @@ PrefabInstance:
     - target: {fileID: 2614173068676701802, guid: ed43c10df4d03914b8fa41c9efc4fd94, type: 3}
       propertyPath: m_Layer
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3875008730821602932, guid: ed43c10df4d03914b8fa41c9efc4fd94, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3875008730821602932, guid: ed43c10df4d03914b8fa41c9efc4fd94, type: 3}
-      propertyPath: m_Size.y
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3875008730821602932, guid: ed43c10df4d03914b8fa41c9efc4fd94, type: 3}
       propertyPath: m_Sprite
@@ -7257,7 +7249,6 @@ MonoBehaviour:
   spawnAhead: 10
   minY: -2
   maxY: 2
-  despawnBehind: 15
 --- !u!4 &645949077
 Transform:
   m_ObjectHideFlags: 0
@@ -13091,13 +13082,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JellyfishSpawner
   jellyfishPrefab: {fileID: 9168818694291533834, guid: 2007b0c82c7654aebb95636faa39ff36, type: 3}
-  spawnAhead: 3
-  groupDistance: 24
-  minCount: 2
-  maxCount: 3
-  xSpacing: 1.6
-  minY: -3
-  maxY: 3
+  spawnCount: 6
+  spawnAreaWidth: 20
+  spawnAreaMinY: -3
+  spawnAreaMaxY: 3
 --- !u!4 &1452678856
 Transform:
   m_ObjectHideFlags: 0
@@ -13505,6 +13493,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EndlessFloor
   cam: {fileID: 0}
   recycleOffset: 5
+  gapBetweenTiles: 1
 --- !u!4 &1609397182 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1446353686012544309, guid: ed43c10df4d03914b8fa41c9efc4fd94, type: 3}
@@ -13949,6 +13938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EndlessFloor
   cam: {fileID: 0}
   recycleOffset: 5
+  gapBetweenTiles: 1
 --- !u!4 &1995588732 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1446353686012544309, guid: ed43c10df4d03914b8fa41c9efc4fd94, type: 3}
@@ -14202,11 +14192,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8170965484597545381, guid: ed43c10df4d03914b8fa41c9efc4fd94, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 15.36
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8170965484597545381, guid: ed43c10df4d03914b8fa41c9efc4fd94, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 3.3
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

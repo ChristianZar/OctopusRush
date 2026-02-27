@@ -38,7 +38,7 @@ public class PlayerHealth : MonoBehaviour
             sr.sprite = aliveSprite;
         
         // NEW: Find GameManager
-        gameManager = FindObjectOfType<GameManager>();
+        gameManager = FindFirstObjectByType<GameManager>();
     }
 
     public void TakeDamage(int amount)
