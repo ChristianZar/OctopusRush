@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
         
         if (scoreManager == null)
         {
-            scoreManager = FindObjectOfType<ScoreManager>();
+            scoreManager = FindFirstObjectByType<ScoreManager>();
         }
         
         // Make sure game over panel is hidden at start
