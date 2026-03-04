@@ -5922,9 +5922,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db35710514d2cc4daaf2562d43b4e0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  moveSpeed: 6
+  riseSpeed: 8
+  fallGravity: 12
+  maxFallSpeed: -10
   acceleration: 8
-  waterDrag: 3
+  screenLockX: 0.2
   inkCloudPrefab: {fileID: 7980751360856455966, guid: e7ebf5c36dc2c494a88a7040dd660cba, type: 3}
   maxInk: 100
   inkDrainPerSecond: 40
@@ -5942,6 +5944,8 @@ MonoBehaviour:
   cam: {fileID: 0}
   topMargin: 0.6
   ceilingPush: 12
+  bottomMargin: 0.5
+  floorPush: 12
   idleAnimationFrames:
   - {fileID: 3041970383809997380, guid: f20bf9b0b7bd6420d959afb609d3dc58, type: 3}
   - {fileID: -3771765876042405461, guid: f20bf9b0b7bd6420d959afb609d3dc58, type: 3}
@@ -5957,7 +5961,6 @@ MonoBehaviour:
   animateFasterWhenInking: 1
   inkAnimationSpeedMultiplier: 2
   enableFlipping: 1
-  flipThreshold: 0.1
 --- !u!58 &367825980
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6089,7 +6092,7 @@ Transform:
   m_GameObject: {fileID: 367825978}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -5.15, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7331,72 +7334,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &695585802
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1280474322017257976, guid: 2007b0c82c7654aebb95636faa39ff36, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.3552814
-      objectReference: {fileID: 0}
-    - target: {fileID: 1280474322017257976, guid: 2007b0c82c7654aebb95636faa39ff36, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.4431031
-      objectReference: {fileID: 0}
-    - target: {fileID: 1280474322017257976, guid: 2007b0c82c7654aebb95636faa39ff36, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1280474322017257976, guid: 2007b0c82c7654aebb95636faa39ff36, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1280474322017257976, guid: 2007b0c82c7654aebb95636faa39ff36, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1280474322017257976, guid: 2007b0c82c7654aebb95636faa39ff36, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1280474322017257976, guid: 2007b0c82c7654aebb95636faa39ff36, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1280474322017257976, guid: 2007b0c82c7654aebb95636faa39ff36, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1280474322017257976, guid: 2007b0c82c7654aebb95636faa39ff36, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1280474322017257976, guid: 2007b0c82c7654aebb95636faa39ff36, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2155435889870140242, guid: 2007b0c82c7654aebb95636faa39ff36, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 9168818694291533834, guid: 2007b0c82c7654aebb95636faa39ff36, type: 3}
-      propertyPath: m_Name
-      value: Jellyfish
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2007b0c82c7654aebb95636faa39ff36, type: 3}
---- !u!1 &695585803 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9168818694291533834, guid: 2007b0c82c7654aebb95636faa39ff36, type: 3}
-  m_PrefabInstance: {fileID: 695585802}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &700562822
 GameObject:
   m_ObjectHideFlags: 0
@@ -13951,11 +13888,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a972438a92e94c85872fd96bee0ff4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JellyfishSpawner
-  jellyfishPrefab: {fileID: 695585803}
+  jellyfishPrefab: {fileID: 0}
   spawnAhead: 10
-  groupDistance: 12
+  groupDistance: 24
   minCount: 2
-  maxCount: 5
+  maxCount: 3
   xSpacing: 1.6
   minY: -3
   maxY: 3
@@ -14373,4 +14310,3 @@ SceneRoots:
   - {fileID: 6218375173179796071}
   - {fileID: 520029301}
   - {fileID: 1861374270}
-  - {fileID: 695585802}
