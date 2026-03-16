@@ -5926,13 +5926,16 @@ MonoBehaviour:
   fallGravity: 12
   maxFallSpeed: -10
   acceleration: 8
+  normalForwardSpeed: 0
+  boostedRiseMultiplier: 1.5
+  boostedFallMultiplier: 0.7
   screenLockX: 0.2
   inkCloudPrefab: {fileID: 7980751360856455966, guid: e7ebf5c36dc2c494a88a7040dd660cba, type: 3}
   maxInk: 100
   inkDrainPerSecond: 40
   inkRechargePerSecond: 20
   inkSpawnRate: 0.2
-  inkForwardOffset: 1.5
+  inkBackwardOffset: 1.5
   inkUpOffset: 0
   inkCooldown: 1
   speedBoostWhileInking: 1
@@ -5961,6 +5964,7 @@ MonoBehaviour:
   animateFasterWhenInking: 1
   inkAnimationSpeedMultiplier: 2
   enableFlipping: 1
+  cameraAutoScroll: {fileID: 519420033}
 --- !u!58 &367825980
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6771,6 +6775,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraAutoScroll
   speed: 3
+  boostMultiplier: 1.8
+  boostLerpSpeed: 6
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0

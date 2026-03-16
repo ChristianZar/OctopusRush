@@ -3,13 +3,18 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
-    public float riseSpeed = 8f;            // upward speed when W is held
-    public float fallGravity = 12f;         // downward pull when W is released
-    public float maxFallSpeed = -10f;       // terminal velocity downward
+    public float riseSpeed = 8f;
+    public float fallGravity = 12f;
+    public float maxFallSpeed = -10f;
     public float acceleration = 8f;
 
+    [Header("Dash / Speed Boost")]
+    public float normalForwardSpeed = 0f;   // keep 0 if player is screen-locked
+    public float boostedRiseMultiplier = 1.5f;
+    public float boostedFallMultiplier = 0.7f;
+
     [Header("Screen Lock")]
-    public float screenLockX = 0.2f;       // viewport X position to lock player (0=left, 1=right)
+    public float screenLockX = 0.2f;
 
     [Header("Ink Ability")]
     public GameObject inkCloudPrefab;
@@ -19,7 +24,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Ink Cloud Spawn")]
     public float inkSpawnRate = 0.2f;
-    public float inkForwardOffset = 1.5f;
+    public float inkBackwardOffset = 1.5f;
     public float inkUpOffset = 0.0f;
 
     [Header("Ink Cooldown")]
@@ -46,10 +51,9 @@ public class PlayerController : MonoBehaviour
     public float ceilingPush = 12f;
 
     [Header("Soft Floor (Screen Based)")]
-    public float bottomMargin = 0.5f;       // how far from bottom edge to stop
-    public float floorPush = 12f;           // how hard to push away from floor
+    public float bottomMargin = 0.5f;
+    public float floorPush = 12f;
 
-    // ===== Animation =====
     [Header("Animation Settings")]
     public Sprite[] idleAnimationFrames;
     public Sprite[] swimmingAnimationFrames;
@@ -66,7 +70,6 @@ public class PlayerController : MonoBehaviour
     private int currentFrameIndex = 0;
     private bool facingRight = true;
 
-    // ===== Internals =====
     private float inkTimer;
     private float currentInk;
     private bool usingInk;
@@ -74,11 +77,14 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 velocity;
 
+    [Header("References")]
+public CameraAutoScroll cameraAutoScroll;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = 0f;       // we handle gravity manually
-        rb.linearDamping = 0f;      // no drag — we control velocity directly
+        rb.gravityScale = 0f;
+        rb.linearDamping = 0f;
 
         currentInk = maxInk;
 
@@ -88,19 +94,16 @@ public class PlayerController : MonoBehaviour
         if (idleAnimationFrames != null && idleAnimationFrames.Length > 0 && spriteRenderer != null)
             spriteRenderer.sprite = idleAnimationFrames[0];
 
-        // Always face right in auto-run
         facingRight = true;
     }
 
     void Update()
     {
-        // Timers
         if (inkCooldownTimer > 0f) inkCooldownTimer -= Time.deltaTime;
         if (boostCooldownTimer > 0f) boostCooldownTimer -= Time.deltaTime;
 
         bool wantsInk = Input.GetKey(KeyCode.Space);
 
-        // ===== INK USAGE =====
         if (wantsInk && currentInk > 0f && inkCooldownTimer <= 0f)
         {
             usingInk = true;
@@ -135,14 +138,13 @@ public class PlayerController : MonoBehaviour
 
         currentInk = Mathf.Clamp(currentInk, 0f, maxInk);
 
-        // ===== BOOST LOGIC =====
         bool canBoost =
             speedBoostWhileInking &&
             boostCooldownTimer <= 0f &&
             currentInk >= minInkToStartBoost &&
             inkCooldownTimer <= 0f;
 
-        bool isBoostingNow = (usingInk && canBoost);
+        bool isBoostingNow = usingInk && canBoost;
 
         float targetBlend = isBoostingNow ? 1f : 0f;
         float rampTime = (targetBlend > boostBlend) ? boostRampUpTime : boostRampDownTime;
@@ -154,6 +156,10 @@ public class PlayerController : MonoBehaviour
             boostCooldownTimer = boostCooldown;
 
         wasBoosting = isBoostingNow;
+        if (cameraAutoScroll != null)
+{
+    cameraAutoScroll.SetBoosting(boostBlend > 0.05f);
+}
 
         UpdateAnimation();
     }
@@ -162,11 +168,11 @@ public class PlayerController : MonoBehaviour
     {
         if (inkCloudPrefab == null) return;
 
-        // Always spawn behind the player (we auto-run right, so ink goes left)
-        float dir = facingRight ? 1f : -1f;
+        // Spawn BEHIND the octopus
+        float behindDir = facingRight ? -1f : 1f;
 
         Vector3 spawnPos = transform.position
-                         + Vector3.right * dir * inkForwardOffset
+                         + Vector3.right * behindDir * inkBackwardOffset
                          + Vector3.up * inkUpOffset;
 
         Instantiate(inkCloudPrefab, spawnPos, Quaternion.identity);
@@ -176,7 +182,6 @@ public class PlayerController : MonoBehaviour
     {
         bool risingInput = Input.GetKey(KeyCode.W);
 
-        // ===== HORIZONTAL: lock player to fixed screen X position =====
         if (cam != null)
         {
             float lockedWorldX = cam.ViewportToWorldPoint(new Vector3(screenLockX, 0.5f, 0f)).x;
@@ -184,22 +189,24 @@ public class PlayerController : MonoBehaviour
             pos.x = lockedWorldX;
             transform.position = pos;
         }
-        velocity.x = 0f;
 
-        // ===== VERTICAL: rise on W, fall when released =====
+        float riseMultiplier = Mathf.Lerp(1f, boostedRiseMultiplier, boostBlend);
+        float fallMultiplier = Mathf.Lerp(1f, boostedFallMultiplier, boostBlend);
+
+        velocity.x = normalForwardSpeed;
+
         if (risingInput)
         {
-            // Smooth rise toward riseSpeed
-            velocity.y = Mathf.Lerp(velocity.y, riseSpeed, acceleration * Time.fixedDeltaTime);
+            float boostedRiseSpeed = riseSpeed * riseMultiplier;
+            velocity.y = Mathf.Lerp(velocity.y, boostedRiseSpeed, acceleration * Time.fixedDeltaTime);
         }
         else
         {
-            // Apply downward gravity manually
-            velocity.y -= fallGravity * Time.fixedDeltaTime;
+            float boostedGravity = fallGravity * fallMultiplier;
+            velocity.y -= boostedGravity * Time.fixedDeltaTime;
             velocity.y = Mathf.Max(velocity.y, maxFallSpeed);
         }
 
-        // ===== SOFT CEILING =====
         if (cam != null)
         {
             float topY = cam.ViewportToWorldPoint(new Vector3(0.5f, 1f, 0f)).y;
@@ -212,7 +219,6 @@ public class PlayerController : MonoBehaviour
                 if (velocity.y > 0f) velocity.y = 0f;
             }
 
-            // ===== SOFT FLOOR =====
             float bottomY = cam.ViewportToWorldPoint(new Vector3(0.5f, 0f, 0f)).y;
             float minY = bottomY + bottomMargin;
 
@@ -231,7 +237,6 @@ public class PlayerController : MonoBehaviour
     {
         if (spriteRenderer == null) return;
 
-        // Always swimming — camera scrolls, player is always in motion
         Sprite[] currentSet = swimmingAnimationFrames;
         float currentSpeed = swimmingAnimationSpeed;
 
@@ -250,7 +255,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // Optional getters
     public float GetCurrentInk() => currentInk;
     public float GetMaxInk() => maxInk;
     public bool IsUsingInk() => usingInk;
