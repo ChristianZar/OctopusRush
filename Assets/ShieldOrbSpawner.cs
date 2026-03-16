@@ -9,10 +9,10 @@ public class ShieldOrbSpawner : MonoBehaviour
     public float maxDelay = 14f;
 
     [Header("Position")]
-    public Transform reference;     // Main Camera
-    public float spawnAhead = 12f;  // how far ahead of camera
-    public float minY = -1.5f;      // playable area
-    public float maxY = 2.0f;       // playable area
+    public Transform reference;
+    public float spawnAhead = 12f;
+    public float minY = -1.5f;
+    public float maxY = 2.0f;
 
     private float timer;
     private float next;
@@ -30,14 +30,16 @@ public class ShieldOrbSpawner : MonoBehaviour
     {
         if (orbPrefab == null || reference == null) return;
 
-        // only one orb at a time
-        if (currentOrb != null) return;
-
-        timer += Time.deltaTime;
-        if (timer >= next)
+        // Clear destroyed reference
+        if (currentOrb == null)
         {
-            Spawn();
-            RollNext();
+            timer += Time.deltaTime;
+
+            if (timer >= next)
+            {
+                Spawn();
+                RollNext();
+            }
         }
     }
 

@@ -24,6 +24,10 @@ public class ShieldOrbPowerUp : MonoBehaviour
     [Header("FX (optional)")]
     public GameObject breakFxPrefab;
 
+    [Header("Cleanup")]
+public Transform reference;
+public float destroyBehindDistance = 15f;
+
     Vector3 pos;            // we’ll manage position manually
     float baseY;            // target Y center for bob
     bool collected;
@@ -32,6 +36,9 @@ public class ShieldOrbPowerUp : MonoBehaviour
     void Start()
     {
         GetComponent<Collider2D>().isTrigger = true;
+
+        if (reference == null && Camera.main != null)
+    reference = Camera.main.transform;
 
         pos = transform.position;
         baseY = pos.y;
@@ -64,6 +71,12 @@ public class ShieldOrbPowerUp : MonoBehaviour
         }
 
         transform.position = pos;
+
+        // Destroy if far behind the camera/player so spawner can make a new one
+if (reference != null && transform.position.x < reference.position.x - destroyBehindDistance)
+{
+    Destroy(gameObject);
+}
     }
 
     IEnumerator EnterRoutine(float startY, float targetY)
