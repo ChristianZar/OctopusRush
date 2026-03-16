@@ -27,6 +27,12 @@ public class PlayerController : MonoBehaviour
     public float inkBackwardOffset = 1.5f;
     public float inkUpOffset = 0.0f;
 
+    [Header("Swim Ink Visual (W key)")]
+    public GameObject swimInkPrefab;
+    public float swimInkSpawnRate = 0.12f;
+    public float swimInkBackwardOffset = 0.15f;
+    public float swimInkDownOffset = 0.8f;
+
     [Header("Ink Cooldown")]
     public float inkCooldown = 1.0f;
     private float inkCooldownTimer = 0f;
@@ -74,6 +80,8 @@ public class PlayerController : MonoBehaviour
     private float currentInk;
     private bool usingInk;
 
+    private float swimInkTimer;
+
     private Rigidbody2D rb;
     private Vector2 velocity;
 
@@ -103,6 +111,8 @@ public CameraAutoScroll cameraAutoScroll;
         if (boostCooldownTimer > 0f) boostCooldownTimer -= Time.deltaTime;
 
         bool wantsInk = Input.GetKey(KeyCode.Space);
+
+        bool wantsSwimInk = Input.GetKey(KeyCode.W);
 
         if (wantsInk && currentInk > 0f && inkCooldownTimer <= 0f)
         {
@@ -160,6 +170,21 @@ public CameraAutoScroll cameraAutoScroll;
 {
     cameraAutoScroll.SetBoosting(boostBlend > 0.05f);
 }
+      // ===== SWIM INK VISUAL (W key only) =====
+if (wantsSwimInk)
+{
+    swimInkTimer += Time.deltaTime;
+
+    if (swimInkTimer >= swimInkSpawnRate)
+    {
+        SpawnSwimInk();
+        swimInkTimer = 0f;
+    }
+}
+else
+{
+    swimInkTimer = 0f;
+}
 
         UpdateAnimation();
     }
@@ -177,6 +202,19 @@ public CameraAutoScroll cameraAutoScroll;
 
         Instantiate(inkCloudPrefab, spawnPos, Quaternion.identity);
     }
+
+    void SpawnSwimInk()
+{
+    if (swimInkPrefab == null) return;
+
+    float behindDir = facingRight ? -1f : 1f;
+
+    Vector3 spawnPos = transform.position
+                     + Vector3.right * behindDir * swimInkBackwardOffset
+                     + Vector3.down * swimInkDownOffset;
+
+    Instantiate(swimInkPrefab, spawnPos, Quaternion.identity);
+}
 
     void FixedUpdate()
     {

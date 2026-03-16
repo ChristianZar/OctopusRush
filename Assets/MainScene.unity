@@ -5937,6 +5937,10 @@ MonoBehaviour:
   inkSpawnRate: 0.2
   inkBackwardOffset: 1.5
   inkUpOffset: 0
+  swimInkPrefab: {fileID: 7980751360856455966, guid: e7ebf5c36dc2c494a88a7040dd660cba, type: 3}
+  swimInkSpawnRate: 0.12
+  swimInkBackwardOffset: 0.15
+  swimInkDownOffset: 0.8
   inkCooldown: 1
   speedBoostWhileInking: 1
   inkSpeedMultiplier: 1.6
