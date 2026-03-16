@@ -69,10 +69,7 @@ public class GameManager : MonoBehaviour
         // Record game start time
         gameStartTime = Time.time;
         
-        // Make sure game is running
         Time.timeScale = 1f;
-        
-        Debug.Log("GameManager initialized successfully");
     }
     
     void Update()
@@ -93,7 +90,6 @@ public class GameManager : MonoBehaviour
     {
         if (isGameOver) return; // Already handling death
         
-        Debug.Log("GameManager: Player died! Showing game over screen.");
         
         isGameOver = true;
         
@@ -142,7 +138,6 @@ public class GameManager : MonoBehaviour
             }
         }
         
-        Debug.Log("Game Over panel displayed");
     }
     
     /// <summary>
@@ -200,28 +195,12 @@ public class GameManager : MonoBehaviour
     {
         if (continuesLeft > 0 && !hasUsedContinue)
         {
-            Debug.Log("Continue clicked - respawning player");
-            
-            // Use the continue
             hasUsedContinue = true;
             continuesLeft--;
-            
-            // Respawn player
             RespawnPlayer();
-            
-            // Hide game over panel
-            if (gameOverPanel != null)
-            {
-                gameOverPanel.SetActive(false);
-            }
-            
-            // Resume game
+            if (gameOverPanel != null) gameOverPanel.SetActive(false);
             Time.timeScale = 1f;
             isGameOver = false;
-        }
-        else
-        {
-            Debug.Log("No continues left or already used");
         }
     }
     
@@ -231,22 +210,10 @@ public class GameManager : MonoBehaviour
     void RespawnPlayer()
     {
         if (player == null) return;
-        
-        Debug.Log("Respawning player...");
-        
-        // Reset player position
         player.transform.position = respawnPosition;
-        
-        // Call PlayerHealth.Respawn() to fully reset the player
         if (playerHealth != null && resetHealthOnRespawn)
-        {
             playerHealth.Respawn();
-        }
-        
-        // Re-enable player GameObject if it was disabled
         player.SetActive(true);
-        
-        Debug.Log($"Player respawned at {respawnPosition}");
     }
     
     /// <summary>
@@ -254,26 +221,13 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void OnRestartClicked()
     {
-        Debug.Log("Restart clicked - reloading scene");
-        
-        // Resume time before loading scene
         Time.timeScale = 1f;
-        
-        // Reload the current scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    
-    /// <summary>
-    /// Quit button - return to main menu
-    /// </summary>
+
     public void OnQuitClicked()
     {
-        Debug.Log("Quit clicked - returning to main menu");
-        
-        // Resume time before loading scene
         Time.timeScale = 1f;
-        
-        // Load main menu scene
         SceneManager.LoadScene("MainMenu");
     }
     

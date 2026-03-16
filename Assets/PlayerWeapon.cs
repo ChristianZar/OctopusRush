@@ -22,6 +22,5 @@ public class PlayerWeapon : MonoBehaviour
         if (ak47Visual != null)
             ak47Visual.SetActive(currentWeapon == WeaponType.AK47);
 
-        Debug.Log("Equipped: " + currentWeapon);
     }
 }

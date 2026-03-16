@@ -8,22 +8,28 @@ public class TentacleDamage : MonoBehaviour
 
     private Collider2D col;
     private float nextAttackTime = 0f;
+    private PlayerWeapon playerWeapon;
 
     void Start()
     {
         col = GetComponent<Collider2D>();
-        col.enabled = false; // off until you press attack
+        col.enabled = false;
+
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+            playerWeapon = player.GetComponent<PlayerWeapon>();
     }
 
     void Update()
     {
+        // Skip tentacle attack if player has a ranged weapon equipped (F key used for shooting)
+        if (playerWeapon != null && playerWeapon.currentWeapon != WeaponType.None)
+            return;
+
         if (Time.time < nextAttackTime) return;
 
-        // Press F to attack (change key if you want)
-       if (Input.GetKeyDown(KeyCode.F))
-
+        if (Input.GetKeyDown(KeyCode.F))
         {
-             Debug.Log("F pressed -> Tentacle attack");
             nextAttackTime = Time.time + attackCooldown;
             StartCoroutine(DoAttack());
         }
@@ -38,12 +44,8 @@ public class TentacleDamage : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Only damage objects that have SharkHealth
         SharkHealth shark = other.GetComponentInParent<SharkHealth>();
         if (shark != null)
-        {
             shark.TakeDamage(damage);
-            Debug.Log("Tentacle HIT shark for " + damage);
-        }
     }
 }

@@ -12,14 +12,14 @@ public class CrabPatrol : MonoBehaviour
 
     [Header("Jumping (Unlock at 400m)")]
     public bool enableJumping = true;
-    public float jumpUnlockDistance = 0f;     // ✅ TEST: set 0
-    public float jumpCooldown = 1.0f;         // ✅ TEST: faster
+    public float jumpUnlockDistance = 400f;
+    public float jumpCooldown = 2.5f;
     public float jumpForceY = 7.5f;
     public float jumpForceX = 3.5f;
-    public float jumpTriggerRangeX = 999f;    // ✅ TEST: always in range
+    public float jumpTriggerRangeX = 8f;
 
     [Header("Ground Check")]
-    public float groundCheckDistance = 0.6f;  // ✅ TEST: bigger
+    public float groundCheckDistance = 0.6f;
     public LayerMask groundLayer;             // set to Ground in inspector
 
     private float speed;
@@ -96,50 +96,24 @@ public class CrabPatrol : MonoBehaviour
         }
 
         float distance = player.position.x - runStartX;
-        if (distance < jumpUnlockDistance)
-        {
-            Debug.Log("Jump blocked: distance=" + distance);
-            return;
-        }
+        if (distance < jumpUnlockDistance) return;
 
         float dx = player.position.x - transform.position.x;
-        if (Mathf.Abs(dx) > jumpTriggerRangeX)
-        {
-            Debug.Log("Jump blocked: range dx=" + dx);
-            return;
-        }
+        if (Mathf.Abs(dx) > jumpTriggerRangeX) return;
 
-        bool grounded = IsGrounded();
-        Debug.Log("Grounded? " + grounded);
-
-        if (!grounded)
-        {
-            Debug.Log("Jump blocked: not grounded");
-            return;
-        }
+        if (!IsGrounded()) return;
 
         float dir = Mathf.Sign(dx == 0 ? 1 : dx);
         rb.linearVelocity = new Vector2(dir * jumpForceX, jumpForceY);
-
-        Debug.Log("✅ CRAB JUMP!");
         jumpTimer = jumpCooldown;
-
-        Debug.Log("Distance: " + distance);
-Debug.Log("IsGrounded: " + IsGrounded());
     }
 
  bool IsGrounded()
 {
-    // Start from bottom of the crab collider
     float extraHeight = 0.05f;
     Bounds bounds = GetComponent<Collider2D>().bounds;
-
     Vector2 origin = new Vector2(bounds.center.x, bounds.min.y + extraHeight);
-
     RaycastHit2D hit = Physics2D.Raycast(origin, Vector2.down, groundCheckDistance, groundLayer);
-
-    Debug.DrawRay(origin, Vector2.down * groundCheckDistance, hit.collider ? Color.green : Color.red);
-
     return hit.collider != null;
 }
 }
