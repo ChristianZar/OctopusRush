@@ -16,6 +16,11 @@ public class PlayerHealth : MonoBehaviour
     public Sprite deadSprite;    // your "X eyes + blood" sprite later
     public float deathDelay = 1.5f;
 
+    [Header("Survival Drain")]
+public bool useHealthDrain = true;
+public float secondsPerDrain = 8f;   // lose 1 HP every 8 seconds
+private float drainTimer = 0f;
+
     private bool isDead = false;
     private SpriteRenderer sr;
     private GameManager gameManager; // NEW: Reference to GameManager
@@ -150,6 +155,8 @@ public class PlayerHealth : MonoBehaviour
         // Reset health
         currentHealth = maxHealth;
         isDead = false;
+        drainTimer = 0f;
+        fishEatenCounter = 0;
         
         // Notify UI
         OnHealthChanged?.Invoke(1f);
@@ -211,6 +218,39 @@ public class PlayerHealth : MonoBehaviour
     {
         fishEatenCounter = 0;
         Heal(1);
+    }
+}
+
+void Update()
+{
+    if (isDead) return;
+    if (!useHealthDrain) return;
+
+    drainTimer += Time.deltaTime;
+
+    if (drainTimer >= secondsPerDrain)
+    {
+        drainTimer = 0f;
+        TakeDrainDamage(1);
+    }
+}
+
+void TakeDrainDamage(int amount)
+{
+    if (isDead) return;
+
+    // shield should probably NOT block hunger/energy drain
+    currentHealth -= amount;
+    currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
+    float healthPercent = (float)currentHealth / maxHealth;
+    OnHealthChanged?.Invoke(healthPercent);
+
+    Debug.Log("Drain damage. Octopus HP: " + currentHealth);
+
+    if (currentHealth <= 0)
+    {
+        Die();
     }
 }
 }
