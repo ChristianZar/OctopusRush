@@ -4,17 +4,14 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class ShieldOrbPowerUp : MonoBehaviour
 {
-    [Header("Enter From Ceiling")]
-    public bool enterFromTop = true;
-    public float enterDistance = 3.5f;      // how far above it starts
-    public float enterDuration = 0.6f;      // how fast it glides down
+    [Header("Enter From Top")]
+    public float dropSpeed = 2.5f;
+    public float targetY = 1.5f;
 
-    [Header("Forward Drift (Player chases it)")]
-    public float forwardSpeed = 2.2f;       // set slightly faster than camera scroll
-
-    [Header("Bob (after it enters)")]
-    public float bobSpeed = 2f;
-    public float bobAmount = 0.25f;
+    [Header("Forward Zig-Zag")]
+    public float forwardSpeed = 2.5f;
+    public float zigZagAmplitude = 1.2f;
+    public float zigZagFrequency = 2.5f;
 
     [Header("Pickup Sequence")]
     public float freezeTime = 0.20f;
@@ -25,74 +22,65 @@ public class ShieldOrbPowerUp : MonoBehaviour
     public GameObject breakFxPrefab;
 
     [Header("Cleanup")]
-public Transform reference;
-public float destroyBehindDistance = 15f;
+    public Transform reference;
+    public float destroyBehindDistance = 15f;
 
-    Vector3 pos;            // we’ll manage position manually
-    float baseY;            // target Y center for bob
-    bool collected;
-    bool entered;
+    [Header("Vertical Limits")]
+    public float minZigZagY = -2.8f;
+    public float maxZigZagY = 3.8f;
+
+    private Vector3 pos;
+    private bool collected;
+    private bool startedZigZag;
+    private float zigZagTimer;
+    private float startY;
 
     void Start()
     {
         GetComponent<Collider2D>().isTrigger = true;
 
         if (reference == null && Camera.main != null)
-    reference = Camera.main.transform;
+            reference = Camera.main.transform;
 
         pos = transform.position;
-        baseY = pos.y;
-
-        if (enterFromTop)
-        {
-            // start above ceiling and glide down to baseY
-            pos.y = baseY + enterDistance;
-            transform.position = pos;
-            StartCoroutine(EnterRoutine(pos.y, baseY));
-        }
-        else
-        {
-            entered = true;
-        }
+        startY = pos.y;
     }
 
     void Update()
     {
         if (collected) return;
 
-        // move forward always
-        pos.x += forwardSpeed * Time.deltaTime;
-
-        // bob only after entering
-        if (entered)
+        if (!startedZigZag)
         {
-            float yOffset = Mathf.Sin(Time.time * bobSpeed) * bobAmount;
-            pos.y = baseY + yOffset;
+            // Step 1: drop from top
+            pos.y -= dropSpeed * Time.deltaTime;
+
+            if (pos.y <= targetY)
+            {
+                pos.y = targetY;
+                startedZigZag = true;
+                startY = pos.y;
+                zigZagTimer = 0f;
+            }
+        }
+        else
+        {
+            // Step 2: move forward with bigger zig-zag
+            zigZagTimer += Time.deltaTime;
+            pos.x += forwardSpeed * Time.deltaTime;
+
+            float waveY = startY + Mathf.Sin(zigZagTimer * zigZagFrequency) * zigZagAmplitude;
+
+            // keep it within upper/lower bounds
+            pos.y = Mathf.Clamp(waveY, minZigZagY, maxZigZagY);
         }
 
         transform.position = pos;
 
-        // Destroy if far behind the camera/player so spawner can make a new one
-if (reference != null && transform.position.x < reference.position.x - destroyBehindDistance)
-{
-    Destroy(gameObject);
-}
-    }
-
-    IEnumerator EnterRoutine(float startY, float targetY)
-    {
-        float t = 0f;
-        while (t < enterDuration)
+        if (reference != null && transform.position.x < reference.position.x - destroyBehindDistance)
         {
-            t += Time.deltaTime;
-            float k = Mathf.Clamp01(t / enterDuration);
-            pos.y = Mathf.Lerp(startY, targetY, k);
-            transform.position = pos;
-            yield return null;
+            Destroy(gameObject);
         }
-
-        baseY = targetY;
-        entered = true;
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -107,7 +95,6 @@ if (reference != null && transform.position.x < reference.position.x - destroyBe
     {
         collected = true;
 
-        // Freeze world briefly
         float old = Time.timeScale;
         Time.timeScale = 0f;
 
@@ -117,7 +104,6 @@ if (reference != null && transform.position.x < reference.position.x - destroyBe
         if (breakFxPrefab != null)
             Instantiate(breakFxPrefab, transform.position, Quaternion.identity);
 
-        // Activate shield
         var shield = player.GetComponent<ShieldSystem>();
         if (shield != null)
             shield.ActivateShield();

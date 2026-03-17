@@ -8,11 +8,20 @@ public class ShieldOrbSpawner : MonoBehaviour
     public float minDelay = 7f;
     public float maxDelay = 14f;
 
-    [Header("Position")]
+    [Header("Reference")]
     public Transform reference;
-    public float spawnAhead = 12f;
-    public float minY = -1.5f;
-    public float maxY = 2.0f;
+
+    [Header("Spawn Area Around Camera")]
+    public float spawnAhead = 14f;
+    public float spawnBehind = 4f;
+    public float minY = -3.5f;
+    public float maxY = 4.5f;
+
+    [Header("Spawn Sides")]
+    public bool spawnFromTop = true;
+    public bool spawnFromRight = true;
+    public bool spawnFromBottom = false;
+    public bool spawnFromLeft = false;
 
     private float timer;
     private float next;
@@ -30,7 +39,6 @@ public class ShieldOrbSpawner : MonoBehaviour
     {
         if (orbPrefab == null || reference == null) return;
 
-        // Clear destroyed reference
         if (currentOrb == null)
         {
             timer += Time.deltaTime;
@@ -49,11 +57,34 @@ public class ShieldOrbSpawner : MonoBehaviour
         next = Random.Range(minDelay, maxDelay);
     }
 
-    void Spawn()
-    {
-        float targetY = Random.Range(minY, maxY);
-        Vector3 pos = new Vector3(reference.position.x + spawnAhead, targetY, 0f);
+  void Spawn()
+{
+    float randomX = reference.position.x + Random.Range(10f, 18f);
+    float topY = maxY + 3f;
 
-        currentOrb = Instantiate(orbPrefab, pos, Quaternion.identity);
+    Vector3 pos = new Vector3(randomX, topY, 0f);
+
+    currentOrb = Instantiate(orbPrefab, pos, Quaternion.identity);
+
+    ShieldOrbPowerUp orb = currentOrb.GetComponent<ShieldOrbPowerUp>();
+    if (orb != null)
+    {
+        orb.reference = reference;
+        orb.targetY = Random.Range(minY, maxY);
+    }
+}
+
+    int GetRandomSide()
+    {
+        System.Collections.Generic.List<int> sides = new System.Collections.Generic.List<int>();
+
+        if (spawnFromTop) sides.Add(0);
+        if (spawnFromRight) sides.Add(1);
+        if (spawnFromBottom) sides.Add(2);
+        if (spawnFromLeft) sides.Add(3);
+
+        if (sides.Count == 0) return 1;
+
+        return sides[Random.Range(0, sides.Count)];
     }
 }
