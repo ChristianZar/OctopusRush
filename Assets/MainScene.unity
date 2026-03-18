@@ -604,6 +604,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 367825983}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &286113494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 286113496}
+  - component: {fileID: 286113495}
+  m_Layer: 0
+  m_Name: ShrimpSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &286113495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286113494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c7b3090250c4894e97e22079eafa8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShrimpSpawner
+  shrimpPrefab: {fileID: 7842450921785167906, guid: aa2a846eae6eea94f95a98e8bb5d49bd, type: 3}
+  cam: {fileID: 519420031}
+  spawnInterval: 3
+  maxShrimpAlive: 8
+  spawnOffsetX: 2
+  minYViewport: 0.2
+  maxYViewport: 0.8
+  destroyBehindX: 4
+--- !u!4 &286113496
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286113494}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.41214, y: -2.28318, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &291320289
 GameObject:
   m_ObjectHideFlags: 0
@@ -6127,6 +6179,8 @@ MonoBehaviour:
   aliveSprite: {fileID: 0}
   deadSprite: {fileID: 0}
   deathDelay: 1.5
+  useHealthDrain: 1
+  secondsPerDrain: 8
 --- !u!61 &367825985
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6828,8 +6882,13 @@ MonoBehaviour:
   maxDelay: 12
   reference: {fileID: 519420032}
   spawnAhead: 12
+  spawnBehind: 4
   minY: -1.5
   maxY: 2
+  spawnFromTop: 1
+  spawnFromRight: 1
+  spawnFromBottom: 0
+  spawnFromLeft: 0
 --- !u!4 &520029301
 Transform:
   m_ObjectHideFlags: 0
@@ -14129,6 +14188,77 @@ MonoBehaviour:
   scoreManager: {fileID: 634699433}
   respawnPosition: {x: 0, y: 0, z: 0}
   resetHealthOnRespawn: 1
+--- !u!1001 &3663198920377450971
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 348833214806391448, guid: aa2a846eae6eea94f95a98e8bb5d49bd, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 367825983}
+    - target: {fileID: 7842450921785167906, guid: aa2a846eae6eea94f95a98e8bb5d49bd, type: 3}
+      propertyPath: m_Name
+      value: shrimp_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7993115415679020666, guid: aa2a846eae6eea94f95a98e8bb5d49bd, type: 3}
+      propertyPath: m_Radius
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7993115415679020666, guid: aa2a846eae6eea94f95a98e8bb5d49bd, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198350475251506216, guid: aa2a846eae6eea94f95a98e8bb5d49bd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198350475251506216, guid: aa2a846eae6eea94f95a98e8bb5d49bd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198350475251506216, guid: aa2a846eae6eea94f95a98e8bb5d49bd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198350475251506216, guid: aa2a846eae6eea94f95a98e8bb5d49bd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198350475251506216, guid: aa2a846eae6eea94f95a98e8bb5d49bd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198350475251506216, guid: aa2a846eae6eea94f95a98e8bb5d49bd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198350475251506216, guid: aa2a846eae6eea94f95a98e8bb5d49bd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198350475251506216, guid: aa2a846eae6eea94f95a98e8bb5d49bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198350475251506216, guid: aa2a846eae6eea94f95a98e8bb5d49bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198350475251506216, guid: aa2a846eae6eea94f95a98e8bb5d49bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
+    - {fileID: -5782166871780248010, guid: aa2a846eae6eea94f95a98e8bb5d49bd, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aa2a846eae6eea94f95a98e8bb5d49bd, type: 3}
 --- !u!1001 &6218375173179796071
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14320,3 +14450,5 @@ SceneRoots:
   - {fileID: 6218375173179796071}
   - {fileID: 520029301}
   - {fileID: 1861374270}
+  - {fileID: 3663198920377450971}
+  - {fileID: 286113496}
