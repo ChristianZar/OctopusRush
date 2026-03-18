@@ -18,7 +18,7 @@ public class PlayerHealth : MonoBehaviour
 
     [Header("Survival Drain")]
 public bool useHealthDrain = true;
-public float secondsPerDrain = 8f;   // lose 1 HP every 8 seconds
+public float secondsPerDrain = 2f;   // lose 1 HP every 8 seconds
 private float drainTimer = 0f;
 
     private bool isDead = false;
