@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7993115415679020666}
   - component: {fileID: 3139306364575472525}
   - component: {fileID: 348833214806391448}
+  - component: {fileID: -2172346695449274314}
   m_Layer: 0
   m_Name: shrimp_0
   m_TagString: Untagged
@@ -151,8 +152,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 1.5
+  m_Offset: {x: -0.01153857, y: 0.0115391}
+  m_Radius: 0.4846118
 --- !u!50 &3139306364575472525
 Rigidbody2D:
   serializedVersion: 5
@@ -198,3 +199,17 @@ MonoBehaviour:
   scareRadius: 2.5
   fleeSpeed: 5
   smoothSpeed: 6
+--- !u!114 &-2172346695449274314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7842450921785167906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb347384a5f26d34a86733bba3af666b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShrimpPickup
+  bloodPuffPrefab: {fileID: 8529487960689385479, guid: 7e46774ea4781584a83712495faec2a9, type: 3}
+  bloodOffset: {x: 0, y: 0, z: 0}
