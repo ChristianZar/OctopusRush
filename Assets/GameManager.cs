@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     
     private bool isGameOver = false;
     private float gameStartTime;
+    private float deathTime;
     
     void Start()
     {
@@ -88,17 +89,14 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void PlayerDied()
     {
-        if (isGameOver) return; // Already handling death
-        
-        
+        if (isGameOver) return;
+
         isGameOver = true;
-        
-        // Save the last run score before showing game over
+        deathTime = Time.time;
+
         if (scoreManager != null)
-        {
             scoreManager.SaveLastRun();
-        }
-        
+
         ShowGameOver();
     }
     
@@ -140,51 +138,27 @@ public class GameManager : MonoBehaviour
         
     }
     
-    /// <summary>
-    /// Updates the game over stats text
-    /// </summary>
     void UpdateStatsDisplay()
     {
         if (gameOverStatsText == null) return;
-        
-        // Calculate time survived
-        float timeSurvived = Time.time - gameStartTime;
+
+        float timeSurvived = Mathf.Max(0f, deathTime - gameStartTime);
         int minutes = Mathf.FloorToInt(timeSurvived / 60f);
         int seconds = Mathf.FloorToInt(timeSurvived % 60f);
-        
-        // Get scores from ScoreManager if available
-        float currentMeters = 0f;
-        float lastMeters = 0f;
-        float bestMeters = 0f;
-        
-        if (scoreManager != null && scoreManager.scoreTarget != null)
-        {
-            // Calculate current run meters
-            currentMeters = Mathf.Max(0f, scoreManager.scoreTarget.position.x);
-            
-            // Get saved scores
-            lastMeters = PlayerPrefs.GetFloat("LAST_SCORE", 0f);
-            bestMeters = PlayerPrefs.GetFloat("BEST_SCORE", 0f);
-        }
-        
-        // Build stats text
-        string statsText = "";
-        
-        // Add big "YOU DIED" message
-    
-        statsText += "<size=80>YOUR RUN</size>\n";
-        statsText += $"<size=56><b>Distance:</b> {Mathf.FloorToInt(currentMeters)}m </size>\n";
-        statsText += $"<size=56><b>Time:</b> {minutes}:{seconds:00} </size>\n\n";
-        
-        // Check if new best score
-        if (currentMeters > bestMeters && bestMeters > 0)
-        {
-            statsText += "<size=40><color=#FFD700>★ NEW BEST! ★</color></size>\n\n";
-        }
-        
-        statsText += $"<size=28><color=#AAAAAA>Last: {Mathf.FloorToInt(lastMeters)}m</color>\n";
-        statsText += $"<color=#FFFF88>Best: {Mathf.FloorToInt(bestMeters)}m</color></size>";
-        
+
+        float currentMeters = scoreManager != null ? scoreManager.GetMeters() : 0f;
+        float lastMeters = PlayerPrefs.GetFloat("LAST_SCORE", 0f);
+        float bestMeters = PlayerPrefs.GetFloat("BEST_SCORE", 0f);
+
+        string statsText = $"<b>Distance</b>   {Mathf.FloorToInt(currentMeters)} m\n" +
+                           $"<b>Time</b>   {minutes}:{seconds:00}\n\n";
+
+        if (currentMeters > bestMeters && currentMeters > 0)
+            statsText += "<color=#FFD700>★  NEW BEST!  ★</color>\n\n";
+
+        statsText += $"<color=#AAAAAA>Last run   {Mathf.FloorToInt(lastMeters)} m\n" +
+                     $"Best   {Mathf.FloorToInt(bestMeters)} m</color>";
+
         gameOverStatsText.text = statsText;
     }
     
