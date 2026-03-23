@@ -218,6 +218,8 @@ else
 
     void FixedUpdate()
     {
+        if (cam == null) cam = Camera.main;
+
         bool risingInput = Input.GetKey(KeyCode.W);
 
         if (cam != null)

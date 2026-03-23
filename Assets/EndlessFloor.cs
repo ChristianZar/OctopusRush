@@ -12,17 +12,38 @@ public class EndlessFloor : MonoBehaviour
         if (cam == null && Camera.main != null)
             cam = Camera.main.transform;
 
-        // Get width from the floor sprite
+        InitTileWidth();
+    }
+
+    void InitTileWidth()
+    {
         var sr = GetComponent<SpriteRenderer>();
-        if (sr != null)
+        if (sr == null) sr = GetComponentInChildren<SpriteRenderer>();
+        if (sr != null && sr.bounds.size.x > 0)
+        {
             tileWidth = sr.bounds.size.x;
-        else
-            tileWidth = GetComponent<BoxCollider2D>().bounds.size.x;
+            return;
+        }
+
+        var col = GetComponent<BoxCollider2D>();
+        if (col == null) col = GetComponentInChildren<BoxCollider2D>();
+        if (col != null)
+            tileWidth = col.bounds.size.x;
     }
 
     void Update()
     {
-        if (cam == null) return;
+        if (cam == null)
+        {
+            if (Camera.main != null) cam = Camera.main.transform;
+            else return;
+        }
+
+        if (tileWidth <= 0)
+        {
+            InitTileWidth();
+            return;
+        }
 
         // If this tile is fully behind the camera, move it forward
         if (transform.position.x + tileWidth < cam.position.x - recycleOffset)
