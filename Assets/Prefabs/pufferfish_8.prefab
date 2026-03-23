@@ -132,7 +132,7 @@ MonoBehaviour:
   normalTime: 2.5
   inflatedTime: 2
   contactDamage: 1
-  bloodPuffPrefab: {fileID: 0}
+  bloodPuffPrefab: {fileID: 8529487960689385479, guid: 7e46774ea4781584a83712495faec2a9, type: 3}
   bloodOffset: {x: 0, y: 0, z: 0}
 --- !u!58 &-3002216538195851406
 CircleCollider2D:
