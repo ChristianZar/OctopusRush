@@ -147,8 +147,13 @@ MonoBehaviour:
   explode2Sprite: {fileID: 4794421619490200746, guid: dfd6335bdcfbb41fd8c6effa593a5cc2, type: 3}
   warningDuration: 1
   explodeFrameTime: 0.12
+  chainDelay: 0.15
   damage: 2
   damageRadius: 3
-  chainRadius: 3
+  shakeDuration: 0.35
+  shakeMagnitude: 0.18
   shakeAmount: 0.06
   shakeSpeed: 25
+  pulseStartSpeed: 2
+  pulseEndSpeed: 10
+  linkedMines: []
