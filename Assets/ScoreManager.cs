@@ -51,15 +51,10 @@ public class ScoreManager : MonoBehaviour
 
     void UpdateUI(float meters)
 {
-    float last = PlayerPrefs.GetFloat(LAST_KEY, 0f);
-
     if (scoreText != null)
-    {
-        scoreText.text =
-            $"Meters: {Mathf.FloorToInt(meters)}\n" +
-            $"Last: {Mathf.FloorToInt(last)}\n" +
-            $"Best: {Mathf.FloorToInt(bestScore)}";
-    }
+        scoreText.text = $"{Mathf.FloorToInt(meters)} m";
+
+    // lastText and bestText are now only shown on the game over panel — leave them alone here
 }
 
 public float GetMeters()

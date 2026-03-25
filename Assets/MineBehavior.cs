@@ -131,6 +131,7 @@ public class MineBehavior : MonoBehaviour
         DealDamage();
         ShakeCamera();
         TriggerLinkedMines();
+        AudioManager.Instance?.PlayMineExplode();
 
         yield return new WaitForSeconds(explodeFrameTime);
 

@@ -12,33 +12,36 @@ public class JellyfishWander2D : MonoBehaviour
     public float bobSpeed = 1.2f;
     public float bobAmount = 0.18f;
 
-    [Header("Bounds (optional)")]
-    public bool useBounds = true;
-    public Vector2 minBounds = new Vector2(-8f, -4f);
-    public Vector2 maxBounds = new Vector2( 8f,  4f);
+    [Header("Vertical Bounds")]
+    public float minY = -4f;
+    public float maxY =  4f;
+
+    [Header("Cleanup")]
+    public float destroyBehindCameraX = 2f;  // world units behind the left edge before destroying
 
     Vector2 dir = Vector2.right;
     float nextTurnTime;
     Vector3 startPos;
     float bobOffset;
-        private SpriteRenderer sr; 
+    private SpriteRenderer sr;
+    private Camera cam;
 
-   void Start()
-{
-    sr = GetComponent<SpriteRenderer>();   // NEW
+    void Start()
+    {
+        sr  = GetComponent<SpriteRenderer>();
+        cam = Camera.main;
 
-    startPos = transform.position;
-    bobOffset = Random.Range(0f, 10f);
+        startPos  = transform.position;
+        bobOffset = Random.Range(0f, 10f);
 
-    float angle = Random.Range(0f, 360f) * Mathf.Deg2Rad;
-    dir = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)).normalized;
+        float angle = Random.Range(0f, 360f) * Mathf.Deg2Rad;
+        dir = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)).normalized;
 
-    // random starting direction
-    if (sr != null)
-        sr.flipX = (Random.value > 0.5f);
+        if (sr != null)
+            sr.flipX = (Random.value > 0.5f);
 
-    ScheduleNextTurn();
-}
+        ScheduleNextTurn();
+    }
 
     void ScheduleNextTurn()
     {
@@ -65,31 +68,34 @@ public class JellyfishWander2D : MonoBehaviour
 
         transform.position = pos;
 
-        // face direction (optional)
-        if (dir.x != 0)
-        {
-            Vector3 s = transform.localScale;
-            s.x = Mathf.Abs(s.x) * (dir.x >= 0 ? 1 : -1);
-            transform.localScale = s;
-        }
+        // face direction
+        if (sr != null && Mathf.Abs(dir.x) > 0.05f)
+            sr.flipX = dir.x < 0f;
 
-        // keep inside bounds
-        if (useBounds)
+        if (cam != null)
         {
+            float leftEdge  = cam.ViewportToWorldPoint(new Vector3(0f, 0f, 0f)).x;
+            float rightEdge = cam.ViewportToWorldPoint(new Vector3(1f, 0f, 0f)).x;
+
+            // Destroy if scrolled off the left side
+            if (transform.position.y < minY - destroyBehindCameraX)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            if (transform.position.x < leftEdge - destroyBehindCameraX)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            // Bounce off right edge and Y bounds
             Vector3 p = transform.position;
-
-            if (p.x < minBounds.x) { p.x = minBounds.x; dir.x = Mathf.Abs(dir.x); }
-            if (p.x > maxBounds.x) { p.x = maxBounds.x; dir.x = -Mathf.Abs(dir.x); }
-            if (p.y < minBounds.y) { p.y = minBounds.y; dir.y = Mathf.Abs(dir.y); }
-            if (p.y > maxBounds.y) { p.y = maxBounds.y; dir.y = -Mathf.Abs(dir.y); }
-
+            if (p.x > rightEdge + 1f) { p.x = rightEdge + 1f; dir.x = -Mathf.Abs(dir.x); }
+            if (p.y < minY) { p.y = minY; dir.y =  Mathf.Abs(dir.y); }
+            if (p.y > maxY) { p.y = maxY; dir.y = -Mathf.Abs(dir.y); }
             transform.position = p;
         }
-
-        if (sr != null)
-{
-    if (Mathf.Abs(dir.x) > 0.05f)
-        sr.flipX = dir.x < 0f;
-}
     }
 }

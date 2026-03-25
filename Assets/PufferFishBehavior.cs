@@ -8,6 +8,7 @@ public class PufferFishBehavior : MonoBehaviour
 
     [Header("Damage / Reward")]
     public int contactDamage = 1;
+    public int eatHeal = 2;       // HP restored when eating a deflated puffer
 
     [Header("Eat FX")]
     public GameObject bloodPuffPrefab;
@@ -70,7 +71,7 @@ public class PufferFishBehavior : MonoBehaviour
             if (bloodPuffPrefab != null)
                 Instantiate(bloodPuffPrefab, transform.position + bloodOffset, Quaternion.identity);
 
-            ph.OnFishEaten(); // or make OnPufferEaten() later
+            ph.Heal(eatHeal);
             Destroy(gameObject);
         }
     }

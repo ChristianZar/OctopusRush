@@ -40,7 +40,7 @@ float originalChaseSpeed;
     {
         startPos = transform.position;
 
-        GameObject p = GameObject.Find("Player_Octopus");
+        GameObject p = GameObject.FindGameObjectWithTag("Player");
         if (p != null) player = p.transform;
         lastX = transform.position.x;
 
@@ -162,8 +162,6 @@ public void ApplyInkSlow()
     slowTimer = slowDuration;
     patrolSpeed = originalPatrolSpeed * slowMultiplier;
     chaseSpeed  = originalChaseSpeed  * slowMultiplier;
-
-    Debug.Log("SHARK SLOWED! chaseSpeed=" + chaseSpeed);
 }
 
 

@@ -13463,50 +13463,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1496447772}
   m_CullTransparentMesh: 1
---- !u!1 &1499409850
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1499409852}
-  - component: {fileID: 1499409851}
-  m_Layer: 0
-  m_Name: RockManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1499409851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1499409850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df2cb532403e1ac439997efe20a62f48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RockWarningAndDrop
---- !u!4 &1499409852
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1499409850}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1545913369
 GameObject:
   m_ObjectHideFlags: 0
@@ -13764,7 +13720,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 0.12, g: 0.08, b: 0.02, a: 1}
@@ -13774,7 +13730,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text:
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 974aa35693d5c40408578e3c0d9193c3, type: 2}
   m_sharedMaterial: {fileID: -6542924239445649901, guid: 974aa35693d5c40408578e3c0d9193c3, type: 2}
@@ -13988,7 +13944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a972438a92e94c85872fd96bee0ff4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JellyfishSpawner
-  jellyfishPrefab: {fileID: 0}
+  jellyfishPrefab: {fileID: 9168818694291533834, guid: 2007b0c82c7654aebb95636faa39ff36, type: 3}
   spawnAhead: 10
   groupDistance: 24
   minCount: 2
@@ -14219,6 +14175,7 @@ MonoBehaviour:
   scoreManager: {fileID: 634699433}
   respawnPosition: {x: 0, y: 0, z: 0}
   resetHealthOnRespawn: 1
+  fadeInDuration: 0.35
 --- !u!1001 &6714682990886238974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14345,7 +14302,6 @@ SceneRoots:
   - {fileID: 1406248292}
   - {fileID: 589605039}
   - {fileID: 2101913573}
-  - {fileID: 1499409852}
   - {fileID: 520029301}
   - {fileID: 1861374270}
   - {fileID: 286113496}

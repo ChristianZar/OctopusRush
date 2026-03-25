@@ -25,9 +25,13 @@ public class SharkSpawner : MonoBehaviour
     public float easySpawnInterval = 6f;
     public float hardSpawnInterval = 2.0f;
 
+    [Header("Cleanup")]
+    public float destroyBehindX = 6f;
+
     private float lastSpawnX;
     private float startX;
     private float timer;
+    private System.Collections.Generic.List<GameObject> sharks = new System.Collections.Generic.List<GameObject>();
 
     void Start()
     {
@@ -67,6 +71,7 @@ public class SharkSpawner : MonoBehaviour
         timer = 0f;
 
         SpawnShark(currentMinDistance);
+        CleanupOldSharks();
     }
 
     void SpawnShark(float currentMinDistance)
@@ -88,6 +93,23 @@ public class SharkSpawner : MonoBehaviour
         if (shark.transform.position.x > target.position.x)
             shark.transform.localScale = new Vector3(-1, 1, 1);
 
+        sharks.Add(shark);
         lastSpawnX = spawnX;
+    }
+
+    void CleanupOldSharks()
+    {
+        if (target == null) return;
+        float leftX = target.position.x - destroyBehindX - 20f;
+
+        for (int i = sharks.Count - 1; i >= 0; i--)
+        {
+            if (sharks[i] == null) { sharks.RemoveAt(i); continue; }
+            if (sharks[i].transform.position.x < leftX)
+            {
+                Destroy(sharks[i]);
+                sharks.RemoveAt(i);
+            }
+        }
     }
 }
