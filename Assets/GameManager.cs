@@ -1,92 +1,77 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using TMPro;
 
-/// <summary>
-/// Game Manager that works with your existing PlayerHealth, PlayerController, and ScoreManager
-/// Shows game over screen instead of auto-reloading scene
-/// </summary>
 public class GameManager : MonoBehaviour
 {
     [Header("Game Over UI")]
     public GameObject gameOverPanel;
     public TMP_Text gameOverStatsText;
-    
+
     [Header("Continue System")]
     public GameObject continueButton;
     private int continuesLeft = 1;
     private bool hasUsedContinue = false;
-    
+
     [Header("Player Reference")]
     public GameObject player;
     public PlayerHealth playerHealth;
     public PlayerController playerController;
-    
+
     [Header("Score Manager Reference")]
     public ScoreManager scoreManager;
-    
+
     [Header("Respawn Settings")]
     public Vector3 respawnPosition = Vector3.zero;
     public bool resetHealthOnRespawn = true;
-    
+
+    [Header("Panel Animation")]
+    public float fadeInDuration = 0.35f;
+
     private bool isGameOver = false;
     private float gameStartTime;
     private float deathTime;
-    
+    private CanvasGroup panelCanvasGroup;
+    private bool isNewBest;
+
     void Start()
     {
-        // Auto-find references if not assigned
         if (player == null)
-        {
             player = GameObject.FindGameObjectWithTag("Player");
-        }
-        
+
         if (playerHealth == null && player != null)
-        {
             playerHealth = player.GetComponent<PlayerHealth>();
-        }
-        
+
         if (playerController == null && player != null)
-        {
             playerController = player.GetComponent<PlayerController>();
-        }
-        
+
         if (scoreManager == null)
-        {
             scoreManager = FindFirstObjectByType<ScoreManager>();
-        }
-        
-        // Make sure game over panel is hidden at start
+
         if (gameOverPanel != null)
         {
+            panelCanvasGroup = gameOverPanel.GetComponent<CanvasGroup>();
+            if (panelCanvasGroup == null)
+                panelCanvasGroup = gameOverPanel.AddComponent<CanvasGroup>();
+            panelCanvasGroup.alpha = 0f;
             gameOverPanel.SetActive(false);
         }
-        
-        // Reset continue system
+
         continuesLeft = 1;
         hasUsedContinue = false;
         isGameOver = false;
-        
-        // Record game start time
         gameStartTime = Time.time;
-        
         Time.timeScale = 1f;
     }
-    
+
     void Update()
     {
-        // Check if player died (from PlayerHealth)
         if (playerHealth != null && playerHealth.IsDead() && !isGameOver)
-        {
-            // Player just died, show game over instead of auto-reloading
             PlayerDied();
-        }
     }
-    
-    /// <summary>
-    /// Called when the player dies
-    /// This replaces the auto-reload in PlayerHealth
-    /// </summary>
+
     public void PlayerDied()
     {
         if (isGameOver) return;
@@ -97,47 +82,67 @@ public class GameManager : MonoBehaviour
         if (scoreManager != null)
             scoreManager.SaveLastRun();
 
-        ShowGameOver();
-    }
-    
-    /// <summary>
-    /// Shows the game over screen with stats
-    /// </summary>
-    void ShowGameOver()
-    {
-        // Small delay to let death animation play
         Invoke("DisplayGameOverPanel", 1.5f);
     }
-    
-    /// <summary>
-    /// Actually displays the game over panel after delay
-    /// </summary>
+
     void DisplayGameOverPanel()
     {
-        // Pause the game
         Time.timeScale = 0f;
-        
-        // Show game over panel
+
+        UpdateStatsDisplay();
+
+        if (hasUsedContinue || continuesLeft <= 0)
+            if (continueButton != null)
+                continueButton.SetActive(false);
+
         if (gameOverPanel != null)
         {
             gameOverPanel.SetActive(true);
+            StartCoroutine(FadeInPanel());
+            if (isNewBest)
+                StartCoroutine(PunchNewBest());
         }
-        
-        // Update stats display
-        UpdateStatsDisplay();
-        
-        // Check if continue is available
-        if (hasUsedContinue || continuesLeft <= 0)
-        {
-            // Hide continue button if already used
-            if (continueButton != null)
-            {
-                continueButton.SetActive(false);
-            }
-        }
-        
     }
-    
+
+    IEnumerator FadeInPanel()
+    {
+        if (panelCanvasGroup == null) yield break;
+
+        float elapsed = 0f;
+        panelCanvasGroup.alpha = 0f;
+
+        while (elapsed < fadeInDuration)
+        {
+            elapsed += Time.unscaledDeltaTime;
+            panelCanvasGroup.alpha = Mathf.Clamp01(elapsed / fadeInDuration);
+            yield return null;
+        }
+
+        panelCanvasGroup.alpha = 1f;
+    }
+
+    IEnumerator PunchNewBest()
+    {
+        if (gameOverStatsText == null) yield break;
+
+        // Wait for panel to mostly fade in first
+        yield return new WaitForSecondsRealtime(fadeInDuration * 0.8f);
+
+        Transform t = gameOverStatsText.transform;
+        float elapsed = 0f;
+        float duration = 0.45f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.unscaledDeltaTime;
+            float s = 1f + Mathf.Sin(elapsed / duration * Mathf.PI) * 0.14f;
+            t.localScale = new Vector3(s, s, 1f);
+            yield return null;
+        }
+
+        t.localScale = Vector3.one;
+    }
+
     void UpdateStatsDisplay()
     {
         if (gameOverStatsText == null) return;
@@ -150,21 +155,22 @@ public class GameManager : MonoBehaviour
         float lastMeters = PlayerPrefs.GetFloat("LAST_SCORE", 0f);
         float bestMeters = PlayerPrefs.GetFloat("BEST_SCORE", 0f);
 
-        string statsText = $"<b>Distance</b>   {Mathf.FloorToInt(currentMeters)} m\n" +
-                           $"<b>Time</b>   {minutes}:{seconds:00}\n\n";
+        isNewBest = currentMeters > bestMeters && currentMeters > 0;
 
-        if (currentMeters > bestMeters && currentMeters > 0)
-            statsText += "<color=#FFD700>★  NEW BEST!  ★</color>\n\n";
+        string statsText =
+            "<b>DISTANCE</b>          <b>TIME</b>\n" +
+            $"  {Mathf.FloorToInt(currentMeters)} m               {minutes}:{seconds:00}\n\n";
 
-        statsText += $"<color=#AAAAAA>Last run   {Mathf.FloorToInt(lastMeters)} m\n" +
-                     $"Best   {Mathf.FloorToInt(bestMeters)} m</color>";
+        if (isNewBest)
+            statsText += "<color=#FFD700><b>★  NEW BEST!  ★</b></color>\n\n";
+
+        statsText +=
+            $"<color=#AAAAAA>Last run    {Mathf.FloorToInt(lastMeters)} m\n" +
+            $"Best        {Mathf.FloorToInt(bestMeters)} m</color>";
 
         gameOverStatsText.text = statsText;
     }
-    
-    /// <summary>
-    /// Continue button - gives player one more chance
-    /// </summary>
+
     public void OnContinueClicked()
     {
         if (continuesLeft > 0 && !hasUsedContinue)
@@ -177,10 +183,7 @@ public class GameManager : MonoBehaviour
             isGameOver = false;
         }
     }
-    
-    /// <summary>
-    /// Respawn the player with full health
-    /// </summary>
+
     void RespawnPlayer()
     {
         if (player == null) return;
@@ -189,10 +192,7 @@ public class GameManager : MonoBehaviour
             playerHealth.Respawn();
         player.SetActive(true);
     }
-    
-    /// <summary>
-    /// Restart button - reload current scene from beginning
-    /// </summary>
+
     public void OnRestartClicked()
     {
         Time.timeScale = 1f;
@@ -204,20 +204,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
-    
-    /// <summary>
-    /// Check if game is currently over
-    /// </summary>
-    public bool IsGameOver()
-    {
-        return isGameOver;
-    }
-    
-    /// <summary>
-    /// Get continues remaining
-    /// </summary>
-    public int GetContinuesLeft()
-    {
-        return hasUsedContinue ? 0 : continuesLeft;
-    }
+
+    public bool IsGameOver() => isGameOver;
+    public int GetContinuesLeft() => hasUsedContinue ? 0 : continuesLeft;
 }
