@@ -299,4 +299,6 @@ else
     public float GetMaxInk() => maxInk;
     public bool IsUsingInk() => usingInk;
     public bool IsFacingRight() => facingRight;
+    public bool IsInkOnCooldown() => inkCooldownTimer > 0f;
+    public float GetInkCooldownNormalized() => Mathf.Clamp01(inkCooldownTimer / inkCooldown);
 }

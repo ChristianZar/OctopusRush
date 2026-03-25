@@ -10,8 +10,14 @@ public class ShrimpSpawner : MonoBehaviour
     public Camera cam;
 
     [Header("Spawn Timing")]
-    public float spawnInterval = 3f;
-    public int maxShrimpAlive = 8;
+    public float easySpawnInterval = 5f;
+    public float hardSpawnInterval = 1.5f;
+    public int easyMaxAlive = 4;
+    public int hardMaxAlive = 12;
+
+    [Header("Difficulty Ramp")]
+    public float easyDistance    = 60f;
+    public float rampEndDistance = 250f;
 
     [Header("Spawn Position")]
     public float spawnOffsetX = 2f;
@@ -22,28 +28,41 @@ public class ShrimpSpawner : MonoBehaviour
     public float destroyBehindX = 4f;
 
     private float timer;
+    private float startX;
+    private Transform playerT;
     private List<GameObject> shrimpList = new List<GameObject>();
 
     void Start()
     {
-        if (cam == null)
-            cam = Camera.main;
+        if (cam == null) cam = Camera.main;
 
-        timer = spawnInterval;
+        var p = GameObject.FindGameObjectWithTag("Player");
+        if (p != null) { playerT = p.transform; startX = p.transform.position.x; }
+
+        timer = easySpawnInterval;
+    }
+
+    float DifficultyT()
+    {
+        if (playerT == null) return 0f;
+        float t = Mathf.InverseLerp(easyDistance, rampEndDistance, playerT.position.x - startX);
+        return Mathf.SmoothStep(0f, 1f, t);
     }
 
     void Update()
     {
         shrimpList.RemoveAll(s => s == null);
 
+        float t = DifficultyT();
+        float spawnInterval  = Mathf.Lerp(easySpawnInterval, hardSpawnInterval, t);
+        int   maxShrimpAlive = Mathf.RoundToInt(Mathf.Lerp(easyMaxAlive, hardMaxAlive, t));
+
         timer -= Time.deltaTime;
 
         if (timer <= 0f)
         {
             if (shrimpList.Count < maxShrimpAlive)
-            {
                 SpawnShrimp();
-            }
 
             timer = spawnInterval;
         }

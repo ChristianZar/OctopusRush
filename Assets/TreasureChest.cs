@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class TreasureChest : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class TreasureChest : MonoBehaviour
     public Transform spawnPoint;
     public GameObject rewardPrefab;
     public Sprite openedSprite;
+
+    [Header("Press E Prompt")]
+    public GameObject pressEPrompt;   // assign a world-space child TextMeshPro or sprite
 
     [HideInInspector] public TreasureChestSpawner spawner;
 
@@ -26,6 +30,7 @@ public class TreasureChest : MonoBehaviour
     void Start()
     {
         keyBar = FindFirstObjectByType<KeyBarUI>();
+        ShowPrompt(false);
     }
 
     void Update()
@@ -41,9 +46,17 @@ public class TreasureChest : MonoBehaviour
         }
     }
 
+    void ShowPrompt(bool show)
+    {
+        if (pressEPrompt != null)
+            pressEPrompt.SetActive(show);
+    }
+
     private void OpenChest()
     {
         opened = true;
+        ShowPrompt(false);
+        AudioManager.Instance?.PlayChestOpen();
 
         if (openedSprite != null && sr != null)
             sr.sprite = openedSprite;
@@ -67,13 +80,19 @@ public class TreasureChest : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
+        {
             playerInRange = true;
+            if (!opened) ShowPrompt(true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
+        {
             playerInRange = false;
+            ShowPrompt(false);
+        }
     }
 
     private void OnDestroy()

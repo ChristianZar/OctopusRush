@@ -38,7 +38,8 @@ void Shoot()
 {
     if (bulletPrefab == null || firePoint == null) return;
 
-    float dir = Mathf.Sign(transform.localScale.x);
+    var controller = GetComponent<PlayerController>();
+    float dir = (controller != null && !controller.IsFacingRight()) ? -1f : 1f;
     Vector3 spawnPos = firePoint.position + Vector3.right * dir * 0.25f;
 
     GameObject b = Instantiate(bulletPrefab, spawnPos, Quaternion.identity);

@@ -18,7 +18,7 @@ public class PlayerHealth : MonoBehaviour
 
     [Header("Survival Drain")]
 public bool useHealthDrain = true;
-public float secondsPerDrain = 2f;   // lose 1 HP every 8 seconds
+public float secondsPerDrain = 10f;  // lose 1 HP every 10 seconds
 private float drainTimer = 0f;
 
     private bool isDead = false;
@@ -62,11 +62,10 @@ private float drainTimer = 0f;
     currentHealth -= amount;
     currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
     damageFX?.SpawnBlood();
+    AudioManager.Instance?.PlayPlayerDamage();
 
     float healthPercent = (float)currentHealth / maxHealth;
     OnHealthChanged?.Invoke(healthPercent);
-
-    Debug.Log("Octopus HP: " + currentHealth);
 
     if (currentHealth <= 0)
     {
@@ -88,18 +87,14 @@ private float drainTimer = 0f;
     {
         float healthPercent = (float)currentHealth / maxHealth;
         OnHealthChanged?.Invoke(healthPercent);
-        Debug.Log("Healed! Octopus HP: " + currentHealth);
+        AudioManager.Instance?.PlayHeal();
     }
 }
 
     void Die()
     {
-        // Save score
-        var sm = FindFirstObjectByType<ScoreManager>();
-        if (sm != null) sm.SaveLastRun();
-
         isDead = true;
-        Debug.Log("Octopus Died");
+        AudioManager.Instance?.PlayPlayerDeath();
 
         // Swap sprite to dead (X eyes + blood)
         if (sr != null && deadSprite != null)
@@ -150,8 +145,6 @@ private float drainTimer = 0f;
     // NEW: Public method to respawn player (called by GameManager on Continue)
     public void Respawn()
     {
-        Debug.Log("PlayerHealth: Respawning player");
-        
         // Reset health
         currentHealth = maxHealth;
         isDead = false;
@@ -197,7 +190,6 @@ private float drainTimer = 0f;
             camScroll.enabled = true;
         }
         
-        Debug.Log($"Player respawned with {currentHealth}/{maxHealth} HP");
     }
 
     public bool IsDead() => isDead;
@@ -245,8 +237,6 @@ void TakeDrainDamage(int amount)
 
     float healthPercent = (float)currentHealth / maxHealth;
     OnHealthChanged?.Invoke(healthPercent);
-
-    Debug.Log("Drain damage. Octopus HP: " + currentHealth);
 
     if (currentHealth <= 0)
     {

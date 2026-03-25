@@ -9,23 +9,32 @@ public class JellyfishSpawner : MonoBehaviour
     public float spawnAhead = 10f;
 
     [Header("Distance between groups")]
-    public float groupDistance = 12f;
+    public float easyGroupDistance = 16f;
+    public float hardGroupDistance = 8f;
 
     [Header("Group size")]
-    public int minCount = 2;
-    public int maxCount = 5;
+    public int easyMinCount = 2;
+    public int easyMaxCount = 3;
+    public int hardMinCount = 3;
+    public int hardMaxCount = 6;
     public float xSpacing = 1.6f;
 
     [Header("Vertical range")]
     public float minY = -3f;
     public float maxY = 3f;
 
+    [Header("Difficulty Ramp")]
+    public float easyDistance   = 60f;
+    public float rampEndDistance = 250f;
+
     private Transform player;
     private float nextSpawnX;
+    private float startX;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        startX = player.position.x;
         nextSpawnX = player.position.x + spawnAhead;
     }
 
@@ -33,29 +42,42 @@ public class JellyfishSpawner : MonoBehaviour
     {
         if (player == null || jellyfishPrefab == null) return;
 
+        float t = DifficultyT();
+        float groupDistance = Mathf.Lerp(easyGroupDistance, hardGroupDistance, t);
+
         if (player.position.x + spawnAhead >= nextSpawnX)
         {
-            float startX = Mathf.Max(nextSpawnX, player.position.x + spawnAhead);
-            SpawnGroup(startX);
-            nextSpawnX = startX + groupDistance;
+            float gx = Mathf.Max(nextSpawnX, player.position.x + spawnAhead);
+            SpawnGroup(gx, t);
+            nextSpawnX = gx + groupDistance;
         }
     }
 
-    void SpawnGroup(float startX)
+    float DifficultyT()
     {
-        int count = Random.Range(minCount, maxCount + 1);
+        if (player == null) return 0f;
+        float dist = player.position.x - startX;
+        float t = Mathf.InverseLerp(easyDistance, rampEndDistance, dist);
+        return Mathf.SmoothStep(0f, 1f, t);
+    }
+
+    void SpawnGroup(float gx, float t)
+    {
+        int minC = Mathf.RoundToInt(Mathf.Lerp(easyMinCount, hardMinCount, t));
+        int maxC = Mathf.RoundToInt(Mathf.Lerp(easyMaxCount, hardMaxCount, t));
+        int count = Random.Range(minC, maxC + 1);
         float baseY = Random.Range(minY, maxY);
 
         int pattern = Random.Range(0, 3); // 0=line, 1=arch, 2=V
 
         if (pattern == 0)
-            SpawnLine(startX, baseY, count);
+            SpawnLine(gx, baseY, count);
         else if (pattern == 1)
-            SpawnArch(startX, baseY, count, archHeight: 1.5f);
+            SpawnArch(gx, baseY, count, archHeight: 1.5f);
         else
         {
             if (count % 2 == 0) count += 1;
-            SpawnVShape(startX, baseY, count, depth: 1.0f);
+            SpawnVShape(gx, baseY, count, depth: 1.0f);
         }
     }
 
