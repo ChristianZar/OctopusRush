@@ -29,7 +29,7 @@ public class BubbleHealZone : MonoBehaviour
     {
         if (box == null || playerHealth == null || playerCol == null) return;
 
-        float now = Time.unscaledTime;
+        float now = Time.time;
         if (now < nextHealTime) return;
 
         if (box.bounds.Intersects(playerCol.bounds))
