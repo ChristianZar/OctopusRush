@@ -4,12 +4,11 @@ public class SharkSpawner : MonoBehaviour
 {
     public GameObject sharkPrefab;
 
-    [Header("Target to spawn ahead of (Player or Camera)")]
-    public Transform target;          // drag Player_Octopus or Main Camera here
+    [Header("Camera (auto-found if empty)")]
+    public Camera cam;
 
     [Header("Spawn Area")]
-    public float spawnAhead = 20f;    // base distance in front of target
-    public float minSpawnAhead = 10f; // NEVER spawn closer than this (anti-unfair)
+    public float spawnOffsetX = 3f;   // units past the RIGHT edge of the screen
     public float minY = -1.5f;
     public float maxY = 2f;
 
@@ -31,30 +30,30 @@ public class SharkSpawner : MonoBehaviour
     private float lastSpawnX;
     private float startX;
     private float timer;
+    private Transform player;
     private System.Collections.Generic.List<GameObject> sharks = new System.Collections.Generic.List<GameObject>();
 
     void Start()
     {
-        if (target == null)
-        {
-            GameObject p = GameObject.FindGameObjectWithTag("Player");
-            if (p != null) target = p.transform;
-        }
+        if (cam == null) cam = Camera.main;
 
-        if (target != null) startX = target.position.x;
+        GameObject p = GameObject.FindGameObjectWithTag("Player");
+        if (p != null) { player = p.transform; startX = p.transform.position.x; }
 
-        float baseX = (target != null) ? target.position.x : transform.position.x;
-        lastSpawnX = baseX + spawnAhead;
+        float rightEdge = cam != null
+            ? cam.ViewportToWorldPoint(new Vector3(1f, 0.5f, Mathf.Abs(cam.transform.position.z))).x
+            : 20f;
+        lastSpawnX = rightEdge + spawnOffsetX;
 
         timer = 0f;
     }
 
     void Update()
     {
-        if (sharkPrefab == null || target == null) return;
+        if (sharkPrefab == null || cam == null) return;
 
         // ---- Difficulty scaling based on distance traveled ----
-        float dist = target.position.x - startX;
+        float dist = player != null ? player.position.x - startX : 0f;
 
         // t = 0 (easy) until easyDistance, then ramps to 1 by rampEndDistance
         float t = Mathf.InverseLerp(easyDistance, rampEndDistance, dist);
@@ -76,8 +75,10 @@ public class SharkSpawner : MonoBehaviour
 
     void SpawnShark(float currentMinDistance)
     {
-        // where "in front" is right now (and enforce a minimum ahead distance)
-        float desiredX = target.position.x + Mathf.Max(spawnAhead, minSpawnAhead);
+        // Always spawn past the right edge of the camera
+        float rightEdge = cam.ViewportToWorldPoint(
+            new Vector3(1f, 0.5f, Mathf.Abs(cam.transform.position.z))).x;
+        float desiredX = rightEdge + spawnOffsetX;
 
         // enforce spacing
         if (desiredX < lastSpawnX + currentMinDistance)
@@ -89,9 +90,8 @@ public class SharkSpawner : MonoBehaviour
         Vector3 pos = new Vector3(spawnX, spawnY, 0f);
         GameObject shark = Instantiate(sharkPrefab, pos, Quaternion.identity);
 
-        // Face toward player (if shark spawns in front, flip to face left)
-        if (shark.transform.position.x > target.position.x)
-            shark.transform.localScale = new Vector3(-1, 1, 1);
+        // Always face left (toward player) since shark spawns to the right
+        shark.transform.localScale = new Vector3(-1, 1, 1);
 
         sharks.Add(shark);
         lastSpawnX = spawnX;
@@ -99,8 +99,9 @@ public class SharkSpawner : MonoBehaviour
 
     void CleanupOldSharks()
     {
-        if (target == null) return;
-        float leftX = target.position.x - destroyBehindX - 20f;
+        if (cam == null) return;
+        float leftX = cam.ViewportToWorldPoint(
+            new Vector3(0f, 0.5f, Mathf.Abs(cam.transform.position.z))).x - destroyBehindX;
 
         for (int i = sharks.Count - 1; i >= 0; i--)
         {

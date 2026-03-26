@@ -253,8 +253,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 974aa35693d5c40408578e3c0d9193c3, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 974aa35693d5c40408578e3c0d9193c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -371,8 +371,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 974aa35693d5c40408578e3c0d9193c3, type: 2}
+  m_sharedMaterial: {fileID: -6542924239445649901, guid: 974aa35693d5c40408578e3c0d9193c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -635,8 +635,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShrimpSpawner
   shrimpPrefab: {fileID: 7842450921785167906, guid: aa2a846eae6eea94f95a98e8bb5d49bd, type: 3}
   cam: {fileID: 519420031}
-  spawnInterval: 3
-  maxShrimpAlive: 8
+  easySpawnInterval: 5
+  hardSpawnInterval: 1.5
+  easyMaxAlive: 4
+  hardMaxAlive: 12
+  easyDistance: 60
+  rampEndDistance: 250
   spawnOffsetX: 2
   minYViewport: 0.2
   maxYViewport: 0.8
@@ -917,6 +921,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HealthBar
   fillImage: {fileID: 107564885}
   playerHealth: {fileID: 367825984}
+  highColor: {r: 0.2, g: 0.9, b: 0.3, a: 1}
+  midColor: {r: 1, g: 0.75, b: 0, a: 1}
+  lowColor: {r: 0.9, g: 0.15, b: 0.1, a: 1}
+  midThreshold: 0.5
+  lowThreshold: 0.25
+  flashColor: {r: 1, g: 1, b: 1, a: 1}
+  flashDuration: 0.12
 --- !u!114 &323966121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6308,6 +6319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerWeapon
   currentWeapon: 1
   ak47Visual: {fileID: 950090544}
+  weaponDuration: 15
 --- !u!82 &367825992
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6601,8 +6613,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 974aa35693d5c40408578e3c0d9193c3, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 974aa35693d5c40408578e3c0d9193c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6963,8 +6975,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 974aa35693d5c40408578e3c0d9193c3, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 974aa35693d5c40408578e3c0d9193c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7587,14 +7599,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishSchoolSpawner
   fishPrefab: {fileID: 2925802537459126814, guid: 3de80a5e8cc133c418471012e61d7943, type: 3}
-  maxFish: 10
-  schoolSize: 4
-  spawnInterval: 5
+  easyMaxFish: 8
+  hardMaxFish: 18
+  easySchoolSize: 3
+  hardSchoolSize: 7
+  easySpawnInterval: 5
+  hardSpawnInterval: 2
   spawnAheadDistance: 12
   yMin: -1
   yMax: 2
   xSpacing: 0.8
   ySpacing: 0.4
+  easyDistance: 30
+  rampEndDistance: 200
 --- !u!1 &773947747
 GameObject:
   m_ObjectHideFlags: 0
@@ -7719,6 +7736,63 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &812333592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 812333594}
+  - component: {fileID: 812333593}
+  m_Layer: 0
+  m_Name: MineSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &812333593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812333592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17089081e2c1841098c9fb6cdf13359f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MineSpawner
+  minePrefab: {fileID: 2066207901006646047, guid: d513e78ba5c9645779824a8dab436602, type: 3}
+  cam: {fileID: 0}
+  minInterval: 5
+  maxInterval: 10
+  maxClusters: 3
+  minClusterSize: 3
+  maxClusterSize: 4
+  spreadX: 1.8
+  spreadY: 1.2
+  minGap: 0.8
+  ceilingOffsetY: 0.8
+  spawnAheadX: 2
+  destroyBehindX: 4
+--- !u!4 &812333594
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812333592}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.78756, y: -1.00855, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8054,8 +8128,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PufferSpawner
   pufferPrefab: {fileID: 2372231410500123941, guid: 7e99e9a338e56ed4aa9ee06072d9ce23, type: 3}
   cam: {fileID: 519420031}
-  spawnInterval: 4
-  maxPuffersAlive: 5
+  easySpawnInterval: 6
+  hardSpawnInterval: 2.5
+  easyMaxAlive: 3
+  hardMaxAlive: 7
+  easyDistance: 60
+  rampEndDistance: 250
   spawnOffsetX: 2
   minYViewport: 0.2
   maxYViewport: 0.8
@@ -13273,9 +13351,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SharkSpawner
   sharkPrefab: {fileID: 7577851971774916772, guid: aab9103f79905d34ab5bcc8a1f7a7768, type: 3}
-  target: {fileID: 0}
-  spawnAhead: 10
-  minSpawnAhead: 10
+  cam: {fileID: 0}
+  spawnOffsetX: 3
   minY: -1.5
   maxY: 2
   easyDistance: 60
@@ -13284,6 +13361,7 @@ MonoBehaviour:
   hardMinDistance: 14
   easySpawnInterval: 6
   hardSpawnInterval: 2
+  destroyBehindX: 6
 --- !u!4 &1492976842
 Transform:
   m_ObjectHideFlags: 0
@@ -13776,8 +13854,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 974aa35693d5c40408578e3c0d9193c3, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 974aa35693d5c40408578e3c0d9193c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13988,14 +14066,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a972438a92e94c85872fd96bee0ff4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JellyfishSpawner
-  jellyfishPrefab: {fileID: 0}
+  jellyfishPrefab: {fileID: 2353403963160580519, guid: 5c7d6b27b6e3438498e905ebba17daac, type: 3}
   spawnAhead: 10
-  groupDistance: 24
-  minCount: 2
-  maxCount: 3
+  easyGroupDistance: 16
+  hardGroupDistance: 9
+  easyMinCount: 1
+  easyMaxCount: 2
+  hardMinCount: 2
+  hardMaxCount: 3
   xSpacing: 1.6
   minY: -3
   maxY: 3
+  easyDistance: 60
+  rampEndDistance: 250
 --- !u!4 &1861374270
 Transform:
   m_ObjectHideFlags: 0
@@ -14219,6 +14302,7 @@ MonoBehaviour:
   scoreManager: {fileID: 634699433}
   respawnPosition: {x: 0, y: 0, z: 0}
   resetHealthOnRespawn: 1
+  fadeInDuration: 0.35
 --- !u!1001 &6714682990886238974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14350,3 +14434,4 @@ SceneRoots:
   - {fileID: 1861374270}
   - {fileID: 286113496}
   - {fileID: 998700844}
+  - {fileID: 812333594}
