@@ -18,14 +18,15 @@ public class MineSpawner : MonoBehaviour
     public int   minClusterSize = 3;
     public int   maxClusterSize = 4;
 
-    [Header("Cluster Scatter")]
-    public float spreadX    = 1.8f;  // max horizontal scatter from cluster centre
-    public float spreadY    = 1.2f;  // max vertical scatter from ceiling anchor
-    public float minGap     = 0.8f;  // minimum distance between any two mines
+    [Header("Chain Layout")]
+    public float linkDistance   = 1.3f;  // distance between consecutive mines in the chain
+    public float linkJitter     = 0.25f; // random position noise per mine
+    public float chainAngleRange = 55f;  // max tilt of the chain from horizontal (degrees)
 
     [Header("Spawn Position")]
     public float ceilingOffsetY = 0.8f; // world units below the top edge of the screen
     public float spawnAheadX    = 2f;   // world units past the right edge
+    public float minY           = -3.5f;// lowest Y a mine can spawn
 
     [Header("Cleanup")]
     public float destroyBehindX = 4f;
@@ -60,52 +61,52 @@ public class MineSpawner : MonoBehaviour
         if (minePrefab == null || cam == null) return;
 
         int   count   = Random.Range(minClusterSize, maxClusterSize + 1);
-        float anchorY = cam.ViewportToWorldPoint(new Vector3(0.5f, 1f, 0f)).y - ceilingOffsetY;
-        float anchorX = cam.ViewportToWorldPoint(new Vector3(1f, 0f, 0f)).x + spawnAheadX;
+        float camZ    = Mathf.Abs(cam.transform.position.z);
+        float topY    = cam.ViewportToWorldPoint(new Vector3(0.5f, 1f, camZ)).y - ceilingOffsetY;
+        float rightX  = cam.ViewportToWorldPoint(new Vector3(1f, 0.5f, camZ)).x + spawnAheadX;
 
-        List<Vector2>      positions = new List<Vector2>();
-        List<MineBehavior> cluster   = new List<MineBehavior>();
+        // Chain starts near the top-right, slight X jitter
+        Vector2 chainStart = new Vector2(
+            rightX + Random.Range(-0.5f, 0.5f),
+            topY   - Random.Range(0f, 0.6f)
+        );
 
-        // Place each mine at a random scattered position, retry if too close to existing ones
+        // Chain direction: tilted at a random angle so mines hang diagonally
+        float   angle = Random.Range(-chainAngleRange, chainAngleRange) * Mathf.Deg2Rad;
+        Vector2 step  = new Vector2(Mathf.Cos(angle), -Mathf.Abs(Mathf.Sin(angle))) * linkDistance;
+
+        List<MineBehavior> cluster = new List<MineBehavior>();
+
         for (int i = 0; i < count; i++)
         {
-            Vector2 pos = Vector2.zero;
-            bool    ok  = false;
+            Vector2 jitter = new Vector2(
+                Random.Range(-linkJitter, linkJitter),
+                Random.Range(-linkJitter, linkJitter)
+            );
+            Vector2 pos = chainStart + step * i + jitter;
 
-            for (int attempt = 0; attempt < 20; attempt++)
-            {
-                pos = new Vector2(
-                    anchorX + Random.Range(-spreadX, spreadX),
-                    anchorY - Random.Range(0f, spreadY)   // always below ceiling
-                );
+            // Keep mines above a minimum Y
+            pos.y = Mathf.Max(pos.y, minY);
 
-                bool tooClose = false;
-                foreach (Vector2 existing in positions)
-                {
-                    if (Vector2.Distance(pos, existing) < minGap)
-                    {
-                        tooClose = true;
-                        break;
-                    }
-                }
-
-                if (!tooClose) { ok = true; break; }
-            }
-
-            if (!ok) continue; // skip if no valid spot found after retries
-
-            positions.Add(pos);
             GameObject go = Instantiate(minePrefab, new Vector3(pos.x, pos.y, 0f), Quaternion.identity);
             MineBehavior mb = go.GetComponent<MineBehavior>();
             if (mb != null)
                 cluster.Add(mb);
         }
 
-        // Link every mine to all others in the cluster (excluding itself)
-        foreach (MineBehavior mine in cluster)
-            foreach (MineBehavior other in cluster)
-                if (other != mine)
-                    mine.linkedMines.Add(other);
+        // Chain-detonate: each mine triggers the next (not all at once)
+        for (int i = 0; i < cluster.Count; i++)
+            for (int j = 0; j < cluster.Count; j++)
+                if (i != j)
+                    cluster[i].linkedMines.Add(cluster[j]);
+
+        // Spawn chain visual connecting the mines in order
+        if (cluster.Count > 1)
+        {
+            GameObject chainGO = new GameObject("MineChain");
+            MineChain  chain   = chainGO.AddComponent<MineChain>();
+            chain.Init(cluster);
+        }
 
         clusters.Add(cluster);
     }
@@ -114,7 +115,7 @@ public class MineSpawner : MonoBehaviour
     {
         if (cam == null) return;
 
-        float leftX = cam.ViewportToWorldPoint(new Vector3(0f, 0.5f, 0f)).x - destroyBehindX;
+        float leftX = cam.ViewportToWorldPoint(new Vector3(0f, 0.5f, Mathf.Abs(cam.transform.position.z))).x - destroyBehindX;
 
         foreach (List<MineBehavior> cluster in clusters)
         {

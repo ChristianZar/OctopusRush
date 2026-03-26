@@ -3,42 +3,43 @@ using UnityEngine;
 public class JellyfishWander2D : MonoBehaviour
 {
     [Header("Drift")]
-    public float speed = 0.4f;
-    public float turnIntervalMin = 1.5f;
-    public float turnIntervalMax = 4.0f;
-    public float turnStrength = 0.35f; // how much it changes direction
+    public float speed = 0.5f;
+    public float turnIntervalMin = 2f;
+    public float turnIntervalMax = 5f;
+    public float turnStrength = 0.4f;
 
-    [Header("Bobbing")]
-    public float bobSpeed = 1.2f;
-    public float bobAmount = 0.18f;
+    [Header("Float Wave")]
+    public float floatAmountY = 0.3f;   // vertical wave amplitude
+    public float floatSpeedY  = 1.1f;   // vertical wave frequency
+    public float floatAmountX = 0.15f;  // side-to-side amplitude (different freq = Lissajous pattern)
+    public float floatSpeedX  = 0.7f;
 
     [Header("Vertical Bounds")]
     public float minY = -4f;
     public float maxY =  4f;
 
     [Header("Cleanup")]
-    public float destroyBehindCameraX = 2f;  // world units behind the left edge before destroying
+    public float destroyBehindCameraX = 2f;
 
-    Vector2 dir = Vector2.right;
+    Vector2 dir;
+    Vector3 driftPos;
     float nextTurnTime;
-    Vector3 startPos;
-    float bobOffset;
+    float timeOffset;
     private SpriteRenderer sr;
     private Camera cam;
 
     void Start()
     {
-        sr  = GetComponent<SpriteRenderer>();
-        cam = Camera.main;
-
-        startPos  = transform.position;
-        bobOffset = Random.Range(0f, 10f);
+        sr         = GetComponent<SpriteRenderer>();
+        cam        = Camera.main;
+        driftPos   = transform.position;
+        timeOffset = Random.Range(0f, 10f);
 
         float angle = Random.Range(0f, 360f) * Mathf.Deg2Rad;
         dir = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)).normalized;
 
         if (sr != null)
-            sr.flipX = (Random.value > 0.5f);
+            sr.flipX = Random.value > 0.5f;
 
         ScheduleNextTurn();
     }
@@ -50,7 +51,7 @@ public class JellyfishWander2D : MonoBehaviour
 
     void Update()
     {
-        // occasionally nudge direction
+        // Occasionally nudge direction for organic wandering
         if (Time.time >= nextTurnTime)
         {
             Vector2 nudge = Random.insideUnitCircle.normalized * turnStrength;
@@ -58,44 +59,44 @@ public class JellyfishWander2D : MonoBehaviour
             ScheduleNextTurn();
         }
 
-        // drift
-        Vector3 pos = transform.position;
-        pos += (Vector3)(dir * speed * Time.deltaTime);
+        // Advance logical drift position
+        driftPos += (Vector3)(dir * speed * Time.deltaTime);
 
-        // bob (vertical sine wave)
-        float bob = Mathf.Sin((Time.time + bobOffset) * bobSpeed) * bobAmount;
-        pos.y += bob * Time.deltaTime; // subtle; doesn't explode
+        // Bounce off Y bounds
+        if (driftPos.y <= minY && dir.y < 0f) dir.y =  Mathf.Abs(dir.y);
+        if (driftPos.y >= maxY && dir.y > 0f) dir.y = -Mathf.Abs(dir.y);
+        driftPos.y = Mathf.Clamp(driftPos.y, minY, maxY);
 
-        transform.position = pos;
+        // Two sine waves at different frequencies layered on top of drift
+        // → produces a Lissajous-style floating motion instead of pure up/down
+        float t    = Time.time + timeOffset;
+        float waveX = Mathf.Sin(t * floatSpeedX) * floatAmountX;
+        float waveY = Mathf.Sin(t * floatSpeedY) * floatAmountY;
 
-        // face direction
+        transform.position = driftPos + new Vector3(waveX, waveY, 0f);
+
+        // Face direction of travel
         if (sr != null && Mathf.Abs(dir.x) > 0.05f)
             sr.flipX = dir.x < 0f;
 
-        if (cam != null)
+        if (cam == null) return;
+
+        float camZ     = Mathf.Abs(cam.transform.position.z);
+        float leftEdge  = cam.ViewportToWorldPoint(new Vector3(0f, 0.5f, camZ)).x;
+        float rightEdge = cam.ViewportToWorldPoint(new Vector3(1f, 0.5f, camZ)).x;
+
+        // Destroy once drifted past left edge
+        if (driftPos.x < leftEdge - destroyBehindCameraX)
         {
-            float leftEdge  = cam.ViewportToWorldPoint(new Vector3(0f, 0f, 0f)).x;
-            float rightEdge = cam.ViewportToWorldPoint(new Vector3(1f, 0f, 0f)).x;
+            Destroy(gameObject);
+            return;
+        }
 
-            // Destroy if scrolled off the left side
-            if (transform.position.y < minY - destroyBehindCameraX)
-            {
-                Destroy(gameObject);
-                return;
-            }
-
-            if (transform.position.x < leftEdge - destroyBehindCameraX)
-            {
-                Destroy(gameObject);
-                return;
-            }
-
-            // Bounce off right edge and Y bounds
-            Vector3 p = transform.position;
-            if (p.x > rightEdge + 1f) { p.x = rightEdge + 1f; dir.x = -Mathf.Abs(dir.x); }
-            if (p.y < minY) { p.y = minY; dir.y =  Mathf.Abs(dir.y); }
-            if (p.y > maxY) { p.y = maxY; dir.y = -Mathf.Abs(dir.y); }
-            transform.position = p;
+        // Bounce off right edge
+        if (driftPos.x > rightEdge + 1f)
+        {
+            driftPos.x = rightEdge + 1f;
+            dir.x = -Mathf.Abs(dir.x);
         }
     }
 }

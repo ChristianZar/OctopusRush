@@ -23,6 +23,10 @@ public class MineBehavior : MonoBehaviour
     public float shakeDuration  = 0.35f;
     public float shakeMagnitude = 0.18f;
 
+    [Header("Float")]
+    public float floatSpeed  = 1.2f;   // bobs per second
+    public float floatAmount = 0.12f;  // world units up/down
+
     [Header("Warning Shake")]
     public float shakeAmount = 0.06f;
     public float shakeSpeed  = 25f;
@@ -36,12 +40,23 @@ public class MineBehavior : MonoBehaviour
 
     private SpriteRenderer sr;
     private Vector3        startPos;
+    private float          floatOffset;
     internal bool          triggered = false;
 
     void Awake()
     {
-        sr       = GetComponent<SpriteRenderer>();
-        startPos = transform.position;
+        sr          = GetComponent<SpriteRenderer>();
+        startPos    = transform.position;
+        floatOffset = Random.Range(0f, Mathf.PI * 2f);
+    }
+
+    void Update()
+    {
+        if (!triggered)
+        {
+            float floatY = Mathf.Sin(Time.time * floatSpeed + floatOffset) * floatAmount;
+            transform.position = new Vector3(startPos.x, startPos.y + floatY, startPos.z);
+        }
     }
 
     void Start()
