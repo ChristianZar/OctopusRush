@@ -173,10 +173,10 @@ TextureImporter:
       name: rocks_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 515
-        height: 1024
+        x: 222
+        y: 320
+        width: 293
+        height: 358
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,13 +217,13 @@ TextureImporter:
       name: rocks_2
       rect:
         serializedVersion: 2
-        x: 561
-        y: 0
-        width: 342
-        height: 1024
+        x: 613
+        y: 552
+        width: 290
+        height: 275
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 342, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
@@ -239,10 +239,10 @@ TextureImporter:
       name: rocks_3
       rect:
         serializedVersion: 2
-        x: 937
-        y: 186
-        width: 338
-        height: 491
+        x: 933
+        y: 285
+        width: 342
+        height: 358
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

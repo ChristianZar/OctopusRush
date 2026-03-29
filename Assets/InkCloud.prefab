@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -103,11 +103,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 7980751360856455966}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95699a3314de6f445b2da17ae53da591, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Ink
-  speed: 6
-  lifetime: 2
+  m_Script: {fileID: 11500000, guid: 47fe59a1533d44146846fb1d883d3d23, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::InkCloud
+  inkColor: {r: 0.04, g: 0.02, b: 0.15, a: 0.88}
+  lifeTime: 1.8
+  startScale: 0.3
+  endScale: 3
+  blobCount: 5
+  blobMaxOffset: 0.5
 --- !u!58 &-8468253622214043506
 CircleCollider2D:
   m_ObjectHideFlags: 0

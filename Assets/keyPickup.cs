@@ -10,10 +10,21 @@ public class KeyPickup : MonoBehaviour
     [Range(0f, 1f)] public float volume = 0.8f;
 
     private KeyBarUI keyBar;
+    private Camera   cam;
 
     void Start()
     {
         keyBar = FindFirstObjectByType<KeyBarUI>();
+        cam    = Camera.main;
+    }
+
+    void Update()
+    {
+        if (cam == null) { cam = Camera.main; return; }
+        float leftEdge = cam.ViewportToWorldPoint(
+            new Vector3(0f, 0.5f, Mathf.Abs(cam.transform.position.z))).x;
+        if (transform.position.x < leftEdge - 1f)
+            Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
