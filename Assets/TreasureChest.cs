@@ -57,6 +57,7 @@ public class TreasureChest : MonoBehaviour
         opened = true;
         ShowPrompt(false);
         AudioManager.Instance?.PlayChestOpen();
+        AchievementManager.Instance?.ReportChestOpened();
 
         if (openedSprite != null && sr != null)
             sr.sprite = openedSprite;

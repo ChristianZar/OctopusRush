@@ -54,11 +54,12 @@ private float drainTimer = 0f;
     var shield = GetComponent<ShieldSystem>();
     if (shield != null && shield.IsShieldActive)
     {
-        // optional: play a "blocked" effect instead of blood
-        // damageFX?.SpawnShieldHit();
+        AchievementManager.Instance?.ReportDamageBlocked();
         return;
     }
 
+    AchievementManager.Instance?.ReportEnemyDamageTaken();
+    int prevHealth = currentHealth;
     currentHealth -= amount;
     currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
     damageFX?.SpawnBlood();
@@ -69,6 +70,7 @@ private float drainTimer = 0f;
 
     if (currentHealth <= 0)
     {
+        AchievementManager.Instance?.ReportDyingWithHP(prevHealth);
         Die();
     }
 }
@@ -88,6 +90,8 @@ private float drainTimer = 0f;
         float healthPercent = (float)currentHealth / maxHealth;
         OnHealthChanged?.Invoke(healthPercent);
         AudioManager.Instance?.PlayHeal();
+        if (currentHealth == maxHealth)
+            AchievementManager.Instance?.ReportHealedToFull();
     }
 }
 

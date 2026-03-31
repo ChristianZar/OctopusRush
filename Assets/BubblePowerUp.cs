@@ -59,6 +59,7 @@ public class BubblePowerup : MonoBehaviour
         if (weapon != null)
         {
             weapon.Equip(weaponToGrant);
+            AchievementManager.Instance?.ReportWeaponPickedUp();
         }
 
         // Pop FX (optional)

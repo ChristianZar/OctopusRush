@@ -18,6 +18,7 @@ public class FishPickup : MonoBehaviour
 
         // heal system: +1 HP every fishPerHeal fish
         ph.OnFishEaten();
+        AchievementManager.Instance?.ReportFishEaten();
 
         Destroy(gameObject);
     }

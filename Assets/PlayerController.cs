@@ -201,6 +201,7 @@ else
                          + Vector3.up * inkUpOffset;
 
         Instantiate(inkCloudPrefab, spawnPos, Quaternion.identity);
+        AchievementManager.Instance?.ReportInkUsed();
     }
 
     void SpawnSwimInk()

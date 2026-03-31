@@ -183,6 +183,9 @@ public class MineBehavior : MonoBehaviour
 
     void TriggerLinkedMines()
     {
+        if (linkedMines.Count > 0)
+            AchievementManager.Instance?.ReportChainExplosion();
+
         for (int i = 0; i < linkedMines.Count; i++)
         {
             if (linkedMines[i] != null)

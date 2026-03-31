@@ -108,6 +108,8 @@ public class ShieldOrbPowerUp : MonoBehaviour
         if (shield != null)
             shield.ActivateShield();
 
+        AchievementManager.Instance?.ReportShieldCollected();
+
         Time.timeScale = old;
         Destroy(gameObject);
     }

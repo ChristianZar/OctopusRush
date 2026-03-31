@@ -6,6 +6,9 @@ public class PauseManager : MonoBehaviour
     [Header("UI")]
     public GameObject pausePanel;
 
+    [Header("Achievements")]
+    public AchievementPanel achievementPanel;
+
     private bool isPaused = false;
     private GameManager gameManager;
 
@@ -50,6 +53,12 @@ public class PauseManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void OnAchievementsClicked()
+    {
+        if (achievementPanel != null)
+            achievementPanel.Toggle();
     }
 
     public bool IsPaused => isPaused;

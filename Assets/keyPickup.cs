@@ -35,6 +35,8 @@ public class KeyPickup : MonoBehaviour
         if (keyBar != null)
             keyBar.AddKey(keyValue);
 
+        AchievementManager.Instance?.ReportKeyCollected();
+
         // 🔊 Play pickup sound with slight random pitch
         if (pickupSfx != null)
         {

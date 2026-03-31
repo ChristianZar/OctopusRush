@@ -17,7 +17,8 @@ public class ShrimpPickup : MonoBehaviour
             Instantiate(bloodPuffPrefab, transform.position + bloodOffset, Quaternion.identity);
 
         // heal player
-        ph.OnFishEaten(); // you can rename later
+        ph.OnFishEaten();
+        AchievementManager.Instance?.ReportFishEaten();
 
         Destroy(gameObject);
     }

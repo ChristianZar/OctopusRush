@@ -90,6 +90,7 @@ public class SharkHealth : MonoBehaviour
 
     void Die()
     {
+        AchievementManager.Instance?.ReportSharkKilled();
         Destroy(gameObject);
     }
 }

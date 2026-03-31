@@ -72,6 +72,7 @@ public class PufferFishBehavior : MonoBehaviour
                 Instantiate(bloodPuffPrefab, transform.position + bloodOffset, Quaternion.identity);
 
             ph.Heal(eatHeal);
+            AchievementManager.Instance?.ReportPufferfishEaten();
             Destroy(gameObject);
         }
     }

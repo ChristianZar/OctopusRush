@@ -82,6 +82,7 @@ public class GameManager : MonoBehaviour
         if (scoreManager != null)
             scoreManager.SaveLastRun();
 
+        AchievementManager.Instance?.ReportRunEnded();
         Invoke("DisplayGameOverPanel", 1.5f);
     }
 
@@ -175,6 +176,7 @@ public class GameManager : MonoBehaviour
     {
         if (continuesLeft > 0 && !hasUsedContinue)
         {
+            AchievementManager.Instance?.ReportContinueUsed();
             hasUsedContinue = true;
             continuesLeft--;
             RespawnPlayer();

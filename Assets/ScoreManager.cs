@@ -38,6 +38,7 @@ public class ScoreManager : MonoBehaviour
             PlayerPrefs.SetFloat(BEST_KEY, bestScore);
         }
 
+        AchievementManager.Instance?.ReportDistance(meters);
         UpdateUI(meters);
     }
 

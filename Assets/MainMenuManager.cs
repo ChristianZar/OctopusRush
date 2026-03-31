@@ -8,6 +8,9 @@ public class MainMenuManager : MonoBehaviour
     public GameObject creditsPanel;
     public string gameSceneName = "MainScene";
 
+    [Header("Achievements")]
+    public AchievementPanel achievementPanel;
+
     void Start()
     {
         ShowStartMenu();
@@ -38,6 +41,17 @@ public class MainMenuManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(gameSceneName);
+    }
+
+    public void ShowAchievements()
+    {
+        if (achievementPanel == null) return;
+        achievementPanel.onClose = () =>
+        {
+            if (startMenuPanel != null) startMenuPanel.SetActive(true);
+        };
+        achievementPanel.Show();
+        if (startMenuPanel != null) startMenuPanel.SetActive(false);
     }
 
     public void QuitGame()
