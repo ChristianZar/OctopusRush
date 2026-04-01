@@ -117,9 +117,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 505
-        width: 281
-        height: 260
+        y: 506
+        width: 279
+        height: 262
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,10 +138,10 @@ TextureImporter:
       name: Firefly_Gemini Flash_1
       rect:
         serializedVersion: 2
-        x: 281
-        y: 504
-        width: 281
-        height: 264
+        x: 280
+        y: 506
+        width: 282
+        height: 262
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,8 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 755c9b12887e54019a3f10ff6c6e7a5c
-      internalID: -1620824176
+      spriteID: a8fff31b7bbb249e8a63af091ebe5bdd
+      internalID: -872120028
       vertices: []
       indices: 
       edges: []
@@ -161,9 +161,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 562
-        y: 505
+        y: 507
         width: 281
-        height: 263
+        height: 261
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,8 +172,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3441c068446c54129b00c4801e6fb831
-      internalID: -401263993
+      spriteID: 03dc2d5a223b54429acd305d61a095f0
+      internalID: 1888098353
       vertices: []
       indices: 
       edges: []
@@ -182,10 +182,10 @@ TextureImporter:
       name: Firefly_Gemini Flash_3
       rect:
         serializedVersion: 2
-        x: 843
-        y: 505
-        width: 281
-        height: 263
+        x: 845
+        y: 507
+        width: 279
+        height: 261
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d2d135c70f6b414c8dd4cb438781ee2
-      internalID: 301631923
+      spriteID: d85f77d6021ac4d4bb0102c42c5f49a7
+      internalID: -1919625036
       vertices: []
       indices: 
       edges: []
@@ -205,9 +205,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1124
-        y: 505
+        y: 512
         width: 281
-        height: 263
+        height: 256
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,8 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 882cc5578730b48cfbbf405382accede
-      internalID: 124427659
+      spriteID: 757dcf00846b04560976dcaf3ed16ac6
+      internalID: 406137608
       vertices: []
       indices: 
       edges: []
@@ -227,9 +227,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 253
+        y: 252
         width: 281
-        height: 252
+        height: 253
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,8 +238,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22345dcb2d37441c6bf1f74828d5943e
-      internalID: 2039044708
+      spriteID: 27e5e3ef5aff54d9b8d282ba7b853165
+      internalID: 1718810687
       vertices: []
       indices: 
       edges: []
@@ -251,7 +251,7 @@ TextureImporter:
         x: 281
         y: 253
         width: 281
-        height: 252
+        height: 254
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,8 +260,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7920f53104d2741a0aff15e0b17c4b08
-      internalID: 1934245016
+      spriteID: 310919a4140504d0781282e916043c49
+      internalID: -6618876
       vertices: []
       indices: 
       edges: []
@@ -271,9 +271,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 562
-        y: 253
+        y: 252
         width: 281
-        height: 252
+        height: 257
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,8 +282,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcdb628ac8c0b48e6a48290fc8c2d03c
-      internalID: -344267987
+      spriteID: e7f4e2a8258034aaca7253dfaf024bbf
+      internalID: -1413457518
       vertices: []
       indices: 
       edges: []
@@ -295,7 +295,7 @@ TextureImporter:
         x: 843
         y: 253
         width: 281
-        height: 252
+        height: 254
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,8 +304,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa21427e45ef44d9397248bb4ddd85e5
-      internalID: -169380003
+      spriteID: 8dbfb0352dda144109a0c7458295c9d4
+      internalID: -344008158
       vertices: []
       indices: 
       edges: []
@@ -315,9 +315,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1124
-        y: 253
+        y: 250
         width: 281
-        height: 252
+        height: 256
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,8 +326,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e355eb3596c824581b2cf9b1d45241b7
-      internalID: -220999737
+      spriteID: 909d1171758d54f9f96373be49b2c3ee
+      internalID: 256419189
       vertices: []
       indices: 
       edges: []
@@ -337,9 +337,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1
+        y: 0
         width: 281
-        height: 252
+        height: 253
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -348,8 +348,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6baa9dcf119f144c8bbbd7de4b632bc9
-      internalID: -1050943061
+      spriteID: 41e5cf3002f3c40d78504536841a4c41
+      internalID: 1802632703
       vertices: []
       indices: 
       edges: []
@@ -359,7 +359,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 281
-        y: 1
+        y: 0
         width: 281
         height: 252
       alignment: 0
@@ -370,8 +370,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5759fa0e0d02d4ef8b4d74efb414099c
-      internalID: 1578972890
+      spriteID: 70907c03f14dd409f89452b760084f79
+      internalID: 641952185
       vertices: []
       indices: 
       edges: []
@@ -381,7 +381,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 562
-        y: 1
+        y: 0
         width: 281
         height: 252
       alignment: 0
@@ -392,8 +392,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 356f3c367ca504dbcac98c365df60fe0
-      internalID: -190657607
+      spriteID: c9ff7d69855374733ad6307daffe1ef5
+      internalID: 985381281
       vertices: []
       indices: 
       edges: []
@@ -403,9 +403,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 843
-        y: 1
+        y: 0
         width: 281
-        height: 252
+        height: 253
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -414,8 +414,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d02c4e5ef259e43099f5406aa34c5b4d
-      internalID: -206652335
+      spriteID: 2bd1cedc7fc79463e981c10c0c250cba
+      internalID: 1959182171
       vertices: []
       indices: 
       edges: []
@@ -425,9 +425,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1124
-        y: 1
+        y: 0
         width: 281
-        height: 252
+        height: 253
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -436,8 +436,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdda00de825784a9192fc764b19baa7c
-      internalID: -1847616375
+      spriteID: d56fe0d061eeb4d08b8cce7c8b7d7b1d
+      internalID: 309901991
       vertices: []
       indices: 
       edges: []
@@ -446,7 +446,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 38ca6180dbc414055bf913549b4bcd4d
+    spriteID: ef116ce88695a4bce9b1526b91e40b5e
     internalID: 0
     vertices: []
     indices: 
@@ -456,23 +456,23 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":3.0},"gridSpriteSize":{"x":281.0,"y":252.0},"gridSpriteOffset":{"x":0.0,"y":11.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":3.0},"gridSpriteSize":{"x":281.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Firefly_Gemini Flash_0: -5116024799857493270
-      Firefly_Gemini Flash_1: -1620824176
-      Firefly_Gemini Flash_10: -1050943061
-      Firefly_Gemini Flash_11: 1578972890
-      Firefly_Gemini Flash_12: -190657607
-      Firefly_Gemini Flash_13: -206652335
-      Firefly_Gemini Flash_14: -1847616375
-      Firefly_Gemini Flash_2: -401263993
-      Firefly_Gemini Flash_3: 301631923
-      Firefly_Gemini Flash_4: 124427659
-      Firefly_Gemini Flash_5: 2039044708
-      Firefly_Gemini Flash_6: 1934245016
-      Firefly_Gemini Flash_7: -344267987
-      Firefly_Gemini Flash_8: -169380003
-      Firefly_Gemini Flash_9: -220999737
+      Firefly_Gemini Flash_1: -872120028
+      Firefly_Gemini Flash_10: 1802632703
+      Firefly_Gemini Flash_11: 641952185
+      Firefly_Gemini Flash_12: 985381281
+      Firefly_Gemini Flash_13: 1959182171
+      Firefly_Gemini Flash_14: 309901991
+      Firefly_Gemini Flash_2: 1888098353
+      Firefly_Gemini Flash_3: -1919625036
+      Firefly_Gemini Flash_4: 406137608
+      Firefly_Gemini Flash_5: 1718810687
+      Firefly_Gemini Flash_6: -6618876
+      Firefly_Gemini Flash_7: -1413457518
+      Firefly_Gemini Flash_8: -344008158
+      Firefly_Gemini Flash_9: 256419189
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
