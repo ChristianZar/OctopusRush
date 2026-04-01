@@ -22,7 +22,13 @@ public class PauseManager : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
-            TogglePause();
+        {
+            // If achievement panel is visible, close it instead of toggling pause
+            if (achievementPanel != null && achievementPanel.gameObject.activeSelf)
+                achievementPanel.Hide();
+            else
+                TogglePause();
+        }
     }
 
     void TogglePause()

@@ -13,8 +13,8 @@ public class AchievementPopup : MonoBehaviour
     public TMP_FontAsset popupFont;
 
     [Header("Appearance")]
-    public float  panelWidth   = 420f;
-    public float  panelHeight  = 100f;
+    public float  panelWidth   = 500f;
+    public float  panelHeight  = 180f;
     public Color  bgColor      = new Color(0.06f, 0.10f, 0.20f, 0.96f);
     public Color  accentColor  = new Color(1f, 0.82f, 0.18f);   // gold
     public Color  titleColor   = new Color(1f, 0.88f, 0.3f);
@@ -33,6 +33,7 @@ public class AchievementPopup : MonoBehaviour
     private TextMeshProUGUI headerText;
     private TextMeshProUGUI titleText;
     private TextMeshProUGUI descText;
+    private TextMeshProUGUI iconText;
 
     // ── State machine ─────────────────────────────────────────────────────────
     private readonly Queue<AchievementData> queue = new Queue<AchievementData>();

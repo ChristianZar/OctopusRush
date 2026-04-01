@@ -1471,7 +1471,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5113469029405553909, guid: 123ca65071e69456c95f752b08da5ed1, type: 3}
+  m_Sprite: {fileID: -5543102798622562870, guid: ce64eb24505b5423a9f0992be4886f7c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8062,10 +8062,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1648641958}
-  - {fileID: 2201011}
   - {fileID: 936370526}
   - {fileID: 955572507}
+  - {fileID: 1648641958}
+  - {fileID: 2201011}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -8849,20 +8849,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df05e4f73e2944eaea58a6e1d380a93b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AchievementPanel
+  cardFont: {fileID: 11400000, guid: 974aa35693d5c40408578e3c0d9193c3, type: 2}
+  achievementIcons:
+  - {fileID: -5116024799857493270, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: -872120028, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 1888098353, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: -1919625036, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 406137608, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 1718810687, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: -6618876, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: -1413457518, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: -344008158, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 256419189, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 1802632703, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 641952185, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 985381281, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 1959182171, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 1959182171, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 309901991, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 1346603588, guid: 67dbba65e24e24e7c8168de252fd0928, type: 3}
+  - {fileID: 1648490751, guid: 67dbba65e24e24e7c8168de252fd0928, type: 3}
+  - {fileID: 1782186185, guid: 67dbba65e24e24e7c8168de252fd0928, type: 3}
+  - {fileID: 1566977054, guid: 67dbba65e24e24e7c8168de252fd0928, type: 3}
+  - {fileID: -1626275000, guid: 67dbba65e24e24e7c8168de252fd0928, type: 3}
+  - {fileID: 1523638810, guid: 67dbba65e24e24e7c8168de252fd0928, type: 3}
+  lockedIcon: {fileID: 8316744574738540984, guid: 67dbba65e24e24e7c8168de252fd0928, type: 3}
+  cardHeight: 200
+  cardSpacing: 8
+  sidePad: 24
+  topPad: 76
   panelBg: {r: 0.05, g: 0.08, b: 0.16, a: 0.97}
   cardLocked: {r: 0.12, g: 0.14, b: 0.22, a: 1}
   cardUnlocked: {r: 0.1, g: 0.2, b: 0.12, a: 1}
   accentUnlocked: {r: 0.25, g: 0.85, b: 0.45, a: 1}
   accentLocked: {r: 0.3, g: 0.32, b: 0.45, a: 1}
-  titleUnlocked: {r: 1, g: 0.92, b: 0.35, a: 1}
   titleLocked: {r: 0.55, g: 0.58, b: 0.7, a: 1}
   descUnlocked: {r: 0.82, g: 0.9, b: 1, a: 1}
   descLocked: {r: 0.4, g: 0.42, b: 0.52, a: 1}
-  cardWidth: 300
-  cardHeight: 70
-  cardSpacing: 8
-  topPadding: 70
-  sidePadding: 20
 --- !u!114 &936370524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9134,8 +9157,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a599928882de4c308ad933f6021a01d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AchievementPopup
-  panelWidth: 310
-  panelHeight: 78
+  popupFont: {fileID: 11400000, guid: 974aa35693d5c40408578e3c0d9193c3, type: 2}
+  panelWidth: 350
+  panelHeight: 160
   bgColor: {r: 0.06, g: 0.1, b: 0.2, a: 0.96}
   accentColor: {r: 1, g: 0.82, b: 0.18, a: 1}
   titleColor: {r: 1, g: 0.88, b: 0.3, a: 1}
