@@ -34,7 +34,6 @@ public class PauseManager : MonoBehaviour
     void TogglePause()
     {
         if (gameManager != null && gameManager.IsGameOver()) return;
-
         isPaused = !isPaused;
         Time.timeScale = isPaused ? 0f : 1f;
         if (pausePanel != null)

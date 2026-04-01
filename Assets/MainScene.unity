@@ -8874,6 +8874,7 @@ MonoBehaviour:
   - {fileID: -1626275000, guid: 67dbba65e24e24e7c8168de252fd0928, type: 3}
   - {fileID: 1523638810, guid: 67dbba65e24e24e7c8168de252fd0928, type: 3}
   lockedIcon: {fileID: 8316744574738540984, guid: 67dbba65e24e24e7c8168de252fd0928, type: 3}
+  unlockedBadgeSprite: {fileID: 5199979006384268662, guid: 7a5a9c6b0b72046718e067f0c7532a3b, type: 3}
   cardHeight: 200
   cardSpacing: 8
   sidePad: 24
@@ -10697,8 +10698,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 619394802}
   - {fileID: 367825983}
+  - {fileID: 619394802}
   - {fileID: 323966124}
   - {fileID: 627189097}
   - {fileID: 724373104}

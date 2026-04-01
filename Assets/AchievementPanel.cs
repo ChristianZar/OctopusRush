@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -19,6 +20,8 @@ public class AchievementPanel : MonoBehaviour
     public Sprite[] achievementIcons;
     [Tooltip("Shown for locked entries when achievementIcons is assigned.")]
     public Sprite lockedIcon;
+    [Tooltip("Star/badge shown on unlocked cards. Leave empty to hide the badge.")]
+    public Sprite unlockedBadgeSprite;
 
     [Header("Layout")]
     public float cardHeight  = 620f;
@@ -66,13 +69,35 @@ public class AchievementPanel : MonoBehaviour
 
     // ── refs ──────────────────────────────────────────────────────────────────
     private readonly List<GameObject> cards = new List<GameObject>();
+    private readonly Dictionary<string, GameObject> cardByID = new Dictionary<string, GameObject>();
     private TextMeshProUGUI progressText;
+    private ScrollRect scrollRect;
     private bool built;
 
     // ── Lifecycle ─────────────────────────────────────────────────────────────
     void OnEnable()  => AchievementManager.OnUnlocked += OnUnlock;
     void OnDisable() => AchievementManager.OnUnlocked -= OnUnlock;
-    void OnUnlock(AchievementData _) => Refresh();
+
+    void OnUnlock(AchievementData data)
+    {
+        Refresh();
+        if (built && gameObject.activeSelf && cardByID.TryGetValue(data.id, out var card))
+            StartCoroutine(RevealPulse(card));
+    }
+
+    IEnumerator RevealPulse(GameObject card)
+    {
+        const float duration = 0.40f;
+        float t = 0f;
+        while (t < duration)
+        {
+            t += Time.unscaledDeltaTime;
+            float s = 1f + 0.12f * Mathf.Sin(Mathf.PI * t / duration);
+            card.transform.localScale = new Vector3(s, s, 1f);
+            yield return null;
+        }
+        card.transform.localScale = Vector3.one;
+    }
 
     // ── Public ────────────────────────────────────────────────────────────────
     public System.Action onClose;
@@ -83,6 +108,7 @@ public class AchievementPanel : MonoBehaviour
         transform.SetAsLastSibling();
         if (!built) Build();
         else        Refresh();
+        if (scrollRect != null) scrollRect.verticalNormalizedPosition = 1f;
     }
 
     public void Hide()
@@ -181,6 +207,7 @@ public class AchievementPanel : MonoBehaviour
         sr.horizontal = false; sr.vertical = true;
         sr.scrollSensitivity = 40; sr.movementType = ScrollRect.MovementType.Clamped;
         sr.inertia = true; sr.decelerationRate = 0.135f;
+        scrollRect = sr;
 
         for (int i = 0; i < AchievementManager.All.Count; i++)
             cards.Add(BuildCard(contentGO, AchievementManager.All[i], i));
@@ -207,6 +234,7 @@ public class AchievementPanel : MonoBehaviour
             typeof(RectTransform), typeof(Image), typeof(CanvasRenderer));
         card.transform.SetParent(parent.transform, false);
         card.GetComponent<Image>().color = u ? cardUnlocked : cardLocked;
+        cardByID[data.id] = card;
 
         // Left accent bar
         MakeSolidRect(card, "Accent",
@@ -282,7 +310,7 @@ public class AchievementPanel : MonoBehaviour
             txt: secret ? "Complete more of the game to reveal this secret." : data.description);
         { var r = descTMP.GetComponent<RectTransform>(); r.offsetMin = new Vector2(textLeft, 4f); r.offsetMax = new Vector2(-textRight, -4f); }
 
-        // Unlocked badge
+        // Unlocked badge — sprite if assigned, otherwise hidden
         var chk = new GameObject("ChkBadge",
             typeof(RectTransform), typeof(Image), typeof(CanvasRenderer));
         chk.transform.SetParent(card.transform, false);
@@ -291,12 +319,17 @@ public class AchievementPanel : MonoBehaviour
         chkRT.pivot     = new Vector2(1,.5f);
         chkRT.sizeDelta = new Vector2(80, 80);
         chkRT.anchoredPosition = new Vector2(-10, 0);
-        chk.GetComponent<Image>().color = new Color(.18f,.70f,.32f,1f);
-        MakeTMP(chk, "ChkTxt",
-            aMin: Vector2.zero, aMax: Vector2.one, piv: new Vector2(.5f,.5f),
-            pos: Vector2.zero, sz: Vector2.zero,
-            fs: 38, col: Color.white,
-            align: TextAlignmentOptions.Center, bold: true, txt: "OK");
+        var chkImg = chk.GetComponent<Image>();
+        if (unlockedBadgeSprite != null)
+        {
+            chkImg.sprite = unlockedBadgeSprite;
+            chkImg.color  = new Color(1f, 0.88f, 0.2f, 1f);
+            chkImg.preserveAspect = true;
+        }
+        else
+        {
+            chkImg.color = Color.clear;  // invisible until user assigns sprite
+        }
         chk.SetActive(u);
 
         return card;

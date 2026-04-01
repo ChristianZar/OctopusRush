@@ -1369,6 +1369,7 @@ MonoBehaviour:
   - {fileID: -1626275000, guid: 67dbba65e24e24e7c8168de252fd0928, type: 3}
   - {fileID: 1523638810, guid: 67dbba65e24e24e7c8168de252fd0928, type: 3}
   lockedIcon: {fileID: 8316744574738540984, guid: 67dbba65e24e24e7c8168de252fd0928, type: 3}
+  unlockedBadgeSprite: {fileID: 5199979006384268662, guid: 7a5a9c6b0b72046718e067f0c7532a3b, type: 3}
   cardHeight: 200
   cardSpacing: 7
   sidePad: 24
@@ -1499,8 +1500,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.3077608, g: 0.7096737, b: 0.7169812, a: 1}
+    m_PressedColor: {r: 0.17777678, g: 0.45144838, b: 0.8018868, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
