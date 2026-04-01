@@ -1345,6 +1345,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AchievementPanel
   cardFont: {fileID: 0}
+  achievementIcons:
+  - {fileID: -5116024799857493270, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: -1620824176, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: -401263993, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 301631923, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 124427659, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 2039044708, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 1934245016, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: -344267987, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: -169380003, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: -220999737, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: -1050943061, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 1578972890, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: -190657607, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: -206652335, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: -1847616375, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  lockedIcon: {fileID: 0}
   cardHeight: 100
   cardSpacing: 7
   sidePad: 24

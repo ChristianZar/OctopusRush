@@ -19,7 +19,7 @@ public class AchievementPanel : MonoBehaviour
     public Sprite lockedIcon;
 
     [Header("Layout")]
-    public float cardHeight  = 110f;
+    public float cardHeight  = 165f;
     public float cardSpacing =   8f;
     public float sidePad     =  24f;
     public float topPad      =  76f;
@@ -141,8 +141,9 @@ public class AchievementPanel : MonoBehaviour
         glg.padding         = new RectOffset(4, 4, 4, 4);
         glg.childAlignment  = TextAnchor.UpperLeft;
 
-        // Cell width = half of estimated content width
-        float contentW = Screen.width - 2f * sidePad - glg.padding.left - glg.padding.right;
+        // Force layout so viewRT.rect.width is correct regardless of canvas scale
+        Canvas.ForceUpdateCanvases();
+        float contentW = viewRT.rect.width - glg.padding.left - glg.padding.right;
         float cellW    = (contentW - cardSpacing) / 2f;
         glg.cellSize   = new Vector2(cellW, cardHeight);
 
@@ -188,7 +189,7 @@ public class AchievementPanel : MonoBehaviour
             w: 6, h: 0, col: u ? accentUnlocked : accentLocked);
 
         // ── Icon area ─────────────────────────────────────────────────────────
-        float iconSize = cardHeight - 20f;   // square with 10px margin top+bottom
+        float iconSize = Mathf.Min(cardHeight - 30f, 120f);  // capped so text area stays readable
         float iconLeft = 14f;
 
         var iconBg = new GameObject("IconBg",
@@ -226,12 +227,12 @@ public class AchievementPanel : MonoBehaviour
         float textLeft  = iconLeft + iconSize + 10f;
         float textRight = 38f;   // always reserve room; ChkBadge sits here
 
-        // Title — bigger and bold
+        // Title — prominent, large
         MakeTMP(card, "CardTitle",
             aMin: new Vector2(0,.44f), aMax: new Vector2(1,1),
             piv: new Vector2(0,.5f),
             pos: new Vector2(textLeft, 0), sz: new Vector2(-(textLeft + textRight), 0),
-            fs: 17, col: u ? titleUnlocked : titleLocked,
+            fs: 22, col: u ? titleUnlocked : titleLocked,
             align: TextAlignmentOptions.Left, bold: true,
             txt: secret ? "???" : data.title);
 
@@ -240,7 +241,7 @@ public class AchievementPanel : MonoBehaviour
             aMin: new Vector2(0,0), aMax: new Vector2(1,.50f),
             piv: new Vector2(0,.5f),
             pos: new Vector2(textLeft, 0), sz: new Vector2(-(textLeft + textRight), 0),
-            fs: 12, col: u ? descUnlocked : descLocked,
+            fs: 14, col: u ? descUnlocked : descLocked,
             align: TextAlignmentOptions.Left, bold: false,
             txt: secret ? "Complete more of the game to reveal this secret." : data.description);
 
