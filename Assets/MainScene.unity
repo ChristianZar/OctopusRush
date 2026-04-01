@@ -9158,8 +9158,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AchievementPopup
   popupFont: {fileID: 11400000, guid: 974aa35693d5c40408578e3c0d9193c3, type: 2}
-  panelWidth: 350
-  panelHeight: 160
+  achievementIcons:
+  - {fileID: -5116024799857493270, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: -872120028, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 1888098353, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: -1919625036, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 406137608, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 1718810687, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: -6618876, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: -1413457518, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: -344008158, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 256419189, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 1802632703, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 641952185, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 985381281, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 1959182171, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 1959182171, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 309901991, guid: 61d77bd459fcb4d40a3e7c1ebe1122ec, type: 3}
+  - {fileID: 1346603588, guid: 67dbba65e24e24e7c8168de252fd0928, type: 3}
+  - {fileID: 1648490751, guid: 67dbba65e24e24e7c8168de252fd0928, type: 3}
+  - {fileID: 1782186185, guid: 67dbba65e24e24e7c8168de252fd0928, type: 3}
+  - {fileID: 1566977054, guid: 67dbba65e24e24e7c8168de252fd0928, type: 3}
+  - {fileID: -1626275000, guid: 67dbba65e24e24e7c8168de252fd0928, type: 3}
+  - {fileID: 1523638810, guid: 67dbba65e24e24e7c8168de252fd0928, type: 3}
+  panelWidth: 500
+  panelHeight: 180
   bgColor: {r: 0.06, g: 0.1, b: 0.2, a: 0.96}
   accentColor: {r: 1, g: 0.82, b: 0.18, a: 1}
   titleColor: {r: 1, g: 0.88, b: 0.3, a: 1}
@@ -10439,7 +10462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

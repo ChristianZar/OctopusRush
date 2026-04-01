@@ -12,6 +12,9 @@ public class AchievementPopup : MonoBehaviour
     [Header("Font (optional — drag Showpop SDF here)")]
     public TMP_FontAsset popupFont;
 
+    [Header("Icons (same order as AchievementManager.All)")]
+    public Sprite[] achievementIcons;
+
     [Header("Appearance")]
     public float  panelWidth   = 500f;
     public float  panelHeight  = 180f;
@@ -33,7 +36,7 @@ public class AchievementPopup : MonoBehaviour
     private TextMeshProUGUI headerText;
     private TextMeshProUGUI titleText;
     private TextMeshProUGUI descText;
-    private TextMeshProUGUI iconText;
+    private Image iconImage;
 
     // ── State machine ─────────────────────────────────────────────────────────
     private readonly Queue<AchievementData> queue = new Queue<AchievementData>();
@@ -64,8 +67,17 @@ public class AchievementPopup : MonoBehaviour
 
         var d = queue.Dequeue();
         headerText.text = "Achievement Unlocked!";
-        titleText.text  = $"{d.icon}  {d.title}";
+        titleText.text  = d.title;
         descText.text   = d.description;
+
+        int idx = AchievementManager.All.FindIndex(a => a.id == d.id);
+        if (iconImage != null)
+        {
+            iconImage.sprite = (idx >= 0 && achievementIcons != null && idx < achievementIcons.Length)
+                ? achievementIcons[idx] : null;
+            iconImage.enabled = iconImage.sprite != null;
+            iconImage.preserveAspect = true;
+        }
 
         SetX(OffScreenX);
         phase = Phase.SlideIn;
@@ -126,35 +138,60 @@ public class AchievementPopup : MonoBehaviour
         panel.pivot     = new Vector2(1f, 1f);
         panel.sizeDelta = new Vector2(panelWidth, panelHeight);
         panel.anchoredPosition = new Vector2(OffScreenX, -marginTop);
-
-        var bg = go.GetComponent<Image>();
-        bg.color = bgColor;
+        go.GetComponent<Image>().color = bgColor;
 
         // Gold left accent bar
         AddRect(go, "Accent", new Color(1f, 0.82f, 0.18f),
             anchorMin: new Vector2(0f, 0f), anchorMax: new Vector2(0f, 1f),
-            pivot: new Vector2(0f, 0.5f), sizeDelta: new Vector2(5f, 0f), pos: Vector2.zero);
+            pivot: new Vector2(0f, 0.5f), sizeDelta: new Vector2(6f, 0f), pos: Vector2.zero);
 
-        // "Achievement Unlocked!" header (top-right, small)
+        // Icon box — left side, square, vertically centred
+        float iconSize = panelHeight - 24f;
+        float iconLeft = 14f;
+        float textLeft = iconLeft + iconSize + 12f;
+
+        var ibGO = new GameObject("IconBg", typeof(RectTransform), typeof(Image), typeof(CanvasRenderer));
+        ibGO.transform.SetParent(go.transform, false);
+        var ibRT = ibGO.GetComponent<RectTransform>();
+        ibRT.anchorMin = new Vector2(0f, 0.5f); ibRT.anchorMax = new Vector2(0f, 0.5f);
+        ibRT.pivot     = new Vector2(0f, 0.5f);
+        ibRT.anchoredPosition = new Vector2(iconLeft, 0f);
+        ibRT.sizeDelta        = new Vector2(iconSize, iconSize);
+        ibGO.GetComponent<Image>().color = new Color(0.08f, 0.12f, 0.24f, 1f);
+
+        // Sprite icon inside icon box
+        var iImgGO = new GameObject("IconImg", typeof(RectTransform), typeof(Image), typeof(CanvasRenderer));
+        iImgGO.transform.SetParent(ibGO.transform, false);
+        var iImgRT = iImgGO.GetComponent<RectTransform>();
+        iImgRT.anchorMin = new Vector2(0.05f, 0.05f); iImgRT.anchorMax = new Vector2(0.95f, 0.95f);
+        iImgRT.offsetMin = Vector2.zero; iImgRT.offsetMax = Vector2.zero;
+        iconImage = iImgGO.GetComponent<Image>();
+        iconImage.preserveAspect = true;
+        iconImage.enabled = false;
+
+        // "Achievement Unlocked!" header — top 38%, right-aligned
         headerText = AddTMP(go, "Header",
-            anchorMin: new Vector2(0f, 0.58f), anchorMax: new Vector2(1f, 1f),
-            pos: new Vector2(-12f, 0f), sizeDelta: new Vector2(-24f, 0f),
-            fontSize: 14f, color: new Color(0.75f, 0.80f, 0.95f),
+            anchorMin: new Vector2(0f, 0.62f), anchorMax: new Vector2(1f, 1f),
+            pos: Vector2.zero, sizeDelta: Vector2.zero,
+            fontSize: 20f, color: new Color(0.75f, 0.80f, 0.95f),
             alignment: TextAlignmentOptions.Right);
+        { var r = headerText.GetComponent<RectTransform>(); r.offsetMin = new Vector2(textLeft, 0f); r.offsetMax = new Vector2(-14f, 0f); }
 
-        // Achievement title (icon + name)
+        // Achievement title — middle, bold gold
         titleText = AddTMP(go, "Title",
-            anchorMin: new Vector2(0f, 0.3f), anchorMax: new Vector2(1f, 0.72f),
-            pos: new Vector2(18f, 0f), sizeDelta: new Vector2(-36f, 0f),
-            fontSize: 19f, color: titleColor,
+            anchorMin: new Vector2(0f, 0.28f), anchorMax: new Vector2(1f, 0.68f),
+            pos: Vector2.zero, sizeDelta: Vector2.zero,
+            fontSize: 26f, color: titleColor,
             alignment: TextAlignmentOptions.Left, bold: true);
+        { var r = titleText.GetComponent<RectTransform>(); r.offsetMin = new Vector2(textLeft, 0f); r.offsetMax = new Vector2(-14f, 0f); }
 
-        // Description
+        // Description — bottom 36%
         descText = AddTMP(go, "Desc",
             anchorMin: new Vector2(0f, 0f), anchorMax: new Vector2(1f, 0.36f),
-            pos: new Vector2(18f, 0f), sizeDelta: new Vector2(-36f, 0f),
-            fontSize: 15f, color: descColor,
+            pos: Vector2.zero, sizeDelta: Vector2.zero,
+            fontSize: 20f, color: descColor,
             alignment: TextAlignmentOptions.Left);
+        { var r = descText.GetComponent<RectTransform>(); r.offsetMin = new Vector2(textLeft, 0f); r.offsetMax = new Vector2(-14f, 0f); }
 
         SetX(OffScreenX);
     }

@@ -137,8 +137,8 @@ public class AchievementPanel : MonoBehaviour
             fs: 30, col: new Color(.60f,.65f,.80f),
             align: TextAlignmentOptions.Center, bold: false, txt: "");
 
-        // Scroll view — starts below header + progress
-        float scrollTopPad = headerH + 34f;
+        // Scroll view — starts below header + progress (progress text is 48px tall + 4px gap = 52, add 12px margin)
+        float scrollTopPad = headerH + 64f;
         var viewGO = new GameObject("View",
             typeof(RectTransform), typeof(ScrollRect), typeof(RectMask2D));
         viewGO.transform.SetParent(transform, false);
