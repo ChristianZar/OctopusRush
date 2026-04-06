@@ -22,6 +22,12 @@ public class AnglerFishAmbush : MonoBehaviour
     private bool attacking = false;
     private float damageTimer = 0f;
 
+    [Header("Patrol")]
+public float patrolDistance = 2f;
+public float patrolSpeed = 1f;
+
+private Vector3 startPos;
+
     void Start()
     {
         if (player == null)
@@ -39,6 +45,8 @@ public class AnglerFishAmbush : MonoBehaviour
 
         if (lure != null)
             lure.SetActive(true);
+
+            startPos = transform.position;
     }
 
     void Update()
@@ -49,6 +57,7 @@ public class AnglerFishAmbush : MonoBehaviour
 
         if (!attacking)
         {
+            Patrol(); 
             MoveLure();
 
             if (dist < attackRadius)
@@ -105,4 +114,12 @@ public class AnglerFishAmbush : MonoBehaviour
         pos.x += offset;
         lure.transform.localPosition = pos;
     }
+
+    void Patrol()
+{
+    float offset = Mathf.Sin(Time.time * patrolSpeed) * patrolDistance;
+    Vector3 pos = startPos;
+    pos.x += offset;
+    transform.position = pos;
+}
 }

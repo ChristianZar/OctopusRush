@@ -9279,6 +9279,79 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1173414393
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 352269592138445526, guid: 863c55fd42b6b1649b3bbeb5d6f6c9a4, type: 3}
+      propertyPath: m_Name
+      value: AnglerFishRoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262338755930562639, guid: 863c55fd42b6b1649b3bbeb5d6f6c9a4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262338755930562639, guid: 863c55fd42b6b1649b3bbeb5d6f6c9a4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.04509
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262338755930562639, guid: 863c55fd42b6b1649b3bbeb5d6f6c9a4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262338755930562639, guid: 863c55fd42b6b1649b3bbeb5d6f6c9a4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262338755930562639, guid: 863c55fd42b6b1649b3bbeb5d6f6c9a4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262338755930562639, guid: 863c55fd42b6b1649b3bbeb5d6f6c9a4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262338755930562639, guid: 863c55fd42b6b1649b3bbeb5d6f6c9a4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262338755930562639, guid: 863c55fd42b6b1649b3bbeb5d6f6c9a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262338755930562639, guid: 863c55fd42b6b1649b3bbeb5d6f6c9a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262338755930562639, guid: 863c55fd42b6b1649b3bbeb5d6f6c9a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5978696121971285364, guid: 863c55fd42b6b1649b3bbeb5d6f6c9a4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+    - target: {fileID: 8274497608050655825, guid: 863c55fd42b6b1649b3bbeb5d6f6c9a4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.90957916
+      objectReference: {fileID: 0}
+    - target: {fileID: 8274497608050655825, guid: 863c55fd42b6b1649b3bbeb5d6f6c9a4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 8274497608050655825, guid: 863c55fd42b6b1649b3bbeb5d6f6c9a4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.11
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 863c55fd42b6b1649b3bbeb5d6f6c9a4, type: 3}
 --- !u!1 &1252901051
 GameObject:
   m_ObjectHideFlags: 0
@@ -9435,6 +9508,57 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &1395762891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1395762893}
+  - component: {fileID: 1395762892}
+  m_Layer: 0
+  m_Name: AnglerFishSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1395762892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395762891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e342d0ac62038ac49bcf3615ba1c3610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnglerFishSpawner
+  anglerFishPrefab: {fileID: 352269592138445526, guid: 863c55fd42b6b1649b3bbeb5d6f6c9a4, type: 3}
+  cam: {fileID: 0}
+  spawnEverySeconds: 3
+  minSpawnOffsetX: 8
+  maxSpawnOffsetX: 11
+  spawnY: -4
+  destroyBehindX: 8
+--- !u!4 &1395762893
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395762891}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.49986, y: 0.04509, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1406248289
 GameObject:
   m_ObjectHideFlags: 0
@@ -10721,3 +10845,5 @@ SceneRoots:
   - {fileID: 2201001}
   - {fileID: 2129110683}
   - {fileID: 589605039}
+  - {fileID: 1173414393}
+  - {fileID: 1395762893}
