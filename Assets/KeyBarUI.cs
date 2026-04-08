@@ -18,6 +18,10 @@ public class KeyBarUI : MonoBehaviour
         keysCollected += amount;
         keysCollected = Mathf.Clamp(keysCollected, 0, keysToFull);
         UpdateBar();
+
+        // Accumulate lifetime keys for the skin shop
+        if (SkinManager.Instance != null)
+            SkinManager.Instance.AddLifetimeKeys(amount);
     }
 
     public bool IsFull()

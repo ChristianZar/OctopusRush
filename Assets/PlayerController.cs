@@ -99,6 +99,19 @@ public CameraAutoScroll cameraAutoScroll;
         if (cam == null) cam = Camera.main;
         spriteRenderer = GetComponent<SpriteRenderer>();
 
+        // Apply equipped skin if SkinManager is present
+        if (SkinManager.Instance != null)
+        {
+            SkinData skin = SkinManager.Instance.GetEquippedSkin();
+            if (skin != null)
+            {
+                if (skin.swimmingFrames != null && skin.swimmingFrames.Length > 0)
+                    swimmingAnimationFrames = skin.swimmingFrames;
+                if (skin.idleFrames != null && skin.idleFrames.Length > 0)
+                    idleAnimationFrames = skin.idleFrames;
+            }
+        }
+
         if (idleAnimationFrames != null && idleAnimationFrames.Length > 0 && spriteRenderer != null)
             spriteRenderer.sprite = idleAnimationFrames[0];
 

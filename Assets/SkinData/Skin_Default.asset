@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beeac62eaa3b74beeb6eee772337a7ba, type: 3}
+  m_Name: Skin_Default
+  m_EditorClassIdentifier: Assembly-CSharp::SkinData
+  skinName: Default
+  thumbnail: {fileID: -7710734765303197050, guid: 906c58acd88934cee89e3653f16c9707, type: 3}
+  keyCost: 0
+  swimmingFrames:
+  - {fileID: -275567586294855528, guid: 906c58acd88934cee89e3653f16c9707, type: 3}
+  - {fileID: -6206441022217820351, guid: 906c58acd88934cee89e3653f16c9707, type: 3}
+  - {fileID: -5226541758263998894, guid: 906c58acd88934cee89e3653f16c9707, type: 3}
+  - {fileID: -6888985061726724557, guid: 906c58acd88934cee89e3653f16c9707, type: 3}
+  idleFrames:
+  - {fileID: -1780124382017051349, guid: 906c58acd88934cee89e3653f16c9707, type: 3}
+  - {fileID: -4650362322033792720, guid: 906c58acd88934cee89e3653f16c9707, type: 3}
+  - {fileID: -7317355073945149601, guid: 906c58acd88934cee89e3653f16c9707, type: 3}
+  - {fileID: -7710734765303197050, guid: 906c58acd88934cee89e3653f16c9707, type: 3}
+  - {fileID: 2724331602463451641, guid: 906c58acd88934cee89e3653f16c9707, type: 3}

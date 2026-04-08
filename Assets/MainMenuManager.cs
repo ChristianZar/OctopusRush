@@ -11,6 +11,9 @@ public class MainMenuManager : MonoBehaviour
     [Header("Achievements")]
     public AchievementPanel achievementPanel;
 
+    [Header("Skin Shop")]
+    public SkinShopPanel skinShopPanel;
+
     void Start()
     {
         ShowStartMenu();
@@ -51,6 +54,17 @@ public class MainMenuManager : MonoBehaviour
             if (startMenuPanel != null) startMenuPanel.SetActive(true);
         };
         achievementPanel.Show();
+        if (startMenuPanel != null) startMenuPanel.SetActive(false);
+    }
+
+    public void ShowSkinShop()
+    {
+        if (skinShopPanel == null) return;
+        skinShopPanel.onClose = () =>
+        {
+            if (startMenuPanel != null) startMenuPanel.SetActive(true);
+        };
+        skinShopPanel.Show();
         if (startMenuPanel != null) startMenuPanel.SetActive(false);
     }
 
