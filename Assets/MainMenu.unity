@@ -311,6 +311,7 @@ MonoBehaviour:
   logo: {fileID: 2125682113}
   achievementPanel: {fileID: 936370523}
   skinShopPanel: {fileID: 1665801992}
+  transitionDuration: 0.25
 --- !u!4 &184736990
 Transform:
   m_ObjectHideFlags: 0
@@ -675,6 +676,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce27d9f9ad4a54c0bbf5aef4432ab64c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuStyler
+  helpCardSprites:
+  - {fileID: -4359119259276198229, guid: 0c9598738a5863949975c9303fce746a, type: 3}
+  - {fileID: 1443271557808925536, guid: 3c509cd8aa5e696469ad2b84a11bd089, type: 3}
+  - {fileID: -3299739834293241358, guid: bed532d98bf1e0d4b8bf2540b2f2ca67, type: 3}
+  - {fileID: 7205055984485969968, guid: 444d829c4f000244b9c5313a8d4a57db, type: 3}
+  - {fileID: 4117100077357832083, guid: 79b7a114c9a1b994da8503bfb5fd27b4, type: 3}
+  - {fileID: -3871084328919047167, guid: 144f82f959866134393b9f5f6b6a1438, type: 3}
+  - {fileID: -5765026725288860141, guid: f207d1cecba11d04abbdd873e578072b, type: 3}
+  - {fileID: -6147679188264957991, guid: 310ce1012815c244bbd6e53f53a8e9b7, type: 3}
+  cardWidth: 500
+  cardHeight: 400
+  labelHeight: 60
+  labelFontSize: 28
 --- !u!1 &445055462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1788,7 +1802,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -113}
-  m_SizeDelta: {x: 440, y: 130}
+  m_SizeDelta: {x: 440, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1016852850
 MonoBehaviour:
@@ -8019,7 +8033,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 500, y: -250}
-  m_SizeDelta: {x: 400, y: 150}
+  m_SizeDelta: {x: 400, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1758316833
 MonoBehaviour:

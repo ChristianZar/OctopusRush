@@ -2,61 +2,58 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-/// <summary>
 /// Organizes main menu layout at runtime:
-///   - Moves ButtonContainer to the RIGHT half of the screen
-///   - Stacks buttons with original widths, consistent gaps, FloatUI preserved
-///   - Fixes HelpPanel text and makes it scrollable
-/// Drag onto any GameObject in the Menu scene.
-/// </summary>
+///   - Repositions logo and button grid
+///   - Builds How To Play panel as a carousel (one card at a time, Prev/Next)
 public class MainMenuStyler : MonoBehaviour
 {
-    // ── Controls / How To Play text ───────────────────────────────────────────
+    [Header("How To Play Cards")]
+    [Tooltip("Drag the 8 card sprites here in order:\n" +
+             "Swimup, Ink, CollectKeys, EatFish,\n" +
+             "ShieldOrb, Gun, Watchout, Stop")]
+    public Sprite[]      helpCardSprites;
+    public TMP_FontAsset helpFont;
+    public float         labelHeight   = 70f;
+    public float         labelFontSize = 32f;
 
-    const string HowToPlayText =
-        "HOW TO PLAY\n\n" +
-        "Hold [W] to swim upward. Release to drift down with the current.\n\n" +
-        "Tap [SPACE] to release an ink cloud — it slows nearby enemies " +
-        "and gives you a quick speed boost.\n\n" +
-        "Collect keys scattered through the ocean. " +
-        "When your key bar is full, swim up to a treasure chest and press [E] to open it.\n\n" +
-        "Pick up Shield Orbs to block one hit. " +
-        "Grab the AK-47 powerup and press [F] to shoot enemies for 15 seconds.\n\n" +
-        "Eat fish to heal — every 3 fish restores 1 HP. " +
-        "Eat a deflated pufferfish for a free heal too!\n\n" +
-        "Avoid sharks, mines, jellyfish, crabs, and anglerfish. " +
-        "Your health drains slowly over time, so keep moving and keep eating.\n\n" +
-        "Survive as long as possible, travel as far as you can, " +
-        "and beat your best distance score!\n\n" +
-        "Press [ESC] or [P] to pause at any time.";
+    static readonly string[] CardLabels =
+    {
+        "Swim Up — Hold W",
+        "Ink Blast — Press SPACE",
+        "Collect Keys — Press E at chest",
+        "Eat Fish to Heal",
+        "Shield Orb",
+        "Gun Power-Up — Press F",
+        "Watch Out!",
+        "Pause — ESC or P",
+    };
 
-    // ── Layout ────────────────────────────────────────────────────────────────
-    //
-    //   Screen split: Logo fills LEFT half, buttons stack on RIGHT half
-    //
-    //   Buttons use their original image widths (unchanged).
-    //   Consistent 20px gap between each button.
-    //   Stack is vertically centred on the right side.
-    //
-    // ─────────────────────────────────────────────────────────────────────────
+    // ── Carousel state ────────────────────────────────────────────────────────
+
+    int                _cardIndex;
+    Image              _carouselImage;
+    TextMeshProUGUI    _carouselLabel;
+    TextMeshProUGUI    _pageIndicator;
+
+    // ── Lifecycle ─────────────────────────────────────────────────────────────
 
     void Start()
     {
         RepositionLogo();
         RepositionButtons();
-        FixHelpText();
-        MakeHelpScrollable();
+        AddButtonFeedback();
+        BuildHelpPanel();
     }
+
+    // ── Logo ──────────────────────────────────────────────────────────────────
 
     void RepositionLogo()
     {
         var go = GameObject.Find("Logo");
         if (go == null) return;
-
         var rt = go.GetComponent<RectTransform>();
         if (rt == null) return;
 
-        // Restore original position/size/anchor
         rt.anchorMin        = new Vector2(0.5f, 0.5f);
         rt.anchorMax        = new Vector2(0.5f, 0.5f);
         rt.pivot            = new Vector2(0.5f, 1f);
@@ -64,46 +61,35 @@ public class MainMenuStyler : MonoBehaviour
         rt.sizeDelta        = new Vector2(900f, 400f);
     }
 
+    // ── Button grid ───────────────────────────────────────────────────────────
+
     void RepositionButtons()
     {
-        // 3 rows × 2 columns grid
-        // Row 0: Start      | How To Play
-        // Row 1: Achievement | Skins
-        // Row 2: Credits     | Quit
-        //
-        // Each button keeps its original image width.
-        // Heights unified per row for clean alignment.
+        float colGap = 24f;
+        float rowGap = 20f;
+        float rowH   = 130f;
 
-        float colGap  = 24f;   // horizontal gap between the two columns
-        float rowGap  = 20f;   // vertical gap between rows
-        float rowH    = 130f;  // uniform row height
+        float wStart = 460f; float wHelp  = 450f;
+        float wAch   = 400f; float wSkins = 400f;
+        float wCred  = 440f; float wQuit  = 350f;
 
-        // Original widths
-        float wStart  = 460f; float wHelp  = 450f;
-        float wAch    = 400f; float wSkins = 400f;
-        float wCred   = 440f; float wQuit  = 350f;
+        float colOffset = wStart / 2f + colGap / 2f;
+        float totalH    = rowH * 3 + rowGap * 2;
+        float topY      = totalH / 2f - rowH / 2f;
 
-        // Column centres: left column at -x, right column at +x
-        // Use the wider pair (Start/Help row) to set the column offset
-        float colOffset = (wStart / 2f + colGap / 2f);   // ~254
-
-        // Total grid height
-        float totalH = rowH * 3 + rowGap * 2;
-        float topY   = totalH / 2f - rowH / 2f;  // centre Y of first row
-
-        float[] rowY = new float[]
+        float[] rowY =
         {
-             topY,
-             topY - (rowH + rowGap),
-             topY - (rowH + rowGap) * 2f,
+            topY,
+            topY - (rowH + rowGap),
+            topY - (rowH + rowGap) * 2f,
         };
 
-        Apply("StartButton",       new Vector2(-colOffset, rowY[0]), new Vector2(wStart,  rowH));
-        Apply("HowToPlayButton",   new Vector2( colOffset, rowY[0]), new Vector2(wHelp,   rowH));
-        Apply("AchievementButton", new Vector2(-colOffset, rowY[1]), new Vector2(wAch,    rowH));
-        Apply("SkinsButton",       new Vector2( colOffset, rowY[1]), new Vector2(wSkins,  rowH));
-        Apply("CreditsButton",     new Vector2(-colOffset, rowY[2]), new Vector2(wCred,   rowH));
-        Apply("QuitButton",        new Vector2( colOffset, rowY[2]), new Vector2(wQuit,   rowH));
+        Apply("StartButton",       new Vector2(-colOffset, rowY[0]), new Vector2(wStart, rowH));
+        Apply("HowToPlayButton",   new Vector2( colOffset, rowY[0]), new Vector2(wHelp,  rowH));
+        Apply("AchievementButton", new Vector2(-colOffset, rowY[1]), new Vector2(wAch,   rowH));
+        Apply("SkinsButton",       new Vector2( colOffset, rowY[1]), new Vector2(wSkins, rowH));
+        Apply("CreditsButton",     new Vector2(-colOffset, rowY[2]), new Vector2(wCred,  rowH));
+        Apply("QuitButton",        new Vector2( colOffset, rowY[2]), new Vector2(wQuit,  rowH));
     }
 
     void Apply(string goName, Vector2 pos, Vector2 size)
@@ -116,83 +102,177 @@ public class MainMenuStyler : MonoBehaviour
         rt.sizeDelta        = size;
     }
 
-    // ── Help panel text ───────────────────────────────────────────────────────
+    // ── Button hover feedback ─────────────────────────────────────────────────
 
-    void FixHelpText()
+    static readonly string[] ButtonNames =
     {
-        foreach (var tmp in Resources.FindObjectsOfTypeAll<TextMeshProUGUI>())
+        "StartButton", "HowToPlayButton", "AchievementButton",
+        "SkinsButton", "CreditsButton", "QuitButton"
+    };
+
+    void AddButtonFeedback()
+    {
+        foreach (var name in ButtonNames)
         {
-            if (tmp.text.Contains("CONTROLS") || tmp.text.Contains("WASD") ||
-                tmp.text.Contains("ARROW")    || tmp.text.Contains("HOW TO PLAY"))
-            {
-                tmp.text               = HowToPlayText;
-                tmp.enableWordWrapping = true;
-                tmp.alignment          = TextAlignmentOptions.Left;
-                break;
-            }
+            var go = GameObject.Find(name);
+            if (go == null) continue;
+            if (go.GetComponent<MenuButtonFeedback>() == null)
+                go.AddComponent<MenuButtonFeedback>();
         }
     }
 
-    // ── Scrollable help panel ─────────────────────────────────────────────────
+    // ── Help panel — carousel ────────────────────────────────────────────────
 
-    void MakeHelpScrollable()
+    void BuildHelpPanel()
     {
-        TextMeshProUGUI contentTMP = null;
-        foreach (var tmp in Resources.FindObjectsOfTypeAll<TextMeshProUGUI>())
+        var mgr = FindObjectOfType<MainMenuManager>();
+        if (mgr == null || mgr.helpPanel == null) return;
+        var panel = mgr.helpPanel;
+
+        if (panel.transform.Find("HelpContent") != null) return;
+
+        // Remove old non-button children
+        var toDelete = new System.Collections.Generic.List<GameObject>();
+        foreach (Transform child in panel.transform)
         {
-            if (tmp.text.Contains("HOW TO PLAY") || tmp.text.Contains("Hold [W]"))
-            {
-                contentTMP = tmp;
-                break;
-            }
+            if (child.GetComponent<Button>() == null)
+                toDelete.Add(child.gameObject);
         }
-        if (contentTMP == null) return;
+        foreach (var go in toDelete) Destroy(go);
 
-        if (contentTMP.transform.parent != null &&
-            contentTMP.transform.parent.name == "HelpScrollContent") return;
+        // ── Root ──
+        var root = new GameObject("HelpContent", typeof(RectTransform));
+        root.transform.SetParent(panel.transform, false);
+        var rootRT = root.GetComponent<RectTransform>();
+        rootRT.anchorMin = Vector2.zero;
+        rootRT.anchorMax = Vector2.one;
+        rootRT.offsetMin = new Vector2(16f, 130f);  // extra bottom room for back button
+        rootRT.offsetMax = new Vector2(-16f, -16f);
 
-        var panelGO = contentTMP.transform.parent?.gameObject;
-        if (panelGO == null) return;
+        // ── Title ──
+        MakeTMP(root.transform, "HelpTitle",
+            anchorMin: new Vector2(0f, 1f), anchorMax: new Vector2(1f, 1f),
+            pivot: new Vector2(0.5f, 1f), pos: Vector2.zero, size: new Vector2(0f, 70f),
+            text: "HOW TO PLAY", fontSize: 54f, bold: true, color: Color.white);
 
-        var viewGO = new GameObject("HelpViewport", typeof(RectTransform), typeof(RectMask2D));
-        viewGO.transform.SetParent(panelGO.transform, false);
-        var viewRT = viewGO.GetComponent<RectTransform>();
-        viewRT.anchorMin = Vector2.zero;
-        viewRT.anchorMax = Vector2.one;
-        viewRT.offsetMin = new Vector2(40f,  80f);
-        viewRT.offsetMax = new Vector2(-40f, -80f);
+        // ── Card image (fills centre, above label + indicator) ──
+        float bottomStrip = labelHeight + 44f; // label + page indicator
+        var imgGO = new GameObject("CarouselImage", typeof(RectTransform), typeof(Image));
+        imgGO.transform.SetParent(root.transform, false);
+        var imgRT = imgGO.GetComponent<RectTransform>();
+        imgRT.anchorMin = Vector2.zero;
+        imgRT.anchorMax = Vector2.one;
+        imgRT.offsetMin = new Vector2(100f, bottomStrip);  // 100px gutters for nav buttons
+        imgRT.offsetMax = new Vector2(-100f, -78f);         // 78px below title
+        _carouselImage = imgGO.GetComponent<Image>();
+        _carouselImage.preserveAspect = true;
 
-        var contentGO = new GameObject("HelpScrollContent", typeof(RectTransform));
-        contentGO.transform.SetParent(viewGO.transform, false);
-        var contentRT = contentGO.GetComponent<RectTransform>();
-        contentRT.anchorMin        = new Vector2(0f, 1f);
-        contentRT.anchorMax        = new Vector2(1f, 1f);
-        contentRT.pivot            = new Vector2(0.5f, 1f);
-        contentRT.anchoredPosition = Vector2.zero;
-        contentRT.sizeDelta        = Vector2.zero;
-        contentGO.AddComponent<ContentSizeFitter>().verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+        // ── Label ──
+        _carouselLabel = MakeTMP(root.transform, "CarouselLabel",
+            anchorMin: new Vector2(0f, 0f), anchorMax: new Vector2(1f, 0f),
+            pivot: new Vector2(0.5f, 0f), pos: new Vector2(0f, 44f), size: new Vector2(0f, labelHeight),
+            text: "", fontSize: labelFontSize, bold: true, color: Color.white);
 
-        contentTMP.transform.SetParent(contentGO.transform, false);
-        var tmpRT = contentTMP.GetComponent<RectTransform>();
-        tmpRT.anchorMin        = new Vector2(0f, 1f);
-        tmpRT.anchorMax        = new Vector2(1f, 1f);
-        tmpRT.pivot            = new Vector2(0.5f, 1f);
-        tmpRT.anchoredPosition = Vector2.zero;
-        tmpRT.sizeDelta        = Vector2.zero;
-        contentTMP.enableWordWrapping = true;
+        // ── Page indicator (e.g. "1 / 8") ──
+        _pageIndicator = MakeTMP(root.transform, "PageIndicator",
+            anchorMin: new Vector2(0f, 0f), anchorMax: new Vector2(1f, 0f),
+            pivot: new Vector2(0.5f, 0f), pos: Vector2.zero, size: new Vector2(0f, 40f),
+            text: "", fontSize: 26f, bold: false, color: new Color(0.7f, 0.85f, 1f));
 
-        var sr = panelGO.GetComponent<ScrollRect>() ?? panelGO.AddComponent<ScrollRect>();
-        sr.viewport          = viewRT;
-        sr.content           = contentRT;
-        sr.horizontal        = false;
-        sr.vertical          = true;
-        sr.scrollSensitivity = 40f;
-        sr.movementType      = ScrollRect.MovementType.Clamped;
-        sr.inertia           = true;
-        sr.decelerationRate  = 0.135f;
-        sr.verticalNormalizedPosition = 1f;
+        // ── Prev button (left) ──
+        var prevBtn = MakeNavButton(root.transform, "PrevButton", left: true);
+        prevBtn.onClick.AddListener(PrevCard);
 
-        var img = panelGO.GetComponent<Image>();
-        if (img != null) img.raycastTarget = true;
+        // ── Next button (right) ──
+        var nextBtn = MakeNavButton(root.transform, "NextButton", left: false);
+        nextBtn.onClick.AddListener(NextCard);
+
+        // Show first card
+        ShowCard(0);
+
+        if (panel.GetComponent<Image>() is Image bg) bg.raycastTarget = true;
+    }
+
+    // ── Carousel logic ────────────────────────────────────────────────────────
+
+    void ShowCard(int index)
+    {
+        int total = helpCardSprites != null ? helpCardSprites.Length : 0;
+        if (total == 0) return;
+
+        _cardIndex = (index + total) % total;
+
+        if (_carouselImage != null)
+            _carouselImage.sprite = helpCardSprites[_cardIndex];
+
+        if (_carouselLabel != null)
+            _carouselLabel.text = _cardIndex < CardLabels.Length ? CardLabels[_cardIndex] : "";
+
+        if (_pageIndicator != null)
+            _pageIndicator.text = $"{_cardIndex + 1}  /  {total}";
+    }
+
+    void NextCard() => ShowCard(_cardIndex + 1);
+    void PrevCard() => ShowCard(_cardIndex - 1);
+
+    // ── Helpers ───────────────────────────────────────────────────────────────
+
+    TextMeshProUGUI MakeTMP(Transform parent, string name,
+        Vector2 anchorMin, Vector2 anchorMax, Vector2 pivot, Vector2 pos, Vector2 size,
+        string text, float fontSize, bool bold, Color color)
+    {
+        var go = new GameObject(name, typeof(RectTransform), typeof(CanvasRenderer));
+        go.transform.SetParent(parent, false);
+        var rt = go.GetComponent<RectTransform>();
+        rt.anchorMin = anchorMin; rt.anchorMax = anchorMax;
+        rt.pivot     = pivot;
+        rt.anchoredPosition = pos;
+        rt.sizeDelta = size;
+        var tmp = go.AddComponent<TextMeshProUGUI>();
+        tmp.text           = text;
+        tmp.fontSize       = fontSize;
+        tmp.fontStyle      = bold ? FontStyles.Bold : FontStyles.Normal;
+        tmp.color          = color;
+        tmp.alignment      = TextAlignmentOptions.Center;
+        tmp.enableWordWrapping = true;
+        tmp.raycastTarget  = false;
+        if (helpFont != null) tmp.font = helpFont;
+        return tmp;
+    }
+
+    Button MakeNavButton(Transform parent, string name, bool left)
+    {
+        var go = new GameObject(name, typeof(RectTransform), typeof(Image), typeof(Button));
+        go.transform.SetParent(parent, false);
+        var rt = go.GetComponent<RectTransform>();
+
+        // Pin to left or right edge, vertically centred in the card area
+        rt.anchorMin = left ? new Vector2(0f, 0.5f) : new Vector2(1f, 0.5f);
+        rt.anchorMax = left ? new Vector2(0f, 0.5f) : new Vector2(1f, 0.5f);
+        rt.pivot     = left ? new Vector2(0f, 0.5f) : new Vector2(1f, 0.5f);
+        rt.anchoredPosition = Vector2.zero;
+        rt.sizeDelta = new Vector2(90f, 160f);
+
+        go.GetComponent<Image>().color = new Color(0.1f, 0.2f, 0.4f, 0.75f);
+
+        // Arrow label
+        var lblGO = new GameObject("Arrow", typeof(RectTransform), typeof(CanvasRenderer));
+        lblGO.transform.SetParent(go.transform, false);
+        var lblRT = lblGO.GetComponent<RectTransform>();
+        lblRT.anchorMin = Vector2.zero; lblRT.anchorMax = Vector2.one;
+        lblRT.offsetMin = Vector2.zero; lblRT.offsetMax = Vector2.zero;
+        var lbl = lblGO.AddComponent<TextMeshProUGUI>();
+        lbl.text      = left ? "<" : ">";
+        lbl.fontSize  = 52f;
+        lbl.color     = Color.white;
+        lbl.alignment = TextAlignmentOptions.Center;
+        lbl.raycastTarget = false;
+        if (helpFont != null) lbl.font = helpFont;
+
+        // Hover feedback
+        if (go.GetComponent<MenuButtonFeedback>() == null)
+            go.AddComponent<MenuButtonFeedback>();
+
+        return go.GetComponent<Button>();
     }
 }
