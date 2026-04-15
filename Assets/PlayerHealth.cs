@@ -12,27 +12,25 @@ public class PlayerHealth : MonoBehaviour
     public System.Action<float> OnHealthChanged;
 
     [Header("Death Visuals")]
-    public Sprite aliveSprite;   // optional
-    public Sprite deadSprite;    // your "X eyes + blood" sprite later
+    public Sprite aliveSprite;
+    public Sprite deadSprite;
     public float deathDelay = 1.5f;
 
     [Header("Survival Drain")]
-public bool useHealthDrain = true;
-public float secondsPerDrain = 10f;  // lose 1 HP every 10 seconds
-private float drainTimer = 0f;
+    public bool useHealthDrain = true;
+    public float secondsPerDrain = 10f;
+    private float drainTimer = 0f;
 
     private bool isDead = false;
     private SpriteRenderer sr;
-    private GameManager gameManager; // NEW: Reference to GameManager
+    private GameManager gameManager;
     private DamageFX damageFX;
 
-
     void Awake()
-{
-    sr = GetComponent<SpriteRenderer>();
-    damageFX = GetComponent<DamageFX>();
-}
-
+    {
+        sr = GetComponent<SpriteRenderer>();
+        damageFX = GetComponent<DamageFX>();
+    }
 
     void Start()
     {
@@ -41,97 +39,88 @@ private float drainTimer = 0f;
 
         if (sr != null && aliveSprite != null)
             sr.sprite = aliveSprite;
-        
-        // NEW: Find GameManager
+
         gameManager = FindFirstObjectByType<GameManager>();
     }
 
     public void TakeDamage(int amount)
-{
-    if (isDead) return;
-
-    // ✅ SHIELD: ignore damage if bubble shield is active
-    var shield = GetComponent<ShieldSystem>();
-    if (shield != null && shield.IsShieldActive)
     {
-        AchievementManager.Instance?.ReportDamageBlocked();
-        return;
-    }
+        if (isDead) return;
 
-    AchievementManager.Instance?.ReportEnemyDamageTaken();
-    int prevHealth = currentHealth;
-    currentHealth -= amount;
-    currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-    damageFX?.SpawnBlood();
-    AudioManager.Instance?.PlayPlayerDamage();
+        var shield = GetComponent<ShieldSystem>();
+        if (shield != null && shield.IsShieldActive)
+        {
+            AchievementManager.Instance?.ReportDamageBlocked();
+            return;
+        }
 
-    float healthPercent = (float)currentHealth / maxHealth;
-    OnHealthChanged?.Invoke(healthPercent);
+        AchievementManager.Instance?.ReportEnemyDamageTaken();
+        int prevHealth = currentHealth;
 
-    if (currentHealth <= 0)
-    {
-        AchievementManager.Instance?.ReportDyingWithHP(prevHealth);
-        Die();
-    }
-}
+        currentHealth -= amount;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
-    public void Heal(int amount)
-{
-    if (isDead) return;                    // don’t heal a dead player
-    if (amount <= 0) return;
+        damageFX?.SpawnBlood();
+        AudioManager.Instance?.PlayPlayerDamage();
 
-    int before = currentHealth;
-
-    currentHealth += amount;
-    currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-
-    if (currentHealth != before)
-    {
         float healthPercent = (float)currentHealth / maxHealth;
         OnHealthChanged?.Invoke(healthPercent);
-        AudioManager.Instance?.PlayHeal();
-        if (currentHealth == maxHealth)
-            AchievementManager.Instance?.ReportHealedToFull();
+
+        if (currentHealth <= 0)
+        {
+            AchievementManager.Instance?.ReportDyingWithHP(prevHealth);
+            Die();
+        }
     }
-}
+
+    public void Heal(int amount)
+    {
+        if (isDead) return;
+        if (amount <= 0) return;
+
+        int before = currentHealth;
+
+        currentHealth += amount;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
+        if (currentHealth != before)
+        {
+            float healthPercent = (float)currentHealth / maxHealth;
+            OnHealthChanged?.Invoke(healthPercent);
+            AudioManager.Instance?.PlayHeal();
+
+            if (currentHealth == maxHealth)
+                AchievementManager.Instance?.ReportHealedToFull();
+        }
+    }
 
     void Die()
     {
         isDead = true;
         AudioManager.Instance?.PlayPlayerDeath();
 
-        // Swap sprite to dead (X eyes + blood)
         if (sr != null && deadSprite != null)
             sr.sprite = deadSprite;
 
-        // Disable movement/ink controls
         var controller = GetComponent<PlayerController>();
         if (controller != null) controller.enabled = false;
 
         var shooting = GetComponent<PlayerShooting>();
         if (shooting != null) shooting.enabled = false;
 
-        // Enable gravity so the body falls
         var rb = GetComponent<Rigidbody2D>();
         if (rb != null)
         {
             rb.linearVelocity = Vector2.zero;
             rb.angularVelocity = 0f;
-
-            rb.bodyType = RigidbodyType2D.Dynamic; // make sure physics is active
-            rb.gravityScale = 3f;                  // fall speed (tweak: 2-6)
-            rb.constraints = RigidbodyConstraints2D.FreezeRotation; // no spinning
+            rb.bodyType = RigidbodyType2D.Dynamic;
+            rb.gravityScale = 3f;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
 
-        // Stop camera scroll
         var camScroll = Camera.main.GetComponent<CameraAutoScroll>();
         if (camScroll != null) camScroll.enabled = false;
 
-        // NEW: Instead of auto-reloading, let GameManager handle it
-        // The GameManager will detect IsDead() and show game over screen
-        // So we DON'T call StartCoroutine(GameOverDelay()) anymore
-        
-        // Only auto-reload if there's no GameManager (fallback)
         if (gameManager == null)
         {
             Debug.LogWarning("No GameManager found - using fallback auto-reload");
@@ -139,112 +128,91 @@ private float drainTimer = 0f;
         }
     }
 
-    // OLD: This is now only used as fallback if no GameManager exists
     IEnumerator GameOverDelay()
     {
         yield return new WaitForSeconds(deathDelay);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    // NEW: Public method to respawn player (called by GameManager on Continue)
     public void Respawn()
     {
-        // Reset health
         currentHealth = maxHealth;
         isDead = false;
         drainTimer = 0f;
         fishEatenCounter = 0;
-        
-        // Notify UI
+
         OnHealthChanged?.Invoke(1f);
-        
-        // Restore alive sprite
+
         if (sr != null && aliveSprite != null)
-        {
             sr.sprite = aliveSprite;
-        }
-        
-        // Reset physics
+
         var rb = GetComponent<Rigidbody2D>();
         if (rb != null)
         {
             rb.linearVelocity = Vector2.zero;
             rb.angularVelocity = 0f;
-            rb.gravityScale = 0f; // Back to underwater (no gravity)
+            rb.gravityScale = 0f;
             rb.bodyType = RigidbodyType2D.Dynamic;
         }
-        
-        // Re-enable controls (GameManager will also do this, but doesn't hurt)
+
         var controller = GetComponent<PlayerController>();
-        if (controller != null)
-        {
-            controller.enabled = true;
-        }
-        
+        if (controller != null) controller.enabled = true;
+
         var shooting = GetComponent<PlayerShooting>();
-        if (shooting != null)
-        {
-            shooting.enabled = true;
-        }
-        
-        // Re-enable camera scroll
+        if (shooting != null) shooting.enabled = true;
+
         var camScroll = Camera.main.GetComponent<CameraAutoScroll>();
-        if (camScroll != null)
-        {
-            camScroll.enabled = true;
-        }
-        
+        if (camScroll != null) camScroll.enabled = true;
     }
 
     public bool IsDead() => isDead;
-    
-    // NEW: Public method to get current health percentage
+
     public float GetHealthPercent()
     {
         return (float)currentHealth / maxHealth;
     }
 
     public void OnFishEaten()
-{
-    if (isDead) return;
-    if (currentHealth >= maxHealth) return;
-
-    fishEatenCounter++;
-    if (fishEatenCounter >= fishPerHeal)
     {
-        fishEatenCounter = 0;
-        Heal(1);
+        if (isDead) return;
+        if (currentHealth >= maxHealth) return;
+
+        fishEatenCounter++;
+
+        AudioManager.Instance?.PlayFishEat(); // 🔊 ADDED SOUND HERE
+
+        if (fishEatenCounter >= fishPerHeal)
+        {
+            fishEatenCounter = 0;
+            Heal(1);
+        }
     }
-}
 
-void Update()
-{
-    if (isDead) return;
-    if (!useHealthDrain) return;
-
-    drainTimer += Time.deltaTime;
-
-    if (drainTimer >= secondsPerDrain)
+    void Update()
     {
-        drainTimer = 0f;
-        TakeDrainDamage(1);
+        if (isDead) return;
+        if (!useHealthDrain) return;
+
+        drainTimer += Time.deltaTime;
+
+        if (drainTimer >= secondsPerDrain)
+        {
+            drainTimer = 0f;
+            TakeDrainDamage(1);
+        }
     }
-}
 
-void TakeDrainDamage(int amount)
-{
-    if (isDead) return;
-
-    // shield should probably NOT block hunger/energy drain
-    currentHealth -= amount;
-    currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-
-    float healthPercent = (float)currentHealth / maxHealth;
-    OnHealthChanged?.Invoke(healthPercent);
-
-    if (currentHealth <= 0)
+    void TakeDrainDamage(int amount)
     {
-        Die();
+        if (isDead) return;
+
+        currentHealth -= amount;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
+        float healthPercent = (float)currentHealth / maxHealth;
+        OnHealthChanged?.Invoke(healthPercent);
+
+        if (currentHealth <= 0)
+            Die();
     }
-}
 }

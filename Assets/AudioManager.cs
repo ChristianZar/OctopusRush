@@ -1,14 +1,13 @@
 using UnityEngine;
+using System.Collections;
 
-/// Singleton audio manager. Place on a persistent GameObject in the game scene.
-/// Assign AudioClips in the Inspector, then call AudioManager.Instance.PlayX() from anywhere.
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
 
     [Header("Music")]
     public AudioSource musicSource;
-    public AudioClip   bgMusic;
+    public AudioClip bgMusic;
 
     [Header("Player SFX")]
     public AudioClip playerDamageClip;
@@ -30,13 +29,18 @@ public class AudioManager : MonoBehaviour
     public AudioClip keyPickupClip;
 
     [Header("SFX Volume")]
-    [Range(0f, 1f)] public float sfxVolume = 0.8f;
+    [Range(0f, 2f)] public float sfxVolume = 1f;
 
     private AudioSource sfxSource;
 
     void Awake()
     {
-        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
@@ -54,23 +58,41 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    // ── Public helpers ────────────────────────────────────────────────────────
+    public void PlayPlayerDamage() => Play(playerDamageClip);
+    public void PlayPlayerDeath() => Play(playerDeathClip);
+    public void PlayInkFire() => Play(inkFireClip);
 
-    public void PlayPlayerDamage()  => Play(playerDamageClip);
-    public void PlayPlayerDeath()   => Play(playerDeathClip);
-    public void PlayInkFire()       => Play(inkFireClip);
-    public void PlayFishEat()       => Play(fishEatClip);
-    public void PlayHeal()          => Play(healClip);
-    public void PlayMineExplode()   => Play(mineExplodeClip);
-    public void PlaySharkBite()     => Play(sharkBiteClip);
-    public void PlayJellyfishZap()  => Play(jellyfishZapClip);
-    public void PlayShieldPickup()  => Play(shieldPickupClip);
-    public void PlayChestOpen()     => Play(chestOpenClip);
-    public void PlayKeyPickup()     => Play(keyPickupClip);
+    public void PlayFishEat()
+    {
+        if (fishEatClip == null || sfxSource == null) return;
+        StartCoroutine(PlayShortClip(fishEatClip, 0.2f));
+    }
+
+    public void PlayHeal() => Play(healClip);
+    public void PlayMineExplode() => Play(mineExplodeClip);
+    public void PlaySharkBite() => Play(sharkBiteClip);
+    public void PlayJellyfishZap() => Play(jellyfishZapClip);
+    public void PlayShieldPickup() => Play(shieldPickupClip);
+    public void PlayChestOpen() => Play(chestOpenClip);
+    public void PlayKeyPickup() => Play(keyPickupClip);
 
     void Play(AudioClip clip)
     {
         if (clip == null || sfxSource == null) return;
+
+        sfxSource.pitch = Random.Range(0.9f, 1.1f);
         sfxSource.PlayOneShot(clip, sfxVolume);
+    }
+
+    IEnumerator PlayShortClip(AudioClip clip, float duration)
+    {
+        if (clip == null || sfxSource == null) yield break;
+
+        sfxSource.pitch = Random.Range(0.95f, 1.1f);
+        sfxSource.PlayOneShot(clip, sfxVolume);
+
+        yield return new WaitForSeconds(duration);
+
+        sfxSource.Stop();
     }
 }

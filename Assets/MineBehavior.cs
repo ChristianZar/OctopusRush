@@ -140,13 +140,16 @@ public class MineBehavior : MonoBehaviour
         if (sr != null)
         {
             sr.color  = Color.white;
-            if (explode1Sprite != null) sr.sprite = explode1Sprite;
+            if (explode1Sprite != null)
+            {
+                sr.sprite = explode1Sprite;
+                AudioManager.Instance?.PlayMineExplode();
+            }
         }
 
         DealDamage();
         ShakeCamera();
         TriggerLinkedMines();
-        AudioManager.Instance?.PlayMineExplode();
 
         yield return new WaitForSeconds(explodeFrameTime);
 
