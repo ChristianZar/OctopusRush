@@ -18,7 +18,7 @@ public class PlayerHealth : MonoBehaviour
 
     [Header("Survival Drain")]
     public bool useHealthDrain = true;
-    public float secondsPerDrain = 10f;
+    public float secondsPerDrain = 1f;
     private float drainTimer = 0f;
 
     private bool isDead = false;
