@@ -1,2 +1,24 @@
 fileFormatVersion: 2
 guid: a13ea801c90de42af9f450a63da2e534
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - musicSource: {instanceID: 0}
+  - bgMusic: {instanceID: 0}
+  - playerDamageClip: {instanceID: 0}
+  - playerDeathClip: {instanceID: 0}
+  - inkFireClip: {instanceID: 0}
+  - fishEatClip: {instanceID: 0}
+  - healClip: {instanceID: 0}
+  - mineExplodeClip: {fileID: 8300000, guid: e19c21c004d10834a87ea3c2f1a2e8a6, type: 3}
+  - sharkBiteClip: {instanceID: 0}
+  - jellyfishZapClip: {instanceID: 0}
+  - shieldPickupClip: {instanceID: 0}
+  - chestOpenClip: {instanceID: 0}
+  - keyPickupClip: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
