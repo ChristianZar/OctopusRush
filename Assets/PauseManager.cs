@@ -1,10 +1,15 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseManager : MonoBehaviour
 {
     [Header("UI")]
     public GameObject pausePanel;
+
+    [Header("Pause Button (optional – auto-created if left empty)")]
+    public GameObject pauseButton;
 
     [Header("Achievements")]
     public AchievementPanel achievementPanel;
@@ -17,6 +22,63 @@ public class PauseManager : MonoBehaviour
         gameManager = FindFirstObjectByType<GameManager>();
         if (pausePanel != null)
             pausePanel.SetActive(false);
+
+        if (pauseButton == null)
+            pauseButton = CreatePauseButton();
+    }
+
+    // ── Auto-build a pause button in the top-right corner ─────────────────────
+    GameObject CreatePauseButton()
+    {
+        // Find (or create) a screen-space Canvas to host the button
+        Canvas canvas = FindFirstObjectByType<Canvas>();
+        if (canvas == null)
+        {
+            var canvasGO = new GameObject("PauseButtonCanvas", typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster));
+            canvas = canvasGO.GetComponent<Canvas>();
+            canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+            canvas.sortingOrder = 50;
+            var scaler = canvasGO.GetComponent<CanvasScaler>();
+            scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+            scaler.referenceResolution = new Vector2(1080, 1920);
+        }
+
+        // Button GameObject
+        var btnGO = new GameObject("PauseBtn_HUD",
+            typeof(RectTransform), typeof(Image), typeof(Button), typeof(CanvasRenderer));
+        btnGO.transform.SetParent(canvas.transform, false);
+
+        // Top-right corner, 110×110 px, 20 px inset
+        var rt = btnGO.GetComponent<RectTransform>();
+        rt.anchorMin = new Vector2(1f, 1f);
+        rt.anchorMax = new Vector2(1f, 1f);
+        rt.pivot     = new Vector2(1f, 1f);
+        rt.sizeDelta = new Vector2(110f, 110f);
+        rt.anchoredPosition = new Vector2(-20f, -20f);
+
+        // Semi-transparent dark circle background
+        var img = btnGO.GetComponent<Image>();
+        img.color = new Color(0f, 0f, 0f, 0.55f);
+        img.raycastTarget = true;
+
+        // ⏸ label
+        var labelGO = new GameObject("PauseIcon", typeof(RectTransform), typeof(CanvasRenderer));
+        labelGO.transform.SetParent(btnGO.transform, false);
+        var labelRT = labelGO.GetComponent<RectTransform>();
+        labelRT.anchorMin = Vector2.zero;
+        labelRT.anchorMax = Vector2.one;
+        labelRT.offsetMin = labelRT.offsetMax = Vector2.zero;
+        var tmp = labelGO.AddComponent<TextMeshProUGUI>();
+        tmp.text      = "⏸";
+        tmp.fontSize  = 52f;
+        tmp.alignment = TextAlignmentOptions.Center;
+        tmp.color     = Color.white;
+        tmp.raycastTarget = false;
+
+        // Wire up click
+        btnGO.GetComponent<Button>().onClick.AddListener(TogglePause);
+
+        return btnGO;
     }
 
     void Update()
@@ -31,7 +93,7 @@ public class PauseManager : MonoBehaviour
         }
     }
 
-    void TogglePause()
+    public void TogglePause()
     {
         if (gameManager != null && gameManager.IsGameOver()) return;
         isPaused = !isPaused;

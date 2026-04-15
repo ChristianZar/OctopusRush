@@ -20,6 +20,15 @@ TextureImporter:
   - first:
       213: 6765899121011961597
     second: Skin_Ghost_5
+  - first:
+      213: 453598814318906734
+    second: Skin_Ghost_6
+  - first:
+      213: -9194199709962524207
+    second: Skin_Ghost_7
+  - first:
+      213: 1081686099060807565
+    second: Skin_Ghost_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -66,7 +75,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 125
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -131,10 +140,10 @@ TextureImporter:
       name: Skin_Ghost_0
       rect:
         serializedVersion: 2
-        x: 138
-        y: 758
-        width: 305
-        height: 141
+        x: 69
+        y: 736
+        width: 185
+        height: 154
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,10 +162,10 @@ TextureImporter:
       name: Skin_Ghost_1
       rect:
         serializedVersion: 2
-        x: 623
-        y: 755
-        width: 283
-        height: 149
+        x: 52
+        y: 544
+        width: 202
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,10 +184,10 @@ TextureImporter:
       name: Skin_Ghost_2
       rect:
         serializedVersion: 2
-        x: 144
-        y: 577
-        width: 299
-        height: 151
+        x: 276
+        y: 544
+        width: 208
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,10 +206,10 @@ TextureImporter:
       name: Skin_Ghost_3
       rect:
         serializedVersion: 2
-        x: 622
-        y: 576
-        width: 296
-        height: 153
+        x: 498
+        y: 544
+        width: 234
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,10 +228,10 @@ TextureImporter:
       name: Skin_Ghost_4
       rect:
         serializedVersion: 2
-        x: 136
-        y: 394
-        width: 307
-        height: 150
+        x: 742
+        y: 546
+        width: 216
+        height: 138
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,10 +250,10 @@ TextureImporter:
       name: Skin_Ghost_5
       rect:
         serializedVersion: 2
-        x: 680
-        y: 395
-        width: 245
-        height: 154
+        x: 14
+        y: 334
+        width: 230
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,6 +264,72 @@ TextureImporter:
       bones: []
       spriteID: dfeab0e376d45ed50800000000000000
       internalID: 6765899121011961597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ghost_6
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 336
+        width: 216
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6d4406e7b18b4600800000000000000
+      internalID: 453598814318906734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ghost_7
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 329
+        width: 250
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d92fa5a314a76080800000000000000
+      internalID: -9194199709962524207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ghost_8
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 334
+        width: 218
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d875ffca6cbe20f00800000000000000
+      internalID: 1081686099060807565
       vertices: []
       indices: 
       edges: []
@@ -279,6 +354,9 @@ TextureImporter:
       Skin_Ghost_3: 1468183009841273924
       Skin_Ghost_4: 682167561380032835
       Skin_Ghost_5: 6765899121011961597
+      Skin_Ghost_6: 453598814318906734
+      Skin_Ghost_7: -9194199709962524207
+      Skin_Ghost_8: 1081686099060807565
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
