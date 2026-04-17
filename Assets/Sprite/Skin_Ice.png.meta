@@ -1,0 +1,884 @@
+fileFormatVersion: 2
+guid: 99bb61a1c16a04772816d465c0921878
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2938116556414620829
+    second: Skin_Ice_0
+  - first:
+      213: -1194277300601946672
+    second: Skin_Ice_1
+  - first:
+      213: 233529698901538499
+    second: Skin_Ice_2
+  - first:
+      213: -4010846487871583253
+    second: Skin_Ice_3
+  - first:
+      213: 355155442312467987
+    second: Skin_Ice_4
+  - first:
+      213: 2936649817899463907
+    second: Skin_Ice_5
+  - first:
+      213: 2155530401459719592
+    second: Skin_Ice_6
+  - first:
+      213: 5057570179893330215
+    second: Skin_Ice_7
+  - first:
+      213: -547795588585258406
+    second: Skin_Ice_8
+  - first:
+      213: 4394367375683612422
+    second: Skin_Ice_9
+  - first:
+      213: 6159712595437479826
+    second: Skin_Ice_10
+  - first:
+      213: -8354904275997836302
+    second: Skin_Ice_11
+  - first:
+      213: -7003028415923781265
+    second: Skin_Ice_12
+  - first:
+      213: -7115359950520366155
+    second: Skin_Ice_13
+  - first:
+      213: 7600252312654715170
+    second: Skin_Ice_14
+  - first:
+      213: -7654350032527542540
+    second: Skin_Ice_15
+  - first:
+      213: 7793045543243980647
+    second: Skin_Ice_16
+  - first:
+      213: -7738677598736748924
+    second: Skin_Ice_17
+  - first:
+      213: -2665884224357996100
+    second: Skin_Ice_18
+  - first:
+      213: -2936396696787497223
+    second: Skin_Ice_19
+  - first:
+      213: -4721734823410718779
+    second: Skin_Ice_20
+  - first:
+      213: -225082640037288967
+    second: Skin_Ice_21
+  - first:
+      213: 6548024916524492984
+    second: Skin_Ice_22
+  - first:
+      213: -527380007113369744
+    second: Skin_Ice_23
+  - first:
+      213: 7675988353558043049
+    second: Skin_Ice_24
+  - first:
+      213: -34707470542844816
+    second: Skin_Ice_25
+  - first:
+      213: 8804798642336528686
+    second: Skin_Ice_26
+  - first:
+      213: 2681352293772510318
+    second: Skin_Ice_27
+  - first:
+      213: 4868449062687243949
+    second: Skin_Ice_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Skin_Ice_0
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 746
+        width: 176
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36b663a0f86b937d0800000000000000
+      internalID: -2938116556414620829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_1
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 746
+        width: 177
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ddfe466f131d6fe0800000000000000
+      internalID: -1194277300601946672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_2
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 746
+        width: 177
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c6b78b160aad3300800000000000000
+      internalID: 233529698901538499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_3
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 746
+        width: 173
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beb8ac1ae5c9658c0800000000000000
+      internalID: -4010846487871583253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_4
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 550
+        width: 184
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 316d41b3ef3cde400800000000000000
+      internalID: 355155442312467987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_5
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 550
+        width: 179
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e4fc99437311c820800000000000000
+      internalID: 2936649817899463907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_6
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 550
+        width: 190
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8adcf89ca7bf9ed10800000000000000
+      internalID: 2155530401459719592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_7
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 550
+        width: 195
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 721862f4849103640800000000000000
+      internalID: 5057570179893330215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 345
+        width: 235
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5289d480d6d568f0800000000000000
+      internalID: -547795588585258406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_9
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 346
+        width: 195
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60fef2888ddebfc30800000000000000
+      internalID: 4394367375683612422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_10
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 443
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 297ec8158f1bb7550800000000000000
+      internalID: 6159712595437479826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_11
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 447
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fbb1c0c3da6d0c80800000000000000
+      internalID: -8354904275997836302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_12
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 346
+        width: 233
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6185e462ce30de90800000000000000
+      internalID: -7003028415923781265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_13
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 410
+        width: 70
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bb4134e2d9214d90800000000000000
+      internalID: -7115359950520366155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_14
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 440
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2291023e535897960800000000000000
+      internalID: 7600252312654715170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_15
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 347
+        width: 262
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f632bc233946c590800000000000000
+      internalID: -7654350032527542540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_16
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 425
+        width: 52
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76f9f7bd1a5762c60800000000000000
+      internalID: 7793045543243980647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_17
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 425
+        width: 36
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48ee508a9b1ba9490800000000000000
+      internalID: -7738677598736748924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_18
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 420
+        width: 45
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb9e2d22c60e00bd0800000000000000
+      internalID: -2665884224357996100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_19
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 419
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fec95013c2df37d0800000000000000
+      internalID: -2936396696787497223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_20
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 425
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c72307e137097eb0800000000000000
+      internalID: -4721734823410718779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_21
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 404
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f3687b088850ecf0800000000000000
+      internalID: -225082640037288967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_22
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 413
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b869d9f7f14fda50800000000000000
+      internalID: 6548024916524492984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_23
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 403
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0775d5e7dae5ea8f0800000000000000
+      internalID: -527380007113369744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_24
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 386
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a9dcd90db6968a60800000000000000
+      internalID: 7675988353558043049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_25
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 408
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07ccd3b4db1b48ff0800000000000000
+      internalID: -34707470542844816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_26
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 390
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e297f4327bde03a70800000000000000
+      internalID: 8804798642336528686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_27
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 387
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e644dfb64b3163520800000000000000
+      internalID: 2681352293772510318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Ice_28
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 368
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dae7e8cd0a4309340800000000000000
+      internalID: 4868449062687243949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: bc0a5b79ae98f4fba9b3d7a209d0d51a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Skin_Ice_0: -2938116556414620829
+      Skin_Ice_1: -1194277300601946672
+      Skin_Ice_10: 6159712595437479826
+      Skin_Ice_11: -8354904275997836302
+      Skin_Ice_12: -7003028415923781265
+      Skin_Ice_13: -7115359950520366155
+      Skin_Ice_14: 7600252312654715170
+      Skin_Ice_15: -7654350032527542540
+      Skin_Ice_16: 7793045543243980647
+      Skin_Ice_17: -7738677598736748924
+      Skin_Ice_18: -2665884224357996100
+      Skin_Ice_19: -2936396696787497223
+      Skin_Ice_2: 233529698901538499
+      Skin_Ice_20: -4721734823410718779
+      Skin_Ice_21: -225082640037288967
+      Skin_Ice_22: 6548024916524492984
+      Skin_Ice_23: -527380007113369744
+      Skin_Ice_24: 7675988353558043049
+      Skin_Ice_25: -34707470542844816
+      Skin_Ice_26: 8804798642336528686
+      Skin_Ice_27: 2681352293772510318
+      Skin_Ice_28: 4868449062687243949
+      Skin_Ice_3: -4010846487871583253
+      Skin_Ice_4: 355155442312467987
+      Skin_Ice_5: 2936649817899463907
+      Skin_Ice_6: 2155530401459719592
+      Skin_Ice_7: 5057570179893330215
+      Skin_Ice_8: -547795588585258406
+      Skin_Ice_9: 4394367375683612422
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

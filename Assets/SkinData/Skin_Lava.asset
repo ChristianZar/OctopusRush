@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beeac62eaa3b74beeb6eee772337a7ba, type: 3}
+  m_Name: Skin_Lava
+  m_EditorClassIdentifier: Assembly-CSharp::SkinData
+  skinName: Lava Octopus
+  thumbnail: {fileID: -5592608367998261967, guid: 4470d6b703f894d1b819c47eb24f4ac0, type: 3}
+  keyCost: 0
+  swimmingFrames:
+  - {fileID: -4374820477280711973, guid: 4470d6b703f894d1b819c47eb24f4ac0, type: 3}
+  - {fileID: 5214166652256158204, guid: 4470d6b703f894d1b819c47eb24f4ac0, type: 3}
+  - {fileID: 5595892453055924652, guid: 4470d6b703f894d1b819c47eb24f4ac0, type: 3}
+  - {fileID: 4384974884820941872, guid: 4470d6b703f894d1b819c47eb24f4ac0, type: 3}
+  idleFrames: []

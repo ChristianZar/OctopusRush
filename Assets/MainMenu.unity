@@ -685,8 +685,7 @@ MonoBehaviour:
   - {fileID: -3871084328919047167, guid: 144f82f959866134393b9f5f6b6a1438, type: 3}
   - {fileID: -5765026725288860141, guid: f207d1cecba11d04abbdd873e578072b, type: 3}
   - {fileID: -6147679188264957991, guid: 310ce1012815c244bbd6e53f53a8e9b7, type: 3}
-  cardWidth: 500
-  cardHeight: 400
+  helpFont: {fileID: 0}
   labelHeight: 60
   labelFontSize: 28
 --- !u!1 &445055462
@@ -894,6 +893,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5fb419129fbd04025a587ee6d06015b6, type: 2}
   - {fileID: 11400000, guid: 18c2dbd8dc30f4817b64a06d1a5a1ce6, type: 2}
   - {fileID: 11400000, guid: cd10e0ea595a840138fbcf6c95c78f21, type: 2}
+  - {fileID: 11400000, guid: 299d945af7d2b49fdbf1966ad5510867, type: 2}
+  - {fileID: 11400000, guid: 2c7172ae2e405486da7a619a1f15434e, type: 2}
 --- !u!4 &486978549
 Transform:
   m_ObjectHideFlags: 0
