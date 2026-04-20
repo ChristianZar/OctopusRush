@@ -97,6 +97,8 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         isDead = true;
+        AudioManager.Instance?.StopAllAudio(); //  stop everything
+        Debug.Log("Player has died.");
         AudioManager.Instance?.PlayPlayerDeath();
 
         if (sr != null && deadSprite != null)
@@ -209,10 +211,13 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
+        AudioManager.Instance?.PlayPlayerDamage();
+
         float healthPercent = (float)currentHealth / maxHealth;
         OnHealthChanged?.Invoke(healthPercent);
 
         if (currentHealth <= 0)
             Die();
     }
+
 }

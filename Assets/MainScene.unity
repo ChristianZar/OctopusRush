@@ -164,6 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseManager
   pausePanel: {fileID: 2201010}
+  pauseButton: {fileID: 0}
   achievementPanel: {fileID: 936370523}
 --- !u!1 &2201010
 GameObject:
@@ -281,7 +282,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 64.99999}
+  m_AnchoredPosition: {x: 0, y: 60}
   m_SizeDelta: {x: 400, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2201042
@@ -821,7 +822,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10, y: -252}
+  m_AnchoredPosition: {x: 20, y: -250}
   m_SizeDelta: {x: 400, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2201082
@@ -1440,7 +1441,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10, y: -406}
+  m_AnchoredPosition: {x: 0, y: -410}
   m_SizeDelta: {x: 400, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &236613678
@@ -10534,18 +10535,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13ea801c90de42af9f450a63da2e534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
-  musicSource: {fileID: 0}
-  bgMusic: {fileID: 0}
-  playerDamageClip: {fileID: 0}
+  musicSource: {fileID: 773947748}
+  bgMusic: {fileID: 8300000, guid: e19c21c004d10834a87ea3c2f1a2e8a6, type: 3}
+  playerDamageClip: {fileID: 8300000, guid: d46f8b9abfa5cdf4c9a2101ef62cfdbf, type: 3}
   playerDeathClip: {fileID: 0}
-  inkFireClip: {fileID: 0}
+  inkFireClip: {fileID: 8300000, guid: 9dab28ed40dd9fa4485a1dfcc45ecfee, type: 3}
   fishEatClip: {fileID: 8300000, guid: bed27a7d9b0169e4a95681ba54e1af89, type: 3}
   healClip: {fileID: 0}
   mineExplodeClip: {fileID: 8300000, guid: 509ba0628d3a41045b521377ce4fbdc9, type: 3}
   sharkBiteClip: {fileID: 0}
   jellyfishZapClip: {fileID: 0}
-  shieldPickupClip: {fileID: 0}
-  chestOpenClip: {fileID: 0}
+  shieldPickupClip: {fileID: 8300000, guid: 7baa247f75279064ba3ded71e6332dc7, type: 3}
+  chestOpenClip: {fileID: 8300000, guid: 0803dd904af0a1e4aa758a1dadea047d, type: 3}
   keyPickupClip: {fileID: 0}
   sfxVolume: 2
 --- !u!4 &1957554888

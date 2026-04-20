@@ -8,7 +8,7 @@ MonoImporter:
   - bgMusic: {instanceID: 0}
   - playerDamageClip: {instanceID: 0}
   - playerDeathClip: {instanceID: 0}
-  - inkFireClip: {instanceID: 0}
+  - inkFireClip: {fileID: 8300000, guid: 9dab28ed40dd9fa4485a1dfcc45ecfee, type: 3}
   - fishEatClip: {instanceID: 0}
   - healClip: {instanceID: 0}
   - mineExplodeClip: {fileID: 8300000, guid: e19c21c004d10834a87ea3c2f1a2e8a6, type: 3}

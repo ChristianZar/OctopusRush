@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 velocity;
 
     [Header("References")]
-public CameraAutoScroll cameraAutoScroll;
+    public CameraAutoScroll cameraAutoScroll;
 
     void Awake()
     {
@@ -124,7 +124,6 @@ public CameraAutoScroll cameraAutoScroll;
         if (boostCooldownTimer > 0f) boostCooldownTimer -= Time.deltaTime;
 
         bool wantsInk = Input.GetKey(KeyCode.Space);
-
         bool wantsSwimInk = Input.GetKey(KeyCode.W);
 
         if (wantsInk && currentInk > 0f && inkCooldownTimer <= 0f)
@@ -180,24 +179,25 @@ public CameraAutoScroll cameraAutoScroll;
 
         wasBoosting = isBoostingNow;
         if (cameraAutoScroll != null)
-{
-    cameraAutoScroll.SetBoosting(boostBlend > 0.05f);
-}
-      // ===== SWIM INK VISUAL (W key only) =====
-if (wantsSwimInk)
-{
-    swimInkTimer += Time.deltaTime;
+        {
+            cameraAutoScroll.SetBoosting(boostBlend > 0.05f);
+        }
 
-    if (swimInkTimer >= swimInkSpawnRate)
-    {
-        SpawnSwimInk();
-        swimInkTimer = 0f;
-    }
-}
-else
-{
-    swimInkTimer = 0f;
-}
+        // ===== SWIM INK VISUAL (W key only) =====
+        if (wantsSwimInk)
+        {
+            swimInkTimer += Time.deltaTime;
+
+            if (swimInkTimer >= swimInkSpawnRate)
+            {
+                SpawnSwimInk();
+                swimInkTimer = 0f;
+            }
+        }
+        else
+        {
+            swimInkTimer = 0f;
+        }
 
         UpdateAnimation();
     }
@@ -214,21 +214,22 @@ else
                          + Vector3.up * inkUpOffset;
 
         Instantiate(inkCloudPrefab, spawnPos, Quaternion.identity);
+        AudioManager.Instance?.PlayInkFire();
         AchievementManager.Instance?.ReportInkUsed();
     }
 
     void SpawnSwimInk()
-{
-    if (swimInkPrefab == null) return;
+    {
+        if (swimInkPrefab == null) return;
 
-    float behindDir = facingRight ? -1f : 1f;
+        float behindDir = facingRight ? -1f : 1f;
 
-    Vector3 spawnPos = transform.position
-                     + Vector3.right * behindDir * swimInkBackwardOffset
-                     + Vector3.down * swimInkDownOffset;
+        Vector3 spawnPos = transform.position
+                         + Vector3.right * behindDir * swimInkBackwardOffset
+                         + Vector3.down * swimInkDownOffset;
 
-    Instantiate(swimInkPrefab, spawnPos, Quaternion.identity);
-}
+        Instantiate(swimInkPrefab, spawnPos, Quaternion.identity);
+    }
 
     void FixedUpdate()
     {

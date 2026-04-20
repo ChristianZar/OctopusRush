@@ -98,6 +98,8 @@ public class ShieldOrbPowerUp : MonoBehaviour
         float old = Time.timeScale;
         Time.timeScale = 0f;
 
+        AudioManager.Instance?.PlayShieldPickup();
+
         yield return new WaitForSecondsRealtime(freezeTime);
         yield return ShakeRealtime(shakeTime, shakeAmount);
 
@@ -109,6 +111,7 @@ public class ShieldOrbPowerUp : MonoBehaviour
             shield.ActivateShield();
 
         AchievementManager.Instance?.ReportShieldCollected();
+
 
         Time.timeScale = old;
         Destroy(gameObject);

@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class TreasureChest : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class TreasureChest : MonoBehaviour
     public Sprite openedSprite;
 
     [Header("Press E Prompt")]
-    public GameObject pressEPrompt;   // assign a world-space child TextMeshPro or sprite
+    public GameObject pressEPrompt;
 
     [HideInInspector] public TreasureChestSpawner spawner;
 
@@ -56,7 +57,10 @@ public class TreasureChest : MonoBehaviour
     {
         opened = true;
         ShowPrompt(false);
+
         AudioManager.Instance?.PlayChestOpen();
+        StartCoroutine(StopAudioAfterDelay(3f));
+
         AchievementManager.Instance?.ReportChestOpened();
 
         if (openedSprite != null && sr != null)
@@ -71,7 +75,6 @@ public class TreasureChest : MonoBehaviour
         Collider2D col = GetComponent<Collider2D>();
         if (col != null) col.enabled = false;
 
-        // 🔥 THIS IS THE IMPORTANT LINE
         if (spawner != null)
             spawner.NotifyChestOpened();
         else if (keyBar != null)
@@ -97,19 +100,24 @@ public class TreasureChest : MonoBehaviour
     }
 
     private void OnDestroy()
-{
-    // If the chest disappears without being opened, allow a new one to spawn
-    if (!opened && spawner != null)
     {
-        spawner.NotifyChestDespawned(this);
+        if (!opened && spawner != null)
+        {
+            spawner.NotifyChestDespawned(this);
+        }
     }
-}
 
-private void OnDisable()
-{
-    if (!opened && spawner != null)
+    private void OnDisable()
     {
-        spawner.NotifyChestDespawned(this);
+        if (!opened && spawner != null)
+        {
+            spawner.NotifyChestDespawned(this);
+        }
     }
-}
+
+    IEnumerator StopAudioAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        AudioManager.Instance?.StopAllAudio();
+    }
 }
