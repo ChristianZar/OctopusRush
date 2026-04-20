@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beeac62eaa3b74beeb6eee772337a7ba, type: 3}
   m_Name: Skin_Ice
   m_EditorClassIdentifier: Assembly-CSharp::SkinData
-  skinName: Crystal Octopus
-  thumbnail: {fileID: 0}
+  skinName: Ice Octopus
+  thumbnail: {fileID: 5057570179893330215, guid: 99bb61a1c16a04772816d465c0921878, type: 3}
   keyCost: 0
   swimmingFrames:
-  - {fileID: 4636293407563483060, guid: 7f1cfa0926c62495188178f038938e96, type: 3}
-  - {fileID: 33939958601082789, guid: 7f1cfa0926c62495188178f038938e96, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: -547795588585258406, guid: 99bb61a1c16a04772816d465c0921878, type: 3}
+  - {fileID: 4394367375683612422, guid: 99bb61a1c16a04772816d465c0921878, type: 3}
+  - {fileID: -7003028415923781265, guid: 99bb61a1c16a04772816d465c0921878, type: 3}
+  - {fileID: -7654350032527542540, guid: 99bb61a1c16a04772816d465c0921878, type: 3}
   idleFrames: []

@@ -27,6 +27,17 @@ public class PauseManager : MonoBehaviour
             pauseButton = CreatePauseButton();
     }
 
+    // ── Canvas scaler enforcement ──────────────────────────────────────────────
+    static void EnsureCanvasScaler(Canvas canvas)
+    {
+        var scaler = canvas.GetComponent<CanvasScaler>();
+        if (scaler == null) scaler = canvas.gameObject.AddComponent<CanvasScaler>();
+        scaler.uiScaleMode        = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+        scaler.referenceResolution = new Vector2(1080f, 1920f);
+        scaler.screenMatchMode    = CanvasScaler.ScreenMatchMode.MatchWidthOrHeight;
+        scaler.matchWidthOrHeight = 1f;
+    }
+
     // ── Auto-build a pause button in the top-right corner ─────────────────────
     GameObject CreatePauseButton()
     {
@@ -38,10 +49,8 @@ public class PauseManager : MonoBehaviour
             canvas = canvasGO.GetComponent<Canvas>();
             canvas.renderMode = RenderMode.ScreenSpaceOverlay;
             canvas.sortingOrder = 50;
-            var scaler = canvasGO.GetComponent<CanvasScaler>();
-            scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
-            scaler.referenceResolution = new Vector2(1080, 1920);
         }
+        EnsureCanvasScaler(canvas);
 
         // Button GameObject
         var btnGO = new GameObject("PauseBtn_HUD",

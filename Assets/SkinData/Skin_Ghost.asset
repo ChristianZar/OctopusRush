@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Skin_Ghost
   m_EditorClassIdentifier: Assembly-CSharp::SkinData
   skinName: Ghost Octopus
-  thumbnail: {fileID: 6765899121011961597, guid: 90f6d38952940442685b26211555383a, type: 3}
+  thumbnail: {fileID: 1468183009841273924, guid: 90f6d38952940442685b26211555383a, type: 3}
   keyCost: 0
   swimmingFrames:
   - {fileID: 6765899121011961597, guid: 90f6d38952940442685b26211555383a, type: 3}
