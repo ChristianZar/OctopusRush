@@ -43,7 +43,7 @@ void Shoot()
     Vector3 spawnPos = firePoint.position + Vector3.right * dir * 0.25f;
 
     AchievementManager.Instance?.ReportShotFired();
-    GameObject b = Instantiate(bulletPrefab, spawnPos, Quaternion.identity);
+    GameObject b = SimplePool.Get(bulletPrefab, spawnPos, Quaternion.identity);
 
     if (gunSound != null && gunSound.clip != null)
     {

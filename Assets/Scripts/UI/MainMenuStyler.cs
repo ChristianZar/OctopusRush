@@ -43,6 +43,7 @@ public class MainMenuStyler : MonoBehaviour
         RepositionButtons();
         AddButtonFeedback();
         BuildHelpPanel();
+        BuildCreditsPanel();
     }
 
     // ── Logo ──────────────────────────────────────────────────────────────────
@@ -238,6 +239,37 @@ public class MainMenuStyler : MonoBehaviour
         tmp.raycastTarget  = false;
         if (helpFont != null) tmp.font = helpFont;
         return tmp;
+    }
+
+    // ── Credits panel ─────────────────────────────────────────────────────────
+
+    void BuildCreditsPanel()
+    {
+        var mgr = FindObjectOfType<MainMenuManager>();
+        if (mgr == null || mgr.creditsPanel == null) return;
+
+        var tmps = mgr.creditsPanel.GetComponentsInChildren<TextMeshProUGUI>(true);
+        foreach (var tmp in tmps)
+        {
+            if (tmp.gameObject.name == "Text (TMP)" || tmp.text.Contains("[YOUR NAME]") || tmp.text.Contains("Octopus Prime") || tmp.text.Contains("OCTOPUS RUSH"))
+            {
+                tmp.text =
+                    "<size=42><b>OCTOPUS RUSH</b></size>\n\n" +
+                    "A game about survival,\ntreasure, and tentacles!\n\n" +
+                    "<color=#FFB347>\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501</color>\n\n" +
+                    "<b>Developed by</b>\n" +
+                    "<color=#FFB347><size=34>Octopus Prime</size></color>\n\n" +
+                    "Eyob Kabeto\n" +
+                    "Christian Zarate\n" +
+                    "Duc Le\n\n" +
+                    "<color=#FFB347>\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501</color>\n\n" +
+                    "Made with Unity\n\u00A9 2025\n\n" +
+                    "<i>Thank you for playing!</i>";
+                tmp.alignment = TextAlignmentOptions.Center;
+                tmp.enableWordWrapping = true;
+                break;
+            }
+        }
     }
 
     Button MakeNavButton(Transform parent, string name, bool left)

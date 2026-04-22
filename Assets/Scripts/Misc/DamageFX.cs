@@ -8,6 +8,6 @@ public class DamageFX : MonoBehaviour
     {
         if (bloodPrefab == null) return;
 
-        Instantiate(bloodPrefab, transform.position, Quaternion.identity);
+        SimplePool.Get(bloodPrefab, transform.position, Quaternion.identity);
     }
 }

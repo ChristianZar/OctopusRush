@@ -17,8 +17,12 @@ public class SharkHealth : MonoBehaviour
     public Transform hitFxPoint; // optional fallback
 
     [Header("Flash")]
-    public SpriteRenderer sharkSprite;   // drag shark sprite renderer here
+    public SpriteRenderer sharkSprite;
     public float flashTime = 0.08f;
+
+    [Header("Death Shake")]
+    [SerializeField] private float deathShakeDuration  = 0.20f;
+    [SerializeField] private float deathShakeMagnitude = 0.12f;
 
     private Coroutine flashRoutine;
 
@@ -91,6 +95,10 @@ public class SharkHealth : MonoBehaviour
     void Die()
     {
         AchievementManager.Instance?.ReportSharkKilled();
+        CameraShake shake = Camera.main != null
+            ? Camera.main.GetComponent<CameraShake>()
+            : null;
+        shake?.Shake(deathShakeDuration, deathShakeMagnitude);
         Destroy(gameObject);
     }
 }

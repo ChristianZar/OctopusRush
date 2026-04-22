@@ -18,7 +18,7 @@ public class SharkBiteDamage : MonoBehaviour
         {
             nextTickTime = Time.time + tickRate;
             hp.TakeDamage(damagePerTick);
-            Debug.Log("Biting... -" + damagePerTick);
+            AudioManager.Instance?.PlaySharkBite();
         }
     }
 }
