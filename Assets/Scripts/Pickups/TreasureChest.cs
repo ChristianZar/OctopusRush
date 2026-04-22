@@ -38,7 +38,7 @@ public class TreasureChest : MonoBehaviour
     {
         if (opened) return;
 
-        if (playerInRange && Input.GetKeyDown(openKey))
+        if (playerInRange && (Input.GetKeyDown(openKey) || (MobileInputBridge.Instance?.InteractDown ?? false)))
         {
             if (keyBar != null && keyBar.IsFull())
             {

@@ -27,7 +27,7 @@ public class PlayerShooting : MonoBehaviour
         if (weapon == null) return;
         if (weapon.currentWeapon != WeaponType.AK47) return;
 
-        if (Input.GetKey(KeyCode.F) && Time.time >= nextFireTime)
+        if ((Input.GetKey(KeyCode.F) || (MobileInputBridge.Instance?.ShootHeld ?? false)) && Time.time >= nextFireTime)
         {
             Shoot();
             nextFireTime = Time.time + fireCooldown;
