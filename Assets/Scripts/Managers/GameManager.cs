@@ -159,15 +159,17 @@ public class GameManager : MonoBehaviour
         isNewBest = currentMeters > bestMeters && currentMeters > 0;
 
         string statsText =
-            "<b>DISTANCE</b>          <b>TIME</b>\n" +
-            $"  {Mathf.FloorToInt(currentMeters)} m               {minutes}:{seconds:00}\n\n";
+            $"<size=68><b>{Mathf.FloorToInt(currentMeters)} m</b></size>\n" +
+            "<size=26><color=#AAAAAA>DISTANCE</color></size>\n\n" +
+            $"<size=48>{minutes}:{seconds:00}</size>\n" +
+            "<size=26><color=#AAAAAA>TIME SURVIVED</color></size>\n\n";
 
         if (isNewBest)
-            statsText += "<color=#FFD700><b>★  NEW BEST!  ★</b></color>\n\n";
+            statsText += "<color=#FFD700><size=38><b>★  NEW BEST!  ★</b></size></color>\n\n";
 
         statsText +=
-            $"<color=#AAAAAA>Last run    {Mathf.FloorToInt(lastMeters)} m\n" +
-            $"Best        {Mathf.FloorToInt(bestMeters)} m</color>";
+            $"<size=28><color=#BBBBBB>Last run    {Mathf.FloorToInt(lastMeters)} m\n" +
+            $"Best run    {Mathf.FloorToInt(bestMeters)} m</color></size>";
 
         gameOverStatsText.text = statsText;
     }

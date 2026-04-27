@@ -28,9 +28,18 @@ public class FloorLooper : MonoBehaviour
             if (width <= 0) return;
         }
 
-        if (Camera.main != null && Camera.main.transform.position.x > transform.position.x + width)
+        Camera cam = Camera.main;
+        if (cam == null) return;
+
+        float camHalfW = cam.orthographicSize * cam.aspect;
+        float camLeft  = cam.transform.position.x - camHalfW;
+        float camRight = cam.transform.position.x + camHalfW;
+
+        // Recycle once the tile's right edge is fully off the left side of the screen
+        if (transform.position.x + width < camLeft)
         {
-            transform.position += Vector3.right * width * 2f;
+            // Place the tile's left edge just past the camera right edge
+            transform.position = new Vector3(camRight, transform.position.y, transform.position.z);
 
             var spawner = GetComponent<FloorCrabSpawner>();
             if (spawner != null)

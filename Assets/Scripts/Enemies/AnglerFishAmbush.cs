@@ -21,6 +21,7 @@ public class AnglerFishAmbush : MonoBehaviour
     private Vector3 lureStartPos;
     private bool attacking = false;
     private float damageTimer = 0f;
+    private Camera cam;
 
     [Header("Patrol")]
 public float patrolDistance = 2f;
@@ -30,6 +31,8 @@ private Vector3 startPos;
 
     void Start()
     {
+        cam = Camera.main;
+
         if (player == null)
         {
             GameObject p = GameObject.FindGameObjectWithTag("Player");
@@ -51,6 +54,7 @@ private Vector3 startPos;
 
     void Update()
     {
+        if (cam != null && transform.position.x > cam.transform.position.x + cam.orthographicSize * cam.aspect + 5f) return;
         if (player == null) return;
 
        float dist = Vector2.Distance(lure.transform.position, player.position);

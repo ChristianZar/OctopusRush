@@ -197,6 +197,5 @@ public class AchievementManager : MonoBehaviour
         foreach (var a in All) PlayerPrefs.DeleteKey(PREF_UNLOCK + a.id);
         PlayerPrefs.DeleteKey(PREF_SHARKS);
         PlayerPrefs.Save();
-        Debug.Log("All achievements reset.");
     }
 }

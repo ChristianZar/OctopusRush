@@ -17,6 +17,7 @@ public class SharkAI : MonoBehaviour
     Transform player;
     Vector3 startPos;
     int dir = 1;
+    Camera cam;
 
     enum State { Patrol, Chase, ReturnHome }
     State state = State.Patrol;
@@ -39,6 +40,7 @@ float originalChaseSpeed;
     void Start()
     {
         startPos = transform.position;
+        cam = Camera.main;
 
         GameObject p = GameObject.FindGameObjectWithTag("Player");
         if (p != null) player = p.transform;
@@ -52,6 +54,8 @@ float originalChaseSpeed;
 
     void Update()
     {
+        if (cam != null && transform.position.x > cam.transform.position.x + cam.orthographicSize * cam.aspect + 5f) return;
+
         if (slowTimer > 0f)
 {
     slowTimer -= Time.deltaTime;

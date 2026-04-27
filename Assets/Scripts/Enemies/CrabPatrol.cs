@@ -30,6 +30,7 @@ public class CrabPatrol : MonoBehaviour
     private Rigidbody2D rb;
     private Transform player;
     private float jumpTimer;
+    private Camera cam;
 
     private static bool runStartSet = false;
     private static float runStartX = 0f;
@@ -43,6 +44,8 @@ public class CrabPatrol : MonoBehaviour
         goingRight = Random.value > 0.5f;
         delayTimer = Random.Range(0f, randomStartDelay);
         jumpTimer = Random.Range(0f, jumpCooldown);
+
+        cam = Camera.main;
 
         GameObject p = GameObject.FindGameObjectWithTag("Player");
         if (p != null)
@@ -58,6 +61,7 @@ public class CrabPatrol : MonoBehaviour
 
    void FixedUpdate()
 {
+    if (cam != null && transform.position.x > cam.transform.position.x + cam.orthographicSize * cam.aspect + 5f) return;
     if (!rb || leftPoint == null || rightPoint == null) return;
 
     if (delayTimer > 0f)

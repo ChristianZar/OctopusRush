@@ -57,12 +57,12 @@ public class PauseManager : MonoBehaviour
             typeof(RectTransform), typeof(Image), typeof(Button), typeof(CanvasRenderer));
         btnGO.transform.SetParent(canvas.transform, false);
 
-        // Top-right corner, 110×110 px, 20 px inset
+        // Top-right corner, 160×160 px, 20 px inset
         var rt = btnGO.GetComponent<RectTransform>();
         rt.anchorMin = new Vector2(1f, 1f);
         rt.anchorMax = new Vector2(1f, 1f);
         rt.pivot     = new Vector2(1f, 1f);
-        rt.sizeDelta = new Vector2(110f, 110f);
+        rt.sizeDelta = new Vector2(160f, 160f);
         rt.anchoredPosition = new Vector2(-20f, -20f);
 
         // Semi-transparent dark circle background
@@ -79,7 +79,7 @@ public class PauseManager : MonoBehaviour
         labelRT.offsetMin = labelRT.offsetMax = Vector2.zero;
         var tmp = labelGO.AddComponent<TextMeshProUGUI>();
         tmp.text      = "⏸";
-        tmp.fontSize  = 52f;
+        tmp.fontSize  = 76f;
         tmp.alignment = TextAlignmentOptions.Center;
         tmp.color     = Color.white;
         tmp.raycastTarget = false;

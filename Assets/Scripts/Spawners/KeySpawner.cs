@@ -4,8 +4,8 @@ public class KeySpawner : MonoBehaviour
 {
     public GameObject keyPrefab;
 
-    [Header("How far ahead of the player the pattern starts")]
-    public float spawnAhead = 6f;
+    [Header("How far ahead of the camera right-edge the pattern starts")]
+    public float spawnAhead = 4f;
 
     [Header("Distance between patterns")]
     public float patternDistance = 8f;
@@ -19,56 +19,58 @@ public class KeySpawner : MonoBehaviour
     public float minY = -2f;
     public float maxY = 2f;
 
-    private Transform player;
+    private Camera cam;
     private float nextSpawnX;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        cam = Camera.main;
 
-        // First pattern will appear ahead (not on player)
-        nextSpawnX = player.position.x + spawnAhead;
+        // Start spawning just off the right edge of the camera
+        float rightEdge = CamRightEdge();
+        nextSpawnX = rightEdge + spawnAhead;
     }
 
     void Update()
     {
-        if (player == null || keyPrefab == null) return;
+        if (cam == null || keyPrefab == null) return;
 
-        // If player has reached the point where we should spawn the next pattern:
-        if (player.position.x + spawnAhead >= nextSpawnX)
+        float rightEdge = CamRightEdge();
+
+        if (rightEdge + spawnAhead >= nextSpawnX)
         {
-            // Force spawn point to be ahead of the player (never behind)
-            float startX = Mathf.Max(nextSpawnX, player.position.x + spawnAhead);
-
+            float startX = Mathf.Max(nextSpawnX, rightEdge + spawnAhead);
             SpawnPattern(startX);
-
             nextSpawnX = startX + patternDistance;
         }
     }
 
-   void SpawnPattern(float startX)
-{
-    int count = Random.Range(minCount, maxCount + 1);
-    float baseY = Random.Range(minY, maxY);
-
-    int pattern = Random.Range(0, 3); // 0=line, 1=arch, 2=V
-
-    if (pattern == 0)
+    float CamRightEdge()
     {
-        SpawnLine(startX, baseY, count);
+        return cam.transform.position.x + cam.orthographicSize * cam.aspect;
     }
-    else if (pattern == 1)
-    {
-        SpawnArch(startX, baseY, count, archHeight: 1.5f);
-    }
-    else
-    {
-        // V looks best with odd counts
-        if (count % 2 == 0) count += 1;
-        SpawnVShape(startX, baseY, count, depth: 1.0f);
-    }
-}
 
+    void SpawnPattern(float startX)
+    {
+        int count = Random.Range(minCount, maxCount + 1);
+        float baseY = Random.Range(minY, maxY);
+
+        int pattern = Random.Range(0, 3); // 0=line, 1=arch, 2=V
+
+        if (pattern == 0)
+        {
+            SpawnLine(startX, baseY, count);
+        }
+        else if (pattern == 1)
+        {
+            SpawnArch(startX, baseY, count, archHeight: 1.5f);
+        }
+        else
+        {
+            if (count % 2 == 0) count += 1;
+            SpawnVShape(startX, baseY, count, depth: 1.0f);
+        }
+    }
 
     void SpawnKey(float x, float y)
     {
@@ -76,45 +78,42 @@ public class KeySpawner : MonoBehaviour
     }
 
     void SpawnLine(float startX, float baseY, int count)
-{
-    for (int i = 0; i < count; i++)
-        SpawnKey(startX + i * spacing, baseY);
-}
-
-void SpawnArch(float startX, float baseY, int count, float archHeight = 1.5f)
-{
-    for (int i = 0; i < count; i++)
     {
-        float t = (count == 1) ? 0.5f : (float)i / (count - 1); // 0..1
-        float x = startX + i * spacing;
-        float y = baseY + Mathf.Sin(t * Mathf.PI) * archHeight; // smooth arch
-        SpawnKey(x, Mathf.Clamp(y, minY, maxY));
+        for (int i = 0; i < count; i++)
+            SpawnKey(startX + i * spacing, baseY);
     }
-}
 
-void SpawnVShape(float startX, float baseY, int count, float depth = 1.2f)
-{
-    // count should be odd (e.g., 5, 7) for a nice V
-    int mid = count / 2;
-
-    for (int i = 0; i < count; i++)
+    void SpawnArch(float startX, float baseY, int count, float archHeight = 1.5f)
     {
-        float x = startX + i * spacing;
-        float distFromMid = Mathf.Abs(i - mid);
-        float y = baseY - (1f - (distFromMid / mid)) * depth; // V dip in center
-        SpawnKey(x, Mathf.Clamp(y, minY, maxY));
+        for (int i = 0; i < count; i++)
+        {
+            float t = (count == 1) ? 0.5f : (float)i / (count - 1);
+            float x = startX + i * spacing;
+            float y = baseY + Mathf.Sin(t * Mathf.PI) * archHeight;
+            SpawnKey(x, Mathf.Clamp(y, minY, maxY));
+        }
     }
-}
 
-void SpawnCircle(float centerX, float centerY, int count, float radius = 1.2f)
-{
-    for (int i = 0; i < count; i++)
+    void SpawnVShape(float startX, float baseY, int count, float depth = 1.2f)
     {
-        float ang = (Mathf.PI * 2f) * (i / (float)count);
-        float x = centerX + Mathf.Cos(ang) * radius;
-        float y = centerY + Mathf.Sin(ang) * radius;
-        SpawnKey(x, Mathf.Clamp(y, minY, maxY));
+        int mid = count / 2;
+        for (int i = 0; i < count; i++)
+        {
+            float x = startX + i * spacing;
+            float distFromMid = Mathf.Abs(i - mid);
+            float y = baseY - (1f - (distFromMid / mid)) * depth;
+            SpawnKey(x, Mathf.Clamp(y, minY, maxY));
+        }
     }
-}
 
+    void SpawnCircle(float centerX, float centerY, int count, float radius = 1.2f)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            float ang = (Mathf.PI * 2f) * (i / (float)count);
+            float x = centerX + Mathf.Cos(ang) * radius;
+            float y = centerY + Mathf.Sin(ang) * radius;
+            SpawnKey(x, Mathf.Clamp(y, minY, maxY));
+        }
+    }
 }

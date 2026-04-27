@@ -56,7 +56,8 @@ public class EndlessFloor : MonoBehaviour
             float gap = Random.Range(minGapX, maxGapX);
 
             Vector3 p = transform.position;
-            p.x = rightEdge + gap;
+            // tileWidth * 0.5f so the LEFT edge of the tile (not center) starts past the right edge
+            p.x = rightEdge + tileWidth * 0.5f + gap;
             transform.position = p;
 
             // Refresh crabs and decorations for the "new" tile

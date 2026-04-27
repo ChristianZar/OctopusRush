@@ -17,11 +17,13 @@ public class PufferFishBehavior : MonoBehaviour
     private Animator anim;
     private bool isInflated = false;
     private float stateTimer;
+    private Camera cam;
 
     void Start()
     {
         anim = GetComponent<Animator>();
         stateTimer = normalTime;
+        cam = Camera.main;
 
         if (anim != null)
             anim.SetBool("IsInflated", false);
@@ -29,6 +31,7 @@ public class PufferFishBehavior : MonoBehaviour
 
     void Update()
     {
+        if (cam != null && transform.position.x > cam.transform.position.x + cam.orthographicSize * cam.aspect + 5f) return;
         if (anim == null) return;
 
         stateTimer -= Time.deltaTime;

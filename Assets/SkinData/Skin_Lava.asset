@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SkinData
   skinName: Lava Octopus
   thumbnail: {fileID: -5592608367998261967, guid: 4470d6b703f894d1b819c47eb24f4ac0, type: 3}
-  keyCost: 0
+  keyCost: 150
   swimmingFrames:
   - {fileID: -4374820477280711973, guid: 4470d6b703f894d1b819c47eb24f4ac0, type: 3}
   - {fileID: 5214166652256158204, guid: 4470d6b703f894d1b819c47eb24f4ac0, type: 3}

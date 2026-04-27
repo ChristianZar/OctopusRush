@@ -44,7 +44,6 @@ public class AnglerFishSpawner : MonoBehaviour
         GameObject angler = Instantiate(anglerFishPrefab, pos, Quaternion.identity);
         anglers.Add(angler);
 
-        Debug.Log("TEST SPAWNED ANGLER at " + pos);
         CleanupOldAnglers();
     }
 

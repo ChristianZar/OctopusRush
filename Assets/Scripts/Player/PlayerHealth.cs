@@ -142,7 +142,6 @@ public class PlayerHealth : MonoBehaviour
 
         if (gameManager == null)
         {
-            Debug.LogWarning("No GameManager found - using fallback auto-reload");
             StartCoroutine(GameOverDelay());
         }
     }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SkinData
   skinName: Robot Octopus
   thumbnail: {fileID: 1551591478697536380, guid: 4a8acacd458a74663879bbfb3e0b3af2, type: 3}
-  keyCost: 50
+  keyCost: 200
   swimmingFrames:
   - {fileID: 9192220001088664876, guid: 4a8acacd458a74663879bbfb3e0b3af2, type: 3}
   - {fileID: 1473581913779521689, guid: 4a8acacd458a74663879bbfb3e0b3af2, type: 3}

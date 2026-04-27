@@ -13,27 +13,11 @@ public class MainMenuStyler : MonoBehaviour
              "ShieldOrb, Gun, Watchout, Stop")]
     public Sprite[]      helpCardSprites;
     public TMP_FontAsset helpFont;
-    public float         labelHeight   = 70f;
-    public float         labelFontSize = 32f;
-
-    static readonly string[] CardLabels =
-    {
-        "Swim Up — Hold W",
-        "Ink Blast — Press SPACE",
-        "Collect Keys — Press E at chest",
-        "Eat Fish to Heal",
-        "Shield Orb",
-        "Gun Power-Up — Press F",
-        "Watch Out!",
-        "Pause — ESC or P",
-    };
 
     // ── Carousel state ────────────────────────────────────────────────────────
 
-    int                _cardIndex;
-    Image              _carouselImage;
-    TextMeshProUGUI    _carouselLabel;
-    TextMeshProUGUI    _pageIndicator;
+    int   _cardIndex;
+    Image _carouselImage;
 
     // ── Lifecycle ─────────────────────────────────────────────────────────────
 
@@ -150,35 +134,16 @@ public class MainMenuStyler : MonoBehaviour
         rootRT.offsetMin = new Vector2(16f, 130f);  // extra bottom room for back button
         rootRT.offsetMax = new Vector2(-16f, -16f);
 
-        // ── Title ──
-        MakeTMP(root.transform, "HelpTitle",
-            anchorMin: new Vector2(0f, 1f), anchorMax: new Vector2(1f, 1f),
-            pivot: new Vector2(0.5f, 1f), pos: Vector2.zero, size: new Vector2(0f, 70f),
-            text: "HOW TO PLAY", fontSize: 54f, bold: true, color: Color.white);
-
-        // ── Card image (fills centre, above label + indicator) ──
-        float bottomStrip = labelHeight + 44f; // label + page indicator
+        // ── Card image (fills the full panel, nav buttons overlay on sides) ──
         var imgGO = new GameObject("CarouselImage", typeof(RectTransform), typeof(Image));
         imgGO.transform.SetParent(root.transform, false);
         var imgRT = imgGO.GetComponent<RectTransform>();
         imgRT.anchorMin = Vector2.zero;
         imgRT.anchorMax = Vector2.one;
-        imgRT.offsetMin = new Vector2(100f, bottomStrip);  // 100px gutters for nav buttons
-        imgRT.offsetMax = new Vector2(-100f, -78f);         // 78px below title
+        imgRT.offsetMin = new Vector2(100f, 0f);
+        imgRT.offsetMax = new Vector2(-100f, 0f);
         _carouselImage = imgGO.GetComponent<Image>();
         _carouselImage.preserveAspect = true;
-
-        // ── Label ──
-        _carouselLabel = MakeTMP(root.transform, "CarouselLabel",
-            anchorMin: new Vector2(0f, 0f), anchorMax: new Vector2(1f, 0f),
-            pivot: new Vector2(0.5f, 0f), pos: new Vector2(0f, 44f), size: new Vector2(0f, labelHeight),
-            text: "", fontSize: labelFontSize, bold: true, color: Color.white);
-
-        // ── Page indicator (e.g. "1 / 8") ──
-        _pageIndicator = MakeTMP(root.transform, "PageIndicator",
-            anchorMin: new Vector2(0f, 0f), anchorMax: new Vector2(1f, 0f),
-            pivot: new Vector2(0.5f, 0f), pos: Vector2.zero, size: new Vector2(0f, 40f),
-            text: "", fontSize: 26f, bold: false, color: new Color(0.7f, 0.85f, 1f));
 
         // ── Prev button (left) ──
         var prevBtn = MakeNavButton(root.transform, "PrevButton", left: true);
@@ -205,12 +170,6 @@ public class MainMenuStyler : MonoBehaviour
 
         if (_carouselImage != null)
             _carouselImage.sprite = helpCardSprites[_cardIndex];
-
-        if (_carouselLabel != null)
-            _carouselLabel.text = _cardIndex < CardLabels.Length ? CardLabels[_cardIndex] : "";
-
-        if (_pageIndicator != null)
-            _pageIndicator.text = $"{_cardIndex + 1}  /  {total}";
     }
 
     void NextCard() => ShowCard(_cardIndex + 1);

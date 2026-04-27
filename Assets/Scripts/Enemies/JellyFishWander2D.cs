@@ -97,7 +97,6 @@ public class JellyfishWander2D : MonoBehaviour
 
         if (HasInvalidVector3(finalPos))
         {
-            Debug.LogWarning("Jellyfish got invalid position, resetting: " + gameObject.name);
             ResetSafeState();
             return;
         }

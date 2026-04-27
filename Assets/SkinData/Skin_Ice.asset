@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SkinData
   skinName: Ice Octopus
   thumbnail: {fileID: 5057570179893330215, guid: 99bb61a1c16a04772816d465c0921878, type: 3}
-  keyCost: 0
+  keyCost: 100
   swimmingFrames:
   - {fileID: -547795588585258406, guid: 99bb61a1c16a04772816d465c0921878, type: 3}
   - {fileID: 4394367375683612422, guid: 99bb61a1c16a04772816d465c0921878, type: 3}
