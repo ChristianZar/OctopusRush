@@ -27,6 +27,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip shieldPickupClip;
     public AudioClip chestOpenClip;
     public AudioClip keyPickupClip;
+    public AudioClip equipClip;
 
     [Header("SFX Volume")]
     [Range(0f, 2f)] public float sfxVolume = 1f;
@@ -68,7 +69,6 @@ public class AudioManager : MonoBehaviour
         sfxSource.PlayOneShot(playerDamageClip, 1f);
     }
 
-
     public void PlayPlayerDeath() => Play(playerDeathClip);
 
     public void PlayInkFire()
@@ -90,21 +90,28 @@ public class AudioManager : MonoBehaviour
     public void PlaySharkBite() => Play(sharkBiteClip);
     public void PlayJellyfishZap() => Play(jellyfishZapClip);
     public void PlayShieldPickup() => Play(shieldPickupClip);
+
     public void PlayChestOpen()
     {
         if (chestOpenClip == null || sfxSource == null) return;
 
         sfxSource.Stop();
-
         sfxSource.clip = chestOpenClip;
-        sfxSource.time = 0.5f; // ⏩ skip first 0.5 seconds (change if needed)
-
+        sfxSource.time = 0.5f;
         sfxSource.pitch = Random.Range(0.95f, 1.05f);
         sfxSource.volume = 1f;
-
-        sfxSource.PlayOneShot(chestOpenClip, 3f); // 🔊 louder
+        sfxSource.Play();
     }
+
     public void PlayKeyPickup() => Play(keyPickupClip);
+
+    public void PlayEquip()
+    {
+        if (equipClip == null || sfxSource == null) return;
+
+        sfxSource.pitch = Random.Range(0.95f, 1.05f);
+        sfxSource.PlayOneShot(equipClip, 1f);
+    }
 
     void Play(AudioClip clip)
     {
@@ -133,6 +140,7 @@ public class AudioManager : MonoBehaviour
         if (sfxSource != null)
             sfxSource.Stop();
     }
+
     public void StopAllAudio()
     {
         if (musicSource != null)

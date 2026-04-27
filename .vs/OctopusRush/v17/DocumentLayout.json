@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\EyobK\\OneDrive - Georgia Gwinnett College\\Desktop\\CodingStudies\\OctopusRush\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\EyobK\\OneDrive - Georgia Gwinnett College\\Desktop\\CodingStudies\\OctopusRush\\Assets\\Scripts\\Managers\\AudioManager.cs||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Managers\\AudioManager.cs||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\EyobK\\OneDrive - Georgia Gwinnett College\\Desktop\\CodingStudies\\OctopusRush\\Assets\\AudioManager.cs||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\AudioManager.cs||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\EyobK\\OneDrive - Georgia Gwinnett College\\Desktop\\CodingStudies\\OctopusRush\\Assets\\TreasureChest.cs||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\TreasureChest.cs||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\EyobK\\OneDrive - Georgia Gwinnett College\\Desktop\\CodingStudies\\OctopusRush\\Assets\\PlayerHealth.cs||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PlayerHealth.cs||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\EyobK\\OneDrive - Georgia Gwinnett College\\Desktop\\CodingStudies\\OctopusRush\\Assets\\ShieldOrbPowerUp.cs||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\ShieldOrbPowerUp.cs||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
@@ -13,14 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\EyobK\\OneDrive - Georgia Gwinnett College\\Desktop\\CodingStudies\\OctopusRush\\Assets\\PlayerController.cs||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PlayerController.cs||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\EyobK\\OneDrive - Georgia Gwinnett College\\Desktop\\CodingStudies\\OctopusRush\\Assets\\AudioManager.cs||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\AudioManager.cs||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\EyobK\\OneDrive - Georgia Gwinnett College\\Desktop\\CodingStudies\\OctopusRush\\Assets\\PlayerHealth.cs||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PlayerHealth.cs||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\EyobK\\OneDrive - Georgia Gwinnett College\\Desktop\\CodingStudies\\OctopusRush\\Assets\\MineBehavior.cs||{3B902123-F8A7-4915-9F01-361F908088D0}",
@@ -34,11 +42,40 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AudioManager.cs",
+              "DocumentMoniker": "C:\\Users\\EyobK\\OneDrive - Georgia Gwinnett College\\Desktop\\CodingStudies\\OctopusRush\\Assets\\Scripts\\Managers\\AudioManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\AudioManager.cs",
+              "ToolTip": "C:\\Users\\EyobK\\OneDrive - Georgia Gwinnett College\\Desktop\\CodingStudies\\OctopusRush\\Assets\\Scripts\\Managers\\AudioManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\AudioManager.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAwwIAAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T21:49:11.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TreasureChest.cs",
+              "DocumentMoniker": "C:\\Users\\EyobK\\OneDrive - Georgia Gwinnett College\\Desktop\\CodingStudies\\OctopusRush\\Assets\\TreasureChest.cs",
+              "RelativeDocumentMoniker": "Assets\\TreasureChest.cs",
+              "ToolTip": "C:\\Users\\EyobK\\OneDrive - Georgia Gwinnett College\\Desktop\\CodingStudies\\OctopusRush\\Assets\\TreasureChest.cs",
+              "RelativeToolTip": "Assets\\TreasureChest.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAwwHQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T20:47:17.004Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ShieldOrbPowerUp.cs",
               "DocumentMoniker": "C:\\Users\\EyobK\\OneDrive - Georgia Gwinnett College\\Desktop\\CodingStudies\\OctopusRush\\Assets\\ShieldOrbPowerUp.cs",
               "RelativeDocumentMoniker": "Assets\\ShieldOrbPowerUp.cs",
@@ -46,16 +83,11 @@
               "RelativeToolTip": "Assets\\ShieldOrbPowerUp.cs",
               "ViewState": "AgIAAFcAAAAAAAAAAAAAAGMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T18:35:57.893Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "WhenOpened": "2026-04-20T18:35:57.893Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\EyobK\\OneDrive - Georgia Gwinnett College\\Desktop\\CodingStudies\\OctopusRush\\Assets\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\PlayerController.cs",
@@ -63,12 +95,11 @@
               "RelativeToolTip": "Assets\\PlayerController.cs",
               "ViewState": "AgIAADcBAAAAAAAAAAAwwD4BAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T18:30:52.578Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-20T18:30:52.578Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "PlayerShooting.cs",
               "DocumentMoniker": "C:\\Users\\EyobK\\OneDrive - Georgia Gwinnett College\\Desktop\\CodingStudies\\OctopusRush\\Assets\\PlayerShooting.cs",
               "RelativeDocumentMoniker": "Assets\\PlayerShooting.cs",
@@ -76,37 +107,34 @@
               "RelativeToolTip": "Assets\\PlayerShooting.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAwwDkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T17:53:43.817Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-20T17:53:43.817Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "PlayerHealth.cs",
               "DocumentMoniker": "C:\\Users\\EyobK\\OneDrive - Georgia Gwinnett College\\Desktop\\CodingStudies\\OctopusRush\\Assets\\PlayerHealth.cs",
               "RelativeDocumentMoniker": "Assets\\PlayerHealth.cs",
               "ToolTip": "C:\\Users\\EyobK\\OneDrive - Georgia Gwinnett College\\Desktop\\CodingStudies\\OctopusRush\\Assets\\PlayerHealth.cs",
               "RelativeToolTip": "Assets\\PlayerHealth.cs",
-              "ViewState": "AgIAAKoAAAAAAAAAAAAmwNkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAALMAAAAAAAAAAAAwwN4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-15T02:53:57.521Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "AudioManager.cs",
               "DocumentMoniker": "C:\\Users\\EyobK\\OneDrive - Georgia Gwinnett College\\Desktop\\CodingStudies\\OctopusRush\\Assets\\AudioManager.cs",
               "RelativeDocumentMoniker": "Assets\\AudioManager.cs",
               "ToolTip": "C:\\Users\\EyobK\\OneDrive - Georgia Gwinnett College\\Desktop\\CodingStudies\\OctopusRush\\Assets\\AudioManager.cs",
               "RelativeToolTip": "Assets\\AudioManager.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAmwEYAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T02:34:22.569Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-15T02:34:22.569Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "MineBehavior.cs",
               "DocumentMoniker": "C:\\Users\\EyobK\\OneDrive - Georgia Gwinnett College\\Desktop\\CodingStudies\\OctopusRush\\Assets\\MineBehavior.cs",
               "RelativeDocumentMoniker": "Assets\\MineBehavior.cs",

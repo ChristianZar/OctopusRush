@@ -10536,7 +10536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   musicSource: {fileID: 773947748}
-  bgMusic: {fileID: 8300000, guid: e19c21c004d10834a87ea3c2f1a2e8a6, type: 3}
+  bgMusic: {fileID: 8300000, guid: f84bbbf953b4fbf4385ac6218d70db2d, type: 3}
   playerDamageClip: {fileID: 8300000, guid: d46f8b9abfa5cdf4c9a2101ef62cfdbf, type: 3}
   playerDeathClip: {fileID: 0}
   inkFireClip: {fileID: 8300000, guid: 9dab28ed40dd9fa4485a1dfcc45ecfee, type: 3}
@@ -10548,6 +10548,7 @@ MonoBehaviour:
   shieldPickupClip: {fileID: 8300000, guid: 7baa247f75279064ba3ded71e6332dc7, type: 3}
   chestOpenClip: {fileID: 8300000, guid: 0803dd904af0a1e4aa758a1dadea047d, type: 3}
   keyPickupClip: {fileID: 0}
+  equipClip: {fileID: 0}
   sfxVolume: 2
 --- !u!4 &1957554888
 Transform:
