@@ -27,7 +27,7 @@ public class PlayerShooting : MonoBehaviour
         if (weapon == null) return;
         if (weapon.currentWeapon != WeaponType.AK47) return;
 
-        if (Input.GetKey(KeyCode.F) && Time.time >= nextFireTime)
+        if ((Input.GetKey(KeyCode.F) || (MobileInputBridge.Instance?.ShootHeld ?? false)) && Time.time >= nextFireTime)
         {
             Shoot();
             nextFireTime = Time.time + fireCooldown;
@@ -43,7 +43,7 @@ void Shoot()
     Vector3 spawnPos = firePoint.position + Vector3.right * dir * 0.25f;
 
     AchievementManager.Instance?.ReportShotFired();
-    GameObject b = Instantiate(bulletPrefab, spawnPos, Quaternion.identity);
+    GameObject b = SimplePool.Get(bulletPrefab, spawnPos, Quaternion.identity);
 
     if (gunSound != null && gunSound.clip != null)
     {

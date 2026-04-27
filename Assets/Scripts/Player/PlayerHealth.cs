@@ -21,15 +21,24 @@ public class PlayerHealth : MonoBehaviour
     public float secondsPerDrain = 1f;
     private float drainTimer = 0f;
 
+    [Header("Hit Feedback")]
+    [SerializeField] private float shakeDuration   = 0.15f;
+    [SerializeField] private float shakeMagnitude  = 0.10f;
+    [SerializeField] private float hitStopDuration = 0.05f;
+
     private bool isDead = false;
     private SpriteRenderer sr;
     private GameManager gameManager;
     private DamageFX damageFX;
+    private CameraShake camShake;
+    private Coroutine hitStopRoutine;
 
     void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
         damageFX = GetComponent<DamageFX>();
+        if (Camera.main != null)
+            camShake = Camera.main.GetComponent<CameraShake>();
     }
 
     void Start()
@@ -62,6 +71,9 @@ public class PlayerHealth : MonoBehaviour
 
         damageFX?.SpawnBlood();
         AudioManager.Instance?.PlayPlayerDamage();
+        camShake?.Shake(shakeDuration, shakeMagnitude);
+        if (hitStopRoutine != null) StopCoroutine(hitStopRoutine);
+        hitStopRoutine = StartCoroutine(HitStop());
 
         float healthPercent = (float)currentHealth / maxHealth;
         OnHealthChanged?.Invoke(healthPercent);
@@ -97,8 +109,13 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         isDead = true;
-        AudioManager.Instance?.StopAllAudio(); //  stop everything
-        Debug.Log("Player has died.");
+        if (hitStopRoutine != null)
+        {
+            StopCoroutine(hitStopRoutine);
+            hitStopRoutine = null;
+            Time.timeScale = 1f;
+        }
+        AudioManager.Instance?.StopAllAudio();
         AudioManager.Instance?.PlayPlayerDeath();
 
         if (sr != null && deadSprite != null)
@@ -128,6 +145,14 @@ public class PlayerHealth : MonoBehaviour
             Debug.LogWarning("No GameManager found - using fallback auto-reload");
             StartCoroutine(GameOverDelay());
         }
+    }
+
+    IEnumerator HitStop()
+    {
+        Time.timeScale = 0f;
+        yield return new WaitForSecondsRealtime(hitStopDuration);
+        Time.timeScale = 1f;
+        hitStopRoutine = null;
     }
 
     IEnumerator GameOverDelay()

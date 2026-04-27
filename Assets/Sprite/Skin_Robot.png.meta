@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: 4a8acacd458a74663879bbfb3e0b3af2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -459963178650079322
+    second: Skin_Robot_0
+  - first:
+      213: 1551591478697536380
+    second: Skin_Robot_1
+  - first:
+      213: -6974179164882874847
+    second: Skin_Robot_2
+  - first:
+      213: 2537922515595489813
+    second: Skin_Robot_3
+  - first:
+      213: -234608211739679964
+    second: Skin_Robot_4
+  - first:
+      213: -8421619173399020542
+    second: Skin_Robot_5
+  - first:
+      213: 682921261052787928
+    second: Skin_Robot_6
+  - first:
+      213: 781851520902743895
+    second: Skin_Robot_7
+  - first:
+      213: -5131569381686360492
+    second: Skin_Robot_8
+  - first:
+      213: -1161745983193301157
+    second: Skin_Robot_9
+  - first:
+      213: -4199378664856713868
+    second: Skin_Robot_10
+  - first:
+      213: 9192220001088664876
+    second: Skin_Robot_11
+  - first:
+      213: -2763891249914703317
+    second: Skin_Robot_12
+  - first:
+      213: 1473581913779521689
+    second: Skin_Robot_13
+  - first:
+      213: 8523197551584986729
+    second: Skin_Robot_14
+  - first:
+      213: -8797758002910356894
+    second: Skin_Robot_15
+  - first:
+      213: 3168635288545494571
+    second: Skin_Robot_16
+  - first:
+      213: 4410461642278259134
+    second: Skin_Robot_17
+  - first:
+      213: 4138135376635001921
+    second: Skin_Robot_18
+  - first:
+      213: 8060920076205420573
+    second: Skin_Robot_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Skin_Robot_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 856
+        width: 308
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6af6dce0de1ed99f0800000000000000
+      internalID: -459963178650079322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Robot_1
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 712
+        width: 214
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7b2a4caa3c588510800000000000000
+      internalID: 1551591478697536380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Robot_2
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 951
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12ec935100db63f90800000000000000
+      internalID: -6974179164882874847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Robot_3
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 975
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 512f889d413883320800000000000000
+      internalID: 2537922515595489813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Robot_4
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 957
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 423eddd03118ebcf0800000000000000
+      internalID: -234608211739679964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Robot_5
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 941
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20cbeef3bf5602b80800000000000000
+      internalID: -8421619173399020542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Robot_6
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 970
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dcfc96c4493a7900800000000000000
+      internalID: 682921261052787928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Robot_7
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 991
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 757c18ad0d1b9da00800000000000000
+      internalID: 781851520902743895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Robot_8
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 983
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4564058e5d009c8b0800000000000000
+      internalID: -5131569381686360492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Robot_9
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 617
+        width: 327
+        height: 407
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5fb688fe26a0efe0800000000000000
+      internalID: -1161745983193301157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Robot_10
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 703
+        width: 236
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4758cd38a5fc8b5c0800000000000000
+      internalID: -4199378664856713868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Robot_11
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 482
+        width: 285
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2571267363519f70800000000000000
+      internalID: 9192220001088664876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Robot_12
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 774
+        width: 342
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b22160b4d8fa4a9d0800000000000000
+      internalID: -2763891249914703317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Robot_13
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 477
+        width: 276
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 998c44671f6337410800000000000000
+      internalID: 1473581913779521689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Robot_14
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 226
+        width: 298
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 966c3bce30b784670800000000000000
+      internalID: 8523197551584986729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Robot_15
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 482
+        width: 249
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26a9da875b518e580800000000000000
+      internalID: -8797758002910356894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Robot_16
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 229
+        width: 307
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b26858cb10149fb20800000000000000
+      internalID: 3168635288545494571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Robot_17
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 484
+        width: 279
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb94b7bfe7b153d30800000000000000
+      internalID: 4410461642278259134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Robot_18
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 232
+        width: 453
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14c7ec4433c9d6930800000000000000
+      internalID: 4138135376635001921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skin_Robot_19
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 221
+        width: 278
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d10f909c9142edf60800000000000000
+      internalID: 8060920076205420573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 229143f5d8f71402f80f66753592c777
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Skin_Robot_0: -459963178650079322
+      Skin_Robot_1: 1551591478697536380
+      Skin_Robot_10: -4199378664856713868
+      Skin_Robot_11: 9192220001088664876
+      Skin_Robot_12: -2763891249914703317
+      Skin_Robot_13: 1473581913779521689
+      Skin_Robot_14: 8523197551584986729
+      Skin_Robot_15: -8797758002910356894
+      Skin_Robot_16: 3168635288545494571
+      Skin_Robot_17: 4410461642278259134
+      Skin_Robot_18: 4138135376635001921
+      Skin_Robot_19: 8060920076205420573
+      Skin_Robot_2: -6974179164882874847
+      Skin_Robot_3: 2537922515595489813
+      Skin_Robot_4: -234608211739679964
+      Skin_Robot_5: -8421619173399020542
+      Skin_Robot_6: 682921261052787928
+      Skin_Robot_7: 781851520902743895
+      Skin_Robot_8: -5131569381686360492
+      Skin_Robot_9: -1161745983193301157
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -123,8 +123,8 @@ public class PlayerController : MonoBehaviour
         if (inkCooldownTimer > 0f) inkCooldownTimer -= Time.deltaTime;
         if (boostCooldownTimer > 0f) boostCooldownTimer -= Time.deltaTime;
 
-        bool wantsInk = Input.GetKey(KeyCode.Space);
-        bool wantsSwimInk = Input.GetKey(KeyCode.W);
+        bool wantsInk     = Input.GetKey(KeyCode.Space) || (MobileInputBridge.Instance?.InkHeld  ?? false);
+        bool wantsSwimInk = Input.GetKey(KeyCode.W)     || (MobileInputBridge.Instance?.SwimHeld ?? false);
 
         if (wantsInk && currentInk > 0f && inkCooldownTimer <= 0f)
         {
@@ -235,7 +235,7 @@ public class PlayerController : MonoBehaviour
     {
         if (cam == null) cam = Camera.main;
 
-        bool risingInput = Input.GetKey(KeyCode.W);
+        bool risingInput = Input.GetKey(KeyCode.W) || (MobileInputBridge.Instance?.SwimHeld ?? false);
 
         if (cam != null)
         {

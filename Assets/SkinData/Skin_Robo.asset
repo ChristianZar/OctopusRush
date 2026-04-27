@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Skin_Robo
   m_EditorClassIdentifier: Assembly-CSharp::SkinData
   skinName: Robot Octopus
-  thumbnail: {fileID: -131052232513833262, guid: 98a4214aa338c4ca79f520a34c335812, type: 3}
+  thumbnail: {fileID: 1551591478697536380, guid: 4a8acacd458a74663879bbfb3e0b3af2, type: 3}
   keyCost: 50
   swimmingFrames:
-  - {fileID: -131052232513833262, guid: 98a4214aa338c4ca79f520a34c335812, type: 3}
-  - {fileID: -124447571710998377, guid: 98a4214aa338c4ca79f520a34c335812, type: 3}
-  - {fileID: 2794854823122511899, guid: 98a4214aa338c4ca79f520a34c335812, type: 3}
-  - {fileID: 6612044160978823885, guid: 98a4214aa338c4ca79f520a34c335812, type: 3}
-  - {fileID: -3323560400561514257, guid: 98a4214aa338c4ca79f520a34c335812, type: 3}
-  - {fileID: -3152936478587561204, guid: 98a4214aa338c4ca79f520a34c335812, type: 3}
+  - {fileID: 9192220001088664876, guid: 4a8acacd458a74663879bbfb3e0b3af2, type: 3}
+  - {fileID: 1473581913779521689, guid: 4a8acacd458a74663879bbfb3e0b3af2, type: 3}
+  - {fileID: -8797758002910356894, guid: 4a8acacd458a74663879bbfb3e0b3af2, type: 3}
+  - {fileID: 8523197551584986729, guid: 4a8acacd458a74663879bbfb3e0b3af2, type: 3}
+  - {fileID: 3168635288545494571, guid: 4a8acacd458a74663879bbfb3e0b3af2, type: 3}
+  - {fileID: 4410461642278259134, guid: 4a8acacd458a74663879bbfb3e0b3af2, type: 3}
   idleFrames: []

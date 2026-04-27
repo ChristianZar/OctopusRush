@@ -677,15 +677,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuStyler
   helpCardSprites:
-  - {fileID: -4359119259276198229, guid: 0c9598738a5863949975c9303fce746a, type: 3}
-  - {fileID: 1443271557808925536, guid: 3c509cd8aa5e696469ad2b84a11bd089, type: 3}
-  - {fileID: -3299739834293241358, guid: bed532d98bf1e0d4b8bf2540b2f2ca67, type: 3}
-  - {fileID: 7205055984485969968, guid: 444d829c4f000244b9c5313a8d4a57db, type: 3}
-  - {fileID: 4117100077357832083, guid: 79b7a114c9a1b994da8503bfb5fd27b4, type: 3}
-  - {fileID: -3871084328919047167, guid: 144f82f959866134393b9f5f6b6a1438, type: 3}
-  - {fileID: -5765026725288860141, guid: f207d1cecba11d04abbdd873e578072b, type: 3}
-  - {fileID: -6147679188264957991, guid: 310ce1012815c244bbd6e53f53a8e9b7, type: 3}
-  helpFont: {fileID: 0}
+  - {fileID: 182426816816142637, guid: 9f1ec69b8c069c845914e161b9898725, type: 3}
+  - {fileID: -1227899160, guid: 9f1ec69b8c069c845914e161b9898725, type: 3}
+  - {fileID: 1779742785, guid: 9f1ec69b8c069c845914e161b9898725, type: 3}
+  - {fileID: 1213833590, guid: 9f1ec69b8c069c845914e161b9898725, type: 3}
+  - {fileID: -1252430467, guid: 9f1ec69b8c069c845914e161b9898725, type: 3}
+  - {fileID: 1111774976, guid: 9f1ec69b8c069c845914e161b9898725, type: 3}
+  - {fileID: 355949485, guid: 9f1ec69b8c069c845914e161b9898725, type: 3}
+  - {fileID: 1595431636, guid: 9f1ec69b8c069c845914e161b9898725, type: 3}
+  helpFont: {fileID: 11400000, guid: 974aa35693d5c40408578e3c0d9193c3, type: 2}
   labelHeight: 60
   labelFontSize: 28
 --- !u!1 &445055462
@@ -892,7 +892,6 @@ MonoBehaviour:
   skins:
   - {fileID: 11400000, guid: 5fb419129fbd04025a587ee6d06015b6, type: 2}
   - {fileID: 11400000, guid: 18c2dbd8dc30f4817b64a06d1a5a1ce6, type: 2}
-  - {fileID: 11400000, guid: cd10e0ea595a840138fbcf6c95c78f21, type: 2}
   - {fileID: 11400000, guid: 299d945af7d2b49fdbf1966ad5510867, type: 2}
   - {fileID: 11400000, guid: 2c7172ae2e405486da7a619a1f15434e, type: 2}
 --- !u!4 &486978549
@@ -1517,7 +1516,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -250}
-  m_SizeDelta: {x: 400, y: 150}
+  m_SizeDelta: {x: 440, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &955172650
 MonoBehaviour:
@@ -1803,7 +1802,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -113}
-  m_SizeDelta: {x: 440, y: 150}
+  m_SizeDelta: {x: 440, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1016852850
 MonoBehaviour:
@@ -2100,7 +2099,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -395}
-  m_SizeDelta: {x: 350, y: 100}
+  m_SizeDelta: {x: 370, y: 135}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1118726351
 MonoBehaviour:
@@ -7872,7 +7871,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 42}
-  m_SizeDelta: {x: 450, y: 130}
+  m_SizeDelta: {x: 460, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1713700737
 MonoBehaviour:
